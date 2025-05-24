@@ -1,0 +1,2 @@
+device_id,server_type,server_ip,vrf,key_hash,timeout_sec,server_group,accounting_enabled,description,source_file
+nrr_dc_ew_fw_001,tacacs+,,mgmt,encrypted,30,TACACS,yes,TACACS+ Authentication Profile,configs/NRR-DC-EW-Backup 

@@ -1,0 +1,10 @@
+device_id,interface_name,description,ip_address,subnet_mask,vlan,speed_mbps,duplex,admin_status,operational_status,mac_address,if_type,ip6_address,lldp_remote_sysname,port_security,bpdu_guard,root_guard,storm_control_pps,mtu,source_file
+nrr_dc_ew_fw_001,mgmt0,Management Interface,10.99.20.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ha1,HA Control Link Primary,192.0.2.1,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ha1-b,HA Control Link Backup,192.0.2.5,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/21,HA4 Primary Link,192.0.2.33,255.255.255.248,,1000,full,up,up,,ha_data,,,,,,,9192,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/22,HA4 Backup Link,192.0.2.41,255.255.255.248,,1000,full,up,up,,ha_data,,,,,,,9192,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/23,HA2 Data Sync Primary,,,,,full,up,up,,ha_sync,,,,,,,9192,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/24,HA2 Data Sync Backup,,,,,full,up,up,,ha_sync,,,,,,,9192,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/25,Link Monitor Group AE1,,,,,full,up,up,,monitor,,,,,,,9192,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ethernet1/26,Link Monitor Group AE1,,,,,full,up,up,,monitor,,,,,,,9192,configs/NRR-DC-EW-Backup 

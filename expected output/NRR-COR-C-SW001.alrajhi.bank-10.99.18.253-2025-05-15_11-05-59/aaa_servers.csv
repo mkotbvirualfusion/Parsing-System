@@ -1,0 +1,5 @@
+device_id,server_type,server_group,server_host,key,timeout,retransmit,port,vrf,source_interface,description,source_file
+nrr_cor_c_sw001,tacacs+,TACACS-SERVER-1,10.252.70.54,encrypted,5,3,49,default,,TACACS primary server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,tacacs+,VTYSec,10.252.70.54,encrypted,5,3,49,default,,TACACS VTY security server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,tacacs+,VTYSec,10.252.70.53,encrypted,5,3,49,default,mgmt0,TACACS VTY security server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,tacacs+,VTYSec,10.242.70.54,encrypted,5,3,49,default,mgmt0,TACACS VTY security server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

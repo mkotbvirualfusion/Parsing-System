@@ -1,0 +1,10 @@
+device_id,dns_server,domain_name,dns_type,vrf,lookup_enabled,source_interface,source_file
+nrr_cor_c_sw002,10.0.10.10,alrajhi.bank,primary,,yes,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.0.10.20,alrajhi.bank,secondary,,yes,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.11.11.10,alrajhi.bank,secondary,,yes,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.11.11.11,alrajhi.bank,secondary,,yes,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+NRR-EXT-EXTBR-R002_d41d8cd9,10.0.10.10,alrajhi.bank,primary,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-INT-INTBR-R001_d41d8cd9,10.0.10.10,alrajhi.bank,primary,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-WAN-BR-R001_d41d8cd9,10.0.10.10,alrajhibank.com.sa,primary,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,10.0.10.10,alrajhibank.com.sa,primary,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+uat_ig_fw001,updates.paloaltonetworks.com,,update_server,,,,configs\UAT-PA-Internet-Backup

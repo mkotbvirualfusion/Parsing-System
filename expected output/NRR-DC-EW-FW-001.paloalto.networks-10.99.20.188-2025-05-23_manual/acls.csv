@@ -1,0 +1,1 @@
+device_id,acl_name,seq_number,action,source_ip,source_mask,destination_ip,destination_mask,protocol,port,log,description,acl_type,direction,source_file 

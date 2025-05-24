@@ -1,0 +1,2 @@
+device_id,lag_id,lag_name,protocol,member_interfaces,load_balance,mode,vlan,description,status,source_file
+nrr_dc_ew_fw_001,1,AE1,ha_monitoring,ethernet1/25;ethernet1/26,round-robin,active,,HA Link Monitoring Group,up,configs/NRR-DC-EW-Backup 

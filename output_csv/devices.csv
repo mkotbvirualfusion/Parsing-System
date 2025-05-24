@@ -1,0 +1,15 @@
+device_id,hostname,vendor,model,os_family,os_version,serial_number,location,config_timestamp,source_file
+nrr_cor_c_sw002,NRR-COR-C-SW002,cisco,Nexus Operating,nx-os,7.0(3)I7(6),,NRR-DC-CORE,Thu May 15 11:08:30 2025,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+NRR-EXT-EXT-FW001_d41d8cd9,NRR-EXT-EXT-FW001,fortinet,FGT3KD,fortios,7.0.14,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXTBR-R002_d41d8cd9,NRR-EXT-EXTBR-R002,cisco,!,ios,17.6,,NRR-DC-EXT-EXTBR-R001,18 KSA Tue Apr 29 2025 by c001421,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-SAMA-FW001_d41d8cd9,NRR-EXT-SAMA-FW001,fortinet,FG1K5D,fortios,7.0.14,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,NRR-EXT-TAD-FW001,fortinet,FG1K5D,fortios,7.0.14,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+SSL VPN interface_d41d8cd9,SSL VPN interface,fortinet,FGT3KD,fortios,7.0.14,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+"""translate\\.google\\..*""","""translate\\.google\\..*""",palo_alto_networks,PA-Series,panos,unknown,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+NRR-INT-INTBR-R001_d41d8cd9,NRR-INT-INTBR-R001,cisco,!,ios,17.6,,NRR-INT-INTBR-R001,37 KSA Fri May 9 2025 by c003396,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-OOB-AGG-FW001_d41d8cd9,NRR-OOB-AGG-FW001,fortinet,FG1K5D,fortios,7.0.14,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-WAN-AGG-FW001_d41d8cd9,NRR-WAN-AGG-FW001,fortinet,,fortios,7.0.16,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-BR-R001_d41d8cd9,NRR-WAN-BR-R001,cisco,!,ios,17.6,,Riyadh NRR-WAN-BR-R001,27 KSA Sun May 11 2025 by c007179,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,NRR-WAN-BR-R002,cisco,!,ios,17.6,,Riyadh NRR-WAN-BR-R002,35 KSA Tue May 13 2025 by c008930,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+palo_alto_device,palo_alto_device,palo_alto_networks,PA-Series,panos,unknown,,,,configs\UAT-PA-Backup
+uat_ig_fw001,UAT-IG-FW001,palo_alto_networks,PA-Series,panos,10.2.10,,NRR-DC-CORE,2025-05-23T03:17:08.557208,configs\UAT-PA-Internet-Backup

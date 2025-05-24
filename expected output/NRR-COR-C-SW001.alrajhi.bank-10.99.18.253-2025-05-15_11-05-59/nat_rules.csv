@@ -1,0 +1,2 @@
+device_id,rule_id,rule_name,original_source,translated_source,original_destination,translated_destination,original_service,translated_service,interface,direction,description,source_file
+# No NAT rules found in this Cisco switch configuration 

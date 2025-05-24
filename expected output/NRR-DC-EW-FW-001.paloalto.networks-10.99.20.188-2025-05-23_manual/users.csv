@@ -1,0 +1,17 @@
+device_id,username,privilege,role,description,hash_type,hash,status,source_file
+nrr_dc_ew_fw_001,admin,15,superuser,Local Administrator with hashed password,5,$5$vlcgprjw$taES7J4OFKBq0qOcvpc6yZmq1FVvzdJM8Bve22VsXH9,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c009942,15,superuser,TACACS+ Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c007178,15,superuser,TACACS+ Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c009117,15,superuser,TACACS+ Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c008889,15,superuser,TACACS+ Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c008888,15,superuser,TACACS+ Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,c013340,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ars34919,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C007011,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C005917,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013303,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013471,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013461,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013470,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013650,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,C013658,10,superreader,TACACS+ Read-Only Superuser,tacacs,external,active,configs/NRR-DC-EW-Backup 

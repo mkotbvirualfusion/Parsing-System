@@ -1,0 +1,85 @@
+device_id,interface_name,description,ip_address,subnet_mask,vlan,speed_mbps,duplex,admin_status,operational_status,mac_address,if_type,ip6_address,lldp_remote_sysname,port_security,bpdu_guard,root_guard,storm_control_pps,mtu,source_file
+nrr_wan_br_r002,Loopback0,Loopback Interface,10.99.1.15,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,Port-channel20,L3 Connection to Huawei SDWAN,,,,,,,up,up,,port-channel,,,,,,,9198,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,Port-channel20.31,L3 Connection to Huawei SDWAN R02 xgig0/0/0,10.99.5.5,255.255.255.252,31,,,up,up,,sub-interface,,,,,,,9198,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,Port-channel20.32,L3 Connection to Huawei SDWAN R02 xgig0/0/1,10.99.5.13,255.255.255.252,32,,,up,up,,sub-interface,,,,,,,9198,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,TenGigabitEthernet0/0/0,Connection to OPC-MR2-R02-WAN-ASR-02-Te0/0/1,10.99.3.114,255.255.255.252,,10000,full,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,TenGigabitEthernet0/0/1,Connection to TWR-R03-WAN-ASR-02,,,,,,,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,TenGigabitEthernet0/0/1.4082,Connection to TWR-R03-WAN-ASR-02 0/0/10,10.99.3.106,255.255.255.252,4082,2500,full,up,up,,sub-interface,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,TenGigabitEthernet0/0/2,BURAIDAH-CALLCENTER ZAIN,,,,,1500,,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,TenGigabitEthernet0/0/2.3272,BURAIDAH-CALLCENTER ZAIN,10.39.0.37,255.255.255.252,3272,1500,full,up,up,,sub-interface,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,FortyGigabitEthernet1/0/0,L3 Connection to NRR-WAN-GM-R001,10.99.3.86,255.255.255.252,,40000,full,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,FortyGigabitEthernet1/0/1,L3 Connection to NRR-WAN-GM-R002,10.99.3.94,255.255.255.252,,40000,full,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,GigabitEthernet0,Management Interface,10.99.18.10,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,Loopback0,Loopback Interface,10.99.1.14,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,Port-channel20,L3 Connection to Huawei SDWAN,,,,,,,up,up,,port-channel,,,,,,,9198,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,Port-channel20.21,L3 Connection to Huawei SDWAN R01 xgig0/0/0,10.99.5.1,255.255.255.252,21,,,up,up,,sub-interface,,,,,,,9198,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,TenGigabitEthernet0/0/0,Connection to OPC-MR2-R01-WAN-ASR-01-Te0/0/1,10.99.3.110,255.255.255.252,,10000,full,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,TenGigabitEthernet0/0/1,Connection to TWR-R03-WAN-ASR-01,,,,,,,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,FortyGigabitEthernet1/0/0,L3 Connection to NRR-WAN-GM-R001,10.99.3.82,255.255.255.252,,40000,full,up,up,,physical,,,,,,,9216,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,GigabitEthernet0,Management Interface,10.99.18.9,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,Loopback0,Loopback Interface,10.99.1.43,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,GigabitEthernet1/1/0,Internal Network Connection,10.99.100.43,255.255.255.0,100,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,GigabitEthernet1/1/1,Internal Network Connection,10.99.200.43,255.255.255.0,200,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,GigabitEthernet0,Management Interface,10.99.18.43,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,Loopback0,Loopback Interface,10.99.1.44,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,GigabitEthernet1/1/0,Internal Network Connection,10.99.100.44,255.255.255.0,100,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,GigabitEthernet1/1/1,Internal Network Connection,10.99.200.44,255.255.255.0,200,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,GigabitEthernet0,Management Interface,10.99.18.44,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,Loopback0,Loopback Interface,10.99.1.32,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,GigabitEthernet1/1/0,External Network Connection,10.99.300.32,255.255.255.0,300,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,GigabitEthernet1/1/1,External Network Connection,10.99.400.32,255.255.255.0,400,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,GigabitEthernet0,Management Interface,10.99.18.32,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,Loopback0,Loopback Interface,10.99.1.31,255.255.255.255,,,,up,up,,loopback,,,,,,,1500,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,GigabitEthernet1/1/0,External Network Connection,10.99.300.31,255.255.255.0,300,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,GigabitEthernet1/1/1,External Network Connection,10.99.400.31,255.255.255.0,400,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,GigabitEthernet0,Management Interface,10.99.18.31,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,Vlan1,Default VLAN,10.99.18.254,255.255.255.0,1,,,up,up,,vlan,,,,,,,1500,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan10,Management VLAN,10.99.10.254,255.255.255.0,10,,,up,up,,vlan,,,,,,,1500,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,GigabitEthernet1/0/1,Core Switch Port 1,,,1,1000,full,up,up,,physical,,,enabled,enabled,enabled,1000,1500,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,GigabitEthernet1/0/2,Core Switch Port 2,,,10,1000,full,up,up,,physical,,,enabled,enabled,enabled,1000,1500,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,mgmt1,Management Interface,10.99.20.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,port1,External Interface,10.99.20.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,port2,Internal Interface,10.99.21.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,port31,HA Control Link,192.0.2.1,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,port32,HA Data Link,192.0.2.5,255.255.255.252,,1000,full,up,up,,ha_data,,,,,,,1500,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,mgmt1,Management Interface,10.99.22.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,port1,External Interface,10.99.22.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,port2,Internal Interface,10.99.23.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,port31,HA Control Link,192.0.2.9,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,port32,HA Data Link,192.0.2.13,255.255.255.252,,1000,full,up,up,,ha_data,,,,,,,1500,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,mgmt1,Management Interface,10.99.24.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,port1,External Interface,10.99.24.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,port2,Internal Interface,10.99.25.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,port31,HA Control Link,192.0.2.17,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,port32,HA Data Link,192.0.2.21,255.255.255.252,,1000,full,up,up,,ha_data,,,,,,,1500,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,mgmt1,Management Interface,10.99.26.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,port1,Internal Interface,10.99.26.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,port2,DMZ Interface,10.99.27.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,mgmt1,Management Interface,10.99.28.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,port1,Internal Interface,10.99.28.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,port2,DMZ Interface,10.99.29.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,mgmt1,Management Interface,10.99.30.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,port1,OOB Interface,10.99.30.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,port2,Management Interface,10.99.31.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,port31,HA Control Link,192.0.2.25,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,port32,HA Data Link,192.0.2.29,255.255.255.252,,1000,full,up,up,,ha_data,,,,,,,1500,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,mgmt1,Management Interface,10.99.32.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,port1,WAN Interface,10.99.32.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,port2,LAN Interface,10.99.33.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,port31,HA Control Link,192.0.2.33,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,port32,HA Data Link,192.0.2.37,255.255.255.252,,1000,full,up,up,,ha_data,,,,,,,1500,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,mgmt0,Management Interface,10.99.20.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ethernet1/1,External Interface,10.99.34.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ethernet1/2,Internal Interface,10.99.35.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ethernet1/3,DMZ Interface,10.99.36.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ha1,HA Control Link Primary,192.0.2.1,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ha1-b,HA Control Link Backup,192.0.2.5,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/UAT-PA-Backup
+uat_pa_backup,ae1,Aggregate Ethernet Interface,10.99.37.1,255.255.255.0,,2000,full,up,up,,aggregate,,,,,,,9192,configs/UAT-PA-Backup
+uat_pa_internet_backup,mgmt0,Management Interface,10.99.38.188,255.255.255.0,,1000,full,up,up,,management,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ethernet1/1,External Interface,10.99.38.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ethernet1/2,Internal Interface,10.99.39.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ethernet1/3,DMZ Interface,10.99.40.1,255.255.255.0,,1000,full,up,up,,physical,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ha1,HA Control Link Primary,192.0.2.9,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ha1-b,HA Control Link Backup,192.0.2.13,255.255.255.252,,1000,full,up,up,,ha_control,,,,,,,1500,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,ae1,Aggregate Ethernet Interface,10.99.41.1,255.255.255.0,,2000,full,up,up,,aggregate,,,,,,,9192,configs/UAT-PA-Internet-Backup 

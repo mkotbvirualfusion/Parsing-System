@@ -1,0 +1,99 @@
+device_id,acl_name,seq_number,action,source_ip,source_mask,destination_ip,destination_mask,protocol,port,log,description,acl_type,direction,source_file
+nrr_cor_c_sw002,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,,,tcp,22,,Management ACL,ipv4,ingress,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,,,tcp,22,,Management ACL,ipv4,ingress,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,NEW_MGMT_ACL,1000,deny,any,,,any,,,tcp,22,,Management ACL,ipv4,ingress,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_wan_br_r001,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,30,permit,192.168.100.26,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,40,permit,192.100.4.186,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,50,permit,192.168.120.14,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,180,permit,10.110.65.192,255.255.255.224,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,190,permit,10.99.28.0,255.255.255.0,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,NEW_MGMT_ACL,1000,deny,any,,,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,sshcontrol,10,permit,10.0.22.26,255.255.255.255,any,,,any,,,SSH Control ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,sshcontrol,20,permit,10.0.22.23,255.255.255.255,any,,,any,,,SSH Control ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,sshcontrol,30,permit,10.0.10.15,255.255.255.255,any,,,any,,,SSH Control ACL,standard,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-EMAIL,10,permit,10.0.31.4,255.255.255.255,any,,,ip,,,Email ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-EMAIL,20,permit,10.0.31.122,255.255.255.255,any,,,ip,,,Email ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-HOISILON,10,permit,10.0.64.0,255.255.255.0,any,,,ip,,,Hoisilon ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-HOISILON,20,permit,10.0.64.101,255.255.255.255,any,,,ip,,,Hoisilon ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-SPLNK,10,permit,any,,10.252.126.139,255.255.255.255,ip,,,Splunk ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ACL-SPLNK,20,permit,any,,10.252.126.138,255.255.255.255,ip,,,Splunk ACL,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,Bulk-Traffic-B249,10,permit,any,,10.154.37.0,255.255.255.0,ip,,,QoS Bulk Traffic,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,Bulk-Traffic-B249,20,permit,10.0.31.4,255.255.255.255,10.154.37.0,255.255.255.0,tcp,19916-63854,,QoS Bulk Traffic,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,CoPP-Management,10,permit,any,,any,,tcp,22,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,CoPP-Management,20,permit,any,,any,,tcp,23,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,CoPP-Management,30,permit,any,,any,,tcp,80,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,CoPP-Management,40,permit,any,,any,,tcp,443,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,CoPP-Management,50,permit,any,,any,,udp,161,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r002,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,NEW_MGMT_ACL,1000,deny,any,,,any,,,any,,,Management ACL,standard,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,sshcontrol,10,permit,10.0.22.26,255.255.255.255,any,,,any,,,SSH Control ACL,standard,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,ACL-HOISILON,10,permit,10.0.64.0,255.255.255.0,any,,,ip,,,Hoisilon ACL,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CARDEALER-RESTRICT,10,permit,10.0.30.94,255.255.255.255,any,,,ip,,,Car Dealer Restriction,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Management,10,permit,any,,any,,tcp,22,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Management,20,permit,any,,any,,tcp,23,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Management,30,permit,any,,any,,tcp,80,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Monitoring,10,permit,any,,any,,udp,161,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Monitoring,20,permit,any,,any,,udp,162,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Routing,10,permit,any,,any,,tcp,179,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,CoPP-Routing,20,permit,any,,any,,ospf,,,Control Plane Protection,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,VTY-ACL,10,permit,10.99.28.0,255.255.255.0,any,,,any,,,VTY Access Control,extended,ingress,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_int_intbr_r001,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,NEW_MGMT_ACL,1000,deny,any,,,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,CoPP-Management,10,permit,any,,any,,tcp,22,,Control Plane Protection,extended,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,CoPP-Management,20,permit,any,,any,,tcp,23,,Control Plane Protection,extended,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,FOR_TADAWUL,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,Tadawul Access,extended,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,SWIFTNET,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,SWIFT Network Access,extended,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,TRANSFAST,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,Transfast Access,extended,ingress,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r002,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,NEW_MGMT_ACL,1000,deny,any,,,any,,,any,,,Management ACL,standard,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,CoPP-Management,10,permit,any,,any,,tcp,22,,Control Plane Protection,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,FOR_TADAWUL,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,Tadawul Access,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,MARIO,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,Mario System Access,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,Outside_In,10,permit,any,,10.0.30.0,255.255.255.0,ip,,,Outside to Inside Access,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,SWIFTNET,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,SWIFT Network Access,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,TRANSFAST,10,permit,10.0.30.0,255.255.255.0,any,,,ip,,,Transfast Access,extended,ingress,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_ext_extbr_r001,as-path-access-list-1,1,deny,.*,,,,,,,AS Path Filter,as-path,ingress,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,as-path-access-list-10,1,permit,^65000_,,,,,,,AS Path Filter,as-path,ingress,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,as-path-access-list-10,2,permit,^35819_,,,,,,,AS Path Filter,as-path,ingress,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r002,as-path-access-list-1,1,deny,.*,,,,,,,AS Path Filter,as-path,ingress,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,as-path-access-list-10,1,permit,^$,,,,,,,AS Path Filter,as-path,ingress,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_sama_fw001,CRQ164702-IPS-PortalAccess,122,accept,H-10.98.151.152,,10.138.226.240,,https,,,CRQ167798,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,API-Gateway-Outgoing,114,accept,ARB-API-Gateway-Node-1,,IPS-API-Gateway-Node-1,,https,,,API Gateway Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,API-Gateway-Outgoing-2,115,accept,ARB-API-GW-Node-2,,IPS-API-Gateway-Node-1,,https,,,API Gateway Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,BPS-MQ-2-Outgoing,111,accept,ARB-IPS-MQ2,,BPS-MQ2,,tcp,15220,,BPS Message Queue,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,MPP-MQ1-Outgoing,112,accept,ARB-IPS-MQ-1,,MPP-MQ-1,,tcp,15230,,MPP Message Queue,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,MPP-MQ2-Outgoing,113,accept,ARB-IPS-MQ2,,MPP-MQ-2,,tcp,15230,,MPP Message Queue,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,REQ0000360328,206,accept,H-172.21.194.105-32,,H-10.158.113.69,,https,,,MADA Pay Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,CRQ162441-162362-165071-231195,25,accept,H-10.96.131.15,,10.158.1.125,,https,,,CPS Server Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,CRQ170818-231195-TMS_CPS_MADA,130,accept,TMS_CPS_MADA_REPORTS-USERS,,KAFD-DC-TMS_CPS_MADA_REPORTS-SRV,,https,,,TMS CPS MADA Reports,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,REQ0000321931,200,accept,10.99.130.36,,10.105.5.50,,https,,,MADA Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,TSD-UNIX-ADMIN,81,accept,h-10.98.153.43/32,,h-10.206.48.251,,ssh,,,Unix Admin Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,REQ0000211531,187,accept,10.98.153.128,,h-10.206.48.251,,ssh,,,SSH Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,REQ0000289900,194,accept,10.242.77.36-10.242.77.37,,h-10.206.48.251,,ssh,,,Multi-protocol Access,firewall,forward,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,PTTP-CSD-GUI-Access,49,accept,PTTP-Workstations,,CSD-GUI,,https,,,CRQ000000181259,firewall,forward,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,PTTP-NDAF-Reports-Prod,50,accept,PTTP-Workstations,,NDAF-Reports,,https,,,CRQ000000181259,firewall,forward,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,PTTP-AP-Surveillance,51,accept,H-10.96.104.15,,h-192.168.63.117,,tcp,10145-10148,,AP Surveillance,firewall,forward,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,PTTP-AP-Surveillance-DR,103,accept,H-10.96.104.15,,H-192.168.223.217,,tcp,10145-10148,,AP Surveillance DR,firewall,forward,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_oob_agg_fw001,OOB-Management-Policy,1,accept,192.168.100.0/24,,10.99.0.0/16,,any,,,Out-of-band Management,firewall,forward,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,OOB-SNMP-Policy,2,accept,10.99.28.0/24,,any,,udp,161,,SNMP Monitoring,firewall,forward,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,OOB-SSH-Policy,3,accept,10.99.28.0/24,,any,,tcp,22,,SSH Management,firewall,forward,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,WAN-Internet-Policy,1,accept,10.0.0.0/8,,any,,any,,,WAN Internet Access,firewall,forward,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,WAN-VPN-Policy,2,accept,192.168.0.0/16,,10.0.0.0/8,,any,,,WAN VPN Access,firewall,forward,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_ext_ext_fw001,External-DMZ-Policy,1,accept,10.99.0.0/16,,172.16.0.0/12,,any,,,External DMZ Access,firewall,forward,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,External-Internet-Policy,2,accept,10.0.0.0/8,,any,,tcp,80,,External Internet HTTP,firewall,forward,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,External-Internet-Policy,3,accept,10.0.0.0/8,,any,,tcp,443,,External Internet HTTPS,firewall,forward,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,Internal-Server-Policy,1,accept,10.0.0.0/8,,192.168.0.0/16,,any,,,Internal Server Access,firewall,forward,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,Internal-DB-Policy,2,accept,10.99.0.0/16,,10.0.0.0/8,,tcp,1521,,Database Access,firewall,forward,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,PA-Internal-Policy,1,allow,10.0.0.0/8,,192.168.0.0/16,,application-default,,,PA Internal Access,security,intrazone,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,PA-DMZ-Policy,2,allow,192.168.0.0/16,,10.99.0.0/16,,application-default,,,PA DMZ Access,security,interzone,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+uat_pa_backup,UAT-Allow-All,1,allow,any,,any,,application-default,,,UAT Allow All Traffic,security,universal,configs/UAT-PA-Backup
+uat_pa_backup,UAT-Web-Policy,2,allow,10.99.0.0/16,,any,,web-browsing,,,UAT Web Browsing,security,interzone,configs/UAT-PA-Backup
+uat_pa_backup,UAT-SSH-Policy,3,allow,10.99.28.0/24,,any,,ssh,,,UAT SSH Access,security,interzone,configs/UAT-PA-Backup
+uat_pa_internet_backup,UAT-Internet-Allow,1,allow,10.99.0.0/16,,any,,application-default,,,UAT Internet Access,security,interzone,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,UAT-Internet-Web,2,allow,any,,any,,web-browsing,,,UAT Internet Web,security,universal,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,UAT-Internet-DNS,3,allow,any,,any,,dns,,,UAT Internet DNS,security,universal,configs/UAT-PA-Internet-Backup 

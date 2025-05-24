@@ -1,0 +1,1 @@
+device_id,process_id,router_id,area,interface,area_type,network_type,hello_interval,dead_interval,priority,cost,authentication,passive_interface,redistribute,source_file 

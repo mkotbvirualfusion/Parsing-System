@@ -1,0 +1,2 @@
+device_id,as_number,router_id,neighbor_ip,neighbor_as,vrf,address_family,route_map_in,route_map_out,update_source,ebgp_multihop,next_hop_self,description,source_file
+# No BGP configuration found in this device 

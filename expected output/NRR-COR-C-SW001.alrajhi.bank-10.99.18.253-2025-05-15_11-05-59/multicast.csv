@@ -1,0 +1,7 @@
+device_id,protocol,rp_address,group_list,interface,mode,ssm_range,anycast_rp,auto_rp_enabled,source_file
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,,sparse-mode,232.0.0.0/8,10.99.1.1,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,,sparse-mode,232.0.0.0/8,10.99.1.4,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,Vlan3301,sparse-mode,232.0.0.0/8,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,loopback10,sparse-mode,232.0.0.0/8,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,Ethernet1/20.405,sparse-mode,232.0.0.0/8,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,pim,10.99.1.100,239.0.0.0/8,Ethernet2/20.407,sparse-mode,232.0.0.0/8,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

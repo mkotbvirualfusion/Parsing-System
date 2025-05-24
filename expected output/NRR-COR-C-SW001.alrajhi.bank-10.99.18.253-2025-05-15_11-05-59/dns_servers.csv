@@ -1,0 +1,9 @@
+device_id,dns_server,vrf,domain_name,domain_lookup_enabled,source_file
+nrr_cor_c_sw001,10.0.10.10,default,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.10.20,default,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.11.10,default,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.11.11,default,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.10.10,management,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.11.10,management,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.11.11,management,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.10.20,management,alrajhi.bank,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

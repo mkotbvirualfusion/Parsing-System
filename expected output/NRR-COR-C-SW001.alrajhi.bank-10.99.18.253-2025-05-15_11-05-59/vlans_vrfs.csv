@@ -1,0 +1,20 @@
+device_id,vlan_id,vlan_name,description,state,mode,svi_ip,vrf_name,vrf_rd,active,source_file
+nrr_cor_c_sw001,1,default,Default VLAN,active,access,,,,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3279,dr_vpn_replica_Inside,***L3 Connection to dr_vpn_replica Inside***,active,routed,10.99.2.105/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3301,L3_to_WAN-FW,***L3 Connection to WAN-FW***,active,routed,10.99.2.1/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3302,L3_to_INT-FW,***L3 Connection to INT-FW***,active,routed,10.99.2.9/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3303,L3_to_SAMA-EXT-FW,***L3 Connection to SAMA-EXT-FW***,active,routed,10.99.2.17/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3304,L3_to_EXT-EXT-FW,***L3 Connection to EXT-EXT-FW***,active,routed,10.99.2.25/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3305,L3_to_TAD-EXT-FW,***L3 Connection to TAD-EXT-FW***,active,routed,10.99.2.33/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3306,L3_to_OOB-AGG-FW,***L3 Connection to OOB-AGG-FW***,active,routed,10.99.2.41/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3307,L3_to_NRR-REP-OTV-R001,***L3 Connection to NRR-REP-OTV-R001***,active,routed,10.99.2.49/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3308,L3_to_NRR-REP-OTV-R002,***L3 Connection to NRR-REP-OTV-R002***,active,routed,10.99.2.57/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3309,ForcePoint_INSIDE,***L3 Connection to ForcePoint Proxy Inside***,active,routed,10.99.5.97/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3310,ForcePoint_OUTSIDE,***L3 Connection to ForcePoint Proxy Outside***,active,routed,10.99.5.105/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3315,L3-USER-CAMPUS,***L3 Connection to NRR_USER_CAMPUS***,active,routed,10.99.2.81/29,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3405,DC_MCAST_Backup,Connection to NRR-DC-BLF-963 DC:MCAST Backup A12,active,subinterface,10.99.0.42/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3407,DC_MCAST_Backup,Connection to NRR-DC-BLF-1064 DC:MCAST Backup A12,active,subinterface,10.99.0.50/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3409,CORE_Main_A10,Connection to NRR-DC-BLF-963 CORE:A Main A10,active,subinterface,10.99.0.58/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3411,CORE_Main_A10,Connection to NRR-DC-BLF-1064 CORE:A Main A10,active,subinterface,10.99.0.66/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3413,MGMT_inb,Connection to NRR-DC-BLF-963 MGMT:inb,active,subinterface,10.99.0.74/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,3415,MGMT_inb,Connection to NRR-DC-BLF-1064 MGMT:inb,active,subinterface,10.99.0.82/30,,,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

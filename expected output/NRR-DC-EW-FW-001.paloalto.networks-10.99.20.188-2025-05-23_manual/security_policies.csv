@@ -1,0 +1,9 @@
+device_id,policy_name,rule_type,action,source_zone,destination_zone,application,service,description,status,source_file
+nrr_dc_ew_fw_001,botnet_dynamic_dns,threat_prevention,detect,any,any,dns,any,Dynamic DNS detection with threshold 5,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_malware_sites,threat_prevention,detect,any,any,web-browsing,any,Malware sites detection with threshold 5,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_recent_domains,threat_prevention,detect,any,any,web-browsing,any,Recent domains detection with threshold 5,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_ip_domains,threat_prevention,detect,any,any,web-browsing,any,IP domains detection with threshold 10,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_unknown_executables,threat_prevention,detect,any,any,web-browsing,any,Executables from unknown sites detection,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_irc,threat_prevention,detect,any,any,irc,any,IRC application detection for botnet,enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_unknown_tcp,threat_prevention,detect,any,any,unknown-tcp,any,Unknown TCP traffic detection (10 dest/hour),enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_unknown_udp,threat_prevention,detect,any,any,unknown-udp,any,Unknown UDP traffic detection (10 dest/hour),enabled,configs/NRR-DC-EW-Backup 

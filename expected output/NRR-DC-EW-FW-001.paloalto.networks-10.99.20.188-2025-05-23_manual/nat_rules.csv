@@ -1,0 +1,1 @@
+device_id,rule_id,nat_type,orig_src,orig_dst,orig_svc,trans_src,trans_dst,trans_svc,zone_in,zone_out,action,hitcnt,source_file 

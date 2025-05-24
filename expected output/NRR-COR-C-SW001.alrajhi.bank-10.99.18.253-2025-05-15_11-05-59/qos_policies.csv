@@ -1,0 +1,2 @@
+device_id,policy_name,class_name,interface,direction,bandwidth,priority,queue_limit,dscp_marking,cos_marking,description,source_file
+nrr_cor_c_sw001,strict,default,global,egress,,,,,,,CoPP profile strict enabled,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

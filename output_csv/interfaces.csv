@@ -1,0 +1,453 @@
+device_id,interface_name,description,ip_address,subnet_mask,vlan,speed_mbps,duplex,admin_status,operational_status,mac_address,if_type,ip6_address,lldp_remote_sysname,port_security,bpdu_guard,root_guard,storm_control_pps,mtu,source_file
+nrr_cor_c_sw002,Vlanan1,,,,1,,,up,up,,vlan,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3279,***L3 Connection to dr_vpn_replica Inside***,10.99.2.106,/29,3279,,,down,down,,vlan,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3301,***L3 Connection to WAN-FW***,10.99.2.2,/29,3301,,,down,down,,vlan,,,,,,,9198,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3302,***L3 Connection to INT-FW***,10.99.2.10,/29,3302,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3303,***L3 Connection to SAMA-EXT-FW***,10.99.2.18,/29,3303,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3304,***L3 Connection to EXT-EXT-FW***,10.99.2.26,/29,3304,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3305,***L3 Connection to TAD-EXT-FW***,10.99.2.34,/29,3305,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3306,***L3 Connection to OOB-AGG-FW***,10.99.2.42,/29,3306,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3307,***L3 Connection to NRR-REP-OTV-R001***,10.99.2.50,/29,3307,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3308,***L3 Connection to NRR-REP-OTV-R002***,10.99.2.58,/29,3308,,,down,down,,vlan,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3309,***L3 Connection to ForcePoint Proxy Inside***,10.99.5.98,/29,3309,,,down,down,,vlan,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3310,***L3 Connection to ForcePoint Proxy Outside***,10.99.5.106,/29,3310,,,down,down,,vlan,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlanan3315,***L3 Connection to NRR_USER_CAMPUS***,10.99.2.82,/29,3315,,,down,down,,vlan,,,,,,,9126,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel10,***Connection to NRR-COR-C-SW001 Port-channel10 VPC_PEER_LINK***,,,,,,up,up,,port-channel,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel11,***Connection to NRR-COR-C-SW001 Port-channel11 VPC-KA ***,10.99.2.202,/30,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel20,***Connection to NRR-WAN-AGG-FW001 Bundle-ID 20***,,,,40000,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel21,***Connection to NRR-WAN-AGG-FW002 Bundle-ID 21***,,,,40000,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel22,***Connection to NRR-INT-AGG-SW Bundle-ID 22***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel23,***Connection to NRR-EXT-AGG-SW Bundle-ID 23***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel24,***Connection to NRR-OOB-AGG-FW001 Bundle-ID 24***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel25,***Connection to NRR-OOB-AGG-FW002 Bundle-ID 25***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel26,***Connection to NRR-REP-OTV-R001 Bundle-ID 26***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel27,***Connection to NRR-REP-OTV-R002 Bundle-ID 27***,,,,,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,port-channel28,***Connection to NRR-USER-CAMPUS-SW01-Bundle-ID 28***,,,,10000,,up,up,,port-channel,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/1,***Connection to NRR-INT-AGG-SW001 Eth1/41***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/2,***Connection to NRR-EXT-AGG-SW001 Eth1/41***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/3,***Connection to NRR-OOB-AGG-FW001 port40***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/4,***Connection to NRR-REP-OTV-R001 TenG0/1/1***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/5,***Connection to NRR-USER-CAMPUS-SW01-Bundle-ID port 50***,,,,10000,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/6,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/7,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/8,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/9,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/10,***Connection to NRR-WAN-AGG-FW001 port 26***,,,,40000,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/11,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/12,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/13,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/14,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/15,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/16,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/17,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/18,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/19,***Connection to NRR-DC-BLF-963 Eth1/2***,,,,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/19.410,***Connection to NRR-DC-BLF-963 Eth1/2 CORE:A Main A10***,10.99.0.62,/30,3410,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/20,***Connection to NRR-DC-BLF-963 Eth1/5***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/20.406,***Connection to NRR-DC-BLF-963 Eth1/5 DC:MCAST Backup A12***,10.99.0.46,/30,3406,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/20.414,***Connection to NRR-DC-BLF-963 Eth1/5 MGMT:inb ***,10.99.0.78,/30,3414,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/21,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/22,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/23,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/24,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/25,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/26,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/27,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/28,***Connection to NRR-COR-C-SW001 Eth1/28***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/29,***Connection to NRR-COR-C-SW001 Eth1/29***,,,,,,down,down,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/30,***Connection to NRR-COR-C-SW001 Eth1/30***,,,,,,down,down,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/31,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/32,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/33,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/34,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/35,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet1/36,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/1,***Connection to NRR-INT-AGG-SW002 Eth1/41***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/2,***Connection to NRR-EXT-AGG-SW002 Eth1/41***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/3,***Connection to NRR-OOB-AGG-FW002 port40***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/4,***Connection to NRR-REP-OTV-R002 TenG0/1/1***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/5,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/6,***Connection to tetration Leaf-2 port 1/36***,10.99.2.69,/30,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/7,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/8,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/9,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/10,***Connection to NRR-WAN-AGG-FW002 port 26***,,,,40000,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/11,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/12,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/13,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/14,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/15,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/16,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/17,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/18,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/19,***Connection to NRR-DC-BLF-1064 Eth1/2***,,,,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/19.412,***Connection to NRR-DC-BLF-1064 Eth1/2 CORE:A Main A10***,10.99.0.70,/30,3412,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/20,***Connection to NRR-DC-BLF-1064 Eth1/5***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/20.403,,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/20.408,***Connection to NRR-DC-BLF-1064 Eth1/5 DC:MCAST Backup A12***,10.99.0.54,/30,3408,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/20.416,***Connection to NRR-DC-BLF-1064 Eth1/5 MGMT:inb ***,10.99.0.86,/30,3416,,,down,down,,ethernet,,,,,,,9000,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/21,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/22,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/23,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/24,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/25,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/26,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/27,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/28,***Connection to NRR-COR-C-SW001 Eth2/28***,,,,,,down,down,,ethernet,,,,,,,9216,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/29,***Connection to NRR-COR-C-SW001 Eth2/29***,,,,,,down,down,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/30,***Connection to NRR-COR-C-SW001 Eth2/30***,,,,,,down,down,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/31,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/32,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/33,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/34,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/35,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Etherneternet2/36,,,,,,,up,up,,ethernet,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,mgmt0,***Connection to OOB-FEX119 Eth119/0/4 and OOB-FEX117 Eth118/0/4***,10.99.18.254,/24,,,,up,up,,management,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback0,***OSPF CORE Process***,10.99.1.4,/32,,,,up,up,,loopback,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback1,***OSPF WAN Process***,10.99.1.5,/32,,,,up,up,,loopback,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback2,***OSPF INT Process***,10.99.1.6,/32,,,,up,up,,loopback,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback10,***Auto-RP Loopback***,10.99.1.100,/32,,,,up,up,,loopback,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback11,,192.168.1.11,/32,,,,up,up,,loopback,,,,,,,1500,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+NRR-EXT-EXT-FW001_d41d8cd9,port1,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port2,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port3,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port4,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port5,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port6,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port7,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port8,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port9,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port10,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port11,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port12,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port13,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port14,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port15,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,port16,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,mgmt1,oob-mgmt,10.99.20.162,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,mgmt2,,192.168.2.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,modem,,,,,,,down,,,physical,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,naf.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,l2t.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,ssl.root,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,EXT-AGG-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,EXT-EXT-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,loopback0,,10.99.1.37,/32,,,,up,,,loopback,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3304-COR-SW,,10.99.2.28,/29,3304,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3191-EXTBR-R,,192.168.8.1,/24,3191,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3350-ARI-TAK,,10.99.4.4,/29,3350,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3351-TCC,,10.99.4.12,/29,3351,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3353-STC-SMS,,10.99.4.28,/29,3353,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3354-SAWA,,10.99.4.36,/29,3354,,,down,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3355-ELM,,10.99.4.44,/29,3355,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3356-SIMAH,,10.99.4.52,/29,3356,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3357-SINNAD,,10.99.4.60,/29,3357,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3358-ARBMALAYSI,,10.99.4.68,/29,3358,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3360-Bloomberg,,172.21.182.1,/24,3360,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3352-REUTERS,Treasury_Private_Network,192.9.100.250,/24,3352,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3542-VISA,,172.21.191.1,/24,3542,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3543-MASTERCARD,,10.4.122.99,/24,3543,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3361-GIB,,10.99.4.75,/29,3361,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,ARBPAYMENT,,10.99.4.84,/29,3362,,,down,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,MOF,,10.99.4.92,/29,3545,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,NEOLEAP,,10.99.4.99,/29,3363,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,MOI,,10.99.4.109,/29,3364,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,EMKAN,,10.99.4.118,/29,3365,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3546-OCI,,172.21.200.1,/24,3546,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,CEQUENS-SMS,,10.99.4.125,/29,3547,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,NEOLEAP-DR,,10.99.4.132,/29,3370,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,MOF-DR,,10.99.4.140,/29,3371,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,3548-ProjectC,,10.99.4.148,/29,3548,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXT-FW001_d41d8cd9,T2-SMS,,10.99.4.155,/29,3344,,,up,,,unknown,,,,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXTBR-R002_d41d8cd9,Null0,*** Loopback0 ***,10.99.1.33,/32,,,,down,,,unknown,,,,,,,9216,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-SAMA-FW001_d41d8cd9,port1,,192.168.100.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port2,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port3,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port4,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port5,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port6,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port7,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port8,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port9,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port10,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port11,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port12,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port13,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port14,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port15,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port16,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port17,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port18,SADAD_eTRUST,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port19,SADAD_eTRUST,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port20,SJN-OUTSIDE-MGMT,10.206.10.100,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port21,SARIE_MADA,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port22,SARIE_MADA,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port23,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port24,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port25,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port26,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port27,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port28,NRR-eTRUST,10.207.96.200,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port29,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port30,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port31,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port32,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port33,EXT-SARIE,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port34,EXT-SARIE,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port35,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port36,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port37,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port38,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port39,COR-SW,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,port40,COR-SW,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,mgmt1,NRR-oob-mgmt,10.99.20.160,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,mgmt2,,192.168.2.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,modem,,,,,,,down,,,physical,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,naf.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,l2t.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,ssl.root,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,EXT-AGG-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,1MDC2-RYD-L3-1,SADAD_eTRUST,,,,,,up,,,aggregate,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,2MDC2-RYD-L3-1,,,,,,,up,,,aggregate,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,loopback0,,10.99.1.36,/32,,,,up,,,loopback,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3303-COR-SW,,10.99.2.20,/29,3303,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,NRR-EXT-SAR,,,,,,,up,,,aggregate,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,27-MDC2-PO2,SJN-OUTSIDE-SADAD_eTRUST,10.206.9.100,/24,27,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,36-MDC2-PO3,SJN-OUTSIDE-SARIE_MADA_IN,10.206.12.100,/24,36,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3391-SARIE-GW,,10.206.48.200,/24,3391,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3392--SARIE-WS,,10.206.50.200,/24,3392,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3542-NEWSAR-ISN,,172.27.1.200,/24,3542,,,down,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3193-E-TRUST,,10.206.96.200,/24,3193,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,SPG-NLP,TO NRR-EXT-AGG-SW,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3401-SPG-NLP,,10.99.4.212,/29,3401,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,CFC,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-SAMA-FW001_d41d8cd9,3400-CFC,,10.99.4.253,/29,3400,,,up,,,unknown,,,,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port1,,192.168.100.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port2,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port3,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port4,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port5,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port6,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port7,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port8,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port9,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port10,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port11,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port12,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port13,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port14,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port15,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port16,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port17,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port18,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port19,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port20,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port21,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port22,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port23,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port24,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port25,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port26,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port27,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port28,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port29,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port30,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port31,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port32,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port33,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port34,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port35,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port36,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port37,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port38,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port39,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,port40,,,,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,mgmt1,oob-mgmt,10.99.20.164,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,mgmt2,,192.168.2.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,modem,,,,,,,down,,,physical,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,naf.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,l2t.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,ssl.root,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,EXT-TAD-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,EXT-AGG-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,loopback0,,10.99.1.38,/32,,,,up,,,loopback,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,3305-COR-SW,,10.99.2.36,/29,3305,,,up,,,unknown,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,3359-EXT-TADBR,,10.99.4.76,/29,3359,,,up,,,unknown,,,,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+SSL VPN interface_d41d8cd9,naf.ASA-VDOM,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,l2t.ASA-VDOM,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,ssl.ASA-VDOM,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,3302-COR-SW,,10.99.2.12,/29,3302,,,up,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,16-DMZ-SRVs,,172.16.0.21,/16,16,,,up,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,20-DMZ-SRVs,DMZ20,172.20.0.1,/16,20,,,down,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,mgmt-cisco,Management,10.252.123.19,/24,,,,down,,,loopback,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,26-Pcloud-IN,,172.25.0.33,/27,26,,,up,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,Guest-Wifi-OUT,,10.99.8.3,/29,35,,,up,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+SSL VPN interface_d41d8cd9,Sbdry-Pcloud-IN,NSX-Sbdry-Pcloud-IN,172.26.0.33,/27,39,,,up,,,unknown,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+"""translate\\.google\\..*""",edit,,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""NRR-INT-IPS""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""INT-DMZ17G10-SW""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""INT-DMZ16-PA""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""3360-INTBR-R1_2""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""NSX-Pcloud-OUT""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""INT-AGG-SW""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""16-DMZ-SRVs-PA""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""emkan""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""16-DMZ-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""3302-COR-SW""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","Pairs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""17-DMZ1-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""18-DMZ2-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""19-DMZ3-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""181-DMZ4-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""149-DMZ5-SRVs""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""VPN-DR-Replica""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""Sbdy-Pcloud-OUT""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""outside_new""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""",MANUALLY,,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""Drahim-ARB""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""EMKAN-DR""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""Tadawul-OCI-1""",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""","""Oracle",,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""",disable,,,,,,,up,up,,ethernet,,,,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+NRR-INT-INTBR-R001_d41d8cd9,Null0,***IGP Loopback***,10.99.1.40,/32,,,,down,,,unknown,,,,,,,9216,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-OOB-AGG-FW001_d41d8cd9,port1,,192.168.100.99,/24,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port2,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port3,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port4,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port5,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port6,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port7,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port8,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port9,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port10,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port11,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port12,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port13,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port14,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port15,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port16,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port17,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port18,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port19,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port20,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port21,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port22,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port23,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port24,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port25,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port26,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port27,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port28,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port29,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port30,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port31,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port32,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port33,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port34,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port35,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port36,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port37,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port38,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port39,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,port40,,,,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,mgmt1,oob-mgmt,10.99.20.168,/24,,,,up,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,mgmt2,,192.168.2.99,/24,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,modem,,,,,,,down,,,physical,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,naf.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,l2t.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,ssl.root,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,NRR-COR-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,OOB-ACC-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,OOB-AGG-SW,,,,,,,up,,,aggregate,,,,,,,9216,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,loopback0,,10.99.1.60,/32,,,,up,,,loopback,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3306-COR-SW,,10.99.2.44,/29,3306,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3370-OOB-NTW,All Network Devices OOB M,10.99.18.1,/24,3370,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,NRR-OOB,,10.98.0.249,/29,3375,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3371-OOB-ACI,ACI Out Band Mgmt,10.99.17.1,/24,3371,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3374-OOB-EXADAT,EXA-DATA-MGMT,10.99.21.1,/24,3374,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3376-OOB-SYSTEM,System Chassis Management,10.99.22.1,/24,3376,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3377-OOB-ISD,ISD OOB Mgmt,10.99.23.1,/24,3377,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3382-OOB-NMS,Monitoring Server System,10.99.28.1,/24,3382,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3383-OOB-PWDISI,"PowerMax,DD,ISILON",10.99.29.1,/24,3383,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3384-OOB-IMVISI,Imvision Controller,10.99.30.1,/24,3384,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3385-OOB-PDU,PDU Vlans,10.99.31.1,/24,3385,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3373-OOB-SEC,Network Security Devices,10.99.20.1,/24,3373,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3372-OOB-SYSLOG,,10.99.19.1,/24,3372,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3378-SYS_VDI_MG,,10.99.24.1,/24,3378,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,3379-SYSCHS-MGM,System_Chas_Mgmt_02,10.99.25.1,/24,3379,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,CRS-REP1-VL3890,,10.243.224.1,/24,3890,,,down,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,CRS-BKP-VL3891,,10.243.228.1,/24,3891,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,CRS-OOB-VL3892,,10.243.229.1,/24,3892,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,EMC_Sys_Mgmt,,10.99.26.1,/24,3380,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,NRR_DMZ_ACI,,10.127.17.1,/24,3895,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,NRR_DMZ_NW_Dvcs,,10.127.18.1,/24,3896,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,Vertiv-PDU,,10.99.27.1,/24,3381,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-OOB-AGG-FW001_d41d8cd9,DCIM-MGMT,,10.127.30.1,/24,3899,,,up,,,unknown,,,,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port1,,80.80.80.1,/30,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port2,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port3,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port4,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port5,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port6,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port7,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port8,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port9,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port10,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port11,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port12,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port13,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port14,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port15,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port16,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port17,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port18,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port19,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port20,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port21,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port22,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port23,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port24,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port25,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port26,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port27,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,port28,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,mgmt1,oob-mgmt,10.99.20.166,/24,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,mgmt2,,192.168.2.99,/24,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,mgmt3,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,ha1,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,ha2,,,,,,,up,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,modem,,,,,,,down,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,naf.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,l2t.root,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,ssl.root,SSL VPN interface,,,,,,down,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,naf.mgmt-vdom,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,l2t.mgmt-vdom,,,,,,,up,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,ssl.mgmt-vdom,SSL VPN interface,,,,,,up,,,tunnel,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,npu0_vlink0,,,,,,,down,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,npu0_vlink1,,,,,,,down,,,physical,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,NRR-COR-SW,,,,,,,up,,,aggregate,,,,,,,9198,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,WAN-AGG-SW,,,,,,,up,,,aggregate,,,,,,,9198,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3301-COR-SW,,10.99.2.4,/29,3301,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3320-WAN-GM,,10.99.3.2,/30,3320,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3321-WAN-GM,,10.99.3.6,/30,3321,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3326-VSA-SIHUB,,10.99.3.26,/30,3326,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3327-VSA-SIHUB,,10.99.3.30,/30,3327,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3328-VSA-DSHUB,,10.99.3.34,/30,3328,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3329-VSA-DSHUB,,10.99.3.38,/30,3329,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,3330-VSA-3GHUB,,10.99.3.42,/30,3330,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,Loopbackopback0,,10.99.1.25,/32,,,,up,,,loopback,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-HUWAEI,3440-SD-WAN-HUWAEI,10.99.3.181,/30,3440,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-HUWAEI-3,3441-SD-WAN-HUWAEI,10.99.3.185,/30,3441,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-Cisco-1,3442-SD-WAN-Cisco,10.99.3.242,/30,3442,,,down,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-Cisco-2,3443-SD-WAN-Cisco,10.99.3.246,/30,3443,,,down,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-Cisco-3,3444-SD-WAN-Cisco,10.99.3.226,/30,3444,,,down,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,SD-WAN-Cisco-4,3445-SD-WAN-Cisco,10.99.3.230,/30,3445,,,down,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,HundredGigEawei-SDWAN,,,,,,,up,,,aggregate,,,,,,,9198,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,200Huawei-Olay1,,10.127.5.18,/30,200,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,210Huawei-Olay2,,10.127.5.22,/30,210,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,140-Huawei-Reg1,,10.127.5.26,/30,140,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-AGG-FW001_d41d8cd9,141-Huawei-Reg2,,10.127.5.30,/30,141,,,up,,,unknown,,,,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-BR-R001_d41d8cd9,Null0,***L3 Connection to Huawei SDWAN R01 xgig0/0/0***,10.99.1.14,/32,,,,down,,,unknown,,,,,,,9198,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,Null0,***L3 Connection to Huawei SDWAN R02 xgig0/0/0***,10.99.1.15,/32,,,,down,,,unknown,,,,,,,9198,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+palo_alto_device,Rule,,,,,,,up,up,,ethernet,,,,,,,,configs\UAT-PA-Backup
+uat_ig_fw001,mgmt0,Management Interface,10.242.123.60,/24,,1000,full,up,up,,management,,,,,,,1500,configs\UAT-PA-Internet-Backup

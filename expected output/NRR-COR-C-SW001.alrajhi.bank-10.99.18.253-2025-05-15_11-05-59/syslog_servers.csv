@@ -1,0 +1,9 @@
+device_id,syslog_server,severity_level,facility,port,vrf,source_interface,description,source_file
+nrr_cor_c_sw001,VHN-NMS-02,7,16,514,management,mgmt0,Primary log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.252.126.161,5,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.61.20,5,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.252.126.170,5,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.252.126.129,5,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.252.105.67,6,16,1517,management,mgmt0,Log server with custom port,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.99.19.90,6,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.242.212.185,6,16,514,management,mgmt0,Log server,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

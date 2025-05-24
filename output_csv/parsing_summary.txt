@@ -1,0 +1,31 @@
+Network Configuration Parser - Summary Report
+==================================================
+
+Total files found: 16
+Successfully processed: 14
+Failed to process: 2
+Success rate: 87.5%
+
+Generated CSV files (22):
+  - aaa_servers.csv
+  - acls.csv
+  - crypto_tls.csv
+  - devices.csv
+  - dns_configs.csv
+  - feature_flags.csv
+  - firmware_inventory.csv
+  - ha_status.csv
+  - hsrp_vrrp_groups.csv
+  - interfaces.csv
+  - log_targets.csv
+  - login_banner.csv
+  - nat_rules.csv
+  - ntp.csv
+  - routing_dynamic.csv
+  - routing_static.csv
+  - service_inventory.csv
+  - snmp.csv
+  - users_local.csv
+  - vlans_vrfs.csv
+  - vpn_tunnels.csv
+  - zones.csv

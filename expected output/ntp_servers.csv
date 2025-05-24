@@ -1,0 +1,77 @@
+device_id,ntp_server,prefer,key_id,version,vrf,description,source_interface,authentication_enabled,source_file
+nrr_wan_br_r002,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,10.0.250.2,yes,,4,Mgmt-intf,Preferred NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,10.0.250.2,no,1,4,Mgmt-intf,Authenticated NTP server,GigabitEthernet0,yes,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,10.0.250.2,yes,,4,Mgmt-intf,Preferred NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,10.0.250.2,yes,,4,Mgmt-intf,Preferred NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,10.0.250.2,yes,,4,Mgmt-intf,Preferred NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,10.11.3.240,no,,4,Mgmt-intf,Primary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,10.0.250.2,yes,,4,Mgmt-intf,Preferred NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,10.0.3.52,no,,4,Mgmt-intf,Secondary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,10.0.3.53,no,,4,Mgmt-intf,Tertiary NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,10.11.3.239,no,,4,Mgmt-intf,Backup NTP server,GigabitEthernet0,no,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,10.0.3.52,no,,4,management,Secondary NTP server,mgmt0,no,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.0.3.53,no,,4,management,Tertiary NTP server,mgmt0,no,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.0.250.2,yes,1,4,management,Preferred authenticated NTP server,mgmt0,yes,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.11.3.239,no,,4,management,Backup NTP server,mgmt0,no,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,10.11.3.240,no,,4,management,Primary NTP server,mgmt0,no,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,10.11.3.239,no,,4,default,Backup NTP server,mgmt1,no,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,10.11.3.240,no,,4,default,Primary NTP server,mgmt1,no,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,10.11.3.239,no,,4,default,Backup NTP server,mgmt1,no,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,10.11.3.240,no,,4,default,Primary NTP server,mgmt1,no,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,10.11.3.239,no,,4,default,Backup NTP server,mgmt1,no,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,10.11.3.240,no,,4,default,Primary NTP server,mgmt1,no,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,0.rhel.pool.ntp.org,no,,4,default,RHEL NTP Pool 0,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,1.rhel.pool.ntp.org,no,,4,default,RHEL NTP Pool 1,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,2.rhel.pool.ntp.org,no,,4,default,RHEL NTP Pool 2,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,3.rhel.pool.ntp.org,no,,4,default,RHEL NTP Pool 3,mgmt1,no,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,10.0.3.52,no,,4,default,Secondary NTP server,mgmt0,no,configs/UAT-PA-Backup
+uat_pa_backup,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt0,no,configs/UAT-PA-Backup
+uat_pa_backup,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt0,no,configs/UAT-PA-Backup
+uat_pa_backup,10.11.3.239,no,,4,default,Backup NTP server,mgmt0,no,configs/UAT-PA-Backup
+uat_pa_backup,10.11.3.240,no,,4,default,Primary NTP server,mgmt0,no,configs/UAT-PA-Backup
+uat_pa_internet_backup,10.0.3.52,no,,4,default,Secondary NTP server,mgmt0,no,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,10.0.3.53,no,,4,default,Tertiary NTP server,mgmt0,no,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,10.0.250.2,yes,,4,default,Preferred NTP server,mgmt0,no,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,10.11.3.239,no,,4,default,Backup NTP server,mgmt0,no,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,10.11.3.240,no,,4,default,Primary NTP server,mgmt0,no,configs/UAT-PA-Internet-Backup 

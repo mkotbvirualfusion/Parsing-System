@@ -1,0 +1,2 @@
+device_id,hostname,vendor,model,os_family,os_version,serial_number,location,description,source_file
+nrr_dc_ew_fw_001,NRR-DC-EW-FW-001,palo_alto_networks,PA-Series,panos,10.2.10,,NRR-DC-CORE,Primary EW Firewall with HA Cluster,configs/NRR-DC-EW-Backup 

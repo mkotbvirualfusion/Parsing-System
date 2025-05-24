@@ -1,0 +1,53 @@
+device_id,version,community_or_user,auth_level,view,target_host,acl_applied,trap_enable,contact,location,source_interface,source_file
+nrr_wan_br_r002,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 002,GigabitEthernet0,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 002,GigabitEthernet0,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 002,GigabitEthernet0,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,3,snmpuser2,auth-no-priv,monitoring,10.0.250.11,mgmt_acl,yes,Network Operations Center,WAN Branch Router 002,GigabitEthernet0,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 001,GigabitEthernet0,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 001,GigabitEthernet0,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Branch Router 001,GigabitEthernet0,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,3,snmpuser2,auth-no-priv,monitoring,10.0.250.11,mgmt_acl,yes,Network Operations Center,WAN Branch Router 001,GigabitEthernet0,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 002,GigabitEthernet0,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 002,GigabitEthernet0,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 002,GigabitEthernet0,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 001,GigabitEthernet0,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 001,GigabitEthernet0,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Branch Router 001,GigabitEthernet0,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 002,GigabitEthernet0,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 002,GigabitEthernet0,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 002,GigabitEthernet0,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 001,GigabitEthernet0,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 001,GigabitEthernet0,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Branch Router 001,GigabitEthernet0,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Core Switch 002,mgmt0,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Core Switch 002,mgmt0,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,Core Switch 002,mgmt0,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3,snmpuser2,auth-no-priv,monitoring,10.0.250.11,mgmt_acl,yes,Network Operations Center,Core Switch 002,mgmt0,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External SAMA Firewall 001,mgmt1,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External SAMA Firewall 001,mgmt1,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,External SAMA Firewall 001,mgmt1,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External TAD Firewall 001,mgmt1,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External TAD Firewall 001,mgmt1,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,External TAD Firewall 001,mgmt1,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Firewall 001,mgmt1,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Firewall 001,mgmt1,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,External Firewall 001,mgmt1,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 ASA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 ASA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 ASA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 PA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 PA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,Internal Aggregation Firewall 001 PA,mgmt1,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,OOB Aggregation Firewall 001,mgmt1,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,OOB Aggregation Firewall 001,mgmt1,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,OOB Aggregation Firewall 001,mgmt1,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Aggregation Firewall 001,mgmt1,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Aggregation Firewall 001,mgmt1,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,WAN Aggregation Firewall 001,mgmt1,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,3,snmpuser2,auth-no-priv,monitoring,10.0.250.11,mgmt_acl,yes,Network Operations Center,WAN Aggregation Firewall 001,mgmt1,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Backup,mgmt0,configs/UAT-PA-Backup
+uat_pa_backup,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Backup,mgmt0,configs/UAT-PA-Backup
+uat_pa_backup,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Backup,mgmt0,configs/UAT-PA-Backup
+uat_pa_internet_backup,2c,public,read-only,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Internet Backup,mgmt0,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,2c,private,read-write,default,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Internet Backup,mgmt0,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,3,snmpuser1,auth-priv,restricted,10.0.250.10,mgmt_acl,yes,Network Operations Center,UAT PA Internet Backup,mgmt0,configs/UAT-PA-Internet-Backup 

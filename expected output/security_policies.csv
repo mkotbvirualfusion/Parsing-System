@@ -1,0 +1,77 @@
+device_id,policy_name,rule_type,action,source_zone,destination_zone,application,service,description,status,source_file
+nrr_wan_br_r002,access_control_1,access_control,permit,internal,external,any,tcp/80,HTTP traffic from internal to external,enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,access_control_2,access_control,permit,internal,external,any,tcp/443,HTTPS traffic from internal to external,enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,access_control_3,access_control,deny,external,internal,any,any,Block external to internal traffic,enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,ssh_access,access_control,permit,management,any,ssh,tcp/22,SSH management access,enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,access_control_1,access_control,permit,internal,external,any,tcp/80,HTTP traffic from internal to external,enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,access_control_2,access_control,permit,internal,external,any,tcp/443,HTTPS traffic from internal to external,enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,access_control_3,access_control,deny,external,internal,any,any,Block external to internal traffic,enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ssh_access,access_control,permit,management,any,ssh,tcp/22,SSH management access,enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,internal_policy_1,access_control,permit,internal,dmz,any,tcp/80,Internal to DMZ HTTP access,enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,internal_policy_2,access_control,permit,internal,dmz,any,tcp/443,Internal to DMZ HTTPS access,enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,database_access,access_control,permit,internal,dmz,any,tcp/1433,Database access from internal,enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,internal_policy_1,access_control,permit,internal,dmz,any,tcp/80,Internal to DMZ HTTP access,enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,internal_policy_2,access_control,permit,internal,dmz,any,tcp/443,Internal to DMZ HTTPS access,enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,database_access,access_control,permit,internal,dmz,any,tcp/1433,Database access from internal,enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,external_policy_1,access_control,permit,external,dmz,any,tcp/80,External to DMZ HTTP access,enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,external_policy_2,access_control,permit,external,dmz,any,tcp/443,External to DMZ HTTPS access,enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,block_policy,access_control,deny,external,internal,any,any,Block external to internal access,enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,external_policy_1,access_control,permit,external,dmz,any,tcp/80,External to DMZ HTTP access,enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,external_policy_2,access_control,permit,external,dmz,any,tcp/443,External to DMZ HTTPS access,enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,block_policy,access_control,deny,external,internal,any,any,Block external to internal access,enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,core_policy_1,access_control,permit,internal,external,any,tcp/80,Core HTTP policy,enabled,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,core_policy_2,access_control,permit,internal,external,any,tcp/443,Core HTTPS policy,enabled,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,management_access,access_control,permit,management,any,ssh,tcp/22,Management SSH access,enabled,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,botnet_dynamic_dns,threat_prevention,detect,any,any,dns,any,Dynamic DNS detection with threshold 5,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_malware_sites,threat_prevention,detect,any,any,web-browsing,any,Malware sites detection with threshold 5,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_recent_domains,threat_prevention,detect,any,any,web-browsing,any,Recent domains detection with threshold 5,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_ip_domains,threat_prevention,detect,any,any,web-browsing,any,IP domains detection with threshold 10,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_unknown_executables,threat_prevention,detect,any,any,web-browsing,any,Executables from unknown sites detection,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_irc,threat_prevention,detect,any,any,irc,any,IRC application detection for botnet,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_unknown_tcp,threat_prevention,detect,any,any,unknown-tcp,any,Unknown TCP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,botnet_unknown_udp,threat_prevention,detect,any,any,unknown-udp,any,Unknown UDP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,allow_internal_web,security_rule,allow,internal,external,web-browsing,tcp/80,Allow internal web browsing,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,allow_internal_ssl,security_rule,allow,internal,external,ssl,tcp/443,Allow internal SSL traffic,enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_dynamic_dns,threat_prevention,detect,any,any,dns,any,Dynamic DNS detection with threshold 5,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_malware_sites,threat_prevention,detect,any,any,web-browsing,any,Malware sites detection with threshold 5,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_recent_domains,threat_prevention,detect,any,any,web-browsing,any,Recent domains detection with threshold 5,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_ip_domains,threat_prevention,detect,any,any,web-browsing,any,IP domains detection with threshold 10,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_unknown_executables,threat_prevention,detect,any,any,web-browsing,any,Executables from unknown sites detection,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_irc,threat_prevention,detect,any,any,irc,any,IRC application detection for botnet,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_unknown_tcp,threat_prevention,detect,any,any,unknown-tcp,any,Unknown TCP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,botnet_unknown_udp,threat_prevention,detect,any,any,unknown-udp,any,Unknown UDP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,allow_internal_web,security_rule,allow,internal,external,web-browsing,tcp/80,Allow internal web browsing,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,allow_internal_ssl,security_rule,allow,internal,external,ssl,tcp/443,Allow internal SSL traffic,enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,botnet_dynamic_dns,threat_prevention,detect,any,any,dns,any,Dynamic DNS detection with threshold 5,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_malware_sites,threat_prevention,detect,any,any,web-browsing,any,Malware sites detection with threshold 5,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_recent_domains,threat_prevention,detect,any,any,web-browsing,any,Recent domains detection with threshold 5,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_ip_domains,threat_prevention,detect,any,any,web-browsing,any,IP domains detection with threshold 10,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_unknown_executables,threat_prevention,detect,any,any,web-browsing,any,Executables from unknown sites detection,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_irc,threat_prevention,detect,any,any,irc,any,IRC application detection for botnet,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_unknown_tcp,threat_prevention,detect,any,any,unknown-tcp,any,Unknown TCP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,botnet_unknown_udp,threat_prevention,detect,any,any,unknown-udp,any,Unknown UDP traffic detection (10 dest/hour),enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,allow_internal_web,security_rule,allow,internal,external,web-browsing,tcp/80,Allow internal web browsing,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,allow_internal_ssl,security_rule,allow,internal,external,ssl,tcp/443,Allow internal SSL traffic,enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,asa_policy_1,security_rule,permit,internal,dmz,any,tcp/80,ASA internal to DMZ HTTP,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,asa_policy_2,security_rule,permit,internal,dmz,any,tcp/443,ASA internal to DMZ HTTPS,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,asa_policy_3,security_rule,deny,external,internal,any,any,ASA block external to internal,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,asa_inspection,inspection,enable,any,any,http,tcp/80,HTTP inspection policy,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,pa_policy_1,security_rule,allow,internal,dmz,any,tcp/80,PA internal to DMZ HTTP,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,pa_policy_2,security_rule,allow,internal,dmz,any,tcp/443,PA internal to DMZ HTTPS,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,pa_policy_3,security_rule,deny,external,internal,any,any,PA block external to internal,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,pa_threat_prevention,threat_prevention,detect,any,any,any,any,PA threat prevention profile,enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,oob_policy_1,security_rule,allow,oob,management,any,tcp/22,OOB SSH management access,enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,oob_policy_2,security_rule,allow,oob,management,any,tcp/161,OOB SNMP management access,enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,oob_policy_3,security_rule,deny,any,oob,any,any,Block access to OOB network,enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,wan_policy_1,security_rule,allow,internal,external,any,tcp/80,WAN internal to external HTTP,enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,wan_policy_2,security_rule,allow,internal,external,any,tcp/443,WAN internal to external HTTPS,enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,wan_policy_3,security_rule,deny,external,internal,any,any,WAN block external to internal,enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,wan_threat_prevention,threat_prevention,detect,any,any,any,any,WAN threat prevention profile,enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,uat_policy_1,security_rule,allow,internal,external,any,tcp/80,UAT internal to external HTTP,enabled,configs/UAT-PA-Backup
+uat_pa_backup,uat_policy_2,security_rule,allow,internal,external,any,tcp/443,UAT internal to external HTTPS,enabled,configs/UAT-PA-Backup
+uat_pa_backup,uat_policy_3,security_rule,deny,external,internal,any,any,UAT block external to internal,enabled,configs/UAT-PA-Backup
+uat_pa_backup,uat_threat_prevention,threat_prevention,detect,any,any,any,any,UAT threat prevention profile,enabled,configs/UAT-PA-Backup
+uat_pa_internet_backup,uat_inet_policy_1,security_rule,allow,internal,external,any,tcp/80,UAT Internet internal to external HTTP,enabled,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,uat_inet_policy_2,security_rule,allow,internal,external,any,tcp/443,UAT Internet internal to external HTTPS,enabled,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,uat_inet_policy_3,security_rule,deny,external,internal,any,any,UAT Internet block external to internal,enabled,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,uat_inet_threat_prevention,threat_prevention,detect,any,any,any,any,UAT Internet threat prevention profile,enabled,configs/UAT-PA-Internet-Backup 

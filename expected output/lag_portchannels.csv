@@ -1,0 +1,25 @@
+device_id,lag_id,lag_name,protocol,member_interfaces,load_balance,mode,vlan,description,status,source_file
+nrr_wan_br_r002,20,Port-channel20,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,L3 Connection to Huawei SDWAN,up,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,20,Port-channel20,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,L3 Connection to Huawei SDWAN,up,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,12,Port-channel12,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,L3 Connection to ARBOR-IXIA-IPS-NRR-INT-AGG-FW,up,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,12,Port-channel12,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,L3 Connection to ARBOR-IXIA-IPS-NRR-INT-AGG-FW,up,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,53,Port-channel53,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,External Connection to Multiple VLANs,up,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,53,Port-channel53,lacp,TenGigabitEthernet0/1/0;TenGigabitEthernet0/1/1,src-dst-ip,active,,External Connection to Multiple VLANs,up,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,1,Port-channel1,lacp,GigabitEthernet1/0/47;GigabitEthernet1/0/48,src-dst-mac,active,1,Core Switch Uplink,up,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,2,Port-channel2,lacp,GigabitEthernet1/0/45;GigabitEthernet1/0/46,src-dst-mac,active,10,Core Switch Backup Uplink,up,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,1,port-channel1,lacp,port3;port4,round-robin,active,,External Fortinet LAG,up,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,2,port-channel2,lacp,port5;port6,round-robin,active,,Internal Fortinet LAG,up,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,1,port-channel1,lacp,port3;port4,round-robin,active,,External Fortinet LAG,up,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,2,port-channel2,lacp,port5;port6,round-robin,active,,Internal Fortinet LAG,up,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,1,port-channel1,lacp,port3;port4,round-robin,active,,External Fortinet LAG,up,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,2,port-channel2,lacp,port5;port6,round-robin,active,,Internal Fortinet LAG,up,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,42,port-channel42,lacp,port3;port4,round-robin,active,,ASA VDOM LAG,up,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,42,port-channel42,lacp,port3;port4,round-robin,active,,PA VDOM LAG,up,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,1,port-channel1,lacp,port3;port4,round-robin,active,,OOB Fortinet LAG,up,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,2,port-channel2,lacp,port5;port6,round-robin,active,,Management Fortinet LAG,up,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,1,port-channel1,lacp,port3;port4,round-robin,active,,WAN Fortinet LAG,up,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,2,port-channel2,lacp,port5;port6,round-robin,active,,LAN Fortinet LAG,up,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,1,ae1,lacp,ethernet1/25;ethernet1/26,round-robin,active,,HA Link Monitoring Group,up,configs/UAT-PA-Backup
+uat_pa_backup,2,ae2,lacp,ethernet1/27;ethernet1/28,round-robin,active,,Data Link Aggregation,up,configs/UAT-PA-Backup
+uat_pa_internet_backup,1,ae1,lacp,ethernet1/25;ethernet1/26,round-robin,active,,HA Link Monitoring Group,up,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,2,ae2,lacp,ethernet1/27;ethernet1/28,round-robin,active,,Data Link Aggregation,up,configs/UAT-PA-Internet-Backup 

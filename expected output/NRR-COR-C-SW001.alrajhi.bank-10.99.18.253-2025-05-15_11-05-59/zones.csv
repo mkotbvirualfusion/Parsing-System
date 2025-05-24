@@ -1,0 +1,2 @@
+device_id,zone_name,zone_type,interfaces,description,intra_zone_blocking,members,source_file
+# No security zones found in this Cisco switch configuration 

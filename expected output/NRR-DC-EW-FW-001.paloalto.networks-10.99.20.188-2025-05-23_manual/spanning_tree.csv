@@ -1,0 +1,1 @@
+device_id,vlan_id,protocol,priority,root_bridge,bridge_id,designated_root,timers_hello,timers_max_age,timers_forward_delay,port_type_default,bpdu_guard,bpdu_filter,pathcost_method,source_file 

@@ -1,0 +1,2 @@
+device_id,tunnel_name,tunnel_type,local_endpoint,remote_endpoint,encryption,authentication,preshared_key,tunnel_interface,vrf,status,description,source_file
+# No VPN tunnels found in this Cisco switch configuration 

@@ -1,0 +1,2 @@
+device_id,vlan_id,protocol,priority,root_bridge,bridge_id,designated_root,timers_hello,timers_max_age,timers_forward_delay,port_type_default,bpdu_guard,bpdu_filter,pathcost_method,source_file
+nrr_cor_c_sw001,1-3967,rstp,4096,no,,,,2,20,15,edge,default,default,long,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

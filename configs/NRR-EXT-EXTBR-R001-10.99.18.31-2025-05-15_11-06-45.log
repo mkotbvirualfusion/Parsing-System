@@ -1,0 +1,2371 @@
+﻿CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+CC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device.
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+NRR-EXT-EXTBR-R001#terminal length 0
+NRR-EXT-EXTBR-R001#sh run conf
+                           ^
+% Invalid input detected at '^' marker.
+
+NRR-EXT-EXTBR-R001#sh running-config
+Building configuration...
+
+Current configuration : 74529 bytes
+!
+! Last configuration change at 17:03:42 KSA Tue Apr 29 2025 by c001421
+! NVRAM config last updated at 23:18:41 KSA Wed Apr 23 2025 by C002124
+!
+version 17.6
+service nagle
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service sequence-numbers
+no service dhcp
+service call-home
+no service password-recovery 
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform hardware crypto-throughput level 8g 
+!
+hostname NRR-EXT-EXTBR-R001
+!
+boot-start-marker
+boot system bootflash:packages.conf
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+security authentication failure rate 3 log
+security passwords min-length 8
+logging buffered 65536
+logging rate-limit all 10 except errors
+no logging console
+enable secret 9 $9$DXaGb4nNect8hk$.Yz2AaVnePUv4q6BDXHWqvXRdJIfPw0i.IfwsdlF.9.
+!
+aaa new-model
+!
+!
+aaa group server tacacs+ TACACS-SERVERS
+ server name TACACS-SERVER-1
+ server name TACACS-SERVER-2
+ server name TACACS-SERVER-DR
+ ip vrf forwarding Mgmt-intf
+ ip tacacs source-interface GigabitEthernet0
+!
+aaa authentication login VTYSec group TACACS-SERVERS local
+aaa authentication login no_tacacs enable
+aaa authorization config-commands
+aaa authorization exec default group TACACS-SERVERS local 
+aaa authorization commands 1 default group TACACS-SERVERS local 
+aaa authorization commands 15 default group TACACS-SERVERS local 
+aaa accounting update newinfo
+aaa accounting exec default start-stop group TACACS-SERVERS
+aaa accounting commands 1 default stop-only group TACACS-SERVERS
+aaa accounting commands 15 default stop-only group TACACS-SERVERS
+aaa accounting network default stop-only group TACACS-SERVERS
+aaa accounting connection default stop-only group TACACS-SERVERS
+aaa accounting system default start-stop group TACACS-SERVERS
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone KSA 3 0
+ip icmp rate-limit unreachable 100
+ip icmp rate-limit unreachable DF 10
+!
+ip vrf ARBMALAYSIA
+ rd 100:100
+!
+ip vrf ARI-TAK
+ rd 10:10
+!
+ip vrf ELM
+ rd 60:60
+!
+ip vrf EMKAN
+ rd 170:170
+!
+ip vrf GIP
+ rd 110:110
+!
+ip vrf MOF
+ rd 120:120
+!
+ip vrf MOI
+ rd 130:130
+!
+ip vrf NeoLeap
+ rd 150:150
+!
+ip vrf OCI
+ rd 180:180
+!
+ip vrf OCI_C
+ rd 40:40
+!
+ip vrf RAJHIPAY
+ rd 30:30
+!
+ip vrf REUTERS
+ rd 90:90
+!
+ip vrf SAWA
+ rd 50:50
+!
+ip vrf SIMAH
+ rd 70:70
+!
+ip vrf SINNAD
+ rd 80:80
+!
+ip vrf T2
+ rd 200:200
+!
+ip vrf TCC
+ rd 20:20
+!
+!
+!
+!
+!
+!
+!
+ip name-server 10.0.10.10 10.0.10.20 10.11.11.10 10.11.11.11
+ip domain name alrajhi.bank
+ip dhcp bootp ignore
+!
+!
+!
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+udld enable
+
+!
+!
+flow record VRF_RECORD
+ match ipv4 source address
+ match ipv4 destination address
+ match transport source-port
+ match transport destination-port
+ match ipv4 protocol
+ match ipv4 tos
+ match interface input
+ match interface output
+ match routing vrf input
+ match routing vrf output
+ match routing vrf service
+ collect counter packets
+ collect counter bytes
+ collect timestamp sys-uptime first
+ collect timestamp sys-uptime last
+!
+!
+flow exporter VHN-NMS-01
+ description Solarwinds
+ destination 10.99.28.77 vrf ARBMALAYSIA
+ source Port-channel52.3358
+ transport udp 2055
+ template data timeout 60
+!
+!
+flow monitor VHN-NMS-01
+ exporter VHN-NMS-01
+ cache timeout inactive 10
+ cache timeout active 30
+ statistics packet protocol
+ statistics packet size
+ record netflow-original
+!
+!
+flow monitor VHN-NMS-VRF
+ exporter VHN-NMS-01
+ cache timeout inactive 10
+ cache timeout active 30
+ statistics packet protocol
+ statistics packet size
+ record VRF_RECORD
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-168767033
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-168767033
+ revocation-check none
+ rsakeypair TP-self-signed-168767033
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-168767033
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+        quit
+!
+!
+license udi pid ASR1002-HX sn JAE22130708
+archive
+ path bootflash:CFG_BKP
+ time-period 1440
+memory free low-watermark processor 681685
+!
+!
+spanning-tree extend system-id
+diagnostic bootup level minimal
+!
+username arbnsd privilege 15 secret 9 $9$XDbfB0V2RdXY2k$tO5Vcckow3svSxHQoKJYrhOZj1vVu6Yp12sl1ITNkfw
+!
+redundancy
+ mode none
+!
+!
+crypto ikev2 proposal IKEV2-PROPOSAL-AESCBC256-SHA384-G21 
+ encryption aes-cbc-256
+ integrity sha384
+ group 21
+crypto ikev2 proposal IKEV2-PROPOSAL-MOF 
+ encryption aes-cbc-256
+ integrity sha256
+ group 21
+crypto ikev2 proposal IKEV2-PROPOSAL-NeoLeap 
+ encryption aes-cbc-256
+ integrity sha384
+ group 21
+crypto ikev2 proposal IKEV2-PROPOSAL-NeoLeap_DR 
+ encryption aes-cbc-256
+ integrity sha384
+ group 21
+crypto ikev2 proposal IKEV2-PROPOSAL-OCI 
+ encryption aes-cbc-256
+ integrity sha384
+ group 14
+crypto ikev2 proposal IKEV2-PROPOSAL-OCI_C 
+ encryption aes-cbc-256
+ integrity sha384
+ group 14
+!
+crypto ikev2 policy IKEV2-VPN-OCI-POLICY 
+ match fvrf OCI
+ proposal IKEV2-PROPOSAL-OCI
+crypto ikev2 policy IKEV2-VPN-OCI_C-POLIC 
+ ! Policy Incomplete(MUST have atleast one complete proposal attached)
+crypto ikev2 policy IKEV2-VPN-OCI_C-POLICY 
+ match fvrf OCI_C
+ proposal IKEV2-PROPOSAL-OCI_C
+crypto ikev2 policy IKEV2-VPN-Policy 
+ match fvrf SINNAD
+ proposal IKEV2-PROPOSAL-AESCBC256-SHA384-G21
+crypto ikev2 policy IKEV2-VPN-Policy-MOF 
+ match fvrf MOF
+ proposal IKEV2-PROPOSAL-MOF
+crypto ikev2 policy IKEV2-VPN-Policy-NeoLeap 
+ match fvrf NeoLeap
+ proposal IKEV2-PROPOSAL-NeoLeap
+crypto ikev2 policy IKEV2-VPN-Policy-NeoLeap_DR 
+ match fvrf NeoLeap
+ proposal IKEV2-PROPOSAL-NeoLeap_DR
+!
+crypto ikev2 keyring IKEV2-SINNAD-Keyring
+ peer SINNAD
+  address 10.202.12.4
+  pre-shared-key $!n2@RBK2020
+ !
+!
+crypto ikev2 keyring IKEV2-NeoLeap-Keyring
+ peer NeoLeap
+  address 10.191.7.36
+  pre-shared-key @rbPCX2$nddR4431
+ !
+!
+crypto ikev2 keyring IKEV2-MOF-Keyring
+ peer MOF-TMI
+  address 172.30.8.78
+  pre-shared-key @rbPCX2M0FR4431
+ !
+ peer MOF
+  address 172.30.12.238
+  pre-shared-key @rbPCX2M0FR4431
+ !
+!
+crypto ikev2 keyring IKEV2-NeoLeap_DR-Keyring
+ peer NeoLeap_DR
+  address 10.191.7.64
+  pre-shared-key @rbPCX2$nddR4431
+ !
+!
+crypto ikev2 keyring IKEV2-OCI_C-Keyring
+ peer OCI_C
+  address 10.109.3.150
+  pre-shared-key @Arbbank@1357
+ !
+!
+crypto ikev2 keyring IKEV2-OCI-Keyring
+ peer OCI
+  address 10.229.48.165
+  pre-shared-key @Arbbank@3579
+ !
+ peer OCI_NOPRO
+  address 10.228.48.165
+  pre-shared-key @Arbbank@1357
+ !
+!
+!
+crypto ikev2 profile SINNAD-IKEV2-PROFILE
+ description **SINNAD-HO-BAH VPN IKEV2 PROFILE **
+ match fvrf SINNAD
+ match identity remote address 10.191.6.28 255.255.255.255 
+ match identity remote address 10.202.12.4 255.255.255.255 
+ identity local address 10.191.6.29
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-SINNAD-Keyring
+ lifetime 43200
+!
+crypto ikev2 profile NeoLeap-IKEV2-PROFILE
+ description **NeoLeap VPN IKEV2 PROFILE **
+ match fvrf NeoLeap
+ match identity remote address 10.191.7.36 255.255.255.255 
+ identity local address 10.191.7.35
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-NeoLeap-Keyring
+ lifetime 43200
+!
+crypto ikev2 profile MOF-TMI-IKEV2-PROFILE
+ description **MOF-TMI VPN IKEV2 PROFILE**
+ match fvrf MOF
+ match identity remote address 172.30.12.238 255.255.255.255 
+ match identity remote address 172.30.8.78 255.255.255.255 
+ identity local address 10.191.7.45
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-MOF-Keyring
+!
+crypto ikev2 profile NeoLeap_DR-IKEV2-PROFILE
+ description **NeoLeap_DR VPN IKEV2 PROFILE **
+ match fvrf NeoLeap
+ match identity remote address 10.191.7.64 255.255.255.255 
+ identity local address 10.191.7.63
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-NeoLeap_DR-Keyring
+ lifetime 43200
+!
+crypto ikev2 profile OCI_C-IKEV2-PROFILE
+ description **OCI_C DC **
+ match fvrf OCI_C
+ match identity remote address 10.109.3.150 255.255.255.255 
+ identity local address 10.191.7.101
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-OCI_C-Keyring
+!
+crypto ikev2 profile OCI-IKEV2-PROFILE
+ description **OCI DC **
+ match fvrf OCI
+ match identity remote address 10.229.48.165 255.255.255.255 
+ match identity remote address 10.228.48.165 255.255.255.255 
+ identity local address 10.191.7.99
+ authentication remote pre-share
+ authentication local pre-share
+ keyring local IKEV2-OCI-Keyring
+ dpd 10 3 periodic
+!
+!
+!
+cdp run
+!
+track 1 ip sla 60 reachability
+!
+track 2 interface Tunnel32 line-protocol
+!
+track 3 interface Tunnel33 line-protocol
+!
+track 10 ip sla 10 state
+!
+track 12 ip sla 12 reachability
+!
+track 20 ip sla 20 reachability
+!
+track 30 ip sla 30 state
+!
+track 40 ip sla 40 state
+!
+track 50 ip sla 50 state
+!
+track 60 list boolean and
+ object 1
+ object 2
+!
+track 70 ip sla 70 state
+!
+track 80 ip sla 80 reachability
+!
+track 90 ip sla 90 reachability
+!
+track 100 ip sla 100 reachability
+!
+track 111 ip sla 111 reachability
+!
+track 222 ip sla 222 reachability
+!
+track 444 ip sla 444 reachability
+!
+!
+class-map match-any Class-CoPP-Undesirable
+ match access-group name CoPP-Undesirable
+class-map match-any Class-CoPP-Routing
+ match access-group name CoPP-Routing
+ match protocol arp
+class-map match-any Class-CoPP-Monitoring
+ match access-group name CoPP-Monitoring
+class-map match-any Class-CoPP-Management
+ match access-group name CoPP-Management
+!
+policy-map Policy-CoPP
+ class Class-CoPP-Routing
+  police 100000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Management
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Monitoring
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Undesirable
+  police 1000000 conform-action drop  exceed-action drop 
+ class class-default
+  police 1000000 conform-action transmit  exceed-action drop 
+!
+!
+! 
+crypto keyring ARABMY vrf ARBMALAYSIA 
+  pre-shared-key address 172.28.2.250 key Alr4jh1B$nk#MY
+crypto keyring SINNAD_DUBAI vrf SINNAD 
+  pre-shared-key address 10.191.5.25 key 3OD@F%s&t1AL@#H
+!
+!
+!
+!
+!
+crypto isakmp policy 10
+ encryption aes 256
+ hash sha
+ authentication pre-share
+ group 2
+!
+crypto isakmp policy 11
+ encryption 3des
+ hash sha
+ authentication pre-share
+ group 2
+!
+!
+crypto ipsec transform-set ts esp-aes 256 esp-sha-hmac 
+ mode tunnel
+crypto ipsec transform-set AES256-SHA384 esp-aes 256 esp-sha384-hmac 
+ mode tunnel
+crypto ipsec transform-set ts-SINNADDUBAI esp-3des esp-sha-hmac 
+ mode tunnel
+crypto ipsec transform-set TS-NeoLeap esp-aes 256 esp-sha-hmac 
+ mode tunnel
+crypto ipsec transform-set TS-MOF esp-aes 256 esp-sha256-hmac 
+ mode tunnel
+crypto ipsec transform-set TS-NeoLeap_DR esp-aes 256 esp-sha-hmac 
+ mode tunnel
+crypto ipsec transform-set OCI_C esp-aes 256 esp-sha384-hmac 
+ mode tunnel
+crypto ipsec transform-set OCI-TS esp-aes 256 esp-sha384-hmac 
+ mode tunnel
+!
+crypto ipsec profile IPSEC-MOF-TMI-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set TS-MOF 
+ set ikev2-profile MOF-TMI-IKEV2-PROFILE
+!
+crypto ipsec profile IPSEC-NeoLeap-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set TS-NeoLeap 
+ set ikev2-profile NeoLeap-IKEV2-PROFILE
+!
+crypto ipsec profile IPSEC-NeoLeap_DR-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set TS-NeoLeap_DR 
+ set ikev2-profile NeoLeap_DR-IKEV2-PROFILE
+!
+crypto ipsec profile IPSEC-OCI-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set OCI-TS 
+ set ikev2-profile OCI-IKEV2-PROFILE
+!
+crypto ipsec profile IPSEC-OCI_C-PROFILE
+ set security-association lifetime seconds 28800
+ set transform-set OCI_C 
+ set ikev2-profile OCI_C-IKEV2-PROFILE
+!
+crypto ipsec profile IPSEC-SINNAD-PROFILE1
+ set security-association lifetime seconds 28800
+ set transform-set AES256-SHA384 
+ set ikev2-profile SINNAD-IKEV2-PROFILE
+!
+!
+!
+crypto map ARBMY local-address Loopback10
+crypto map ARBMY 10 ipsec-isakmp 
+ set peer 172.28.2.250
+ set transform-set ts 
+ match address ARB-RIYADH-TO-MALAYSIA
+!
+crypto map SINNAD_DUBAI local-address Loopback33
+crypto map SINNAD_DUBAI 11 ipsec-isakmp 
+ set peer 10.191.5.25
+ set transform-set ts-SINNADDUBAI 
+ match address GRE_to_SINNAD_DUBAI
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Null0
+ no ip unreachables
+!
+interface Loopback0
+ description *** Loopback0 ***
+ ip address 10.99.1.32 255.255.255.255
+!
+interface Loopback10
+ description To ARB-MALAYSIA
+ ip vrf forwarding ARBMALAYSIA
+ ip address 172.21.179.1 255.255.255.255
+!
+interface Loopback32
+ description LOOPBACK FOR SINNAD_PROD_BAHRAIN
+ ip vrf forwarding SINNAD
+ ip address 10.191.6.29 255.255.255.255
+!
+interface Loopback33
+ description ###SINNAD DUBAI PROD####
+ ip vrf forwarding SINNAD
+ ip address 10.191.5.55 255.255.255.255
+!
+interface Loopback34
+ description ***Loopback FOR NeoLeap***
+ ip vrf forwarding NeoLeap
+ ip address 10.191.7.35 255.255.255.255
+!
+interface Loopback35
+ description ***Loopback_FOR_NeoLeap_DRC0-01***
+ ip vrf forwarding NeoLeap
+ ip address 10.191.7.63 255.255.255.255
+!
+interface Loopback42
+ description ***Loopback FOR MOF TMI***
+ ip vrf forwarding MOF
+ ip address 10.191.7.45 255.255.255.255
+!
+interface Loopback55
+ description ***LOOPBACK FOR OCI_DC***
+ ip vrf forwarding OCI
+ ip address 10.191.7.99 255.255.255.255
+!
+interface Loopback56
+ description ***LOOPBACK FOR OCI_C***
+ ip vrf forwarding OCI_C
+ ip address 10.191.7.101 255.255.255.255
+!
+interface Loopback111
+ ip vrf forwarding MOI
+ ip address 172.21.185.5 255.255.255.255
+!
+interface Loopback200
+ ip vrf forwarding SIMAH
+ ip address 172.31.1.31 255.255.255.255
+!
+interface Port-channel52
+ description ***Connection to NRR-EXT-EXTAGG-SW VPC 52***
+ mtu 9216
+ no ip address
+ no ip redirects
+ no ip unreachables
+!
+interface Port-channel52.3344
+ description Connection to NRR-EXT-EXT-FW T2-SMS
+ encapsulation dot1Q 3344
+ ip vrf forwarding T2
+ ip address 10.99.4.156 255.255.255.248
+!
+interface Port-channel52.3350
+ description ARI-TAK
+ encapsulation dot1Q 3350
+ ip vrf forwarding ARI-TAK
+ ip address 10.99.4.2 255.255.255.248
+ standby version 2
+ standby 3350 ip 10.99.4.1
+ standby 3350 timers 1 3
+ standby 3350 priority 255
+ standby 3350 preempt
+ standby 3350 authentication Kr@rb4nk
+ standby 3350 track 20 decrement 160
+!
+interface Port-channel52.3351
+ description TCC
+ encapsulation dot1Q 3351
+ ip vrf forwarding TCC
+ ip address 10.99.4.10 255.255.255.248
+ standby version 2
+ standby 3351 ip 10.99.4.9
+ standby 3351 timers 1 3
+ standby 3351 priority 255
+ standby 3351 preempt
+ standby 3351 authentication Kr@rb4nk
+ standby 3351 track 100 decrement 160
+!
+interface Port-channel52.3354
+ description SAWA
+ encapsulation dot1Q 3354
+ ip vrf forwarding SAWA
+ ip address 10.99.4.34 255.255.255.248
+ standby version 2
+ standby 3354 ip 10.99.4.33
+ standby 3354 timers 1 3
+ standby 3354 priority 255
+ standby 3354 preempt
+ standby 3354 authentication Kr@rb4nk
+!
+interface Port-channel52.3355
+ description ELM
+ encapsulation dot1Q 3355
+ ip vrf forwarding ELM
+ ip address 10.99.4.42 255.255.255.248
+ standby version 2
+ standby 3355 ip 10.99.4.41
+ standby 3355 timers 1 3
+ standby 3355 priority 255
+ standby 3355 preempt
+ standby 3355 authentication Kr@rb4nk
+ standby 3355 track 30 decrement 160
+!
+interface Port-channel52.3356
+ description SIMAH
+ encapsulation dot1Q 3356
+ ip vrf forwarding SIMAH
+ ip address 10.99.4.50 255.255.255.248
+ standby version 2
+ standby 3356 ip 10.99.4.49
+ standby 3356 timers 1 3
+ standby 3356 priority 255
+ standby 3356 preempt
+ standby 3356 authentication Kr@rb4nk
+ standby 3356 track 80 decrement 2
+ standby 3356 track 90 decrement 2
+!
+interface Port-channel52.3357
+ description SINNAD
+ encapsulation dot1Q 3357
+ ip vrf forwarding SINNAD
+ ip address 10.99.4.58 255.255.255.248
+ standby version 2
+ standby 3357 ip 10.99.4.57
+ standby 3357 timers 1 3
+ standby 3357 priority 255
+ standby 3357 preempt
+ standby 3357 authentication Kr@rb4nk
+ standby 3357 track 1 decrement 160
+!
+interface Port-channel52.3358
+ description ARBMALAYSIA
+ encapsulation dot1Q 3358
+ ip vrf forwarding ARBMALAYSIA
+ ip address 10.99.4.66 255.255.255.248
+ standby version 2
+ standby 3358 ip 10.99.4.65
+ standby 3358 timers 1 3
+ standby 3358 priority 255
+ standby 3358 preempt
+ standby 3358 authentication Kr@rb4nk
+ standby 3358 track 10 decrement 160
+!
+interface Port-channel52.3361
+ description GIP
+ encapsulation dot1Q 3361
+ ip vrf forwarding GIP
+ ip address 10.99.4.74 255.255.255.248
+ standby version 2
+ standby 3361 ip 10.99.4.73
+ standby 3361 timers 1 3
+ standby 3361 priority 150
+ standby 3361 preempt
+!
+interface Port-channel52.3362
+ description RAJHIPAY
+ encapsulation dot1Q 3362
+ ip vrf forwarding RAJHIPAY
+ ip address 10.99.4.82 255.255.255.248
+ standby version 2
+ standby 3361 preempt
+ standby 3362 ip 10.99.4.81
+ standby 3362 timers 1 3
+ standby 3362 priority 150
+!
+interface Port-channel52.3363
+ description NeoLeap-Prod
+ encapsulation dot1Q 3363
+ ip vrf forwarding NeoLeap
+ ip address 10.99.4.97 255.255.255.248
+ standby version 2
+ standby 3363 ip 10.99.4.100
+ standby 3363 timers 1 3
+ standby 3363 priority 254
+ standby 3363 preempt
+ standby 3363 authentication Kr@rb4nk
+!
+interface Port-channel52.3364
+ description MOI
+ encapsulation dot1Q 3364
+ ip vrf forwarding MOI
+ ip address 10.99.4.106 255.255.255.248
+ standby version 2
+ standby 3364 ip 10.99.4.105
+ standby 3364 timers 1 3
+ standby 3364 priority 255
+ standby 3364 preempt
+ standby 3364 authentication Kr@rb4nk
+!
+interface Port-channel52.3365
+ description EMKAN
+ encapsulation dot1Q 3365
+ ip vrf forwarding EMKAN
+ ip address 10.99.4.114 255.255.255.248
+ standby version 2
+ standby 3365 ip 10.99.4.113
+ standby 3365 timers 1 3
+ standby 3365 priority 254
+ standby 3365 preempt
+ standby 3365 authentication Kr@rb4nk
+!
+interface Port-channel52.3370
+ description NeoLeap-DR
+ encapsulation dot1Q 3370
+ ip vrf forwarding NeoLeap
+ ip address 10.99.4.130 255.255.255.248
+ standby version 2
+ standby 3370 ip 10.99.4.129
+ standby 3370 timers 1 3
+ standby 3370 priority 254
+ standby 3370 preempt
+ standby 3370 authentication Kr@rb4nk
+!
+interface Port-channel52.3371
+ description MOF_DR
+ encapsulation dot1Q 3371
+ ip vrf forwarding MOF
+ ip address 10.99.4.138 255.255.255.248
+ standby version 2
+ standby 3371 ip 10.99.4.137
+ standby 3371 timers 1 3
+ standby 3371 priority 200
+ standby 3371 preempt
+!
+interface Port-channel52.3545
+ description MOF
+ encapsulation dot1Q 3545
+ ip vrf forwarding MOF
+ ip address 10.99.4.90 255.255.255.248
+ standby version 2
+ standby 3545 ip 10.99.4.89
+ standby 3545 timers 1 3
+ standby 3545 priority 255
+ standby 3545 preempt
+ standby 3545 authentication Kr@rb4nk
+ standby 3545 track 12 decrement 160
+!
+interface Port-channel52.3546
+ description OCI_DC
+ encapsulation dot1Q 3546
+ ip vrf forwarding OCI
+ ip address 172.21.200.12 255.255.255.0
+ standby version 2
+ standby 3546 ip 172.21.200.11
+ standby 3546 timers 1 3
+ standby 3546 preempt
+!
+interface Port-channel52.3548
+ description OCI_C
+ encapsulation dot1Q 3548
+ ip vrf forwarding OCI_C
+ ip address 10.99.4.146 255.255.255.248
+ standby version 2
+ standby 3548 ip 10.99.4.147
+ standby 3548 timers 1 3
+ standby 3548 priority 254
+ standby 3548 preempt
+ standby 3548 authentication Kr@rb4nk
+!
+interface Tunnel10
+ description To ARB-MALAYSIA
+ ip vrf forwarding ARBMALAYSIA
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.21.179.13 255.255.255.252
+ ip mtu 1420
+ tunnel source Loopback10
+ tunnel destination 172.28.2.250
+ tunnel vrf ARBMALAYSIA
+!
+interface Tunnel32
+ description FOR SINNAD_PROD_BAHRAIN
+ ip vrf forwarding SINNAD
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.19.99.22 255.255.255.252
+ ip mtu 1420
+ load-interval 30
+ tunnel source Loopback32
+ tunnel mode ipsec ipv4
+ tunnel destination 10.202.12.4
+ tunnel vrf SINNAD
+ tunnel protection ipsec profile IPSEC-SINNAD-PROFILE1
+!
+interface Tunnel33
+ description Tunnel to SINNAD_NI_DUBAI
+ ip vrf forwarding SINNAD
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.42.242 255.255.255.252
+ ip mtu 1420
+ ip tcp adjust-mss 1324
+ load-interval 30
+ shutdown
+ keepalive 10 3
+ tunnel source Loopback33
+ tunnel destination 10.191.5.25
+ tunnel vrf SINNAD
+!
+interface Tunnel34
+ description ***Tunnel for NeoLeap***
+ ip vrf forwarding NeoLeap
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.209 255.255.255.252
+ ip mtu 1436
+ tunnel source Loopback34
+ tunnel mode ipsec ipv4
+ tunnel destination 10.191.7.36
+ tunnel vrf NeoLeap
+ tunnel protection ipsec profile IPSEC-NeoLeap-PROFILE
+!
+interface Tunnel35
+ description ***Tunnel_FOR_NeoLeap_DRC0-01***
+ ip vrf forwarding NeoLeap
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.193 255.255.255.252
+ ip mtu 1436
+ tunnel source Loopback35
+ tunnel mode ipsec ipv4
+ tunnel destination 10.191.7.64
+ tunnel vrf NeoLeap
+ tunnel protection ipsec profile IPSEC-NeoLeap_DR-PROFILE
+!
+interface Tunnel42
+ description ***NRR-Tunnel for MOF TMI***
+ ip vrf forwarding MOF
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.225 255.255.255.252
+ tunnel source Loopback42
+ tunnel mode ipsec ipv4
+ tunnel destination 172.30.8.78
+ tunnel vrf MOF
+ tunnel protection ipsec profile IPSEC-MOF-TMI-PROFILE
+!
+interface Tunnel43
+ description description ***Tunnel for MOF TMI-PROD-ITC***
+ ip vrf forwarding MOF
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.173 255.255.255.252
+ tunnel source Loopback42
+ tunnel mode ipsec ipv4
+ tunnel destination 172.30.12.238
+ tunnel vrf MOF
+ tunnel protection ipsec profile IPSEC-MOF-TMI-PROFILE
+!
+interface Tunnel55
+ description FOR OCI_PROD_TUNNEL2
+ ip vrf forwarding OCI
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.165 255.255.255.252
+ keepalive 10 3
+ tunnel source Loopback55
+ tunnel mode ipsec ipv4
+ tunnel destination 10.229.48.165
+ tunnel vrf OCI
+ tunnel bandwidth transmit 10000000
+ tunnel bandwidth receive 10000000
+ tunnel protection ipsec profile IPSEC-OCI-PROFILE
+!
+interface Tunnel56
+ description FOR OCI_C_TUNNEL
+ ip vrf forwarding OCI_C
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.109.129.9 255.255.255.252
+ tunnel source Loopback56
+ tunnel mode ipsec ipv4
+ tunnel destination 10.109.3.150
+ tunnel vrf OCI_C
+ tunnel bandwidth transmit 10000000
+ tunnel bandwidth receive 10000000
+ tunnel protection ipsec profile IPSEC-OCI_C-PROFILE
+!
+interface Tunnel66
+ description FOR OCI_NonPROD_TUNNEL2
+ ip vrf forwarding OCI
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.191.7.157 255.255.255.252
+ keepalive 10 3
+ tunnel source Loopback55
+ tunnel mode ipsec ipv4
+ tunnel destination 10.228.48.165
+ tunnel vrf OCI
+ tunnel protection ipsec profile IPSEC-OCI-PROFILE
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/4
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/6
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/7
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface TenGigabitEthernet0/1/0
+ description *** Connected to NRR-EXT-EXTAGG-SW001 Eth1/1 ***
+ mtu 9216
+ no ip address
+ cdp enable
+ channel-group 52 mode active
+!
+interface TenGigabitEthernet0/1/1
+ description *** Connected to NRR-EXT-EXTAGG-SW002 Eth1/1 ***
+ mtu 9216
+ no ip address
+ cdp enable
+ channel-group 52 mode active
+!
+interface TenGigabitEthernet0/1/2
+ description ***ITC_OCI - 11037241***
+ mtu 9216
+ bandwidth 4000000
+ ip vrf forwarding OCI
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.30.3.98 255.255.255.252
+ load-interval 30
+!
+interface TenGigabitEthernet0/1/3
+ description ***11084091_OCI_C***
+ mtu 9216
+ bandwidth 102400
+ ip vrf forwarding OCI_C
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.30.14.130 255.255.255.252
+ udld port disable
+!
+interface TenGigabitEthernet0/1/4
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/1/5
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/1/6
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/1/7
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/2/0
+ description NN-SINNAD-PRI:HOWANSW1-Gig0/17(SINNAD)-(BAHRAIN):192.168.38.21-Fa0/1/2
+ bandwidth 1024
+ ip vrf forwarding SINNAD
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 192.168.34.110 255.255.255.252
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ load-interval 30
+ negotiation auto
+ crypto map SINNAD_DUBAI
+!
+interface GigabitEthernet0/2/1
+ description STC-ELM-PRI:RIYADH-RIYADH IP7342
+ bandwidth 1024
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ load-interval 30
+ negotiation auto
+ cdp enable
+ udld port disable
+!
+interface GigabitEthernet0/2/1.2154
+ description STC-ELM-PRI:RIYADH-RIYADH IP7342
+ bandwidth 1000
+ encapsulation dot1Q 2154
+ ip vrf forwarding ELM
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.27.108.114 255.255.255.252
+ no ip redirects
+!
+interface GigabitEthernet0/2/2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/2/3
+ description Uplink to ARB-Malaysia via NN
+ bandwidth 1024
+ ip vrf forwarding ARBMALAYSIA
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 192.168.34.98 255.255.255.252
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+ cdp enable
+ crypto map ARBMY
+!
+interface GigabitEthernet0/2/4
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/2/5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/2/6
+ description STC-SAWA:RIYADH-RIYADH PLL1041
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/2/6.3522
+ description STC-SAWA:RIYADH-RIYADH PLL1041
+ bandwidth 1024
+ encapsulation dot1Q 3522
+ ip vrf forwarding SAWA
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.255.18.46 255.255.255.252
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ ip access-group STC-ARB in
+!
+interface GigabitEthernet0/2/7
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/2/8
+ description P-MOI-STC:RIYADH-RIYADH IP7335 (1M)
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ load-interval 30
+ negotiation auto
+ udld port disable
+!
+interface GigabitEthernet0/2/8.3211
+ description P-MOI-STC:RIYADH-RIYADH IP7335 (1M)
+ bandwidth 1024
+ encapsulation dot1Q 3211
+ ip vrf forwarding MOI
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.27.108.110 255.255.255.252
+!
+interface GigabitEthernet0/2/9
+ no ip address
+ negotiation auto
+ udld port disable
+!
+interface GigabitEthernet0/2/9.3761
+ description GIP-LINK-RIYADH-RIYADH-PLL10103
+ bandwidth 1024
+ encapsulation dot1Q 3641
+ ip vrf forwarding GIP
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 192.168.11.254 255.255.255.252
+ ip access-group testgip in
+!
+interface GigabitEthernet0/2/10
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/2/11
+ description ITC-RIYADH_IP_11014872_NeoLeap
+ bandwidth 10240
+ ip vrf forwarding NeoLeap
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.30.10.246 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet0/2/11.3243
+ description STC-RAJHIPAY-PRI:RIYADH-RIYADH DIA13318
+ bandwidth 50000
+ encapsulation dot1Q 3243
+ ip vrf forwarding RAJHIPAY
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.22.22.10 255.255.255.252
+ no ip redirects
+ ip access-group paytest in
+!
+interface GigabitEthernet0/2/12
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/2/13
+ description SIMAH_11008101
+ bandwidth 1024
+ ip vrf forwarding SIMAH
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.16.18.27 255.255.255.248
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+ udld port disable
+!
+interface GigabitEthernet0/2/14
+ description TAKAFUL_ITC 11008922
+ bandwidth 30000
+ ip vrf forwarding ARI-TAK
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.30.8.178 255.255.255.252
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+!
+interface GigabitEthernet0/2/15
+ description TCC_ITC_11008781
+ bandwidth 2048
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/2/15.2100
+ description TCC_ITC_11008781
+ bandwidth 2048
+ encapsulation dot1Q 2100
+ ip vrf forwarding TCC
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 10.200.111.9 255.255.255.248
+!
+interface GigabitEthernet0/2/16
+ description ITC_11014371_MOF
+ no ip address
+ no ip proxy-arp
+ load-interval 30
+ negotiation auto
+ udld port disable
+!
+interface GigabitEthernet0/2/16.1203
+ description ITC_11014371_MOF
+ encapsulation dot1Q 1203
+ ip vrf forwarding MOF
+ ip flow monitor VHN-NMS-VRF input
+ ip flow monitor VHN-NMS-VRF output
+ ip address 172.30.11.102 255.255.255.252
+!
+interface GigabitEthernet0/2/17
+ description T2-ITC-11131411
+ ip vrf forwarding T2
+ ip address 10.123.10.2 255.255.255.252
+ negotiation auto
+ udld port disable
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ ip address 10.99.18.31 255.255.255.0
+ negotiation auto
+!
+router bgp 64756
+ bgp router-id vrf auto-assign
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+ !
+ address-family ipv4 vrf ARBMALAYSIA
+  network 172.21.179.1 mask 255.255.255.255
+  neighbor 192.168.34.97 remote-as 29684
+  neighbor 192.168.34.97 activate
+  neighbor 192.168.34.97 soft-reconfiguration inbound
+  neighbor 192.168.34.97 route-map ARBMALAYSIA_IN in
+  neighbor 192.168.34.97 route-map ARBMALAYSIA_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf ARI-TAK
+  network 172.28.4.0 mask 255.255.255.0
+  neighbor 172.30.8.177 remote-as 35753
+  neighbor 172.30.8.177 password 7 105A0812041107072C567A7874
+  neighbor 172.30.8.177 activate
+  neighbor 172.30.8.177 soft-reconfiguration inbound
+  neighbor 172.30.8.177 route-map ARI_PRIMARY_IN in
+  neighbor 172.30.8.177 route-map ARI_PRIMARY_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf ELM
+  network 10.210.16.48 mask 255.255.255.240
+  network 10.210.19.128 mask 255.255.255.240
+  neighbor 172.27.108.113 remote-as 65000
+  neighbor 172.27.108.113 activate
+  neighbor 172.27.108.113 soft-reconfiguration inbound
+  neighbor 172.27.108.113 prefix-list ELM_IN in
+  neighbor 172.27.108.113 prefix-list ELM_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf MOF
+  network 10.99.4.88 mask 255.255.255.248
+  network 10.191.7.45 mask 255.255.255.255
+  network 172.21.193.0 mask 255.255.255.0
+  neighbor 172.30.11.101 remote-as 35753
+  neighbor 172.30.11.101 activate
+  neighbor 172.30.11.101 soft-reconfiguration inbound
+  neighbor 172.30.11.101 route-map MOF_IN in
+  neighbor 172.30.11.101 route-map MOF_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf MOI
+  network 172.21.185.0 mask 255.255.255.0
+ exit-address-family
+ !
+ address-family ipv4 vrf NeoLeap
+  network 10.191.7.35 mask 255.255.255.255
+  network 10.191.7.63 mask 255.255.255.255
+  neighbor 172.30.10.245 remote-as 35753
+  neighbor 172.30.10.245 activate
+  neighbor 172.30.10.245 soft-reconfiguration inbound
+  neighbor 172.30.10.245 route-map NeoLeap_IN in
+  neighbor 172.30.10.245 route-map NeoLeap_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf OCI
+  network 0.0.0.0
+  network 10.191.7.99 mask 255.255.255.255
+  network 172.21.200.0 mask 255.255.255.0
+  neighbor 172.30.3.97 remote-as 35753
+  neighbor 172.30.3.97 activate
+  neighbor 172.30.3.97 soft-reconfiguration inbound
+  neighbor 172.30.3.97 route-map OCI_IN in
+  neighbor 172.30.3.97 route-map OCI_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf OCI_C
+  network 10.191.7.101 mask 255.255.255.255
+  redistribute static
+  neighbor 172.30.14.129 remote-as 35753
+  neighbor 172.30.14.129 shutdown
+  neighbor 172.30.14.129 activate
+  neighbor 172.30.14.129 soft-reconfiguration inbound
+  neighbor 172.30.14.129 route-map OCI_C_IN in
+  neighbor 172.30.14.129 route-map OCI_C_OUT out
+ exit-address-family
+ !
+ address-family ipv4 vrf RAJHIPAY
+  network 10.100.100.0 mask 255.255.255.0
+  network 172.21.191.248 mask 255.255.255.255
+  network 172.22.22.0 mask 255.255.255.0
+ exit-address-family
+ !
+ address-family ipv4 vrf SIMAH
+  network 172.31.1.0 mask 255.255.255.0
+ exit-address-family
+ !
+ address-family ipv4 vrf SINNAD
+  network 10.191.5.55 mask 255.255.255.255
+  network 10.191.6.29 mask 255.255.255.255
+  neighbor 192.168.34.109 remote-as 29684
+  neighbor 192.168.34.109 description SINNAD-BAHRAIN-via-NN(STC)
+  neighbor 192.168.34.109 activate
+  neighbor 192.168.34.109 soft-reconfiguration inbound
+  neighbor 192.168.34.109 route-map SINNAD_IN in
+  neighbor 192.168.34.109 route-map SINNAD_OUT out
+ exit-address-family
+!
+ip tcp window-size 65535
+ip tcp synwait-time 10
+ip tcp path-mtu-discovery
+ip telnet source-interface GigabitEthernet0
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip forward-protocol nd
+!
+ip as-path access-list 1 deny .*
+ip as-path access-list 10 permit ^$
+ip ftp source-interface GigabitEthernet0
+ip tftp source-interface GigabitEthernet0
+ip tftp blocksize 8192
+ip route vrf SIMAH 10.0.1.133 255.255.255.255 172.16.18.25 track 80
+ip route vrf SIMAH 10.0.1.137 255.255.255.255 172.16.18.25 track 80
+ip route vrf SIMAH 10.0.1.133 255.255.255.255 172.16.18.26 200 track 90
+ip route vrf SIMAH 10.0.1.137 255.255.255.255 172.16.18.26 200 track 90
+ip route vrf NeoLeap 10.177.0.0 255.255.255.0 Tunnel34 name VISA_Production track 111
+ip route vrf NeoLeap 10.177.2.0 255.255.255.0 Tunnel34 name VISA_Production track 111
+ip route vrf NeoLeap 10.10.165.11 255.255.255.255 Tunnel34 name Neoleap_CRM track 111
+ip route vrf NeoLeap 10.10.162.21 255.255.255.255 Tunnel34 name IAM_system track 111
+ip route vrf NeoLeap 10.10.52.1 255.255.255.255 Tunnel34 name Service_plus track 111
+ip route vrf NeoLeap 172.16.149.30 255.255.255.255 Tunnel34 name One_Drive track 111
+ip route vrf NeoLeap 10.10.164.15 255.255.255.255 Tunnel34 name cortex_server track 111
+ip route vrf NeoLeap 10.177.102.0 255.255.255.0 Tunnel35 name VISA_Production_DR track 222
+ip route 10.200.213.92 255.255.255.255 Tunnel10
+ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 GigabitEthernet0 10.99.18.1
+ip route vrf ARBMALAYSIA 0.0.0.0 0.0.0.0 Port-channel52.3358 10.99.4.68
+ip route vrf ARBMALAYSIA 10.200.10.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_IP_SUBNET
+ip route vrf ARBMALAYSIA 10.200.11.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_IP_SUBNET
+ip route vrf ARBMALAYSIA 10.200.60.95 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-SFTP_USER3
+ip route vrf ARBMALAYSIA 10.200.60.202 255.255.255.255 Tunnel10 172.21.179.14 name MALAYSIA-VC
+ip route vrf ARBMALAYSIA 10.200.181.1 255.255.255.255 Tunnel10 name MALAYSIA_TEST_ATM
+ip route vrf ARBMALAYSIA 10.200.213.92 255.255.255.255 Tunnel10 name TEST
+ip route vrf ARBMALAYSIA 10.200.214.10 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-CCM
+ip route vrf ARBMALAYSIA 10.200.214.27 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-CUCM
+ip route vrf ARBMALAYSIA 10.200.215.102 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-KMS_SERVER
+ip route vrf ARBMALAYSIA 10.200.215.159 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-KMS_SERVER2
+ip route vrf ARBMALAYSIA 10.200.224.118 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-SFTP_USER2
+ip route vrf ARBMALAYSIA 10.201.10.75 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-SFTP_USER1
+ip route vrf ARBMALAYSIA 10.201.10.211 255.255.255.255 Tunnel10 172.21.179.14 name MALAYSIA-VC
+ip route vrf ARBMALAYSIA 10.201.11.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.21.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.31.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.41.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.51.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.60.218 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-MRA_ACCESS
+ip route vrf ARBMALAYSIA 10.201.61.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.71.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.81.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 10.201.91.0 255.255.255.0 Tunnel10 172.21.179.14 name ARBMY_HEAD_QUARTER_NETWORK
+ip route vrf ARBMALAYSIA 172.16.181.10 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-TEST_HOST
+ip route vrf ARBMALAYSIA 172.16.181.11 255.255.255.255 Tunnel10 172.28.2.249 name BASE24_TEST
+ip route vrf ARBMALAYSIA 172.16.181.11 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-PROD_HOST
+ip route vrf ARBMALAYSIA 172.16.181.12 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-PROD_CARD_SERVER
+ip route vrf ARBMALAYSIA 172.16.181.13 255.255.255.255 Tunnel10 172.21.179.14 name ARBMY-PROD_TFTP_ORACLE
+ip route vrf ARBMALAYSIA 172.16.181.15 255.255.255.255 Tunnel10 172.21.179.14 name B24_TEST
+ip route vrf ARI-TAK 0.0.0.0 0.0.0.0 Port-channel52.3350 10.99.4.4
+ip route vrf ARI-TAK 172.28.4.0 255.255.255.0 Port-channel52.3350 10.99.4.4
+ip route vrf ELM 0.0.0.0 0.0.0.0 Port-channel52.3355 10.99.4.44
+ip route vrf ELM 10.210.19.128 255.255.255.240 Port-channel52.3355 10.99.4.44
+ip route vrf GIP 172.16.5.225 255.255.255.255 10.99.4.75
+ip route vrf GIP 172.16.10.166 255.255.255.255 10.99.4.75
+ip route vrf GIP 192.168.11.241 255.255.255.255 GigabitEthernet0/2/9.3761 192.168.11.253
+ip route vrf GIP 192.168.11.242 255.255.255.255 GigabitEthernet0/2/9.3761 192.168.11.253
+ip route vrf MOF 0.0.0.0 0.0.0.0 Port-channel52.3545 10.99.4.92
+ip route vrf MOF 172.21.193.0 255.255.255.0 10.99.4.92
+ip route vrf MOF 172.21.193.0 255.255.255.128 10.99.4.92
+ip route vrf MOF 172.21.193.128 255.255.255.128 10.99.4.140
+ip route vrf MOF 172.21.196.0 255.255.255.128 10.99.4.92
+ip route vrf MOF 172.21.196.128 255.255.255.128 10.99.4.140
+ip route vrf MOF 192.168.20.70 255.255.255.255 Tunnel42 name Payment
+ip route vrf MOF 192.168.20.70 255.255.255.255 Tunnel42 10.191.7.226 name Payment
+ip route vrf MOF 192.168.20.140 255.255.255.255 Tunnel42 name Payment
+ip route vrf MOF 192.168.20.141 255.255.255.255 Tunnel42 name Payment_Absher
+ip route vrf MOF 192.168.30.140 255.255.255.255 Tunnel43 name TMI
+ip route vrf MOF 192.168.30.141 255.255.255.255 Tunnel43 name TMI
+ip route vrf MOI 172.21.185.0 255.255.255.0 Port-channel52.3364 10.99.4.109 name MOI
+ip route vrf NeoLeap 10.4.122.55 255.255.255.255 Port-channel52.3363 10.99.4.99 name NEOLEAP_VISANAT
+ip route vrf NeoLeap 10.177.100.0 255.255.255.0 Tunnel35 name NeoLeap-DR
+ip route vrf NeoLeap 172.21.191.248 255.255.255.255 Port-channel52.3363 10.99.4.99 name NEOLEAP_VISANAT
+ip route vrf NeoLeap 172.21.194.0 255.255.255.0 Port-channel52.3363 10.99.4.99 name RAJHI_PAY_NeoLeap
+ip route vrf NeoLeap 172.21.198.0 255.255.255.0 Port-channel52.3370 10.99.4.132 name RAJHI_PAY_NeoLeap
+ip route vrf OCI 0.0.0.0 0.0.0.0 Port-channel52.3546 172.21.200.1
+ip route vrf OCI 10.40.208.0 255.255.240.0 Tunnel55 10.191.7.166 name ARC_ROBO_VCN
+ip route vrf OCI 10.40.210.0 255.255.254.0 Tunnel55 10.191.7.166 name ARC_ROBO
+ip route vrf OCI 10.228.0.0 255.255.0.0 Tunnel66 10.191.7.158 name NONPROD
+ip route vrf OCI 10.228.0.0 255.255.240.0 Tunnel66 10.191.7.158 name NONPROD
+ip route vrf OCI 10.228.49.0 255.255.255.0 Tunnel66 10.191.7.158 name SNIPER
+ip route vrf OCI 10.228.50.0 255.255.255.0 Tunnel66 10.191.7.158 name J2C
+ip route vrf OCI 10.228.51.0 255.255.255.0 Tunnel66 10.191.7.158 name J2C_2
+ip route vrf OCI 10.228.53.0 255.255.255.0 Tunnel66 10.191.7.158 name APP_OVLAY
+ip route vrf OCI 10.228.54.0 255.255.255.0 Tunnel66 10.191.7.158 name OFSSA_DEV
+ip route vrf OCI 10.228.55.64 255.255.255.192 Tunnel66 10.191.7.158 name OFSSA_UAT
+ip route vrf OCI 10.228.57.0 255.255.255.0 Tunnel66 10.191.7.158
+ip route vrf OCI 10.228.73.0 255.255.255.0 Tunnel66 10.191.7.158 name OFSAA
+ip route vrf OCI 10.228.88.0 255.255.255.0 Tunnel66 10.191.7.158 name HYPERION
+ip route vrf OCI 10.228.109.0 255.255.255.0 Tunnel66 10.191.7.158 name from_TWOER
+ip route vrf OCI 10.228.132.0 255.255.255.0 Tunnel66 10.191.7.158 name SIT
+ip route vrf OCI 10.228.152.0 255.255.255.0 Tunnel66 10.191.7.158 name UAT_1
+ip route vrf OCI 10.228.162.0 255.255.255.0 Tunnel66 10.191.7.158 name DEV
+ip route vrf OCI 10.228.196.0 255.255.255.0 Tunnel66 10.191.7.158 name NONPROD
+ip route vrf OCI 10.228.233.0 255.255.255.0 Tunnel66 10.191.7.158 name vCenter
+ip route vrf OCI 10.229.0.0 255.255.0.0 Tunnel55 10.191.7.166
+ip route vrf OCI 169.254.238.49 255.255.255.255 172.30.3.97
+ip route vrf OCI 169.254.238.50 255.255.255.255 172.30.3.97
+ip route vrf OCI 172.23.16.0 255.255.240.0 Tunnel66 10.191.7.158
+ip route vrf OCI 172.23.32.0 255.255.224.0 Tunnel66 10.191.7.158
+ip route vrf OCI 172.23.64.0 255.255.192.0 Tunnel55 10.191.7.158
+ip route vrf OCI_C 0.0.0.0 0.0.0.0 Port-channel52.3548 10.99.4.148
+ip route vrf OCI_C 10.109.0.0 255.255.192.0 Tunnel56 10.109.129.2 name OCI_C
+ip route vrf RAJHIPAY 10.100.100.0 255.255.255.0 Port-channel52.3362 10.99.4.84
+ip route vrf RAJHIPAY 172.21.191.248 255.255.255.255 Port-channel52.3362 10.99.4.84 name Service_VISA-AP
+ip route vrf RAJHIPAY 172.22.22.0 255.255.255.0 Port-channel52.3362 10.99.4.84
+ip route vrf SAWA 0.0.0.0 0.0.0.0 Port-channel52.3354 10.99.4.36
+ip route vrf SAWA 10.255.255.6 255.255.255.255 10.255.18.45 name SAWA_Service
+ip route vrf SAWA 10.255.255.70 255.255.255.255 10.255.18.45 name SAWA_Service
+ip route vrf SAWA 10.255.255.72 255.255.255.255 10.255.18.45 name SAWA_Service
+ip route vrf SIMAH 0.0.0.0 0.0.0.0 Port-channel52.3356 10.99.4.52
+ip route vrf SIMAH 172.31.1.0 255.255.255.0 Port-channel52.3356 10.99.4.52
+ip route vrf SINNAD 0.0.0.0 0.0.0.0 Port-channel52.3357 10.99.4.60
+ip route vrf SINNAD 10.66.102.50 255.255.255.255 Tunnel33 name Instant_Card_Issuance
+ip route vrf SINNAD 10.66.102.50 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.66.102.52 255.255.255.255 Tunnel33 name Instant_Card_Issuance1
+ip route vrf SINNAD 10.66.102.52 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.67.1.5 255.255.255.255 Tunnel33 name SINNAD-SFTP
+ip route vrf SINNAD 10.67.1.5 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.67.1.30 255.255.255.255 Tunnel33 name SINNAD-Almubasher
+ip route vrf SINNAD 10.67.1.30 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.102.7.205 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.102.102.10 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.102.102.10 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.102.102.11 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.102.102.11 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.102.102.20 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.102.102.20 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.102.102.200 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.102.102.200 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.114.114.100 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.114.114.100 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.173.173.17 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.173.173.17 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.174.174.16 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.174.174.16 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.199.18.1 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.199.18.1 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.199.182.1 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.199.182.1 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.199.204.10 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.199.204.10 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.199.204.11 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.199.204.11 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 10.199.204.14 255.255.255.255 Tunnel32
+ip route vrf SINNAD 10.199.204.14 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.108.75 255.255.255.255 Tunnel33 name SINNAD-TANDEM-TEST
+ip route vrf SINNAD 192.168.108.75 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.108.115 255.255.255.255 Tunnel33 name SINNAD-TANDEM-PROD
+ip route vrf SINNAD 192.168.108.115 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.19 255.255.255.255 Tunnel33 name Sinad_DCMS_TESTHOST
+ip route vrf SINNAD 192.168.124.19 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.110 255.255.255.255 Tunnel33 name SINNAD-SFTP
+ip route vrf SINNAD 192.168.124.110 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.112 255.255.255.255 Tunnel33 name SINNAD-TEST-SFTP
+ip route vrf SINNAD 192.168.124.112 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.114 255.255.255.255 Tunnel33 name SINNAD-PROGNOSIS
+ip route vrf SINNAD 192.168.124.114 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.122 255.255.255.255 Tunnel33 name SINNAD-TEST-Base24
+ip route vrf SINNAD 192.168.124.122 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.173 255.255.255.255 Tunnel33 name SINNAD-TIBCO-TEST
+ip route vrf SINNAD 192.168.124.173 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.180 255.255.255.255 Tunnel33 name SINNAD-SMS
+ip route vrf SINNAD 192.168.124.180 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.182 255.255.255.255 Tunnel33 name SINNAD-PALMARIS
+ip route vrf SINNAD 192.168.124.182 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.193 255.255.255.255 Tunnel33 name SINNAD-ARBJ-DCMS
+ip route vrf SINNAD 192.168.124.193 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.194 255.255.255.255 Tunnel33 name SINNAD-ARBK-DCM
+ip route vrf SINNAD 192.168.124.194 255.255.255.255 10.99.4.59 200
+ip route vrf SINNAD 192.168.124.232 255.255.255.255 Tunnel33 name SINNAD_SMS
+ip route vrf SINNAD 192.168.124.232 255.255.255.255 10.99.4.59 200
+ip route vrf TCC 0.0.0.0 0.0.0.0 10.99.4.12
+ip route vrf TCC 192.168.31.53 255.255.255.255 GigabitEthernet0/2/15.2100 10.200.111.10
+ip route vrf T2 0.0.0.0 0.0.0.0 Port-channel52.3344 10.99.4.155 name default-T2-FW
+ip route vrf T2 46.49.192.26 255.255.255.255 10.123.10.1 name T2-SMS-DigitalCity
+ip tacacs source-interface GigabitEthernet0 
+ip ssh time-out 60
+ip ssh version 2
+ip scp server enable
+!
+ip access-list standard NEW_MGMT_ACL
+ 10 permit 10.8.10.8
+ 20 permit 192.168.100.6
+ 30 permit 192.168.100.26
+ 40 permit 192.100.4.186
+ 50 permit 192.168.120.14
+ 60 permit 192.168.34.122
+ 70 permit 192.100.6.150
+ 80 permit 192.100.8.153
+ 90 permit 10.98.114.34
+ 100 permit 192.168.34.118
+ 110 permit 10.98.113.122
+ 120 permit 10.96.115.150
+ 130 permit 172.30.2.46
+ 140 permit 172.30.2.26
+ 150 permit 172.30.2.30
+ 160 permit 10.96.115.201
+ 170 permit 192.168.100.254
+ 180 permit 10.110.65.192 0.0.0.31
+ 190 permit 10.99.28.0 0.0.0.255
+ 200 permit 10.242.126.0 0.0.0.255
+ 210 permit 10.98.151.0 0.0.0.255
+ 220 permit 10.98.153.0 0.0.0.255
+ 230 permit 10.98.154.0 0.0.0.255
+ 240 permit 10.2.0.0 0.0.255.255
+ 250 permit 10.237.47.0 0.0.0.255
+ 260 permit 10.3.0.0 0.0.255.255
+ 270 permit 10.56.233.0 0.0.0.255
+ 280 permit 10.9.0.0 0.0.255.255
+ 290 permit 10.252.126.0 0.0.0.255
+ 300 permit 10.10.71.0 0.0.0.255
+ 310 permit 10.240.246.0 0.0.0.255
+ 320 permit 10.252.120.0 0.0.0.255
+ 330 permit 10.110.192.0 0.0.0.31
+ 1000 deny   any
+!
+ip access-list extended ARB-RIYADH-TO-MALAYSIA
+ 10 permit gre host 172.21.179.1 host 172.28.2.250
+ 20 deny   icmp host 172.21.179.13 host 172.21.179.14
+ip access-list extended ARBK-SINNAD
+ 10 permit ip host 10.62.7.15 host 10.102.102.10
+ 20 permit ip host 10.102.102.10 host 10.62.7.15
+ 30 permit ip host 10.62.7.16 host 10.102.102.10
+ 40 permit ip host 10.102.102.10 host 10.62.7.16
+ 50 permit ip host 10.62.7.17 host 10.102.102.10
+ 60 permit ip host 10.102.102.10 host 10.62.7.17
+ 70 permit ip host 10.62.7.18 host 10.102.102.10
+ 80 permit ip host 10.102.102.10 host 10.62.7.18
+ip access-list extended CAP-FILTER
+ 10 permit ip host 10.62.6.250 any
+ 20 permit ip any host 10.62.6.250
+ip access-list extended CoPP-Management
+ 10 remark ****Match SNMP****
+ 10 permit udp any any eq snmp
+ 20 remark ****Match TACACS****
+ 20 permit tcp any eq tacacs any
+ 30 permit udp any eq tacacs any
+ 40 remark ****Match Telnet-SSH****
+ 40 permit tcp any any eq telnet
+ 50 permit tcp any eq telnet any
+ 60 permit tcp any eq 22 any
+ 70 permit tcp any any eq 22
+ 80 permit tcp any eq 22 any established
+ 90 permit tcp any any eq 22 established
+ 100 remark ****Match NTP-Domain****
+ 100 permit udp any any eq ntp
+ 110 permit udp any eq ntp any
+ 120 remark ****Match SYSLOG****
+ 120 permit udp any eq syslog any
+ 130 remark ****Match FTP/TFTP****
+ 130 permit udp any eq tftp any
+ 140 permit tcp any eq ftp any
+ 150 permit tcp any eq ftp-data any
+ip access-list extended CoPP-Monitoring
+ 10 permit icmp any any ttl-exceeded
+ 20 permit icmp any any port-unreachable
+ 30 permit icmp any any echo-reply
+ 40 permit icmp any any echo
+ 50 permit icmp any any time-exceeded
+ 60 remark ****UDP-Traceroute matching linux*****
+ 60 permit udp any any range 33434 33534
+ip access-list extended CoPP-Routing
+ 10 permit tcp any any eq bgp
+ 20 permit tcp any eq bgp any
+ip access-list extended CoPP-Undesirable
+ 10 permit udp any any range netbios-ns netbios-ss
+ 20 permit tcp any any fragments
+ 30 permit udp any any fragments
+ 40 permit icmp any any fragments
+ 50 permit ip any any fragments
+ip access-list extended GRE_to_SINNAD
+ 10 permit gre host 10.191.5.45 host 10.191.5.25
+ip access-list extended GRE_to_SINNAD_DR
+ 10 permit gre host 10.191.40.29 host 10.191.40.14
+ip access-list extended GRE_to_SINNAD_DUBAI
+ 10 permit gre host 10.191.5.55 host 10.191.5.25
+ip access-list extended STC-ARB
+ 10 permit tcp any host 10.255.18.46 eq 9444
+ 20 permit tcp any host 10.255.18.56 eq 9444
+ 30 permit tcp host 10.255.255.72 host 10.255.18.46 eq 9444
+ 40 permit tcp host 10.255.255.72 host 10.255.18.56 eq 9444
+ 50 permit ip any any
+ip access-list extended VTY-ACL
+ 10 permit ip host 10.0.22.23 any
+ 20 permit ip host 10.0.10.15 any
+ 30 permit ip host 10.0.25.50 any
+ 40 permit ip host 10.252.126.170 any
+ 50 permit ip host 10.0.61.20 any
+ 60 permit ip host 10.10.2.42 any
+ 70 permit ip host 10.0.5.91 any
+ 80 permit ip host 10.0.25.125 any
+ 90 permit ip host 10.10.71.194 any
+ 100 permit ip host 10.0.22.137 any
+ 110 permit ip host 10.0.25.133 any
+ 120 permit ip host 10.0.25.178 any
+ 130 permit ip host 10.0.122.213 any
+ 140 permit ip host 10.11.31.173 any
+ 150 permit ip host 10.0.122.199 any
+ 160 permit ip host 10.0.9.195 any
+ 170 permit ip host 10.0.22.205 any
+ 180 permit ip host 10.0.25.244 any
+ 190 permit ip host 10.0.22.251 any
+ 200 permit ip host 10.10.2.254 any
+ 210 permit ip 10.98.151.0 0.0.0.255 any
+ 220 permit tcp 10.99.28.0 0.0.0.255 any eq 22
+ 230 permit tcp 10.242.126.0 0.0.0.255 any eq 22
+ip access-list extended ciscoacl
+ 10 permit ip host 10.191.6.29 host 10.191.6.28
+ 20 permit ip host 10.191.6.28 host 10.191.6.29
+ip access-list extended paytest
+ 10 permit icmp host 10.248.1.21 host 10.100.100.100
+ 20 permit icmp host 10.100.100.100 host 10.248.1.21
+ 30 permit ip any any
+ip access-list extended test
+ 10 permit ip host 192.168.60.205 host 10.210.19.130
+ 20 permit ip any any
+ip access-list extended testgip
+ 10 permit tcp host 192.168.11.241 host 172.16.10.166 eq 443
+ 20 permit icmp host 192.168.11.241 host 172.16.10.166
+ 30 permit ip host 192.168.11.241 host 172.16.10.166
+ 40 permit ip host 192.168.11.241 any
+ 50 permit ip any any
+!
+!
+ip prefix-list ARBMALAYSIA_IN seq 5 permit 172.21.180.1/32
+ip prefix-list ARBMALAYSIA_IN seq 10 permit 172.28.2.250/32
+!
+ip prefix-list ARBMALAYSIA_OUT seq 10 permit 172.21.179.1/32
+!
+ip prefix-list ARI-TAK_IN seq 5 permit 100.100.100.0/24 le 32
+ip prefix-list ARI-TAK_IN seq 15 permit 100.100.100.210/32
+ip prefix-list ARI-TAK_IN seq 25 permit 100.100.100.0/24
+ip prefix-list ARI-TAK_IN seq 30 permit 172.30.8.140/30
+!
+ip prefix-list ARI-TAK_OUT seq 5 permit 172.28.4.0/24
+!
+ip prefix-list BGP_IN seq 3 permit 100.100.100.111/32
+ip prefix-list BGP_IN seq 4 permit 100.100.100.112/32
+ip prefix-list BGP_IN seq 5 permit 100.100.100.100/32
+ip prefix-list BGP_IN seq 6 permit 100.100.100.201/32
+ip prefix-list BGP_IN seq 7 permit 100.100.100.202/32
+ip prefix-list BGP_IN seq 8 permit 100.100.100.205/32
+ip prefix-list BGP_IN seq 9 permit 100.100.100.110/32
+ip prefix-list BGP_IN seq 10 permit 100.100.100.200/32
+ip prefix-list BGP_IN seq 12 permit 100.100.100.204/32
+ip prefix-list BGP_IN seq 13 permit 100.100.100.203/32
+ip prefix-list BGP_IN seq 15 permit 100.100.100.250/32
+ip prefix-list BGP_IN seq 16 permit 100.100.100.193/32
+ip prefix-list BGP_IN seq 17 permit 100.100.100.101/32
+ip prefix-list BGP_IN seq 18 permit 100.100.100.102/32
+ip prefix-list BGP_IN seq 19 permit 100.100.100.103/32
+ip prefix-list BGP_IN seq 20 permit 87.101.215.28/30
+ip prefix-list BGP_IN seq 21 permit 100.100.100.114/32
+ip prefix-list BGP_IN seq 22 permit 100.100.100.207/32
+ip prefix-list BGP_IN seq 23 permit 100.100.100.210/32
+ip prefix-list BGP_IN seq 24 permit 100.100.100.211/32
+ip prefix-list BGP_IN seq 25 permit 100.100.100.212/32
+ip prefix-list BGP_IN seq 26 permit 100.100.100.209/32
+ip prefix-list BGP_IN seq 27 permit 100.100.100.213/32
+ip prefix-list BGP_IN seq 100 deny 0.0.0.0/0 le 32
+!
+ip prefix-list BGP_IN_ARBMY seq 10 permit 172.28.2.250/32
+ip prefix-list BGP_IN_ARBMY seq 20 permit 172.28.2.254/32
+ip prefix-list BGP_IN_ARBMY seq 30 permit 192.168.30.0/30
+ip prefix-list BGP_IN_ARBMY seq 40 permit 88.85.230.0/28
+ip prefix-list BGP_IN_ARBMY seq 1000 deny 0.0.0.0/0 le 32
+!
+ip prefix-list BGP_OUT seq 10 permit 172.28.4.0/24
+ip prefix-list BGP_OUT seq 20 permit 87.101.215.44/30
+ip prefix-list BGP_OUT seq 100 deny 0.0.0.0/0 le 32
+!
+ip prefix-list BGP_OUT_ARBMALAYSIA seq 5 permit 172.28.2.249/32
+!
+ip prefix-list BGP_OUT_RAJHIBANK seq 5 permit 172.28.1.0/24
+ip prefix-list BGP_OUT_RAJHIBANK seq 10 permit 172.28.2.249/32
+ip prefix-list BGP_OUT_RAJHIBANK seq 15 permit 172.28.2.252/30
+ip prefix-list BGP_OUT_RAJHIBANK seq 1000 deny 0.0.0.0/0 le 32
+!
+ip prefix-list ELM_IN seq 5 permit 192.168.60.0/24
+!
+ip prefix-list ELM_OUT seq 10 permit 10.210.19.128/28
+!
+ip prefix-list MOF_IN seq 4 permit 10.70.55.0/27
+ip prefix-list MOF_IN seq 5 permit 10.70.55.11/32
+ip prefix-list MOF_IN seq 6 permit 10.70.55.10/32
+ip prefix-list MOF_IN seq 10 permit 10.70.55.20/32
+ip prefix-list MOF_IN seq 15 permit 10.70.55.21/32
+ip prefix-list MOF_IN seq 20 permit 172.27.128.92/30
+ip prefix-list MOF_IN seq 25 permit 10.70.65.0/27
+ip prefix-list MOF_IN seq 30 permit 172.30.12.236/30
+ip prefix-list MOF_IN seq 35 permit 172.30.8.76/30
+!
+ip prefix-list MOF_OUT seq 5 permit 10.99.4.80/28
+ip prefix-list MOF_OUT seq 10 permit 10.191.7.45/32
+ip prefix-list MOF_OUT seq 20 permit 172.21.193.0/24
+!
+ip prefix-list MOI_IN seq 5 permit 10.4.201.197/32
+!
+ip prefix-list MOI_OUT seq 5 permit 172.21.185.0/24
+!
+ip prefix-list NeoLeap_IN seq 5 permit 172.30.6.152/30
+ip prefix-list NeoLeap_IN seq 10 permit 10.191.7.36/32
+ip prefix-list NeoLeap_IN seq 15 permit 10.191.7.64/32
+!
+ip prefix-list NeoLeap_OUT seq 12 permit 10.191.7.35/32
+ip prefix-list NeoLeap_OUT seq 15 permit 10.191.7.63/32
+!
+ip prefix-list OCI_C_IN seq 7 permit 10.109.0.0/18 le 32
+!
+ip prefix-list OCI_C_OUT seq 8 permit 10.191.7.101/32
+!
+ip prefix-list OCI_IN seq 3 permit 10.228.3.192/26
+ip prefix-list OCI_IN seq 5 permit 10.229.48.165/32
+ip prefix-list OCI_IN seq 10 permit 10.229.48.64/27
+ip prefix-list OCI_IN seq 15 permit 10.228.48.64/27
+ip prefix-list OCI_IN seq 20 permit 10.228.48.165/32
+ip prefix-list OCI_IN seq 25 permit 10.229.49.0/24
+ip prefix-list OCI_IN seq 26 permit 10.229.56.0/24
+!
+ip prefix-list OCI_OUT seq 5 permit 10.191.7.71/32
+ip prefix-list OCI_OUT seq 25 permit 0.0.0.0/0
+ip prefix-list OCI_OUT seq 30 permit 10.191.7.99/32
+!
+ip prefix-list RAJHIPAYIN seq 5 permit 10.248.0.0/16
+!
+ip prefix-list RAJHIPAYOUT seq 5 permit 10.100.100.0/24
+ip prefix-list RAJHIPAYOUT seq 6 permit 172.21.191.248/32
+ip prefix-list RAJHIPAYOUT seq 10 permit 172.22.22.0/24
+!
+ip prefix-list SIMAH_IN seq 5 permit 10.0.1.136/32
+ip prefix-list SIMAH_IN seq 10 permit 10.0.1.137/32
+ip prefix-list SIMAH_IN seq 11 permit 10.0.1.133/32
+ip prefix-list SIMAH_IN seq 15 permit 10.0.103.0/24
+ip prefix-list SIMAH_IN seq 20 permit 10.0.1.0/24
+ip prefix-list SIMAH_IN seq 25 permit 10.0.100.0/24
+!
+ip prefix-list SIMAH_OUT seq 10 permit 172.31.1.0/24
+!
+ip prefix-list SINNAD_IN seq 10 permit 10.191.5.25/32
+ip prefix-list SINNAD_IN seq 15 permit 10.191.6.28/32
+ip prefix-list SINNAD_IN seq 20 permit 10.202.12.4/32
+ip prefix-list SINNAD_IN seq 25 permit 10.202.12.0/29
+!
+ip prefix-list SINNAD_OUT seq 10 permit 10.191.5.55/32
+ip prefix-list SINNAD_OUT seq 15 permit 10.191.6.29/32
+ip sla 5
+ icmp-echo 10.200.103.1
+  vrf TCC
+  threshold 2
+  timeout 1000
+  frequency 3
+ip sla schedule 5 life forever start-time now
+ip sla 10
+ icmp-echo 192.168.34.97
+  vrf ARBMALAYSIA
+ip sla schedule 10 life forever start-time now
+ip sla 12
+ icmp-echo 172.30.8.78
+  vrf MOF
+ip sla schedule 12 life forever start-time now
+ip sla 20
+ icmp-echo 172.30.8.142 source-ip 172.30.8.178
+  vrf ARI-TAK
+ip sla schedule 20 life forever start-time now
+ip sla 30
+ icmp-echo 172.27.108.113
+  vrf ELM
+ip sla schedule 30 life forever start-time now
+ip sla 40
+ icmp-echo 10.255.18.45
+  vrf SAWA
+ip sla schedule 40 life forever start-time now
+ip sla 50
+ icmp-echo 172.27.108.85
+  vrf SIMAH
+ip sla schedule 50 life forever start-time now
+ip sla 60
+ icmp-echo 172.19.99.21
+  vrf SINNAD
+  timeout 10000
+ip sla schedule 60 life forever start-time now
+ip sla 70
+ icmp-echo 10.255.10.193
+ip sla schedule 70 life forever start-time now
+ip sla 80
+ icmp-echo 172.16.18.25 source-ip 172.16.18.27
+  vrf SIMAH
+  frequency 10
+ip sla schedule 80 life forever start-time now
+ip sla 90
+ icmp-echo 172.16.18.26 source-ip 172.16.18.27
+  vrf SIMAH
+  frequency 10
+ip sla schedule 90 life forever start-time now
+ip sla 100
+ icmp-echo 10.200.111.10 source-ip 10.200.111.9
+  vrf TCC
+  threshold 1000
+  timeout 6000
+  frequency 10
+ip sla schedule 100 life forever start-time now
+ip sla 111
+ icmp-echo 10.191.7.36 source-ip 10.191.7.35
+  vrf NeoLeap
+  threshold 1000
+  timeout 6000
+  frequency 10
+ip sla schedule 111 life forever start-time now
+ip sla 222
+ icmp-echo 10.191.7.64 source-ip 10.191.7.63
+  vrf NeoLeap
+  threshold 1000
+  timeout 6000
+  frequency 10
+ip sla schedule 222 life forever start-time now
+ip sla 333
+ icmp-echo 172.27.128.94 source-ip 10.191.7.45
+  vrf MOF
+  threshold 1000
+  timeout 6000
+  frequency 10
+ip sla schedule 333 life forever start-time now
+ip sla 444
+ icmp-echo 172.30.12.238 source-ip 10.191.7.45
+  vrf MOF
+  threshold 1000
+  timeout 6000
+  frequency 10
+ip sla schedule 444 life forever start-time now
+logging trap debugging
+logging origin-id hostname
+logging source-interface GigabitEthernet0 vrf Mgmt-intf
+logging host 10.0.46.236 vrf Mgmt-intf
+logging host 10.252.126.161 vrf Mgmt-intf
+logging host 10.0.61.20 vrf Mgmt-intf
+logging host 10.252.126.170 vrf Mgmt-intf
+logging host 10.252.126.129 vrf Mgmt-intf
+logging host 10.99.19.90 vrf Mgmt-intf
+logging host 10.99.28.72 vrf Mgmt-intf
+logging host 10.99.28.72
+logging host 10.252.105.67 vrf Mgmt-intf
+logging host 10.252.105.67 vrf Mgmt-intf transport udp port 1517
+ip access-list standard 10
+ 10 permit 10.0.10.15
+ 20 permit 10.99.28.100
+ 30 permit 10.99.19.90
+ 40 permit 10.99.28.72
+ 50 permit 10.0.46.100
+ 60 permit 10.242.212.185
+ 70 permit 10.0.46.236
+ 80 permit 193.19.91.0 0.0.0.255
+ 90 permit 10.252.126.0 0.0.0.255
+ 100 permit 10.110.64.36
+ 110 permit 10.99.28.82
+ip access-list standard 25
+ 10 permit 10.110.64.13
+ 20 permit 10.110.64.20
+ 30 permit 10.229.150.11
+ 40 permit 10.229.150.12
+ 50 permit 10.242.213.135
+ 60 permit 10.110.150.11
+ 70 permit 10.110.150.12
+ 80 permit 10.99.28.0 0.0.0.255
+ 90 permit 10.242.126.0 0.0.0.255
+ 100 permit 10.110.64.36
+!
+route-map OCI_C_IN permit 10 
+ match ip address prefix-list OCI_C_IN
+!
+route-map ARBMALAYSIA_IN permit 10 
+ match ip address prefix-list ARBMALAYSIA_IN
+!
+route-map SINNAD_OUT permit 10 
+ match ip address prefix-list SINNAD_OUT
+!
+route-map ARI_PRIMARY_IN permit 10 
+ match ip address prefix-list ARI-TAK_IN
+ set weight 200
+!
+route-map MOI_IN permit 10 
+ match ip address prefix-list MOI_IN
+!
+route-map SIMAH_PRIMARY_IN permit 10 
+ match ip address prefix-list SIMAH_IN
+ set weight 200
+!
+route-map MOF_IN permit 10 
+ match ip address prefix-list MOF_IN
+!
+route-map OCI_IN permit 10 
+ match ip address prefix-list OCI_IN
+ set local-preference 300
+!
+route-map NeoLeap_IN permit 10 
+ match ip address prefix-list NeoLeap_IN
+!
+route-map ARBMALAYSIA_OUT permit 10 
+ match ip address prefix-list ARBMALAYSIA_OUT
+!
+route-map SINNAD_IN permit 10 
+ match ip address prefix-list SINNAD_IN
+!
+route-map AS_PATH_DENYALL permit 10 
+ match as-path 1
+!
+route-map OCI_C_OUT permit 10 
+ match ip address prefix-list OCI_C_OUT
+ set as-path prepend 64756 64756 64756 64756 64756
+!
+route-map OCI_OUT permit 10 
+ match ip address prefix-list OCI_OUT
+ set as-path prepend 64756 64756 64756 64756
+!
+route-map MOF_OUT permit 10 
+ match ip address prefix-list MOF_OUT
+!
+route-map ARI_PRIMARY_OUT permit 10 
+ match ip address prefix-list ARI-TAK_OUT
+!
+route-map MOI_OUT permit 10 
+ match ip address prefix-list MOI_OUT
+!
+route-map SIMAH_PRIMARY_OUT permit 10 
+ match ip address prefix-list SIMAH_OUT
+!
+route-map NeoLeap_OUT permit 10 
+!
+snmp-server group admin v3 priv 
+snmp-server group Alrajhi v3 auth access 10
+snmp-server group Alrajhi v3 priv access 10
+snmp-server group default v3 priv 
+snmp-server group SOLARWIND v3 auth access 25
+snmp-server group SOLARWIND v3 priv access 25
+snmp-server trap-source GigabitEthernet0
+snmp-server location NRR-DC-EXT-EXTBR-R001
+snmp-server contact nw-cs@alrajhibank.com.sa
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps pfr
+snmp-server enable traps flowmon
+snmp-server enable traps ds1
+snmp-server enable traps entity-perf throughput-notif
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps casa
+snmp-server enable traps smart-license
+snmp-server enable traps license
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps bfd
+snmp-server enable traps bgp
+snmp-server enable traps bgp cbgp2
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dhcp
+snmp-server enable traps dial
+snmp-server enable traps diameter
+snmp-server enable traps dlsw
+snmp-server enable traps dsp card-status
+snmp-server enable traps dsp oper-state
+snmp-server enable traps dsp video-usage
+snmp-server enable traps dsp video-out-of-resource
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay multilink bundle-mismatch
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif
+snmp-server enable traps hsrp
+snmp-server enable traps pimstdmib neighbor-loss invalid-register invalid-join-prune rp-mapping-change interface-election
+snmp-server enable traps ipmulticast
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps ospfv3 state-change
+snmp-server enable traps ospfv3 errors
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps pw vc
+snmp-server enable traps rsvp
+snmp-server enable traps ipsla
+snmp-server enable traps syslog
+snmp-server enable traps l2tun session
+snmp-server enable traps l2tun pseudowire status
+snmp-server enable traps pki
+snmp-server enable traps adslline
+snmp-server enable traps vdsl2line
+snmp-server enable traps ethernet evc status create delete
+snmp-server enable traps ether-oam
+snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps entity-qfp mem-res-thresh throughput-notif
+snmp-server enable traps entity-state
+snmp-server enable traps lisp
+snmp-server enable traps entity-sensor
+snmp-server enable traps flash insertion removal lowspace
+snmp-server enable traps firewall serverstatus
+snmp-server enable traps netsync
+snmp-server enable traps sbc adj-status
+snmp-server enable traps sbc blacklist
+snmp-server enable traps sbc congestion-alarm
+snmp-server enable traps sbc h248-ctrlr-status
+snmp-server enable traps sbc media-source
+snmp-server enable traps sbc radius-conn-status
+snmp-server enable traps sbc sla-violation
+snmp-server enable traps sbc sla-violation-rev1
+snmp-server enable traps sbc svc-state
+snmp-server enable traps sbc qos-statistics
+snmp-server enable traps srp
+snmp-server enable traps isdn call-information
+snmp-server enable traps isdn layer2
+snmp-server enable traps isdn chan-not-avail
+snmp-server enable traps isdn ietf
+snmp-server enable traps cnpd
+snmp-server enable traps entity-diag boot-up-fail hm-test-recover hm-thresh-reached scheduled-test-fail
+snmp-server enable traps ike policy add
+snmp-server enable traps ike policy delete
+snmp-server enable traps ike tunnel start
+snmp-server enable traps ike tunnel stop
+snmp-server enable traps ipsec cryptomap add
+snmp-server enable traps ipsec cryptomap delete
+snmp-server enable traps ipsec cryptomap attach
+snmp-server enable traps ipsec cryptomap detach
+snmp-server enable traps ipsec tunnel start
+snmp-server enable traps ipsec tunnel stop
+snmp-server enable traps ipsec too-many-sas
+snmp-server enable traps gdoi gm-start-registration
+snmp-server enable traps gdoi gm-registration-complete
+snmp-server enable traps gdoi gm-re-register
+snmp-server enable traps gdoi gm-rekey-rcvd
+snmp-server enable traps gdoi gm-rekey-fail
+snmp-server enable traps gdoi ks-rekey-pushed
+snmp-server enable traps gdoi gm-incomplete-cfg
+snmp-server enable traps gdoi ks-no-rsa-keys
+snmp-server enable traps gdoi ks-new-registration
+snmp-server enable traps gdoi ks-reg-complete
+snmp-server enable traps gdoi ks-role-change
+snmp-server enable traps gdoi ks-gm-deleted
+snmp-server enable traps gdoi ks-peer-reachable
+snmp-server enable traps gdoi ks-peer-unreachable
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps sonet
+snmp-server enable traps resource-policy
+snmp-server enable traps otn
+snmp-server enable traps nhrp nhs
+snmp-server enable traps nhrp nhc
+snmp-server enable traps nhrp nhp
+snmp-server enable traps nhrp quota-exceeded
+snmp-server enable traps isis
+snmp-server enable traps ip local pool
+snmp-server enable traps mpls rfc ldp
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls rfc traffic-eng
+snmp-server enable traps mpls traffic-eng
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps alarms informational
+snmp-server enable traps voice
+snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+snmp-server enable traps ethernet cfm alarm
+snmp-server enable traps rf
+snmp-server enable traps transceiver all
+snmp-server enable traps mpls vpn
+snmp-server enable traps mpls rfc vpn
+snmp-server host 10.99.28.72 version 3 priv NSMmonitoring 
+snmp-server host 10.99.28.72 vrf Mgmt-intf version 3 priv NSMmonitoring 
+snmp-server host 10.252.126.172 version 3 priv admin 
+!
+tacacs server TACACS-SERVER-1
+ address ipv4 10.252.70.54
+ key 7 0832494D1B180F1F1B0E5F507D
+ timeout 5
+tacacs server TACACS-SERVER-2
+ address ipv4 10.252.70.53
+ key 7 13161211190D0E2222217B6762
+ timeout 5
+tacacs server TACACS-SERVER-DR
+ address ipv4 10.242.70.54
+ key 7 03175E08140E2B44470C4A5140
+ timeout 5
+!
+!
+!
+!
+control-plane
+ service-policy input Policy-CoPP
+!
+!
+!
+!
+!
+banner exec ^CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device.
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner login ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner motd ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+!
+line con 0
+ exec-timeout 5 0
+ login authentication no_tacacs
+ stopbits 1
+line aux 0
+ login authentication no_tacacs
+ no exec
+ transport output none
+line vty 0 4
+ access-class NEW_MGMT_ACL in vrf-also
+ exec-timeout 5 0
+ session-limit 3
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output none
+line vty 5 15
+ access-class NEW_MGMT_ACL in vrf-also
+ exec-timeout 5 0
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output none
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+ntp authentication-key 1 md5 045802150C2E 7
+ntp authenticate
+ntp trusted-key 1
+ntp source GigabitEthernet0
+ntp server vrf Mgmt-intf 10.11.3.240
+ntp server vrf Mgmt-intf 10.0.250.2 prefer
+ntp server vrf Mgmt-intf 10.0.3.52
+ntp server vrf Mgmt-intf 10.0.3.53
+ntp server vrf Mgmt-intf 10.11.3.239
+!
+!
+!
+!
+!
+!
+end
+

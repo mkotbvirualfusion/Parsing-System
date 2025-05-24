@@ -1,0 +1,73 @@
+device_id,policy_name,class_name,interface,direction,bandwidth,priority,queue_limit,dscp_marking,cos_marking,description,source_file
+nrr_wan_br_r002,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,voice,voice-class,global,both,priority 256,high,32,46,5,Voice traffic class with priority queuing,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,video,video-class,global,both,bandwidth 512,medium,64,34,4,Video traffic class with guaranteed bandwidth,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,data,data-class,global,both,bandwidth 1024,low,128,18,2,Data traffic class with best effort,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,voice,voice-class,global,both,priority 256,high,32,46,5,Voice traffic class with priority queuing,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,video,video-class,global,both,bandwidth 512,medium,64,34,4,Video traffic class with guaranteed bandwidth,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,data,data-class,global,both,bandwidth 1024,low,128,18,2,Data traffic class with best effort,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,critical,critical-class,global,both,priority 128,high,16,46,5,Critical business traffic class,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,business,business-class,global,both,bandwidth 256,medium,32,26,3,Business traffic class,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,critical,critical-class,global,both,priority 128,high,16,46,5,Critical business traffic class,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,business,business-class,global,both,bandwidth 256,medium,32,26,3,Business traffic class,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,external,external-class,global,both,bandwidth 512,medium,64,22,2,External traffic class,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,management,mgmt-class,global,both,bandwidth 64,low,16,16,1,Management traffic class,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,external,external-class,global,both,bandwidth 512,medium,64,22,2,External traffic class,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,management,mgmt-class,global,both,bandwidth 64,low,16,16,1,Management traffic class,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,default,class-default,global,both,,normal,64,0,0,Default class for unclassified traffic,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,voice,voice-class,global,both,priority 256,high,32,46,5,Voice traffic class with strict priority,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,video,video-class,global,both,bandwidth 512,medium,64,34,4,Video conferencing traffic class,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,data,data-class,global,both,bandwidth 1024,low,128,18,2,General data traffic class,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class5,global,both,,medium,,,,QoS Class 5 - Medium Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class6,global,both,,low,,,,QoS Class 6 - Low Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class7,global,both,,low,,,,QoS Class 7 - Low Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,default,class8,global,both,,low,,,,QoS Class 8 - Low Priority Traffic,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class5,global,both,,medium,,,,QoS Class 5 - Medium Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class6,global,both,,low,,,,QoS Class 6 - Low Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class7,global,both,,low,,,,QoS Class 7 - Low Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,default,class8,global,both,,low,,,,QoS Class 8 - Low Priority Traffic,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class5,global,both,,medium,,,,QoS Class 5 - Medium Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class6,global,both,,low,,,,QoS Class 6 - Low Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class7,global,both,,low,,,,QoS Class 7 - Low Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,default,class8,global,both,,low,,,,QoS Class 8 - Low Priority Traffic,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/UAT-PA-Backup
+uat_pa_backup,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/UAT-PA-Backup
+uat_pa_backup,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/UAT-PA-Backup
+uat_pa_backup,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/UAT-PA-Backup
+uat_pa_internet_backup,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/UAT-PA-Internet-Backup 

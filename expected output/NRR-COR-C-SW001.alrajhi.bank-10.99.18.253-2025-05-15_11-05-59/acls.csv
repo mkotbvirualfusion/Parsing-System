@@ -1,0 +1,42 @@
+device_id,acl_name,seq_number,action,source_ip,source_mask,destination_ip,destination_mask,protocol,port,log,description,acl_type,direction,source_file
+nrr_cor_c_sw001,25,10,permit,10.99.28.0,255.255.255.0,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,20,permit,10.242.126.0,255.255.255.0,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,30,permit,10.110.150.11,255.255.255.255,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,40,permit,10.110.150.12,255.255.255.255,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,50,permit,10.242.213.135,255.255.255.255,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,60,permit,10.229.150.11,255.255.255.255,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,25,70,permit,10.229.150.12,255.255.255.255,any,any,ip,,,IP access list,standard,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,10,permit,10.8.10.8,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,20,permit,192.168.100.6,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,30,permit,192.168.100.26,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,40,permit,192.100.4.186,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,50,permit,192.168.120.14,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,60,permit,192.168.34.122,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,70,permit,192.100.6.150,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,80,permit,192.100.8.153,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,90,permit,10.98.114.34,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,100,permit,192.168.34.118,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,110,permit,10.98.113.122,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,120,permit,10.96.115.150,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,130,permit,172.30.2.46,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,140,permit,172.30.2.26,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,150,permit,172.30.2.30,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,160,permit,10.96.115.201,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,170,permit,192.168.100.254,255.255.255.255,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,180,permit,10.110.65.192,255.255.255.224,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,190,permit,10.99.28.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,200,permit,10.242.126.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,210,permit,10.98.151.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,220,permit,10.98.153.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,230,permit,10.98.154.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,240,permit,10.2.0.0,255.254.0.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,250,permit,10.237.47.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,260,permit,10.3.0.0,255.253.0.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,270,permit,10.56.233.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,280,permit,10.9.0.0,255.247.0.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,290,permit,10.252.126.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,300,permit,10.10.71.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,310,permit,10.240.246.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,320,permit,10.252.120.0,255.255.255.0,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,330,permit,10.110.192.0,255.255.255.224,any,any,tcp,22,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NEW_MGMT_ACL,1000,deny,any,any,any,any,tcp,,,Management ACL for SSH,extended,,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

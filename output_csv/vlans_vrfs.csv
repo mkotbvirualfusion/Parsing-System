@@ -1,0 +1,14 @@
+device_id,vlan_id,vlan_name,description,state,mode,svi_ip,vrf_name,vrf_rd,active,source_file
+nrr_cor_c_sw002,1,,,up,access,,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3279,dr_vpn_replica_Inside,,up,routed,10.99.2.106,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3301,L3_to_WAN-FW,,up,routed,10.99.2.2,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3302,L3_to_INT-FW,,up,routed,10.99.2.10,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3303,L3_to_SAMA-EXT-FW,,up,routed,10.99.2.18,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3304,L3_to_EXT-EXT-FW,,up,routed,10.99.2.26,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3305,L3_to_TAD-EXT-FW,,up,routed,10.99.2.34,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3306,L3_to_OOB-AGG-FW,,up,routed,10.99.2.42,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3307,L3_to_NRR-REP-OTV-R001,,up,routed,10.99.2.50,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3308,L3_to_NRR-REP-OTV-R002,,up,routed,10.99.2.58,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3309,ForcePoint_INSIDE,,up,routed,10.99.5.98,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3310,ForcePoint_OUTSIDE,,up,routed,10.99.5.106,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,3315,L3-USER-CAMPUS,,up,routed,10.99.2.82,,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log

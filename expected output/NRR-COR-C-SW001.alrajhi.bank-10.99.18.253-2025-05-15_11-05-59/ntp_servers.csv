@@ -1,0 +1,6 @@
+device_id,ntp_server,prefer,key_id,version,vrf,description,source_interface,authentication_enabled,source_file
+nrr_cor_c_sw001,10.0.3.52,no,,4,management,NTP server,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.3.53,no,,4,management,NTP server,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.0.250.2,yes,1,4,management,Primary NTP server,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.3.239,no,,4,management,NTP server,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,10.11.3.240,no,,4,management,NTP server,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

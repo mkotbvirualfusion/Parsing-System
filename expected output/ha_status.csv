@@ -1,0 +1,28 @@
+device_id,ha_role,peer_id,sync_state,failover_timer,last_failover_ts,ha_group_id,ha_mode,priority,preempt,description,source_file
+nrr_wan_br_r002,standalone,,,,,,,,,Cisco router in SSO redundancy mode,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,standalone,,,,,,,,,Cisco router in SSO redundancy mode,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,standalone,,,,,,,,,Cisco router standalone,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,standalone,,,,,,,,,Cisco router standalone,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,standalone,,,,,,,,,Cisco router standalone,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,standalone,,,,,,,,,Cisco router standalone,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,standalone,,,,,,,,,Cisco switch standalone,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,primary,port32,enabled,recommended,,10,active-passive,200,auto,Fortinet firewall primary in sama-ha group,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001_secondary,secondary,port31,enabled,recommended,,10,active-passive,100,auto,Fortinet firewall secondary in sama-ha group,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,primary,port32,enabled,recommended,,11,active-passive,200,auto,Fortinet firewall primary in tad-ha group,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001_secondary,secondary,port31,enabled,recommended,,11,active-passive,100,auto,Fortinet firewall secondary in tad-ha group,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,primary,port32,enabled,recommended,,12,active-passive,200,auto,Fortinet firewall primary in ext-ha group,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001_secondary,secondary,port31,enabled,recommended,,12,active-passive,100,auto,Fortinet firewall secondary in ext-ha group,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,standalone,,,,,,,,,Fortinet firewall standalone ASA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,standalone,,,,,,,,,Fortinet firewall standalone PA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,primary,port32,enabled,recommended,,13,active-passive,200,auto,Fortinet firewall primary in oob-ha group,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001_secondary,secondary,port31,enabled,recommended,,13,active-passive,100,auto,Fortinet firewall secondary in oob-ha group,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,primary,port32,enabled,recommended,,14,active-passive,200,auto,Fortinet firewall primary in wan-ha group,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001_secondary,secondary,port31,enabled,recommended,,14,active-passive,100,auto,Fortinet firewall secondary in wan-ha group,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,primary,192.0.2.2,enabled,recommended,,31,active-passive,90,auto,Palo Alto firewall primary with HA Group 31,configs/UAT-PA-Backup
+uat_pa_backup_secondary,secondary,192.0.2.1,enabled,recommended,,31,active-passive,80,auto,Palo Alto firewall secondary with HA Group 31,configs/UAT-PA-Backup
+uat_pa_internet_backup,primary,192.0.2.6,enabled,recommended,,32,active-passive,90,auto,Palo Alto firewall primary with HA Group 32,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup_secondary,secondary,192.0.2.5,enabled,recommended,,32,active-passive,80,auto,Palo Alto firewall secondary with HA Group 32,configs/UAT-PA-Internet-Backup
+cluster_member_1,cluster_member,019901003832,enabled,recommended,,11,cluster,90,auto,Primary-NRR Cluster Member,configs/UAT-PA-Backup
+cluster_member_2,cluster_member,019901003860,enabled,recommended,,11,cluster,90,auto,Secondary-NRR Cluster Member,configs/UAT-PA-Backup
+cluster_member_3,cluster_member,019901004029,enabled,recommended,,11,cluster,90,auto,Primary-DRC Cluster Member,configs/UAT-PA-Backup
+cluster_member_4,cluster_member,019901003897,enabled,recommended,,11,cluster,90,auto,Secondary-DRC Cluster Member,configs/UAT-PA-Backup 

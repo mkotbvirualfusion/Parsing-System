@@ -1,0 +1,2 @@
+device_id,zone_name,interfaces_list,inspection_profile,source_file
+nrr_dc_ew_fw_001,vsys1,,default,configs/NRR-DC-EW-Backup 

@@ -1,0 +1,48 @@
+device_id,tunnel_name,tunnel_type,local_endpoint,remote_endpoint,encryption,authentication,preshared_key,tunnel_interface,vrf,status,description,source_file
+nrr_wan_br_r002,site_to_site_vpn1,ipsec,10.99.18.10,10.99.18.9,aes-256-cbc,sha256,group14,Tunnel1,global,up,Site-to-Site VPN to Branch R001,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,backup_vpn,ipsec,10.99.18.10,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel2,global,standby,Backup VPN to Core,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,site_to_site_vpn1,ipsec,10.99.18.9,10.99.18.10,aes-256-cbc,sha256,group14,Tunnel1,global,up,Site-to-Site VPN to Branch R002,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,backup_vpn,ipsec,10.99.18.9,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel2,global,standby,Backup VPN to Core,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,internal_vpn,ipsec,10.99.18.43,10.99.18.44,aes-256-cbc,sha256,group14,Tunnel10,global,up,Internal Branch VPN,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,core_vpn,ipsec,10.99.18.43,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel11,global,up,VPN to Core Switch,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,internal_vpn,ipsec,10.99.18.44,10.99.18.43,aes-256-cbc,sha256,group14,Tunnel10,global,up,Internal Branch VPN,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,core_vpn,ipsec,10.99.18.44,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel11,global,up,VPN to Core Switch,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,external_vpn,ipsec,10.99.18.32,10.99.18.31,aes-256-cbc,sha256,group14,Tunnel20,global,up,External Branch VPN,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,core_vpn,ipsec,10.99.18.32,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel21,global,up,VPN to Core Switch,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,external_vpn,ipsec,10.99.18.31,10.99.18.32,aes-256-cbc,sha256,group14,Tunnel20,global,up,External Branch VPN,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,core_vpn,ipsec,10.99.18.31,10.99.18.254,aes-128-cbc,sha1,group2,Tunnel21,global,up,VPN to Core Switch,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_sama_fw001,sama_site_vpn,ipsec,10.99.20.188,10.99.22.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,Site-to-Site VPN to TAD,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,ssl_vpn_portal,ssl_vpn,10.99.20.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for Remote Access,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,backup_tunnel,ipsec,10.99.20.188,10.99.24.188,aes-128-cbc,sha1,group14,tunnel.2,default,standby,Backup VPN Tunnel,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,tad_site_vpn,ipsec,10.99.22.188,10.99.20.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,Site-to-Site VPN to SAMA,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,ssl_vpn_portal,ssl_vpn,10.99.22.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for Remote Access,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,backup_tunnel,ipsec,10.99.22.188,10.99.24.188,aes-128-cbc,sha1,group14,tunnel.2,default,standby,Backup VPN Tunnel,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,ext_site_vpn,ipsec,10.99.24.188,10.99.26.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,Site-to-Site VPN to Internal AGG,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,ssl_vpn_portal,ssl_vpn,10.99.24.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for Remote Access,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,wan_tunnel,ipsec,10.99.24.188,10.99.32.188,aes-128-cbc,sha1,group14,tunnel.2,default,up,VPN to WAN Aggregation,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,internal_agg_vpn,ipsec,10.99.26.188,10.99.28.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,Internal Aggregation VPN,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,ssl_vpn_portal,ssl_vpn,10.99.26.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for Internal Users,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,backup_tunnel,ipsec,10.99.26.188,10.99.30.188,aes-128-cbc,sha1,group14,tunnel.2,default,standby,Backup VPN to OOB,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,internal_pa_vpn,ipsec,10.99.28.188,10.99.26.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,Internal PA VPN,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,ssl_vpn_portal,ssl_vpn,10.99.28.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for PA Users,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,wan_tunnel,ipsec,10.99.28.188,10.99.32.188,aes-128-cbc,sha1,group14,tunnel.2,default,up,VPN to WAN Aggregation,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,oob_mgmt_vpn,ipsec,10.99.30.188,10.99.26.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,OOB Management VPN,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,ssl_vpn_portal,ssl_vpn,10.99.30.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for OOB Access,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,backup_tunnel,ipsec,10.99.30.188,10.99.32.188,aes-128-cbc,sha1,group14,tunnel.2,default,standby,Backup VPN to WAN AGG,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,wan_agg_vpn,ipsec,10.99.32.188,10.99.28.188,aes-256-cbc,sha256,group19,tunnel.1,default,up,WAN Aggregation VPN,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,ssl_vpn_portal,ssl_vpn,10.99.32.188,,aes-256-cbc,certificate,,ssl.root,default,configured,SSL VPN Portal for WAN Access,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,internet_tunnel,ipsec,10.99.32.188,203.0.113.1,aes-128-cbc,sha1,group14,tunnel.2,default,up,Internet VPN Tunnel,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,default,ike_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IKE Crypto Profile Default,configs/UAT-PA-Backup
+uat_pa_backup,Suite-B-GCM-128,ike_crypto,,,aes-128-cbc,sha256,group19,,,configured,IKE Crypto Profile Suite-B 128-bit,configs/UAT-PA-Backup
+uat_pa_backup,Suite-B-GCM-256,ike_crypto,,,aes-256-cbc,sha384,group20,,,configured,IKE Crypto Profile Suite-B 256-bit,configs/UAT-PA-Backup
+uat_pa_backup,default,ipsec_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IPSec Crypto Profile Default,configs/UAT-PA-Backup
+uat_pa_backup,Suite-B-GCM-128,ipsec_crypto,,,aes-128-gcm,none,group19,,,configured,IPSec Crypto Profile Suite-B 128-bit,configs/UAT-PA-Backup
+uat_pa_backup,Suite-B-GCM-256,ipsec_crypto,,,aes-256-gcm,none,group20,,,configured,IPSec Crypto Profile Suite-B 256-bit,configs/UAT-PA-Backup
+uat_pa_backup,default,globalprotect,,,aes-128-cbc,sha1,,,,configured,GlobalProtect App Crypto Profile,configs/UAT-PA-Backup
+uat_pa_internet_backup,default,ike_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IKE Crypto Profile Default,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,Suite-B-GCM-128,ike_crypto,,,aes-128-cbc,sha256,group19,,,configured,IKE Crypto Profile Suite-B 128-bit,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,Suite-B-GCM-256,ike_crypto,,,aes-256-cbc,sha384,group20,,,configured,IKE Crypto Profile Suite-B 256-bit,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,default,ipsec_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IPSec Crypto Profile Default,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,Suite-B-GCM-128,ipsec_crypto,,,aes-128-gcm,none,group19,,,configured,IPSec Crypto Profile Suite-B 128-bit,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,Suite-B-GCM-256,ipsec_crypto,,,aes-256-gcm,none,group20,,,configured,IPSec Crypto Profile Suite-B 256-bit,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,default,globalprotect,,,aes-128-cbc,sha1,,,,configured,GlobalProtect App Crypto Profile,configs/UAT-PA-Internet-Backup 

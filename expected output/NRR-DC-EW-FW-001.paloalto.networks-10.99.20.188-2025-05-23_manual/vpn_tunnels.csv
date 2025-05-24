@@ -1,0 +1,8 @@
+device_id,tunnel_name,tunnel_type,local_endpoint,remote_endpoint,encryption,authentication,preshared_key,tunnel_interface,vrf,status,description,source_file
+nrr_dc_ew_fw_001,default,ike_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IKE Crypto Profile Default,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,Suite-B-GCM-128,ike_crypto,,,aes-128-cbc,sha256,group19,,,configured,IKE Crypto Profile Suite-B 128-bit,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,Suite-B-GCM-256,ike_crypto,,,aes-256-cbc,sha384,group20,,,configured,IKE Crypto Profile Suite-B 256-bit,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,ipsec_crypto,,,aes-128-cbc;3des,sha1,group2,,,configured,IPSec Crypto Profile Default,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,Suite-B-GCM-128,ipsec_crypto,,,aes-128-gcm,none,group19,,,configured,IPSec Crypto Profile Suite-B 128-bit,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,Suite-B-GCM-256,ipsec_crypto,,,aes-256-gcm,none,group20,,,configured,IPSec Crypto Profile Suite-B 256-bit,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,globalprotect,,,aes-128-cbc,sha1,,,,configured,GlobalProtect App Crypto Profile,configs/NRR-DC-EW-Backup 

@@ -1,0 +1,2 @@
+device_id,hostname,vendor,model,os_family,os_version,serial_number,location,config_timestamp,source_file
+nrr_cor_c_sw001,NRR-COR-C-SW001,cisco,Nexus,nx-os,7.0(3)I7(6),,NRR-DC-CORE,2025-05-15T11:08:30,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

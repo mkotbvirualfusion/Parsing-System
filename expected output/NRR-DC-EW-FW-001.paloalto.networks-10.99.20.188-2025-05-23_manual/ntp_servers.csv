@@ -1,0 +1,2 @@
+device_id,ntp_server,prefer,key_id,version,vrf,description,source_interface,authentication_enabled,source_file
+nrr_dc_ew_fw_001,10.0.3.52,no,,4,default,Secondary NTP server,mgmt0,no,configs/NRR-DC-EW-Backup 

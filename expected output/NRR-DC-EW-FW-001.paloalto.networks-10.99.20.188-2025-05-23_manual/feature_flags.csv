@@ -1,0 +1,15 @@
+device_id,feature_name,status,description,source_file
+nrr_dc_ew_fw_001,telnet,disabled,Telnet service disabled for security,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,http,disabled,HTTP service disabled for security,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,high_availability,enabled,High Availability cluster enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,password_complexity,enabled,Password complexity requirements enabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,botnet_protection,enabled,Botnet protection enabled with thresholds,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,dynamic_dns_detection,enabled,Dynamic DNS detection enabled (threshold: 5),configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,malware_sites_detection,enabled,Malware sites detection enabled (threshold: 5),configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,recent_domains_detection,enabled,Recent domains detection enabled (threshold: 5),configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,ip_domains_detection,enabled,IP domains detection enabled (threshold: 10),configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,jumbo_frames,enabled,Jumbo frames enabled (MTU: 9192),configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,session_synchronization,enabled,Session synchronization enabled for HA,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,link_monitoring,enabled,Link monitoring enabled for HA interfaces,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,path_monitoring,disabled,Path monitoring disabled,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,panorama_management,enabled,Panorama management servers configured,configs/NRR-DC-EW-Backup 

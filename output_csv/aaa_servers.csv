@@ -1,0 +1,4 @@
+device_id,server_type,server_ip,vrf,key_hash,timeout_sec,server_group,accounting_enabled,source_file
+nrr_cor_c_sw002,tacacs+,10.252.70.54,default,vagwsjcnw347,5,VTYSec,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,tacacs+,10.252.70.53,default,vagwsjcnw347,5,VTYSec,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,tacacs+,10.242.70.54,default,vagwsjcnw347,5,VTYSec,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log

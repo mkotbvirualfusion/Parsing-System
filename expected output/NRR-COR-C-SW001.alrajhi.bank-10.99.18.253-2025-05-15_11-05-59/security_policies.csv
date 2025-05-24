@@ -1,0 +1,2 @@
+device_id,policy_name,policy_id,from_zone,to_zone,source_address,destination_address,service,action,logging,nat_rule,schedule,description,source_file
+# No firewall security policies found in this Cisco switch configuration 

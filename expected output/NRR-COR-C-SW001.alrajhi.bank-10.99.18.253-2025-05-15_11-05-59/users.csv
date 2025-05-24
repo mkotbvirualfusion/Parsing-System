@@ -1,0 +1,5 @@
+device_id,username,privilege_level,roles,description,password_type,encrypted_password,status,source_file
+nrr_cor_c_sw001,admin,15,network-admin,Administrator account,5,$5$XANVkN3x$nCh.Muys6I79lReIQin2Yi6S5SyvOp/A9ch320OWnc9,active,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,ALRAJHISNMP,1,network-operator,SNMP monitoring account,5,$5$IFvjp/gN$8qpSW0shb7Oz47V9tYM.TtN3xRzesv6XhsLaykZL9n2,active,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,arbnsd,15,network-admin,Bank network admin account,5,$5$MtcKIVDd$P0B9RKBzwv0J9WOXW2/WQ0OfahbER.pz6KhO51MzJ6.,active,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,NSMmonitoring,1,network-operator,Network monitoring account,5,$5$IBsGnse4$n0.G/Vh1xSxTw6POCJzb6n2lmcwMGNSpVdxQJVGPw49,active,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

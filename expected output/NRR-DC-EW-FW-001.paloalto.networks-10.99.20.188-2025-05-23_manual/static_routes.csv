@@ -1,0 +1,2 @@
+device_id,destination,subnet_mask,next_hop,metric,admin_distance,tag,description,interface,vrf,source_file
+nrr_dc_ew_fw_001,0.0.0.0,0.0.0.0,10.99.20.1,1,1,,Default Gateway for Management,mgmt0,mgmt,configs/NRR-DC-EW-Backup 

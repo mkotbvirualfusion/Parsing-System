@@ -1,0 +1,9 @@
+device_id,policy_name,class_name,interface,direction,bandwidth,priority,queue_limit,dscp_marking,cos_marking,description,source_file
+nrr_dc_ew_fw_001,default,class1,global,both,,real-time,,,,QoS Class 1 - Real-time Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class2,global,both,,high,,,,QoS Class 2 - High Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class3,global,both,,high,,,,QoS Class 3 - High Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class4,global,both,,medium,,,,QoS Class 4 - Medium Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class5,global,both,,medium,,,,QoS Class 5 - Medium Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class6,global,both,,low,,,,QoS Class 6 - Low Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class7,global,both,,low,,,,QoS Class 7 - Low Priority Traffic,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,default,class8,global,both,,low,,,,QoS Class 8 - Low Priority Traffic,configs/NRR-DC-EW-Backup 

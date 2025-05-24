@@ -1,0 +1,45 @@
+device_id,service_name,state,vrf,cipher_suite,tcp_keepalive,source_file
+NRR-EXT-EXTBR-R002_d41d8cd9,nagle,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,tcp-keepalives-in,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,tcp-keepalives-out,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,timestamps,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,password-encryption,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,sequence-numbers,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,dhcp,down,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,call-home,up,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,password-recovery,down,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-INT-INTBR-R001_d41d8cd9,nagle,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,tcp-keepalives-in,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,tcp-keepalives-out,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,timestamps,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,password-encryption,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,sequence-numbers,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,dhcp,down,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,call-home,up,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,password-recovery,down,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-WAN-BR-R001_d41d8cd9,nagle,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,tcp-keepalives-in,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,tcp-keepalives-out,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,timestamps,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,password-encryption,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,sequence-numbers,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,dhcp,down,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,call-home,up,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,password-recovery,down,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,nagle,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,tcp-keepalives-in,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,tcp-keepalives-out,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,timestamps,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,password-encryption,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,sequence-numbers,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,dhcp,down,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,call-home,up,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,password-recovery,down,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+uat_ig_fw001,QoS-class1,"profile: default, priority: real-time",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class2,"profile: default, priority: high",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class3,"profile: default, priority: high",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class4,"profile: default, priority: medium",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class5,"profile: default, priority: medium",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class6,"profile: default, priority: low",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class7,"profile: default, priority: low",,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,QoS-class8,"profile: default, priority: low",,,,configs\UAT-PA-Internet-Backup

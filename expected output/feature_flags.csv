@@ -1,0 +1,117 @@
+device_id,feature_name,status,description,source_file
+nrr_wan_br_r002,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_dhcp,disabled,DHCP service disabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_call_home,enabled,Call home service enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,cdp,enabled,Cisco Discovery Protocol enabled on interfaces,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,ip_scp_server,enabled,SCP server functionality enabled,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,snmp_traps,enabled,SNMP traps enabled for various protocols,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r001,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_dhcp,disabled,DHCP service disabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_call_home,enabled,Call home service enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,cdp,enabled,Cisco Discovery Protocol enabled on interfaces,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,ip_scp_server,enabled,SCP server functionality enabled,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,snmp_traps,enabled,SNMP traps enabled for various protocols,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_int_intbr_r002,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_dhcp,disabled,DHCP service disabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_call_home,enabled,Call home service enabled,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r001,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_dhcp,disabled,DHCP service disabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_call_home,enabled,Call home service enabled,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_ext_extbr_r002,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_dhcp,disabled,DHCP service disabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_call_home,enabled,Call home service enabled,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r001,service_nagle,enabled,TCP Nagle algorithm enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_tcp_keepalives_in,enabled,TCP keepalives for incoming connections,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_tcp_keepalives_out,enabled,TCP keepalives for outgoing connections,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_timestamps_debug,enabled,Debug timestamps with msec localtime,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_timestamps_log,enabled,Log timestamps with msec localtime,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_password_encryption,enabled,Password encryption service enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_sequence_numbers,enabled,Sequence numbers in log messages,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_dhcp,disabled,DHCP service disabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_call_home,enabled,Call home service enabled,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,service_password_recovery,disabled,Password recovery disabled for security,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_cor_c_sw002,ip_domain_lookup,enabled,IP domain lookup enabled,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,logging_server_dns_refresh,enabled,DNS refresh interval for logging server,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_sama_fw001,firewall_policies,enabled,Firewall security policies configured,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,antivirus,enabled,Antivirus protection enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,web_filtering,enabled,Web filtering enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,application_control,enabled,Application control enabled,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,firewall_policies,enabled,Firewall security policies configured,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,antivirus,enabled,Antivirus protection enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,web_filtering,enabled,Web filtering enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,application_control,enabled,Application control enabled,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,firewall_policies,enabled,Firewall security policies configured,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,antivirus,enabled,Antivirus protection enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,web_filtering,enabled,Web filtering enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,application_control,enabled,Application control enabled,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,firewall_policies,enabled,Firewall security policies configured,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,antivirus,enabled,Antivirus protection enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,web_filtering,enabled,Web filtering enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_asa,application_control,enabled,Application control enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,security_policies,enabled,Palo Alto security policies configured,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,threat_prevention,enabled,Threat prevention enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,url_filtering,enabled,URL filtering enabled,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,application_visibility,enabled,Application visibility and control,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_int_agg_fw001_pa,wildfire_analysis,enabled,WildFire malware analysis,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,firewall_policies,enabled,Firewall security policies configured,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,antivirus,enabled,Antivirus protection enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,web_filtering,enabled,Web filtering enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_oob_agg_fw001,application_control,enabled,Application control enabled,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,firewall_policies,enabled,Firewall security policies configured,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,ips_protection,enabled,Intrusion Prevention System enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,antivirus,enabled,Antivirus protection enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,web_filtering,enabled,Web filtering enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+nrr_wan_agg_fw001,application_control,enabled,Application control enabled,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,security_policies,enabled,Palo Alto security policies configured,configs/UAT-PA-Backup
+uat_pa_backup,threat_prevention,enabled,Threat prevention enabled,configs/UAT-PA-Backup
+uat_pa_backup,url_filtering,enabled,URL filtering enabled,configs/UAT-PA-Backup
+uat_pa_backup,application_visibility,enabled,Application visibility and control,configs/UAT-PA-Backup
+uat_pa_backup,wildfire_analysis,enabled,WildFire malware analysis,configs/UAT-PA-Backup
+uat_pa_backup,routing_hdr,enabled,Routing header processing enabled,configs/UAT-PA-Backup
+uat_pa_backup,discard_strict_source_routing,enabled,Strict source routing discarded,configs/UAT-PA-Backup
+uat_pa_backup,discard_loose_source_routing,enabled,Loose source routing discarded,configs/UAT-PA-Backup
+uat_pa_internet_backup,security_policies,enabled,Palo Alto security policies configured,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,threat_prevention,enabled,Threat prevention enabled,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,url_filtering,enabled,URL filtering enabled,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,application_visibility,enabled,Application visibility and control,configs/UAT-PA-Internet-Backup
+uat_pa_internet_backup,wildfire_analysis,enabled,WildFire malware analysis,configs/UAT-PA-Internet-Backup 

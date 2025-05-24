@@ -1,0 +1,6 @@
+device_id,snmp_version,community_string,access_mode,host,user,auth_protocol,auth_key,priv_protocol,priv_key,contact,location,source_interface,trap_enabled,source_file
+nrr_cor_c_sw001,v2c,ALRAJHISNMP,ro,,,,,,,nw-cs@alrajhibank.com.sa,NRR-DC-CORE,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,v3,,rw,10.252.126.172,admin,md5,encrypted,aes,encrypted,nw-cs@alrajhibank.com.sa,NRR-DC-CORE,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,v3,,rw,10.252.126.172,arbnsd,md5,encrypted,aes,encrypted,nw-cs@alrajhibank.com.sa,NRR-DC-CORE,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,v3,,ro,10.99.28.72,ALRAJHISNMP,md5,encrypted,,localized,nw-cs@alrajhibank.com.sa,NRR-DC-CORE,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log
+nrr_cor_c_sw001,v3,,ro,10.99.28.72,NSMmonitoring,sha,encrypted,aes-128,encrypted,nw-cs@alrajhibank.com.sa,NRR-DC-CORE,mgmt0,yes,configs/NRR-COR-C-SW001.alrajhi.bank-10.99.18.253-2025-05-15_11-05-59.log 

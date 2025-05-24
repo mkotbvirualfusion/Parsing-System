@@ -1,0 +1,125 @@
+device_id,neighbor_ip,remote_as,description,peer_group,source_interface,protocol,process_id,router_id,areas,redistributions,source_file
+nrr_cor_c_sw002,Vlan3301,,"Interface:Vlan3301, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,,0.0.0.0(normal),,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback1,,"Interface:loopback1, Priority:, Auth:, Passive:no",,,ospf,,,0.0.0.0(normal),,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3306,,"Interface:Vlan3306, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.2(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3307,,"Interface:Vlan3307, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.0(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3308,,"Interface:Vlan3308, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.0(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3315,,"Interface:Vlan3315, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.3(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet1/19.410,,"Interface:Ethernet1/19.410, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.10(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet1/20.406,,"Interface:Ethernet1/20.406, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.12(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet1/20.414,,"Interface:Ethernet1/20.414, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.11(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet2/19.412,,"Interface:Ethernet2/19.412, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.10(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet2/20.408,,"Interface:Ethernet2/20.408, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.12(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Ethernet2/20.416,,"Interface:Ethernet2/20.416, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.4,0.0.0.11(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback0,,"Interface:loopback0, Priority:, Auth:, Passive:no",,,ospf,,10.99.1.4,0.0.0.0(nssa),ospf;ospf;direct(CORE_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3302,,"Interface:Vlan3302, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.6,0.0.0.1(normal),ospf;ospf;direct(INT_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3303,,"Interface:Vlan3303, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.6,0.0.0.2(normal),ospf;ospf;direct(INT_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3304,,"Interface:Vlan3304, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.6,0.0.0.2(normal),ospf;ospf;direct(INT_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3305,,"Interface:Vlan3305, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.6,0.0.0.2(normal),ospf;ospf;direct(INT_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback2,,"Interface:loopback2, Priority:, Auth:, Passive:no",,,ospf,,10.99.1.6,0.0.0.0(normal),ospf;ospf;direct(INT_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,Vlan3301,,"Interface:Vlan3301, Priority:100, Auth:key-chain:OSPF_KEY, Passive:no",,,ospf,,10.99.1.5,0.0.0.0(normal),ospf;ospf;direct(WAN_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,loopback1,,"Interface:loopback1, Priority:, Auth:, Passive:no",,,ospf,,10.99.1.5,0.0.0.0(normal),ospf;ospf;direct(WAN_TAG);static(STATIC_CORE_TAG),configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.14.5,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.179.189,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.12.1,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.157.177,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.11.189,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.13.193,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.4.5,35819,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.34.113,29684,,,,bgp,64756,,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.14.5,35819,BGP Neighbor 192.100.14.5,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.179.189,35819,BGP Neighbor 192.168.179.189,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.12.1,35819,BGP Neighbor 192.100.12.1,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.157.177,35819,BGP Neighbor 192.168.157.177,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.11.189,35819,BGP Neighbor 192.100.11.189,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.13.193,35819,BGP Neighbor 192.100.13.193,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.100.4.5,35819,BGP Neighbor 192.100.4.5,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,192.168.34.113,29684,BGP Neighbor 192.168.34.113,,,bgp,64756,vrf,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-INT-INTBR-R001_d41d8cd9,PROLEXIC,32787,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,10.99.5.3,64800,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,10.99.5.10,202982,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,202a:2800:1:4601::3,64800,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,2a02:cb81:1000:500::2c2,64943,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,192.168.127.1,64943,,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,PROLEXIC,32787,PROLEXIC-AKAMI-32787,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,10.99.5.3,64800,***EBGP-to-NRR-INT-AGG-FW***,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,10.99.5.10,202982,***IBGP-to-NRR-INT-INTBR-R002***,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,202a:2800:1:4601::3,64800,BGP Neighbor 202A:2800:1:4601::3,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,2a02:cb81:1000:500::2c2,64943,***EBGP-to-ZAIN-IPV6***,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,192.168.127.1,64943,ZAIN_NET,,,bgp,202982,,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-WAN-BR-R001_d41d8cd9,10.20.70.246,65209,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.39.0.34,65207,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.81,65048,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.89,65048,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.101,65204,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.109,65203,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.5.65,65005,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.5.89,65005,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.240.168.234,65208,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,172.27.105.117,65000,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,172.30.2.29,35753,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.100.8.154,35819,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.101,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.121,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.125,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.100.5,64943,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.100.77,64943,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.252.85,65010,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.252.113,65010,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.254.193,48695,,,,bgp,65048,,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.20.70.246,65209,##ITC LINK TO RemalCC##,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.39.0.34,65207,##BURAIDAH-CALLCENTER##,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.81,65048,NRR-WAN-GM-R001,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.89,65048,NRR-WAN-GM-R002,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.101,65204,##TOWER-WAN-ROUTER-01##,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.3.109,65203,##OPC-MR1-R01-WAN-ASR-01-Te1/0/3##,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.5.65,65005,NRR-WAN-SD-R001,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.99.5.89,65005,NRR-WAN-SD-R002,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,10.240.168.234,65208,##ITC DWDM LINK TO TANFEETH##,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,172.27.105.117,65000,****STC_BRANCHES_PRIMARY- RIYADH-RIYADH IP7307****,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,172.30.2.29,35753,ITC_PRIMARY_BACKHUALL_BR,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.100.8.154,35819,***Mobily_Backhaul***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.101,29684,***KUWAIT-JORDAN-22M-P-NN***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.121,29684,***NOURNET_PRIMARY***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.34.125,29684,KW-NRR-P-NN-ORD-14155-ISPV2000,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.100.5,64943,*** ZAIN_PRIMARY_BACKHAUL_CRIY0127 ***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.100.77,64943,*** ZAIN_PRIMARY_BACKHAUL_CRIY0127 ***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.252.85,65010,***GO-NEW-PRIMARY***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.252.113,65010,***GO-NEW-PRIMARY***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,192.168.254.193,48695,***GO_PRIMARY***,,,bgp,65048,10.99.1.14,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,10.20.70.254,65209,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.39.0.38,65207,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.85,65048,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.93,65048,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.105,65204,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.113,65203,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.5.69,65005,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.5.93,65005,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.240.168.238,65208,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,172.30.2.45,35753,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.100.6.149,35819,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.105,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.117,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.129,29684,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.100.81,64943,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.100.253,64943,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.252.85,65010,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.254.197,48695,,,,bgp,65048,,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.20.70.254,65209,##ZAIN LINK TO RemalCC##,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.39.0.38,65207,##BURAIDAH-CALLCENTER##,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.85,65048,NRR-WAN-GM-R001,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.93,65048,NRR-WAN-GM-R002,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.105,65204,##TOWER-WAN-ROUTER-02##,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.3.113,65203,##OPC-MR2-R02-WAN-ASR-02-Te0/0/1##,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.5.69,65005,NRR-WAN-SD-R001,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.99.5.93,65005,NRR-WAN-SD-R002,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,10.240.168.238,65208,##ITC DWDM LINK TO TANFEETH##,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,172.30.2.45,35753,ITC_BACKUP_BACKHUALL_BR,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.100.6.149,35819,BGP Neighbor 192.100.6.149,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.105,29684,***NNR-Kuwait and Jordon Branches-22M-B-NN***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.117,29684,***NNR-Backhaul-60M-B-NN***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.34.129,29684,KW_NRR_B-NN-ORD-14155-ISPV538_6MB,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.100.81,64943,***ZAIN-BACKUP-CAR-DEALER***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.100.253,64943,***ZAIN-BACKUP-1GIG***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.252.85,65010,***GO-NEW-PRIMARY***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,192.168.254.197,48695,***GO-BACKHAUL-BACKUP***,,,bgp,65048,10.99.1.15,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log

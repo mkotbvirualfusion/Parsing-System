@@ -1,0 +1,1379 @@
+﻿
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Copyright (C) 2002-2019, Cisco and/or its affiliates.
+All rights reserved.
+The copyrights to certain works contained in this software are
+owned by other third parties and used and distributed under their own
+licenses, such as open source.  This software is provided "as is," and unless
+otherwise stated, there is no warranty, express or implied, including but not
+limited to warranties of merchantability and fitness for a particular purpose.
+Certain components of this software are licensed under
+the GNU General Public License (GPL) version 2.0 or 
+GNU General Public License (GPL) version 3.0  or the GNU
+Lesser General Public License (LGPL) Version 2.1 or 
+Lesser General Public License (LGPL) Version 2.0. 
+A copy of each such license is available at
+http://www.opensource.org/licenses/gpl-2.0.php and
+http://opensource.org/licenses/gpl-3.0.html and
+http://www.opensource.org/licenses/lgpl-2.1.php and
+http://www.gnu.org/licenses/old-licenses/library.txt.
+NRR-COR-C-SW001# terminal length 0
+NRR-COR-C-SW001# sh run conf
+                          ^
+% Invalid command at '^' marker.
+NRR-COR-C-SW001# sh running-config
+
+!Command: show running-config
+!Running configuration last done at: Fri May  9 00:30:32 2025
+!Time: Thu May 15 11:08:30 2025
+
+version 7.0(3)I7(6) Bios:version 05.28 
+hostname NRR-COR-C-SW001
+vdc NRR-COR-C-SW001 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature bash-shell
+feature scp-server
+feature sftp-server
+feature tacacs+
+cfs eth distribute
+feature ospf
+feature pim
+feature udld
+feature interface-vlan
+feature hsrp
+feature lacp
+feature vpc
+feature lldp
+feature vtp
+clock timezone KSA 3 0
+
+archive
+  path bootflash:CFG_BKP
+  maximum 14
+
+role name NRR-DC
+  rule 2 permit read feature snmp
+  rule 1 permit read-write  
+role name Alrajhi
+  rule 2 permit read feature snmp
+  rule 1 permit read-write  
+username admin password 5 $5$XANVkN3x$nCh.Muys6I79lReIQin2Yi6S5SyvOp/A9ch320OWnc9  role network-admin
+username ALRAJHISNMP password 5 $5$IFvjp/gN$8qpSW0shb7Oz47V9tYM.TtN3xRzesv6XhsLaykZL9n2  role network-operator
+username arbnsd password 5 $5$MtcKIVDd$P0B9RKBzwv0J9WOXW2/WQ0OfahbER.pz6KhO51MzJ6.  role network-admin
+username NSMmonitoring password 5 $5$IBsGnse4$n0.G/Vh1xSxTw6POCJzb6n2lmcwMGNSpVdxQJVGPw49  role network-operator
+
+banner motd ^CC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^
+
+ssh login-attempts 5
+
+ip domain-lookup
+ip domain-name alrajhi.bank
+ip name-server 10.0.10.10 10.0.10.20 10.11.11.10 10.11.11.11
+tacacs-server host TACACS-SERVER-1 
+tacacs-server host 10.252.70.54 key 7 "vagwsjcnw347" 
+tacacs-server host 10.252.70.53 key 7 "vagwsjcnw347" 
+tacacs-server host 10.242.70.54 key 7 "vagwsjcnw347" 
+aaa group server tacacs+ TACACS-SERVER-1 
+    server 10.252.70.54 
+aaa group server tacacs+ VTYSec 
+    server 10.252.70.54 
+    server 10.252.70.53 
+    server 10.242.70.54 
+    source-interface mgmt0
+ip access-list 25
+  10 permit ip 10.99.28.0 0.0.0.255 any 
+  20 permit ip 10.242.126.0 0.0.0.255 any 
+  30 permit ip 10.110.150.11/32 any 
+  40 permit ip 10.110.150.12/32 any 
+  50 permit ip 10.242.213.135/32 any 
+  60 permit ip 10.229.150.11/32 any 
+  70 permit ip 10.229.150.12/32 any 
+ip access-list NEW_MGMT_ACL
+  10 permit tcp 10.8.10.8/32 any eq 22 
+  20 permit tcp 192.168.100.6/32 any eq 22 
+  30 permit tcp 192.168.100.26/32 any eq 22 
+  40 permit tcp 192.100.4.186/32 any eq 22 
+  50 permit tcp 192.168.120.14/32 any eq 22 
+  60 permit tcp 192.168.34.122/32 any eq 22 
+  70 permit tcp 192.100.6.150/32 any eq 22 
+  80 permit tcp 192.100.8.153/32 any eq 22 
+  90 permit tcp 10.98.114.34/32 any eq 22 
+  100 permit tcp 192.168.34.118/32 any eq 22 
+  110 permit tcp 10.98.113.122/32 any eq 22 
+  120 permit tcp 10.96.115.150/32 any eq 22 
+  130 permit tcp 172.30.2.46/32 any eq 22 
+  140 permit tcp 172.30.2.26/32 any eq 22 
+  150 permit tcp 172.30.2.30/32 any eq 22 
+  160 permit tcp 10.96.115.201/32 any eq 22 
+  170 permit tcp 192.168.100.254/32 any eq 22 
+  180 permit tcp 10.110.65.192/27 any eq 22 
+  190 permit tcp 10.99.28.0/24 any eq 22 
+  200 permit tcp 10.242.126.0/24 any eq 22 
+  210 permit tcp 10.98.151.0/24 any eq 22 
+  220 permit tcp 10.98.153.0/24 any eq 22 
+  230 permit tcp 10.98.154.0/24 any eq 22 
+  240 permit tcp 10.2.0.0/16 any eq 22 
+  250 permit tcp 10.237.47.0/24 any eq 22 
+  260 permit tcp 10.3.0.0/16 any eq 22 
+  270 permit tcp 10.56.233.0/24 any eq 22 
+  280 permit tcp 10.9.0.0/16 any eq 22 
+  290 permit tcp 10.252.126.0/24 any eq 22 
+  300 permit tcp 10.10.71.0/24 any eq 22 
+  310 permit tcp 10.240.246.0/24 any eq 22 
+  320 permit tcp 10.252.120.0/24 any eq 22 
+  330 permit tcp 10.110.192.0/27 any eq 22 
+  1000 deny tcp any any 
+time-range 5
+copp profile strict
+snmp-server contact nw-cs@alrajhibank.com.sa
+snmp-server location NRR-DC-CORE
+snmp-server source-interface traps mgmt0
+snmp-server source-interface informs mgmt0
+snmp-server user admin network-admin auth md5 0x2f2f28c539b9ef2682eadbd0ea67fd88 priv 0x2f2f28c539b9ef2682eadbd0ea67fd88 localizedkey
+snmp-server user arbnsd network-admin auth md5 0xffb316f711bed60e8b616ef4716f0988 priv 0xffb316f711bed60e8b616ef4716f0988 localizedkey
+snmp-server user ALRAJHISNMP network-operator auth md5 0xae476cd6122891e0dc8d1665f760a328 localizedkey
+snmp-server user NSMmonitoring network-operator auth sha 0x29e8c92bf98481f2ed94a3b019e60e8084697055 priv aes-128 0xd8b6cd404d8385d6e3d9cfead469090ce8425c1b localizedkey
+snmp-server user NSMmonitoring enforcePriv
+snmp-server user NSMmonitoring use-ipv4acl 25
+snmp-server host 10.252.126.172 traps version 3 auth ncsuser
+snmp-server host 10.252.126.172 source-interface mgmt0
+snmp-server host 10.99.28.72 traps version 3 priv NSMmonitoring
+snmp-server host 10.99.28.72 source-interface mgmt0
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server enable traps ospf
+snmp-server enable traps callhome event-notify
+snmp-server enable traps callhome smtp-send-fail
+snmp-server enable traps cfs state-change-notif
+snmp-server enable traps lldp lldpRemTablesChange
+snmp-server enable traps cfs merge-failure
+snmp-server enable traps aaa server-state-change
+snmp-server enable traps hsrp state-change
+snmp-server enable traps feature-control FeatureOpStatusChange
+snmp-server enable traps sysmgr cseFailSwCoreNotifyExtended
+snmp-server enable traps config ccmCLIRunningConfigChanged
+snmp-server enable traps snmp authentication
+snmp-server enable traps link cisco-xcvr-mon-status-chg
+snmp-server enable traps vtp notifs
+snmp-server enable traps vtp vlancreate
+snmp-server enable traps vtp vlandelete
+snmp-server enable traps bridge newroot
+snmp-server enable traps bridge topologychange
+snmp-server enable traps stpx inconsistency
+snmp-server enable traps stpx root-inconsistency
+snmp-server enable traps stpx loop-inconsistency
+snmp-server enable traps system Clock-change-notification
+snmp-server enable traps feature-control ciscoFeatOpStatusChange
+snmp-server enable traps mmode cseNormalModeChangeNotify
+snmp-server enable traps mmode cseMaintModeChangeNotify
+snmp-server counter cache timeout 10
+snmp-server community ALRAJHISNMP group network-operator
+ntp server 10.0.3.52 use-vrf management
+ntp server 10.0.3.53 use-vrf management
+ntp server 10.0.250.2 prefer use-vrf management key 1
+ntp server 10.11.3.239 use-vrf management
+ntp server 10.11.3.240 use-vrf management
+ntp source-interface  mgmt0
+ntp authenticate
+ntp authentication-key 1 md5 uwnmanou 7
+ntp trusted-key 1
+aaa authentication login default group VTYSec local 
+aaa authorization config-commands default group VTYSec 
+aaa authorization commands default group VTYSec 
+aaa accounting default group VTYSec 
+
+ip route 10.0.0.0/8 Null0 name Major_Subnet tag 100
+ip route 10.17.0.35/32 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.17.0.93/32 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.18.0.14/32 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.27.11.0/26 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.99.3.180/30 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.99.3.184/30 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 10.99.251.0/26 Ethernet2/6 10.99.2.66 name Tetration_Subnet
+ip route 10.199.248.160/29 10.99.2.4 name SDWAN_BR_LAN_Subnet
+ip route 129.0.0.0/8 Null0 name Major_Subnet tag 100
+ip route 129.35.224.0/24 10.99.2.12 name temp_IBM
+ip route 185.250.80.93/32 10.99.2.52 name SIMAHPRO
+ip pim rp-address 10.99.1.100 group-list 239.0.0.0/8
+ip pim ssm range 232.0.0.0/8
+ip pim anycast-rp 10.99.1.100 10.99.1.1
+ip pim anycast-rp 10.99.1.100 10.99.1.4
+vlan 1,3279,3301-3310,3315
+vlan 3279
+  name dr_vpn_replica_Inside
+vlan 3301
+  name L3_to_WAN-FW
+vlan 3302
+  name L3_to_INT-FW
+vlan 3303
+  name L3_to_SAMA-EXT-FW
+vlan 3304
+  name L3_to_EXT-EXT-FW
+vlan 3305
+  name L3_to_TAD-EXT-FW
+vlan 3306
+  name L3_to_OOB-AGG-FW
+vlan 3307
+  name L3_to_NRR-REP-OTV-R001
+vlan 3308
+  name L3_to_NRR-REP-OTV-R002
+vlan 3309
+  name ForcePoint_INSIDE
+vlan 3310
+  name ForcePoint_OUTSIDE
+vlan 3315
+  name L3-USER-CAMPUS
+
+spanning-tree pathcost method long
+spanning-tree port type edge default
+spanning-tree port type edge bpduguard default
+spanning-tree port type edge bpdufilter default
+spanning-tree vlan 1-3967 priority 4096
+ip prefix-list CORE_Connected seq 5 permit 10.99.2.40/29 
+ip prefix-list DEFAULT seq 5 permit 0.0.0.0/0 
+ip prefix-list FORTINET-B2B seq 10 permit 10.99.2.0/29 
+ip prefix-list FORTINET-B2B seq 15 permit 10.99.2.24/29 
+ip prefix-list FORTINET-B2B seq 20 permit 10.99.2.16/29 
+ip prefix-list Major_Subnet seq 5 permit 10.0.0.0/8 
+ip prefix-list Major_Subnet seq 10 permit 129.0.0.0/8 
+ip prefix-list OPC_Prefix seq 5 permit 10.98.0.0/16 le 24 
+ip prefix-list PROXY_DIRECT seq 10 permit 10.99.5.104/29 
+ip prefix-list PROXY_DIRECT seq 20 permit 10.99.5.96/29 
+ip prefix-list RP_DIRECT seq 10 permit 10.99.1.100/32 
+ip prefix-list SDWAN_BR_LAN_Subnet seq 10 permit 10.199.248.160/29 
+ip prefix-list Tetration-P2P seq 10 permit 10.99.2.64/30 
+ip prefix-list Tetration_Subnet seq 10 permit 10.99.251.0/26 
+ip prefix-list WAN_Loopbacks seq 5 permit 10.99.1.10/32 
+ip prefix-list WAN_Loopbacks seq 10 permit 10.99.1.11/32 
+ip prefix-list WAN_Loopbacks seq 15 permit 10.99.1.12/32 
+ip prefix-list WAN_Loopbacks seq 20 permit 10.99.1.13/32 
+ip prefix-list WAN_Loopbacks seq 25 permit 10.99.1.14/32 
+ip prefix-list WAN_Loopbacks seq 30 permit 10.99.1.15/32 
+ip prefix-list WAN_Loopbacks seq 35 permit 10.99.1.16/32 
+ip prefix-list WAN_Loopbacks seq 40 permit 10.99.1.17/32 
+ip prefix-list WAN_Loopbacks seq 45 permit 10.99.1.18/32 
+ip prefix-list WAN_Loopbacks seq 50 permit 10.99.1.19/32 
+ip prefix-list WAN_Loopbacks seq 55 permit 10.99.1.20/32 
+ip prefix-list WAN_Loopbacks seq 60 permit 10.99.1.21/32 
+ip prefix-list WAN_Loopbacks seq 65 permit 10.99.1.22/32 
+ip prefix-list WAN_Loopbacks seq 70 permit 10.99.1.23/32 
+ip prefix-list WAN_Loopbacks seq 75 permit 10.99.1.24/32 
+route-map CORE_FILTER deny 5
+  description DENY_CORE
+  match tag 100 111 112 110 
+route-map CORE_FILTER permit 10
+  description MATCH_WAN_Branches
+  match tag 610 
+  set metric 100 
+route-map CORE_FILTER permit 20
+  description MATCH_WAN_ATM_VSATSI
+  match tag 611 
+  set metric 100 
+route-map CORE_FILTER permit 30
+  description MATCH_WAN_ATM_VSATDS
+  match tag 612 
+  set metric 100 
+route-map CORE_FILTER permit 40
+  description MATCH_WAN_ATM_3G
+  match tag 613 
+  set metric 100 
+route-map CORE_FILTER permit 60
+  description MATCH_EXTRANET_SAMA
+  match tag 310 
+  set metric 100 
+route-map CORE_FILTER permit 70
+  description MATCH_EXTRANET_Parties
+  match tag 311 
+  set metric 100 
+route-map CORE_FILTER permit 80
+  description MATCH_EXTRANET_TADAWUL
+  match tag 312 
+  set metric 100 
+route-map CORE_FILTER permit 90
+  description MATCH_INTERNET
+  match tag 200 
+  set metric 100 
+route-map CORE_INT_FILTER permit 10
+  description MATCH_EXTRANET_SAMA
+  match tag 310 
+  set metric +100 
+route-map CORE_INT_FILTER permit 20
+  description MATCH_EXTRANET_Parties
+  match tag 311 
+  set metric +100 
+route-map CORE_INT_FILTER permit 30
+  description MATCH_EXTRANET_TADAWUL
+  match tag 312 
+  set metric +100 
+route-map CORE_INT_FILTER permit 40
+  description MATCH_INTERNET
+  match tag 200 
+  set metric +100 
+route-map CORE_INT_FILTER permit 50
+  description MATCH_EXTRANET_OCI
+  match tag 315 
+  set metric +100 
+route-map CORE_INT_FILTER permit 60
+  description MATCH_EXTRANET_SWIFT
+  match tag 316 
+  set metric +100 
+route-map CORE_TAG permit 10
+  match ip address prefix-list RP_DIRECT 
+  set tag 100 
+route-map CORE_TAG permit 20
+  description ***PROXY_SUBNET***
+  match ip address prefix-list PROXY_DIRECT 
+  set tag 200 
+  set metric +100 
+route-map CORE_TAG permit 30
+  match ip address prefix-list Tetration-P2P 
+  set tag 100 
+route-map CORE_TAG permit 40
+  match ip address prefix-list FORTINET-B2B 
+  set tag 100 
+route-map CORE_WAN_FILTER permit 5
+  description MATCH_WAN_Loopbacks
+  match ip address prefix-list WAN_Loopbacks 
+  set tag 610 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 10
+  description MATCH_WAN_Branches
+  match tag 610 600 666 605 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 20
+  description MATCH_WAN_ATM_VSATSI
+  match tag 611 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 30
+  description MATCH_WAN_ATM_VSATDS
+  match tag 612 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 40
+  description MATCH_WAN_ATM_3G
+  match tag 613 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 50
+  match tag 669 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 60
+  description TWR
+  match tag 670 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 70
+  description BUR_CALL
+  match tag 675 
+  set metric +100 
+route-map CORE_WAN_FILTER permit 80
+  description HU_SDWAN_ATM
+  match tag 615 
+  set metric +100 
+route-map DEFAULT-METRIC permit 10
+  set tag 200 
+  set metric +100 
+route-map DR-DEFAULT-METRIC permit 10
+  set tag 1200 
+  set metric +100 
+route-map INT_CORE_FILTER permit 5
+  description DR_INTERNET
+  match tag 1200 
+  set metric +100 
+route-map INT_CORE_FILTER permit 10
+  description MATCH_Core
+  match tag 100 
+  set metric +100 
+route-map INT_CORE_FILTER permit 20
+  description MATCH_Replication
+  match tag 500 
+  set metric +100 
+route-map INT_CORE_FILTER permit 30
+  description MATCH_Server_Farm_Main
+  match tag 110 
+  set metric +100 
+route-map INT_CORE_FILTER permit 40
+  description MATCH_Server_Farm_Backup
+  match tag 111 112 
+  set metric +1000 
+route-map INT_CORE_FILTER permit 50
+  description MATCH_OOB
+  match tag 400 
+  set metric +100 
+route-map INT_CORE_FILTER permit 60
+  description DR_EXTRANET
+  match tag 1310 1311 1312 1315 1316 
+  set metric +1000 
+route-map INT_FILTER deny 5
+  description DENY_INT_EXT
+  match tag 310 311 312 200 
+route-map INT_FILTER permit 10
+  description MATCH_Core
+  match tag 100 
+  set metric +100 
+route-map INT_FILTER permit 20
+  description MATCH_WAN_Branches
+  match tag 610 
+  set metric +100 
+route-map INT_FILTER permit 30
+  description MATCH_WAN_ATM_VSATSI
+  match tag 611 
+  set metric +100 
+route-map INT_FILTER permit 40
+  description MATCH_WAN_ATM_VSATDS
+  match tag 612 
+  set metric +100 
+route-map INT_FILTER permit 50
+  description MATCH_WAN_ATM_3G
+  match tag 613 
+  set metric +100 
+route-map INT_FILTER permit 60
+  description MATCH_OOB
+  match tag 400 
+  set metric +100 
+route-map INT_FILTER permit 70
+  description MATCH_Replication
+  match tag 500 
+  set metric +100 
+route-map INT_FILTER permit 80
+  description MATCH_Server_Farm_Main
+  match tag 110 
+  set metric +100 
+route-map INT_FILTER permit 90
+  description MATCH_Server_Farm_Backup
+  match tag 111 112 
+  set metric +1000 
+route-map INT_TAG permit 10
+  match ip address prefix-list PROXY_DIRECT 
+  set tag 200 
+route-map INT_TAG permit 20
+  match ip address prefix-list CORE_Connected 
+  set tag 100 
+  set metric +100 
+route-map INT_WAN_FILTER permit 5
+  match ip address prefix-list WAN_Loopbacks 
+  set tag 610 
+  set metric 100 
+route-map INT_WAN_FILTER permit 10
+  description MATCH_WAN_Branches
+  match tag 610 600 666 
+  set metric +100 
+route-map INT_WAN_FILTER permit 20
+  description MATCH_WAN_ATM_VSATSI
+  match tag 611 
+  set metric +100 
+route-map INT_WAN_FILTER permit 30
+  description MATCH_WAN_ATM_VSATDS
+  match tag 612 
+  set metric +100 
+route-map INT_WAN_FILTER permit 40
+  description MATCH_WAN_ATM_3G
+  match tag 613 
+  set metric +100 
+route-map INT_WAN_FILTER permit 50
+  description TWR
+  match tag 670 
+  set metric +100 
+route-map INT_WAN_FILTER permit 80
+  description HU_SDWAN_ATM
+  match tag 615 
+  set metric +100 
+route-map STATIC_CORE_TAG permit 10
+  match ip address prefix-list Tetration_Subnet 
+  set tag 100 
+route-map STATIC_CORE_TAG permit 20
+  match ip address prefix-list Major_Subnet 
+  set tag 100 
+route-map STATIC_CORE_TAG permit 30
+  match ip address prefix-list SDWAN_BR_LAN_Subnet 
+  set tag 100 
+route-map WAN_CORE_FILTER permit 5
+  description DR_INTERNET
+  match tag 1200 
+  set metric +100 
+route-map WAN_CORE_FILTER permit 10
+  description MATCH_CORE
+  match tag 100 
+  set metric +100 
+route-map WAN_CORE_FILTER deny 15
+  match ip address prefix-list OPC_Prefix 
+route-map WAN_CORE_FILTER permit 20
+  description MATCH_OOB
+  match tag 400 
+  set metric +100 
+route-map WAN_CORE_FILTER permit 30
+  description MATCH_Replication
+  match tag 500 
+  set metric +100 
+route-map WAN_CORE_FILTER permit 40
+  description MATCH_Server_Farm_Main
+  match tag 110 
+  set metric +100 
+route-map WAN_CORE_FILTER permit 50
+  description MATCH_Server_Farm_Backup
+  match tag 111 112 
+  set metric +1000 
+route-map WAN_FILTER deny 5
+  description DENY_WAN
+  match tag 610 611 612 613 
+route-map WAN_FILTER permit 10
+  description MATCH_CORE
+  match tag 100 
+  set metric +100 
+route-map WAN_FILTER permit 20
+  description MATCH_EXTRANET_SAMA
+  match tag 310 
+  set metric +100 
+route-map WAN_FILTER permit 30
+  description MATCH_EXTRANET_Parties
+  match tag 311 
+  set metric +100 
+route-map WAN_FILTER permit 40
+  description MATCH_EXTRANET_TADAWUL
+  match tag 312 
+  set metric +100 
+route-map WAN_FILTER permit 50
+  description MATCH_INTERNET
+  match tag 200 
+  set metric +100 
+route-map WAN_FILTER permit 60
+  description MATCH_OOB
+  match tag 400 
+  set metric +100 
+route-map WAN_FILTER permit 70
+  description MATCH_Replication
+  match tag 500 
+  set metric +100 
+route-map WAN_FILTER permit 80
+  description MATCH_Server_Farm_Main
+  match tag 110 
+  set metric +100 
+route-map WAN_FILTER permit 90
+  description MATCH_Server_Farm_Backup
+  match tag 111 112 
+  set metric +1000 
+route-map WAN_INT_FILTER permit 10
+  description MATCH_EXTRANET_SAMA
+  match tag 310 
+  set metric +100 
+route-map WAN_INT_FILTER permit 20
+  description MATCH_EXTRANET_Parties
+  match tag 311 
+  set metric +100 
+route-map WAN_INT_FILTER permit 30
+  description MATCH_EXTRANET_TADAWUL
+  match tag 312 
+  set metric +100 
+route-map WAN_INT_FILTER permit 40
+  description MATCH_INTERNET
+  match tag 200 
+  set metric +100 
+route-map WAN_INT_FILTER permit 50
+  description MATCH_EXTRANET_OCI
+  match tag 315 
+  set metric +100 
+route-map WAN_INT_FILTER permit 60
+  description MATCH_EXTRANET_SWIFT
+  match tag 316 
+  set metric +100 
+route-map WAN_TAG permit 10
+  match ip address prefix-list RP_DIRECT 
+  set tag 610 
+route-map WAN_TAG permit 20
+  description ***PROXY_SUBNET***
+  match ip address prefix-list PROXY_DIRECT 
+  set tag 200 
+  set metric +100 
+key chain OSPF_KEY
+  key 1
+    key-string 7 070c285f4d06391716180305
+    cryptographic-algorithm MD5
+key chain secrajhie347
+vrf context CONTROL_TEST
+  address-family ipv4 unicast
+vrf context VPC-KA
+vrf context management
+  ip domain-name alrajhi.bank
+  ip name-server 10.0.10.10 10.11.11.10 10.11.11.11 10.0.10.20
+  ip route 0.0.0.0/0 10.99.18.1 name **NRR-OOB-AGG-FW**
+vpc domain 10
+  peer-switch
+  role priority 1
+  peer-keepalive destination 10.99.2.202 source 10.99.2.201 vrf VPC-KA
+  delay restore 90
+  peer-gateway
+  layer3 peer-router
+  no layer3 peer-router syslog
+  auto-recovery
+  ip arp synchronize
+
+
+interface Vlan1
+
+interface Vlan3279
+  description ***L3 Connection to dr_vpn_replica Inside***
+  no shutdown
+  no ip redirects
+  ip address 10.99.2.105/29
+  no ipv6 redirects
+  hsrp version 2
+  hsrp 3279 
+    authentication md5 key-string CISCO@Rajhi
+    name DR_VPN_REPLICA_INSIDE
+    preempt 
+    priority 200
+    ip 10.99.2.107
+
+interface Vlan3301
+  description ***L3 Connection to WAN-FW***
+  no shutdown
+  mtu 9198
+  no ip redirects
+  ip address 10.99.2.1/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf WAN area 0.0.0.0
+  ip pim sparse-mode
+
+interface Vlan3302
+  description ***L3 Connection to INT-FW***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.9/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf INT area 0.0.0.1
+
+interface Vlan3303
+  description ***L3 Connection to SAMA-EXT-FW***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.17/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf INT area 0.0.0.2
+
+interface Vlan3304
+  description ***L3 Connection to EXT-EXT-FW***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.25/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf INT area 0.0.0.2
+
+interface Vlan3305
+  description ***L3 Connection to TAD-EXT-FW***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.33/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf INT area 0.0.0.2
+
+interface Vlan3306
+  description ***L3 Connection to OOB-AGG-FW***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.41/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.2
+
+interface Vlan3307
+  description ***L3 Connection to NRR-REP-OTV-R001***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.49/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.0
+
+interface Vlan3308
+  description ***L3 Connection to NRR-REP-OTV-R002***
+  no shutdown
+  mtu 9216
+  no ip redirects
+  ip address 10.99.2.57/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.0
+
+interface Vlan3309
+  description ***L3 Connection to ForcePoint Proxy Inside***
+  no shutdown
+  no ip redirects
+  ip address 10.99.5.97/29
+  no ipv6 redirects
+  hsrp version 2
+  hsrp 3309 
+    authentication md5 key-string CISCO@Rajhi
+    name INTERNET_PROXY_Inside
+    preempt 
+    priority 200
+    ip 10.99.5.99
+
+interface Vlan3310
+  description ***L3 Connection to ForcePoint Proxy Outside***
+  no shutdown
+  no ip redirects
+  ip address 10.99.5.105/29
+  no ipv6 redirects
+  hsrp version 2
+  hsrp 3310 
+    authentication md5 key-string CISCO@Rajhi
+    name INTERNET_PROXY_Outside
+    preempt 
+    priority 200
+    ip 10.99.5.107
+
+interface Vlan3315
+  description ***L3 Connection to NRR_USER_CAMPUS***
+  no shutdown
+  mtu 9126
+  no ip redirects
+  ip address 10.99.2.81/29
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.3
+
+interface port-channel10
+  description ***Connection to NRR-COR-C-SW002 Port-channel10 VPC_PEER_LINK***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3301-3319
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel11
+  description ***Connection to NRR-COR-C-SW002 Port-channel11 VPC-KA ***
+  mtu 9216
+  vrf member VPC-KA
+  ip address 10.99.2.201/30
+
+interface port-channel20
+  description ***Connection to NRR-WAN-AGG-FW001 Bundle-ID 20***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3301
+  spanning-tree port type edge trunk
+  mtu 9216
+  speed 40000
+  no negotiate auto
+  vpc 20
+
+interface port-channel21
+  description ***Connection to NRR-WAN-AGG-FW002 Bundle-ID 21***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3301
+  spanning-tree port type edge trunk
+  mtu 9216
+  speed 40000
+  no negotiate auto
+  vpc 21
+
+interface port-channel22
+  description ***Connection to NRR-INT-AGG-SW Bundle-ID 22***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3302,3309-3310
+  spanning-tree port type normal
+  mtu 9216
+  vpc 22
+
+interface port-channel23
+  description ***Connection to NRR-EXT-AGG-SW Bundle-ID 23***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3303-3305
+  spanning-tree port type normal
+  mtu 9216
+  vpc 23
+
+interface port-channel24
+  description ***Connection to NRR-OOB-AGG-FW001 Bundle-ID 24***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3306
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 24
+
+interface port-channel25
+  description ***Connection to NRR-OOB-AGG-FW002 Bundle-ID 25***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3306
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 25
+
+interface port-channel26
+  description ***Connection to NRR-REP-OTV-R001 Bundle-ID 26***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3307
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 26
+
+interface port-channel27
+  description ***Connection to NRR-REP-OTV-R002 Bundle-ID 27***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3308
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 27
+
+interface port-channel28
+  description ***Connection to NRR-USER-CAMPUS-SW01-Bundle-ID 28***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3315
+  mtu 9216
+  speed 10000
+  vpc 28
+
+interface Ethernet1/1
+  description ***Connection to NRR-INT-AGG-SW001 Eth1/40***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3302,3309-3310
+  mtu 9216
+  channel-group 22 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description ***Connection to NRR-EXT-AGG-SW001 Eth1/40***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3303-3305
+  mtu 9216
+  channel-group 23 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description ***Connection to NRR-OOB-AGG-FW001 port39***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3306
+  mtu 9216
+  channel-group 24 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description ***Connection to NRR-REP-OTV-R001 TenG0/1/0***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3307
+  mtu 9216
+  channel-group 26 mode active
+  no shutdown
+
+interface Ethernet1/5
+  description ***Connection to NRR-USER-CAMPUS-SW01-Bundle-ID  port 49***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3315
+  mtu 9216
+  speed 10000
+  channel-group 28 mode active
+  no shutdown
+
+interface Ethernet1/6
+
+interface Ethernet1/7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+  description ***Connection to NRR-WAN-AGG-FW001 port 25***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3301
+  mtu 9216
+  speed 40000
+  no negotiate auto
+  channel-group 20 mode active
+  no shutdown
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+  description ***Connection to NRR-DC-BLF-963 Eth1/1*** 
+  mtu 9000
+  no shutdown
+
+interface Ethernet1/19.409
+  description ***Connection to NRR-DC-BLF-963 Eth1/1 CORE:A Main A10*** 
+  mtu 9000
+  encapsulation dot1q 3409
+  no ip redirects
+  ip address 10.99.0.58/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.10
+  no shutdown
+
+interface Ethernet1/20
+  description ***Connection to NRR-DC-BLF-963 Eth1/4*** 
+  mtu 9216
+  no shutdown
+
+interface Ethernet1/20.405
+  description ***Connection to NRR-DC-BLF-963 Eth1/4 DC:MCAST Backup A12*** 
+  mtu 9000
+  encapsulation dot1q 3405
+  no ip redirects
+  ip address 10.99.0.42/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.12
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet1/20.413
+  description ***Connection to NRR-DC-BLF-963 Eth1/4 MGMT:inb *** 
+  mtu 9000
+  encapsulation dot1q 3413
+  no ip redirects
+  ip address 10.99.0.74/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.11
+  no shutdown
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+  description ***Connection to NRR-COR-C-SW002 Eth1/28***
+  mtu 9216
+  channel-group 11 mode active
+  no shutdown
+
+interface Ethernet1/29
+  description ***Connection to NRR-COR-C-SW002 Eth1/29***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3301-3319
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/30
+  description ***Connection to NRR-COR-C-SW002 Eth1/30***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3301-3319
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet2/1
+  description ***Connection to NRR-INT-AGG-SW002 Eth1/40***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3302,3309-3310
+  mtu 9216
+  channel-group 22 mode active
+  no shutdown
+
+interface Ethernet2/2
+  description ***Connection to NRR-EXT-AGG-SW002 Eth1/40***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3303-3305
+  mtu 9216
+  channel-group 23 mode active
+  no shutdown
+
+interface Ethernet2/3
+  description ***Connection to NRR-OOB-AGG-FW002 port39***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3306
+  mtu 9216
+  channel-group 25 mode active
+  no shutdown
+
+interface Ethernet2/4
+  description ***Connection to NRR-REP-OTV-R002 TenG0/1/0***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3308
+  mtu 9216
+  channel-group 27 mode active
+  no shutdown
+
+interface Ethernet2/5
+
+interface Ethernet2/6
+  description ***Connection to tetration Leaf-1 port 1/36***
+  ip address 10.99.2.65/30
+
+interface Ethernet2/7
+
+interface Ethernet2/8
+
+interface Ethernet2/9
+
+interface Ethernet2/10
+  description ***Connection to NRR-WAN-AGG-FW002 port 25***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3301
+  mtu 9216
+  speed 40000
+  no negotiate auto
+  channel-group 21 mode active
+  no shutdown
+
+interface Ethernet2/11
+
+interface Ethernet2/12
+
+interface Ethernet2/13
+
+interface Ethernet2/14
+
+interface Ethernet2/15
+
+interface Ethernet2/16
+
+interface Ethernet2/17
+
+interface Ethernet2/18
+
+interface Ethernet2/19
+  description ***Connection to NRR-DC-BLF-1064 Eth1/1*** 
+  mtu 9000
+  no shutdown
+
+interface Ethernet2/19.411
+  description ***Connection to NRR-DC-BLF-1064 Eth1/1 CORE:A Main A10*** 
+  mtu 9000
+  encapsulation dot1q 3411
+  no ip redirects
+  ip address 10.99.0.66/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.10
+  no shutdown
+
+interface Ethernet2/20
+  description ***Connection to NRR-DC-BLF-1064 Eth1/4*** 
+  mtu 9216
+  no shutdown
+
+interface Ethernet2/20.407
+  description ***Connection to NRR-DC-BLF-1064 Eth1/4 DC:MCAST Backup A12*** 
+  mtu 9000
+  encapsulation dot1q 3407
+  no ip redirects
+  ip address 10.99.0.50/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.12
+  ip pim sparse-mode
+  no shutdown
+
+interface Ethernet2/20.415
+  description ***Connection to NRR-DC-BLF-1064 Eth1/4 MGMT:inb *** 
+  mtu 9000
+  encapsulation dot1q 3415
+  no ip redirects
+  ip address 10.99.0.82/30
+  no ipv6 redirects
+  ip ospf authentication key-chain OSPF_KEY
+  ip ospf dead-interval 3
+  ip ospf hello-interval 1
+  ip ospf network point-to-point
+  no ip ospf passive-interface
+  ip ospf priority 100
+  ip router ospf CORE area 0.0.0.11
+  no shutdown
+
+interface Ethernet2/21
+
+interface Ethernet2/22
+
+interface Ethernet2/23
+
+interface Ethernet2/24
+
+interface Ethernet2/25
+
+interface Ethernet2/26
+
+interface Ethernet2/27
+
+interface Ethernet2/28
+  description ***Connection to NRR-COR-C-SW002 Eth2/28***
+  mtu 9216
+  channel-group 11 mode active
+  no shutdown
+
+interface Ethernet2/29
+  description ***Connection to NRR-COR-C-SW002 Eth2/29***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3301-3319
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet2/30
+  description ***Connection to NRR-COR-C-SW002 Eth2/30***
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 3279,3301-3319
+  channel-group 10 mode active
+  no shutdown
+
+interface Ethernet2/31
+
+interface Ethernet2/32
+
+interface Ethernet2/33
+
+interface Ethernet2/34
+
+interface Ethernet2/35
+
+interface Ethernet2/36
+
+interface mgmt0
+  description ***Connection to OOB-FEX117 Eth117/0/4 and OOB-FEX120 Eth120/0/4***
+  vrf member management
+  ip address 10.99.18.253/24
+
+interface loopback0
+  description ***OSPF CORE Process***
+  ip address 10.99.1.1/32
+  ip router ospf CORE area 0.0.0.0
+
+interface loopback1
+  description ***OSPF WAN Process***
+  ip address 10.99.1.2/32
+  ip router ospf WAN area 0.0.0.0
+
+interface loopback2
+  description ***OSPF INT Process***
+  ip address 10.99.1.3/32
+  ip router ospf INT area 0.0.0.0
+
+interface loopback10
+  description ***Auto-RP Loopback***
+  ip address 10.99.1.100/32
+  ip pim sparse-mode
+cli alias name wr copy running startup vdc-all
+line console
+  exec-timeout 10
+line vty
+  exec-timeout 10
+  access-class NEW_MGMT_ACL in
+boot nxos bootflash:/nxos.7.0.3.I7.6.bin sup-1
+boot nxos bootflash:/nxos.7.0.3.I7.6.bin sup-2
+router ospf CORE
+  router-id 10.99.1.1
+  area 0.0.0.2 nssa no-summary no-redistribution
+  area 0.0.0.3 nssa no-summary no-redistribution
+  area 0.0.0.10 nssa no-summary no-redistribution
+  area 0.0.0.11 nssa no-summary no-redistribution
+  area 0.0.0.12 nssa no-summary no-redistribution
+  redistribute ospf INT route-map CORE_INT_FILTER
+  redistribute ospf WAN route-map CORE_WAN_FILTER
+  redistribute direct route-map CORE_TAG
+  redistribute static route-map STATIC_CORE_TAG
+  log-adjacency-changes
+  area 0.0.0.0 authentication message-digest
+  area 0.0.0.2 authentication message-digest
+  area 0.0.0.3 authentication message-digest
+  area 0.0.0.10 authentication message-digest
+  area 0.0.0.11 authentication message-digest
+  area 0.0.0.12 authentication message-digest
+  area 0.0.0.10 default-cost 10
+  area 0.0.0.11 default-cost 1000
+  area 0.0.0.12 default-cost 1000
+  passive-interface default
+router ospf INT
+  router-id 10.99.1.3
+  default-information originate route-map DR-DEFAULT-METRIC
+  redistribute ospf CORE route-map INT_CORE_FILTER
+  redistribute ospf WAN route-map INT_WAN_FILTER
+  redistribute direct route-map INT_TAG
+  redistribute static route-map STATIC_CORE_TAG
+  log-adjacency-changes
+  area 0.0.0.0 authentication message-digest
+  area 0.0.0.1 authentication message-digest
+  area 0.0.0.2 authentication message-digest
+  summary-address 10.0.0.0/8 tag 100
+  summary-address 129.0.0.0/8 tag 100
+  summary-address 172.16.0.0/12 tag 100
+  summary-address 192.168.0.0/16 tag 100
+  passive-interface default
+router ospf WAN
+  router-id 10.99.1.2
+  default-information originate route-map DR-DEFAULT-METRIC
+  redistribute ospf CORE route-map WAN_CORE_FILTER
+  redistribute ospf INT route-map WAN_INT_FILTER
+  redistribute direct route-map WAN_TAG
+  redistribute static route-map STATIC_CORE_TAG
+  log-adjacency-changes
+  area 0.0.0.0 authentication message-digest
+  summary-address 10.0.0.0/8 tag 100
+  summary-address 129.0.0.0/8 tag 100
+  summary-address 172.16.0.0/12 tag 100
+  summary-address 192.168.0.0/16 tag 100
+  passive-interface default
+
+logging server VHN-NMS-02 7 use-vrf management
+logging server 10.252.126.161 5 use-vrf management
+logging server 10.0.61.20 5 use-vrf management
+logging server 10.252.126.170 5 use-vrf management
+logging server 10.252.126.129 5 use-vrf management
+logging server 10.252.105.67 6 port 1517 use-vrf management
+logging server 10.99.19.90 6 use-vrf management
+logging server 10.242.212.185 6 use-vrf management
+logging source-interface mgmt0
+logging timestamp milliseconds
+logging monitor 6
+logging level user 6
+logging level syslog 6
+no logging console
+logging origin-id hostname
+logging rfc-strict 5424
+logging server dns-refresh-interval 10
+
+

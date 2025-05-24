@@ -1,0 +1,17 @@
+device_id,hostname,vendor,model,os_family,os_version,serial_number,location,description,source_file
+nrr_cor_c_sw002,NRR-COR-C-SW002,Cisco,Nexus 9000,NX-OS,7.0(3)I7(6),,NRR-DC-CORE,Core switch for NRR datacenter,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_extbr_r001,NRR-EXT-EXTBR-R001,Cisco,ASR1002-HX,IOS-XE,17.6,,NRR-EXT,External border router,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r002,NRR-EXT-EXTBR-R002,Cisco,ASR1002-HX,IOS-XE,17.6,,NRR-EXT,External border router,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_int_intbr_r001,NRR-INT-INTBR-R001,Cisco,ASR1002-HX,IOS-XE,17.6,,NRR-INT,Internal border router,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r002,NRR-INT-INTBR-R002,Cisco,ASR1002-HX,IOS-XE,17.6,,NRR-INT,Internal border router,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_wan_br_r001,NRR-WAN-BR-R001,Cisco,ASR1006-X,IOS-XE,17.6,FXS22090601,NRR-WAN,WAN border router,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r002,NRR-WAN-BR-R002,Cisco,ASR1006-X,IOS-XE,17.6,FXS22090601,NRR-WAN,WAN border router,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_ext_sama_fw001,NRR-EXT-SAMA-FW001,Fortinet,FortiGate 1000D,FortiOS,7.0.14,FG1K5DT918802439,NRR-EXT,SAMA external firewall,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,NRR-EXT-TAD-FW001,Fortinet,FortiGate 1000D,FortiOS,7.0.14,FG1K5DT918802442,NRR-EXT,TAD external firewall,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_ext_fw001,NRR-EXT-EXT-FW001,Fortinet,FortiGate 1000D,FortiOS,7.0.14,,NRR-EXT,External firewall,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_int_agg_fw001_asa,NRR-INT-AGG-FW001-ASA,Fortinet,FortiGate 1000D,FortiOS,7.0.14,,NRR-INT,Internal aggregation firewall ASA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,NRR-INT-AGG-FW001-PA,Palo Alto,PA-5220,PanOS,10.1.6,,NRR-INT,Internal aggregation firewall PA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,NRR-OOB-AGG-FW001,Fortinet,FortiGate 1000D,FortiOS,7.0.14,FG1K5DT918802441,NRR-OOB,Out-of-band aggregation firewall,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,NRR-WAN-AGG-FW001,Fortinet,FortiGate 1000D,FortiOS,7.0.14,,NRR-WAN,WAN aggregation firewall,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+uat_pa_backup,UAT-PA-Backup,Palo Alto,PA-5220,PanOS,10.1.6,,UAT,UAT Palo Alto backup firewall,configs/UAT-PA-Backup
+uat_pa_internet_backup,UAT-PA-Internet-Backup,Palo Alto,PA-5220,PanOS,10.1.6,,UAT,UAT Palo Alto internet backup firewall,configs/UAT-PA-Internet-Backup

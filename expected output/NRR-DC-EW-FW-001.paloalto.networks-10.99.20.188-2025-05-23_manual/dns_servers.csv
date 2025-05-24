@@ -1,0 +1,2 @@
+device_id,dns_server,domain_name,dns_type,vrf,lookup_enabled,description,source_file
+nrr_dc_ew_fw_001,updates.paloaltonetworks.com,,update_server,mgmt,yes,Palo Alto Networks update server,configs/NRR-DC-EW-Backup 

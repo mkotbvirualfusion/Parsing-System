@@ -1,0 +1,6 @@
+device_id,ha_role,peer_id,sync_state,failover_timer,last_failover_ts,ha_group_id,ha_mode,priority,preempt,description,source_file
+nrr_dc_ew_fw_001,primary,192.0.2.2,enabled,recommended,,31,active-passive,90,auto,Primary NRR-EW-FW with HA Group 31,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,cluster_member,019901003832,enabled,recommended,,11,cluster,90,auto,Primary-NRR Cluster Member,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,cluster_member,019901003860,enabled,recommended,,11,cluster,90,auto,Secondary-NRR Cluster Member,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,cluster_member,019901004029,enabled,recommended,,11,cluster,90,auto,Primary-DRC Cluster Member,configs/NRR-DC-EW-Backup
+nrr_dc_ew_fw_001,cluster_member,019901003897,enabled,recommended,,11,cluster,90,auto,Secondary-DRC Cluster Member,configs/NRR-DC-EW-Backup 

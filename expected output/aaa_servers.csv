@@ -1,0 +1,41 @@
+device_id,server_type,server_ip,vrf,key_hash,timeout_sec,server_group,accounting_enabled,description,source_file
+uat_pa_fw_01,tacacs+,10.242.70.54,,8Vxk7oePWsjyN95SC2oWzQ==,30,TACAS_SRVS,yes,Primary TACACS+ server for UAT Palo Alto firewall,configs/UAT-PA-Backup
+uat_pa_fw_01,tacacs+,10.242.70.53,,8Vxk7oePWsjyN95SC2oWzQ==,30,TACAS_SRVS,yes,Secondary TACACS+ server for UAT Palo Alto firewall,configs/UAT-PA-Backup
+uat_pa_fw_01,tacacs+,10.252.70.53,,8Vxk7oePWsjyN95SC2oWzQ==,30,TACAS_SRVS,yes,DR TACACS+ server for UAT Palo Alto firewall,configs/UAT-PA-Backup
+uat_pa_fw_01,radius,10.0.3.178,,8Vxk7oePWsjyN95SC2oWzQ==,30,RADIUS,no,Primary RADIUS server for UAT Palo Alto firewall,configs/UAT-PA-Backup
+uat_pa_fw_01,radius,10.0.3.223,,8Vxk7oePWsjyN95SC2oWzQ==,30,RADIUS,no,Secondary RADIUS server for UAT Palo Alto firewall,configs/UAT-PA-Backup
+uat_pa_internet_fw,tacacs+,10.242.70.54,,encrypted,30,TACACS-Profile,yes,TACACS+ server for UAT Internet Palo Alto firewall,configs/UAT-PA-Internet-Backup
+nrr_cor_c_sw002,tacacs+,10.252.70.54,,vagwsjcnw347,5,VTYSec,yes,Primary TACACS+ server for NRR Core Switch,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,tacacs+,10.252.70.53,,vagwsjcnw347,5,VTYSec,yes,Secondary TACACS+ server for NRR Core Switch,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,tacacs+,10.242.70.54,,vagwsjcnw347,5,VTYSec,yes,DR TACACS+ server for NRR Core Switch,configs/NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_ext_extbr_r001,tacacs+,10.252.70.54,,0832494D1B180F1F1B0E5F507D,5,TACACS-SERVERS,yes,Primary TACACS+ server for External Border Router 001,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,tacacs+,10.252.70.53,,13161211190D0E2222217B6762,5,TACACS-SERVERS,yes,Secondary TACACS+ server for External Border Router 001,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r001,tacacs+,10.242.70.54,,03175E08140E2B44470C4A5140,5,TACACS-SERVERS,yes,DR TACACS+ server for External Border Router 001,configs/NRR-EXT-EXTBR-R001-10.99.18.31-2025-05-15_11-06-45.log
+nrr_ext_extbr_r002,tacacs+,10.252.70.54,,encrypted,5,TACACS-SERVERS,yes,Primary TACACS+ server for External Border Router 002,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,tacacs+,10.252.70.53,,encrypted,5,TACACS-SERVERS,yes,Secondary TACACS+ server for External Border Router 002,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_ext_extbr_r002,tacacs+,10.242.70.54,,encrypted,5,TACACS-SERVERS,yes,DR TACACS+ server for External Border Router 002,configs/NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+nrr_int_intbr_r001,tacacs+,10.252.70.54,,encrypted,5,TACACS-SERVERS,yes,Primary TACACS+ server for Internal Border Router 001,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,tacacs+,10.252.70.53,,encrypted,5,TACACS-SERVERS,yes,Secondary TACACS+ server for Internal Border Router 001,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r001,tacacs+,10.242.70.54,,encrypted,5,TACACS-SERVERS,yes,DR TACACS+ server for Internal Border Router 001,configs/NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+nrr_int_intbr_r002,tacacs+,10.252.70.54,,encrypted,5,TACACS-SERVERS,yes,Primary TACACS+ server for Internal Border Router 002,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,tacacs+,10.252.70.53,,encrypted,5,TACACS-SERVERS,yes,Secondary TACACS+ server for Internal Border Router 002,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_int_intbr_r002,tacacs+,10.242.70.54,,encrypted,5,TACACS-SERVERS,yes,DR TACACS+ server for Internal Border Router 002,configs/NRR-INT-INTBR-R002.alrajhi.bank-10.99.18.43-2025-05-15_11-06-51.log
+nrr_wan_br_r001,tacacs+,10.252.70.54,,encrypted,5,TACACS-SERVERS,yes,Primary TACACS+ server for WAN Border Router 001,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,tacacs+,10.252.70.53,,encrypted,5,TACACS-SERVERS,yes,Secondary TACACS+ server for WAN Border Router 001,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r001,tacacs+,10.242.70.54,,encrypted,5,TACACS-SERVERS,yes,DR TACACS+ server for WAN Border Router 001,configs/NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+nrr_wan_br_r002,tacacs+,10.252.70.54,,encrypted,5,TACACS-SERVERS,yes,Primary TACACS+ server for WAN Border Router 002,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,tacacs+,10.252.70.53,,encrypted,5,TACACS-SERVERS,yes,Secondary TACACS+ server for WAN Border Router 002,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_wan_br_r002,tacacs+,10.242.70.54,,encrypted,5,TACACS-SERVERS,yes,DR TACACS+ server for WAN Border Router 002,configs/NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+nrr_ext_ext_fw001,tacacs+,10.252.70.54,,ELm6yDPI4GzmZqITkNS87B8k,30,Tacacs-FNT,yes,Primary TACACS+ server for External Firewall 001,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,tacacs+,10.252.70.53,,fb4Q9FiQ1/N2ZZwrjjXF239x,30,Tacacs-FNT,yes,Secondary TACACS+ server for External Firewall 001,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,tacacs+,10.96.11.21,,2B0YFmmsaNVwrAD1Cnh24gRO,30,Tacacs-FNT,yes,DR TACACS+ server for External Firewall 001,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,tacacs+,10.242.70.53,,O0BXc0pDa+UZg5YEs/HEvDZs,30,Tacacs-FNT,yes,Additional TACACS+ server for External Firewall 001,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_ext_fw001,tacacs+,10.242.70.54,,L7baCKabNOsM5zaa3FOmNKRU,30,Tacacs-FNT,yes,Additional TACACS+ server for External Firewall 001,configs/NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+nrr_ext_sama_fw001,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,Primary TACACS+ server for SAMA External Firewall 001,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_sama_fw001,tacacs+,10.252.70.53,,encrypted,30,Tacacs-FNT,yes,Secondary TACACS+ server for SAMA External Firewall 001,configs/NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,Primary TACACS+ server for TAD External Firewall 001,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_ext_tad_fw001,tacacs+,10.252.70.53,,encrypted,30,Tacacs-FNT,yes,Secondary TACACS+ server for TAD External Firewall 001,configs/NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+nrr_int_agg_fw001_asa,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,TACACS+ server for Internal Aggregate Firewall ASA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+nrr_int_agg_fw001_pa,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,TACACS+ server for Internal Aggregate Firewall PA VDOM,configs/NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+nrr_oob_agg_fw001,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,TACACS+ server for OOB Aggregate Firewall 001,configs/NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+nrr_wan_agg_fw001,tacacs+,10.252.70.54,,encrypted,30,Tacacs-FNT,yes,TACACS+ server for WAN Aggregate Firewall 001,configs/NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf 

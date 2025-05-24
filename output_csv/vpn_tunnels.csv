@@ -1,0 +1,63 @@
+device_id,tunnel_id,peer_ip,mode,ike_policy,pfs_group,life_sec,state,bytes_in,bytes_out,source_file
+uat_ig_fw001,default,,IKE,"Enc:aes-128-cbc, 3des, Auth:sha1, DH: , Life:8h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Suite-B-GCM-128,,IKE,"Enc:aes-128-cbc, Auth:sha256, DH: , Life:8h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Suite-B-GCM-256,,IKE,"Enc:aes-256-cbc, Auth:sha384, DH: , Life:8h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MOI-ELM-IKE-PROF,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,STC-SMS-VPN,,IKE,"Enc:aes-256-cbc, Auth:sha1, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MOH-VPN,,IKE,"Enc:3des, aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Peoples-Bank-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,STCC-SAWA-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Faysal-Bank-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,UBL-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NBP-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MISR-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha512, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Loyalty-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha512, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Sonali-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha512, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MCB-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ZAIN-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,IBBL-IKE,,IKE,"Enc:3des, Auth:md5, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,BMRI-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,CEQUENS-Riyadh-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha512, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,CEQUENS-Jeddah-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha512, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,EDARAT-tunnel,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,SDB-tunnel-Phase1,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Mobily-ARB-SMS,,IKE,"Enc:aes-256-cbc, aes-128-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Secondary_Mobily_SMS,,IKE,"Enc:aes-256-cbc, aes-128-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,DR_Mobily_SMS,,IKE,"Enc:aes-256-cbc, aes-128-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Oracle-OCI-DRG-IKE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:8h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ARC_ISO_MSG,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NUPCO,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,AlibabaCloud_NonProd,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NBE,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NBE-IKE-NEW,,IKE,"Enc:aes-256-cbc, Auth:sha256, DH: , Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,BMRI-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:no-pfs, Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,CEQUENS-Jeddah-IPSEC-1,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha512, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,CEQUENS-Riyadh-IPSEC,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha512, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,default_new,,IPSec,"ESP - Enc:aes-128-cbc, 3des, Auth:sha1, DH:group2, Life:1h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,DR_Mobily_SMS,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,EDARAT-IPsec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Faysal-Bank-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,IBBL-IPSec,,IPSec,"ESP - Enc:3des, Auth:md5, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Loyalty-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha512, DH:no-pfs, Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MCB-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MISR-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha512, DH:group14, Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Mobily-ARB-SMS,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MOH-IPSec,,IPSec,"ESP - Enc:3des, aes-256-cbc, Auth:sha256, md5, DH:group5, Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,MOI-ELM-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, aes-256-gcm, Auth:sha256, DH:group19, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NBP-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:8h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Peoples-Bank-Ipsec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group5, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,SDB-IPsec-Phase2,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Secondary_Mobily_SMS,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Sonali-IPSec,,IPSec,"ESP - Enc:3des, Auth:sha256, DH:no-pfs, Life:24h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,STC-SMS-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha1, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,STCC-SAWA-IPSec,,IPSec,"ESP - Enc:aes-256-gcm, Auth:sha512, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Suite-B-GCM-128,,IPSec,"ESP - Enc:aes-128-gcm, Auth:none, DH:group19, Life:1h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Suite-B-GCM-256,,IPSec,"ESP - Enc:aes-256-gcm, Auth:none, DH:group20, Life:1h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,UBL-IPSec,,IPSec,"ESP - Enc:aes-256-gcm, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ZAIN-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:no-pfs, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,Oracle-OCI-DRG-IPSec,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:1h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ARC_ISO_MSG,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group20, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NUPCO,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,AlibabaCloud_NonProd,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,NBE,,IPSec,"ESP - Enc:aes-256-cbc, Auth:sha256, DH:group14, Life:h",,,,,,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,default,,GlobalProtect,"GP - Enc:aes-128-cbc, Auth:sha1",,,,,,configs\UAT-PA-Internet-Backup

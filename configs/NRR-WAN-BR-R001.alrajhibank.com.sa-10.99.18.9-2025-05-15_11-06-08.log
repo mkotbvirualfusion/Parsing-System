@@ -1,0 +1,2438 @@
+﻿CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+CC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+NRR-WAN-BR-R001#terminal length 0
+NRR-WAN-BR-R001#sh run conf
+                        ^
+% Invalid input detected at '^' marker.
+
+NRR-WAN-BR-R001#sh running-config
+Building configuration...
+
+Current configuration : 95055 bytes
+!
+! Last configuration change at 11:51:27 KSA Sun May 11 2025 by c007179
+! NVRAM config last updated at 01:50:56 KSA Fri May 2 2025 by c007179
+!
+version 17.6
+service nagle
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service sequence-numbers
+no service dhcp
+! Call-home is enabled by Smart-Licensing.
+service call-home
+no service password-recovery 
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname NRR-WAN-BR-R001
+!
+boot-start-marker
+boot system bootflash:packages.conf
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+logging buffered 65536
+no logging console
+enable secret 9 $14$s41Q$UQ/xZtrumG3PQU$RowG90/a/a3T1lOiPhi5t01U54uuuMVDTjpiAYWb/bU
+!
+aaa new-model
+!
+!
+aaa group server tacacs+ TACACS-SERVERS
+ server name TACACS-SERVER-1
+ server name TACACS-SERVER-2
+ server name TACACS-SERVER-DR
+ ip vrf forwarding Mgmt-intf
+ ip tacacs source-interface GigabitEthernet0
+!
+aaa authentication login VTYSec group TACACS-SERVERS local
+aaa authentication login no_tacacs enable
+aaa authorization config-commands
+aaa authorization exec default group TACACS-SERVERS local 
+aaa authorization commands 1 default group TACACS-SERVERS local 
+aaa authorization commands 15 default group TACACS-SERVERS local 
+aaa accounting update newinfo
+aaa accounting exec default start-stop group TACACS-SERVERS
+aaa accounting commands 1 default stop-only group TACACS-SERVERS
+aaa accounting commands 15 default stop-only group TACACS-SERVERS
+aaa accounting network default stop-only group TACACS-SERVERS
+aaa accounting connection default stop-only group TACACS-SERVERS
+aaa accounting system default start-stop group TACACS-SERVERS
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone KSA 3 0
+ip icmp rate-limit unreachable 100
+ip icmp rate-limit unreachable DF 10
+ip spd queue max-threshold 1499
+ip spd queue min-threshold 1498
+!
+!
+!
+!
+!
+!
+!
+ip name-server 10.0.10.10 10.0.10.20 10.11.11.10 10.11.11.11
+ip domain name alrajhibank.com.sa
+ip dhcp bootp ignore
+!
+!
+!
+login on-failure log
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+flow exporter ENTUITY
+ description ENTUITY
+ destination 10.252.126.172
+ source Loopback0
+ transport udp 9996
+!
+!
+flow exporter VHN-NMS-01
+ description Solarwinds
+ destination 10.99.28.70
+ source Loopback0
+ transport udp 2055
+!
+!
+flow monitor ENTUITYM
+ exporter ENTUITY
+ record netflow ipv4 original-input
+!
+!
+flow monitor VHN-NMS-01
+ exporter VHN-NMS-01
+ cache timeout inactive 10
+ cache timeout active 30
+ statistics packet protocol
+ statistics packet size
+ record netflow-original
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2587275263
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2587275263
+ revocation-check none
+ rsakeypair TP-self-signed-2587275263
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-2587275263
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32353837 32373532 3633301E 170D3138 30353136 30333335 
+  32395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 35383732 
+  37353236 33308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100BED2 5D2C0D4F 6C5F7CA7 7392B707 5E821853 1A0F3649 9321B50B 
+  CEE3B9AA 6712A5A5 5F70D3AB 1C50A9CF BAA8C411 C7D358E6 14552025 05D070AE 
+  24568BEC 23DA2AD2 17A22E67 FB5A5808 5F1D10D2 30996CB3 2E40D576 28FEB480 
+  5379ADC0 662A18FD 786B8A43 906A1E25 346C361D A5DD1FA2 85B5E0AC 0BF2EA63 
+  5FF0461B 2AE8D823 5F96F4E5 47D9BEA3 33465D1D 65B30E23 128B975B ECB2E20C 
+  DDA36E81 C2853390 EE0852B7 50FB7FAF DCC0E8CB 03531A01 D8CF8FEB A4D0531D 
+  6A15CFCA 8FA42B27 D36BF961 64E1875E F8795945 A088C272 B22D4306 8018DB1F 
+  FDC76036 358C5EFB DC789F7A 8E30A57E 38D09995 9B849519 C8FAA011 BB5C5E79 
+  46B0E270 83970203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 142A646A A72C1A81 1501AF16 9C2C8EE8 79D13FF0 
+  9F301D06 03551D0E 04160414 2A646AA7 2C1A8115 01AF169C 2C8EE879 D13FF09F 
+  300D0609 2A864886 F70D0101 05050003 82010100 7FEC35BA 1BCE6579 110F60C9 
+  119B1D44 21F0B4D6 8C555A0D 54FE09AD FA647CA9 B196C9D5 3F419ED7 5CD59C74 
+  C9B12DD5 1463EDBB 692DB079 D507BA7B D942A063 23CDDF5E 12C2F160 FDB04044 
+  4F66758D 017FBB12 1A248AC9 5D153BD2 465F0675 3F578833 FFDAF1C1 69B467DB 
+  1DB6D14E 9E9D6878 C873C166 CB3506B0 BD794762 F04640F1 1F796EBD 4428A9C8 
+  B0596624 5F44FFC0 BA8F8BF9 909FAC74 1CA9BA5E 62F893C1 88CBED8D DC870A5C 
+  EECFFBD8 B224227D 6167B6CC BB56ECF4 4090A692 FE9BCA2C 026326DA 4162A7DE 
+  4AEA143A DFD83F4B E99797E2 047F13A9 2881C62F 1C0F2C32 F5C4329E B67F13CD 
+  98153199 99A68C3B 7E1F2590 6F773ABF 58CC2A3B
+        quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+        quit
+!
+!
+license udi pid ASR1006-X sn FXS22090602
+license boot level adventerprise
+archive
+ path bootflash:CFG_BKP
+ time-period 1440
+memory free low-watermark processor 415445
+!
+!
+spanning-tree extend system-id
+diagnostic bootup level minimal
+!
+username arbnsd privilege 15 secret 9 $14$76O7$1pkT8./gkaWbqE$4Hjb/Bp4.wGrZfAXPhSulKC.af8vvQT5tLZRmhUL0Q.
+!
+redundancy
+ mode sso
+!
+!
+!
+!
+!
+!
+cdp run
+!
+lldp run
+!
+class-map match-all Bulk-Traffic-B249
+ match access-group name Bulk-Traffic-B249
+class-map match-all Business-Low-B314
+ match access-group name Business-Low-B314
+class-map match-all Business-Low-B446
+ match access-group name Business-Low-B446
+class-map match-all Bulk-Traffic-B314
+ match access-group name Bulk-Traffic-B314
+class-map match-all Bulk-Traffic-B446
+ match access-group name Bulk-Traffic-B446
+class-map match-all Business-Low-B249
+ match access-group name Business-Low-B249
+class-map match-all CLASS-MLFTPSERVER
+ match access-group name ACL-MLFTPSERVER
+class-map match-all CLASS-SPLNK
+ match access-group name ACL-SPLNK
+class-map match-all CLASS-PROXY
+ match access-group name ACL-PROXY
+class-map match-all CLASS-EMAIL
+ match access-group name ACL-EMAIL
+class-map match-any Class-CoPP-Undesirable
+ match access-group name CoPP-Undesirable
+class-map match-any Class-CoPP-Routing
+ match access-group name CoPP-Routing
+ match protocol arp
+class-map match-all CLASS-SPLNK-OUT
+ match access-group name ACL-SPLNK-OUT
+class-map match-any Class-CoPP-Monitoring
+ match access-group name CoPP-Monitoring
+class-map match-any Class-CoPP-Management
+ match access-group name CoPP-Management
+class-map match-all DC-Class
+ match access-group name HODC-JODC
+class-map match-all Best-Effort-B249
+ match access-group name Best-Effort-B249
+class-map match-all Business-High-B249
+ match access-group name Business-High-B249
+class-map match-all CLASS-HOSEPPRDAP
+ match access-group name ACL-HOSEPPRDAP
+class-map match-all Best-Effort-B314
+ match access-group name Best-Effort-B314
+class-map match-all Best-Effort-B446
+ match access-group name Best-Effort-B446
+class-map match-all CLASS-HOISILON
+ match access-group name ACL-HOISILON
+class-map match-all Business-High-B314
+ match access-group name Business-High-B314
+class-map match-all Business-High-B446
+ match access-group name Business-High-B446
+!
+policy-map DC-Policy
+ class DC-Class
+  police cir 512000 bc 64000 conform-action transmit  exceed-action drop 
+policy-map Alrajhi-HO-To-STC-BR-QoS
+ class Business-High-B249
+  bandwidth 500
+ class Business-Low-B249
+  bandwidth 250
+ class Bulk-Traffic-B249
+  bandwidth 150
+  random-detect
+ class Best-Effort-B249
+  bandwidth 100
+  random-detect
+ class Business-High-B446
+  bandwidth 1000
+ class Business-Low-B446
+  bandwidth 500
+ class Bulk-Traffic-B446
+  bandwidth 300
+  random-detect
+ class Best-Effort-B446
+  bandwidth 200
+  random-detect
+ class class-default
+  random-detect
+policy-map Alrajhi-HO-To-STC-BR-QoS-Parent
+ class class-default
+  shape average 200000000   
+   service-policy Alrajhi-HO-To-STC-BR-QoS
+policy-map Alrajhi-HO-To-NN-BR-QoS
+ class Business-High-B314
+  bandwidth 1000
+ class Business-Low-B314
+  bandwidth 500
+ class Bulk-Traffic-B314
+  bandwidth 300
+  random-detect
+ class Best-Effort-B314
+  bandwidth 200
+  random-detect
+ class Business-High-B446
+  bandwidth 500
+ class Business-Low-B446
+  bandwidth 250
+ class Bulk-Traffic-B446
+  bandwidth 150
+  random-detect
+ class Best-Effort-B446
+  bandwidth 100
+  random-detect
+ class class-default
+  random-detect
+policy-map Policy-CoPP
+ class Class-CoPP-Routing
+  police 100000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Management
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Monitoring
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Undesirable
+  police 1000000 conform-action drop  exceed-action drop 
+ class class-default
+  police 1000000 conform-action transmit  exceed-action drop 
+policy-map Alrajhi-HO-To-ITC-BR-QoS
+ class Business-High-B314
+  bandwidth 1000
+ class Business-Low-B314
+  bandwidth 500
+ class Bulk-Traffic-B314
+  bandwidth 300
+  random-detect
+ class Best-Effort-B314
+  bandwidth 200
+  random-detect
+ class class-default
+  random-detect
+policy-map Alrajhi-HO-To-ITC-BR-QoS-Parent
+ class class-default
+  shape average 25000000   
+   service-policy Alrajhi-HO-To-ITC-BR-QoS
+policy-map Alrajhi-HO-To-NN-BR-QoS-Parent
+ class class-default
+  shape average 60000000   
+   service-policy Alrajhi-HO-To-NN-BR-QoS
+policy-map POLICY-MAP-QOS-IN
+ class CLASS-SPLNK
+  police cir 1000000 conform-action transmit  exceed-action drop 
+policy-map POLICY-MAP-QOS-OUT
+ class CLASS-HOISILON
+  police cir percent 20
+   conform-action transmit 
+   exceed-action drop 
+ class CLASS-PROXY
+  police cir percent 20
+   conform-action transmit 
+   exceed-action drop 
+ class CLASS-EMAIL
+  police cir percent 20
+   conform-action transmit 
+   exceed-action drop 
+ class CLASS-MLFTPSERVER
+  police cir percent 10
+   conform-action transmit 
+   exceed-action drop 
+ class CLASS-HOSEPPRDAP
+  police cir percent 25
+   conform-action transmit 
+   exceed-action drop 
+ class CLASS-SPLNK-OUT
+  police cir 1000000 conform-action transmit  exceed-action drop 
+ class class-default
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Null0
+ no ip unreachables
+!
+interface Loopback0
+ ip address 10.99.1.14 255.255.255.255
+!
+interface Port-channel20
+ mtu 9198
+ no ip address
+!
+interface Port-channel20.21
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/0***
+ encapsulation dot1Q 21
+ ip address 10.99.5.1 255.255.255.252
+!
+interface Port-channel20.22
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/1***
+ encapsulation dot1Q 22
+ ip address 10.99.5.9 255.255.255.252
+!
+interface Port-channel20.23
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/2***
+ encapsulation dot1Q 23
+ ip address 10.99.5.17 255.255.255.252
+!
+interface Port-channel20.24
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/3***
+ encapsulation dot1Q 24
+ ip address 10.99.5.25 255.255.255.252
+!
+interface Port-channel20.25
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/4***
+ encapsulation dot1Q 25
+ ip address 10.99.5.33 255.255.255.252
+!
+interface Port-channel20.26
+ description ***L3 Connection to Huawei SDWAN R01 xgig0/0/5***
+ encapsulation dot1Q 26
+ ip address 10.99.5.41 255.255.255.252
+!
+interface Port-channel20.27
+ description ***L3 Connection to Huawei SDWAN R03 xgig0/0/0***
+ encapsulation dot1Q 27
+ ip address 10.99.5.49 255.255.255.252
+!
+interface TenGigabitEthernet0/0/0
+ description Connection to OPC-MR1-R01-WAN-ASR-01-Te1/0/3
+ mtu 9216
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.99.3.110 255.255.255.252
+ cdp enable
+ bfd interval 50 min_rx 50 multiplier 3
+!
+interface TenGigabitEthernet0/0/1
+ mtu 9216
+ no ip address
+ load-interval 30
+ cdp enable
+!
+interface TenGigabitEthernet0/0/1.4072
+ description Connection to TWR-R02-WAN-ASR-01 0/0/10
+ bandwidth 2500000
+ encapsulation dot1Q 4072
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.99.3.102 255.255.255.252
+ cdp enable
+ bfd interval 50 min_rx 50 multiplier 3
+!
+interface TenGigabitEthernet0/0/2
+ description *** BURAIDAH-CALLCENTER_R01-ITC***
+ bandwidth 1500000
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ no ip address
+!
+interface TenGigabitEthernet0/0/2.3271
+ description *** BURAIDAH-CALLCENTER-ITC-11014601 ***
+ encapsulation dot1Q 3271
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.39.0.33 255.255.255.252
+ bfd interval 50 min_rx 50 multiplier 3
+!
+interface TenGigabitEthernet0/0/3
+ description *** ITC DWDM LINK TO TANFEETH -11022201***
+ no ip address
+!
+interface TenGigabitEthernet0/0/3.3275
+ description *** ITC DWDM LINK TO TANFEETH -11022201***
+ bandwidth 1000000
+ encapsulation dot1Q 3275
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.240.168.233 255.255.255.252
+ bfd interval 50 min_rx 50 multiplier 3
+!
+interface TenGigabitEthernet0/0/4
+ description ITC_11051101_ALREMAL_CALL_CENTER_BRANCH
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.20.70.245 255.255.255.252
+ bfd interval 50 min_rx 50 multiplier 3
+!
+interface TenGigabitEthernet0/0/5
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/0/6
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/0/7
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/0/8
+ description ***Connection to Huawei SDWAN SW xgig0/0/20***
+ mtu 9198
+ no ip address
+ channel-group 20 mode active
+!
+interface TenGigabitEthernet0/0/9
+ description ***Connection to Huawei SDWAN SW xgig1/0/20***
+ mtu 9198
+ no ip address
+ channel-group 20 mode active
+!
+interface FortyGigabitEthernet1/0/0
+ description ***L3 Connection to NRR-WAN-GM-R001***
+ mtu 9216
+ ip flow monitor VHN-NMS-01 input
+ ip address 10.99.3.82 255.255.255.252
+ cdp enable
+ bfd interval 1000 min_rx 1000 multiplier 3
+!
+interface FortyGigabitEthernet1/0/1
+ description ***L3 Connection to NRR-WAN-GM-R002***
+ mtu 9216
+ ip flow monitor VHN-NMS-01 input
+ ip address 10.99.3.90 255.255.255.252
+ cdp enable
+ bfd interval 1000 min_rx 1000 multiplier 3
+!
+interface GigabitEthernet1/1/0
+ description ***   STC_BRANCHES_PRIMARY- RIYADH-RIYADH IP7307   ***
+ bandwidth 200000
+ ip flow monitor VHN-NMS-01 output
+ no ip address
+ ip directed-broadcast
+ negotiation auto
+!
+interface GigabitEthernet1/1/0.941
+ description ***   STC_BRANCHES_PRIMARY- RIYADH-RIYADH IP7307   ***
+ bandwidth 100000
+ encapsulation dot1Q 941
+ ip flow monitor VHN-NMS-01 output
+ ip address 172.27.105.118 255.255.255.252
+ service-policy input POLICY-MAP-QOS-IN
+ service-policy output POLICY-MAP-QOS-OUT
+!
+interface GigabitEthernet1/1/1
+ description ***L3-MOBILY-Backhaul-SAI-1001231387439225***
+ bandwidth 500000
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.100.8.153 255.255.255.252
+ load-interval 30
+ negotiation auto
+ service-policy output POLICY-MAP-QOS-OUT
+!
+interface GigabitEthernet1/1/2
+ description NOURNET-NRR-Branches-Backhaul-300M-P-Fiber
+ bandwidth 300000
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.34.122 255.255.255.252
+ ip tcp adjust-mss 1420
+ load-interval 30
+ negotiation auto
+ service-policy output POLICY-MAP-QOS-OUT
+!
+interface GigabitEthernet1/1/3
+ description ***NNR-Jordon Branches-35M-P-NN***
+ bandwidth 35840
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.34.102 255.255.255.252
+ ip access-group test out
+ negotiation auto
+!
+interface GigabitEthernet1/1/4
+ description GO-Backhaul-PRI-ORD-02034-W4L1S4-RUH-580
+ bandwidth 81920
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.254.194 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet1/1/5
+ description ZAIN-Primary-Backhaul_CRIY0127
+ bandwidth 900000
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.100.6 255.255.255.252
+ negotiation auto
+ bfd interval 1000 min_rx 1000 multiplier 3
+!
+interface GigabitEthernet1/1/6
+ description NNR-Kuwait-P-NN-ORD-14155-ISPV2000
+ bandwidth 6144
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.34.126 255.255.255.252
+ load-interval 30
+ negotiation auto
+!
+interface GigabitEthernet1/1/7
+ description ITC_PRIMARY_10995671
+ bandwidth 1024000
+ ip flow monitor VHN-NMS-01 output
+ ip address 172.30.2.30 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet1/1/8
+ description ZAIN_PRIMARY_Car-Dealer-CRIY0127-CD01
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.100.78 255.255.255.252
+ negotiation auto
+ bfd interval 1000 min_rx 1000 multiplier 3
+!
+interface GigabitEthernet1/1/9
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet1/1/10
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet1/1/10.120
+!
+interface GigabitEthernet1/1/11
+ description ***L3 Connection to NRR-WAN-SD-R001 Gi0/0/0 Transport***
+ ip address 10.99.5.66 255.255.255.252
+ negotiation auto
+ cdp enable
+!
+interface GigabitEthernet1/1/12
+ description ***L3 Connection to NRR-WAN-SD-R002 Gi0/0/0 Transport***
+ ip address 10.99.5.90 255.255.255.252
+ negotiation auto
+ cdp enable
+!
+interface GigabitEthernet1/1/13
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet1/1/14
+ description GO-Backhaul-PRI-CID-ORD-26070-S0K9J2-RUH-1000167998-FIBER
+ bandwidth 1024000
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 192.168.252.114 255.255.255.252
+ no negotiation auto
+!
+interface GigabitEthernet1/1/15
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet1/1/16
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet1/1/17
+ description ***Huawei-SDWAN***
+ ip address 10.99.3.189 255.255.255.252
+ negotiation auto
+!
+interface GigabitEthernet0
+ description ***Connection to OOB-FEX117 Eth117/0/9***
+ vrf forwarding Mgmt-intf
+ ip address 10.99.18.9 255.255.255.0
+ negotiation auto
+!
+router bgp 65048
+ bgp router-id 10.99.1.14
+ bgp log-neighbor-changes
+ neighbor 10.20.70.246 remote-as 65209
+ neighbor 10.20.70.246 description ##ITC LINK TO RemalCC##
+ neighbor 10.20.70.246 shutdown
+ neighbor 10.20.70.246 fall-over bfd
+ neighbor 10.39.0.34 remote-as 65207
+ neighbor 10.39.0.34 description ##BURAIDAH-CALLCENTER##
+ neighbor 10.39.0.34 shutdown
+ neighbor 10.39.0.34 fall-over bfd
+ neighbor 10.99.3.81 remote-as 65048
+ neighbor 10.99.3.81 description NRR-WAN-GM-R001
+ neighbor 10.99.3.81 fall-over bfd
+ neighbor 10.99.3.89 remote-as 65048
+ neighbor 10.99.3.89 description NRR-WAN-GM-R002
+ neighbor 10.99.3.89 fall-over bfd
+ neighbor 10.99.3.101 remote-as 65204
+ neighbor 10.99.3.101 description ##TOWER-WAN-ROUTER-01##
+ neighbor 10.99.3.101 shutdown
+ neighbor 10.99.3.101 fall-over bfd
+ neighbor 10.99.3.109 remote-as 65203
+ neighbor 10.99.3.109 description ##OPC-MR1-R01-WAN-ASR-01-Te1/0/3## 
+ neighbor 10.99.3.109 fall-over bfd
+ neighbor 10.99.5.65 remote-as 65005
+ neighbor 10.99.5.65 description NRR-WAN-SD-R001
+ neighbor 10.99.5.89 remote-as 65005
+ neighbor 10.99.5.89 description NRR-WAN-SD-R002
+ neighbor 10.240.168.234 remote-as 65208
+ neighbor 10.240.168.234 description ##ITC DWDM LINK TO TANFEETH##
+ neighbor 10.240.168.234 password 7 00303228227E2E3227016D7C2B382B3C325A5E57
+ neighbor 10.240.168.234 fall-over bfd
+ neighbor 172.27.105.117 remote-as 65000
+ neighbor 172.27.105.117 description ****STC_BRANCHES_PRIMARY- RIYADH-RIYADH IP7307****
+ neighbor 172.27.105.117 shutdown
+ neighbor 172.27.105.117 password 7 123B2227323B2F1C3C263E0561
+ neighbor 172.30.2.29 remote-as 35753
+ neighbor 172.30.2.29 description ITC_PRIMARY_BACKHUALL_BR
+ neighbor 172.30.2.29 shutdown
+ neighbor 172.30.2.29 password 7 14253201040D7B1F07
+ neighbor 192.100.8.154 remote-as 35819
+ neighbor 192.100.8.154 description ***Mobily_Backhaul***
+ neighbor 192.100.8.154 shutdown
+ neighbor 192.100.8.154 password 7 111B180F1F1B090D0A21
+ neighbor 192.168.34.101 remote-as 29684
+ neighbor 192.168.34.101 description ***KUWAIT-JORDAN-22M-P-NN***
+ neighbor 192.168.34.121 remote-as 29684
+ neighbor 192.168.34.121 description ***NOURNET_PRIMARY***
+ neighbor 192.168.34.121 shutdown
+ neighbor 192.168.34.125 remote-as 29684
+ neighbor 192.168.34.125 description KW-NRR-P-NN-ORD-14155-ISPV2000
+ neighbor 192.168.100.5 remote-as 64943
+ neighbor 192.168.100.5 description *** ZAIN_PRIMARY_BACKHAUL_CRIY0127 ***
+ neighbor 192.168.100.5 shutdown
+ neighbor 192.168.100.5 password 7 023C245205071D231E1E5A49
+ neighbor 192.168.100.5 fall-over bfd
+ neighbor 192.168.100.77 remote-as 64943
+ neighbor 192.168.100.77 description *** ZAIN_PRIMARY_BACKHAUL_CRIY0127 ***
+ neighbor 192.168.100.77 shutdown
+ neighbor 192.168.100.77 password 7 0129260D550A140D731C1D59
+ neighbor 192.168.100.77 fall-over bfd
+ neighbor 192.168.252.85 remote-as 65010
+ neighbor 192.168.252.85 local-as 64756 no-prepend replace-as
+ neighbor 192.168.252.85 description ***GO-NEW-PRIMARY***
+ neighbor 192.168.252.85 shutdown
+ neighbor 192.168.252.85 password 7 094B412918011A1B054203256527273E7B3112
+ neighbor 192.168.252.113 remote-as 65010
+ neighbor 192.168.252.113 local-as 64756 no-prepend replace-as
+ neighbor 192.168.252.113 description ***GO-NEW-PRIMARY***
+ neighbor 192.168.252.113 shutdown
+ neighbor 192.168.252.113 password 7 07082E6C4F0D140C195C0C034A292429662034
+ neighbor 192.168.254.193 remote-as 48695
+ neighbor 192.168.254.193 local-as 64756 no-prepend replace-as
+ neighbor 192.168.254.193 description ***GO_PRIMARY***
+ neighbor 192.168.254.193 shutdown
+ neighbor 192.168.254.193 password 7 045C04260E254147075702185C080309643825
+ !
+ address-family ipv4
+  bgp additional-paths select backup
+  bgp additional-paths install
+  network 10.20.70.244 mask 255.255.255.252
+  network 10.99.1.14 mask 255.255.255.255
+  network 10.99.1.70 mask 255.255.255.255
+  network 10.99.1.71 mask 255.255.255.255
+  network 10.99.1.72 mask 255.255.255.255
+  network 10.99.1.73 mask 255.255.255.255
+  network 10.99.1.74 mask 255.255.255.255
+  network 10.99.1.75 mask 255.255.255.255
+  network 10.99.1.78 mask 255.255.255.255
+  network 10.99.1.79 mask 255.255.255.255
+  network 10.99.1.80 mask 255.255.255.255
+  network 10.99.1.81 mask 255.255.255.255
+  network 10.99.1.82 mask 255.255.255.255
+  network 10.99.1.83 mask 255.255.255.255
+  network 10.99.3.188 mask 255.255.255.252
+  network 10.99.3.216 mask 255.255.255.252
+  network 10.99.3.232 mask 255.255.255.252
+  network 10.99.5.0 mask 255.255.255.252
+  network 10.99.5.8 mask 255.255.255.252
+  network 10.99.5.16 mask 255.255.255.252
+  network 10.99.5.24 mask 255.255.255.252
+  network 10.99.5.32 mask 255.255.255.252
+  network 10.99.5.40 mask 255.255.255.252
+  network 10.99.5.48 mask 255.255.255.252
+  network 192.168.34.100 mask 255.255.255.252
+  network 192.168.34.128 mask 255.255.255.252
+  neighbor 10.20.70.246 activate
+  neighbor 10.20.70.246 send-community both
+  neighbor 10.20.70.246 soft-reconfiguration inbound
+  neighbor 10.20.70.246 route-map REMAL_IN in
+  neighbor 10.20.70.246 route-map REMAL_OUT out
+  neighbor 10.39.0.34 activate
+  neighbor 10.39.0.34 send-community both
+  neighbor 10.39.0.34 soft-reconfiguration inbound
+  neighbor 10.39.0.34 route-map BUR_CALL_IN in
+  neighbor 10.39.0.34 route-map BUR_CALL_OUT out
+  neighbor 10.99.3.81 activate
+  neighbor 10.99.3.81 send-community both
+  neighbor 10.99.3.81 next-hop-self
+  neighbor 10.99.3.81 route-map IBGP-COMMUNITY out
+  neighbor 10.99.3.89 activate
+  neighbor 10.99.3.89 send-community both
+  neighbor 10.99.3.89 next-hop-self
+  neighbor 10.99.3.89 route-map IBGP-COMMUNITY out
+  neighbor 10.99.3.101 activate
+  neighbor 10.99.3.101 send-community both
+  neighbor 10.99.3.101 soft-reconfiguration inbound
+  neighbor 10.99.3.101 route-map TWR_IN in
+  neighbor 10.99.3.101 route-map TWR_OUT out
+  neighbor 10.99.3.109 activate
+  neighbor 10.99.3.109 send-community both
+  neighbor 10.99.3.109 soft-reconfiguration inbound
+  neighbor 10.99.3.109 route-map OPC_IN in
+  neighbor 10.99.3.109 route-map OPC_OUT out
+  neighbor 10.99.5.65 activate
+  neighbor 10.99.5.65 send-community both
+  neighbor 10.99.5.65 route-map SDWAN-VPN0-OUT out
+  neighbor 10.99.5.65 filter-list 1 in
+  neighbor 10.99.5.89 activate
+  neighbor 10.99.5.89 send-community both
+  neighbor 10.99.5.89 route-map SDWAN-VPN0-OUT out
+  neighbor 10.99.5.89 filter-list 1 in
+  neighbor 10.240.168.234 activate
+  neighbor 10.240.168.234 send-community both
+  neighbor 10.240.168.234 soft-reconfiguration inbound
+  neighbor 10.240.168.234 route-map TANFEETH_IN in
+  neighbor 10.240.168.234 route-map TANFEETH_OUT out
+  neighbor 172.27.105.117 activate
+  neighbor 172.27.105.117 send-community both
+  neighbor 172.27.105.117 advertise-map WAN_R1_select_stc exist-map check
+  neighbor 172.27.105.117 soft-reconfiguration inbound
+  neighbor 172.27.105.117 prefix-list NRR_Filtration in
+  neighbor 172.27.105.117 prefix-list Branch_Filteration out
+  neighbor 172.27.105.117 route-map STC-SDWAN out
+  neighbor 172.30.2.29 activate
+  neighbor 172.30.2.29 send-community both
+  neighbor 172.30.2.29 advertise-map WAN_R1_SELECT_ITCBR exist-map check
+  neighbor 172.30.2.29 soft-reconfiguration inbound
+  neighbor 172.30.2.29 prefix-list NRR_Filtration in
+  neighbor 172.30.2.29 prefix-list Branch_Filteration out
+  neighbor 172.30.2.29 route-map ITC-SDWAN out
+  neighbor 192.100.8.154 activate
+  neighbor 192.100.8.154 send-community both
+  neighbor 192.100.8.154 advertise-map WAN_R1_select_MOB exist-map check
+  neighbor 192.100.8.154 soft-reconfiguration inbound
+  neighbor 192.100.8.154 prefix-list NRR_Filtration in
+  neighbor 192.100.8.154 prefix-list Branch_Filteration out
+  neighbor 192.100.8.154 route-map MOBILY-SDWAN out
+  neighbor 192.168.34.101 activate
+  neighbor 192.168.34.101 send-community both
+  neighbor 192.168.34.101 advertise-map WAN_R1_select_itc exist-map check
+  neighbor 192.168.34.101 soft-reconfiguration inbound
+  neighbor 192.168.34.101 prefix-list NRR_Filtration in
+  neighbor 192.168.34.101 prefix-list Branch_Filteration out
+  neighbor 192.168.34.101 route-map INTL in
+  neighbor 192.168.34.121 activate
+  neighbor 192.168.34.121 send-community both
+  neighbor 192.168.34.121 advertise-map WAN_R1_select_NN exist-map check
+  neighbor 192.168.34.121 soft-reconfiguration inbound
+  neighbor 192.168.34.121 prefix-list NRR_Filtration in
+  neighbor 192.168.34.121 prefix-list Branch_Filteration out
+  neighbor 192.168.34.121 route-map NN-SDWAN out
+  neighbor 192.168.34.125 activate
+  neighbor 192.168.34.125 send-community both
+  neighbor 192.168.34.125 advertise-map WAN_R1_select_itc exist-map check
+  neighbor 192.168.34.125 soft-reconfiguration inbound
+  neighbor 192.168.34.125 prefix-list NRR_Filtration in
+  neighbor 192.168.34.125 prefix-list Branch_Filteration out
+  neighbor 192.168.34.125 route-map KW_LINK in
+  neighbor 192.168.100.5 activate
+  neighbor 192.168.100.5 send-community both
+  neighbor 192.168.100.5 soft-reconfiguration inbound
+  neighbor 192.168.100.5 prefix-list NRR_Filtration in
+  neighbor 192.168.100.5 prefix-list Branch_Filteration out
+  neighbor 192.168.100.5 route-map ZAIN-SDWAN out
+  neighbor 192.168.100.77 activate
+  neighbor 192.168.100.77 send-community both
+  neighbor 192.168.100.77 advertise-map WAN_R1_select_ZAIN_CRD exist-map check
+  neighbor 192.168.100.77 soft-reconfiguration inbound
+  neighbor 192.168.100.77 prefix-list NRR_Filtration in
+  neighbor 192.168.100.77 prefix-list Branch_Filteration out
+  neighbor 192.168.100.77 route-map ZAIN-CAR-DEALER in
+  no neighbor 192.168.252.85 activate
+  neighbor 192.168.252.113 activate
+  neighbor 192.168.252.113 send-community both
+  neighbor 192.168.252.113 soft-reconfiguration inbound
+  neighbor 192.168.252.113 prefix-list GO_IN in
+  neighbor 192.168.252.113 prefix-list Branch_Filteration out
+  neighbor 192.168.252.113 route-map GO-SDWAN out
+  neighbor 192.168.254.193 activate
+  neighbor 192.168.254.193 send-community both
+  neighbor 192.168.254.193 soft-reconfiguration inbound
+  neighbor 192.168.254.193 prefix-list GO_IN in
+  neighbor 192.168.254.193 prefix-list Branch_Filteration out
+  neighbor 192.168.254.193 route-map GO-SDWAN out
+ exit-address-family
+!
+ip tcp window-size 65535
+ip tcp synwait-time 10
+ip tcp path-mtu-discovery
+ip telnet source-interface GigabitEthernet0
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip community-list standard Branches permit 65048:610
+ip community-list standard DATASAT permit 65048:611
+ip community-list standard SKYBAND permit 65048:612
+ip community-list standard 3G permit 65048:613
+ip community-list standard INTERNET permit 65048:200
+ip community-list standard SAMA permit 65048:310
+ip community-list standard EXT_3rd permit 65048:311
+ip community-list standard TADAWUL permit 65048:312
+ip community-list standard Server_Farm permit 65048:110
+ip community-list standard CORE permit 65048:100
+ip community-list standard HUW_SDWAN_ATM permit 65048:615
+ip as-path access-list 1 deny .*
+ip as-path access-list 10 permit ^65000_
+ip as-path access-list 10 permit ^35819_
+ip as-path access-list 10 permit ^29684_
+ip as-path access-list 10 permit ^48695_
+ip as-path access-list 10 permit ^64943_
+ip as-path access-list 30 permit ^([0-9]+)(_[0-9]+)(_[0-9]+)+$
+ip ftp source-interface GigabitEthernet0
+ip tftp source-interface GigabitEthernet0
+ip route 10.99.1.70 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name STC
+ip route 10.99.1.71 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name Mobily
+ip route 10.99.1.72 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name NN
+ip route 10.99.1.73 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name ITC
+ip route 10.99.1.74 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name GO
+ip route 10.99.1.75 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name ZAIN
+ip route 10.99.1.78 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name STC
+ip route 10.99.1.79 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name Mobily
+ip route 10.99.1.80 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name NN
+ip route 10.99.1.81 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name ITC
+ip route 10.99.1.82 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name GO
+ip route 10.99.1.83 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name ZAIN
+ip route 10.99.74.47 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_NRR
+ip route 10.99.74.47 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_NRR
+ip route 10.99.74.48 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_NRR
+ip route 10.99.74.48 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_NRR
+ip route 10.99.74.49 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_NRR
+ip route 10.99.74.49 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_NRR
+ip route 10.99.74.50 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_NRR
+ip route 10.99.74.50 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_NRR
+ip route 10.99.74.51 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_NRR
+ip route 10.99.74.51 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_NRR
+ip route 10.242.67.204 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.204 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route 10.242.67.205 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.205 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route 10.242.67.206 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.206 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route 10.242.67.207 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.207 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route 10.242.67.208 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.208 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route 10.242.67.214 255.255.255.255 GigabitEthernet1/1/11 10.99.5.65 name SDWAN_CONTROL_DR
+ip route 10.242.67.214 255.255.255.255 GigabitEthernet1/1/12 10.99.5.89 name SDWAN_CONTROL_DR
+ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 GigabitEthernet0 10.99.18.1
+ip ssh time-out 60
+ip ssh source-interface GigabitEthernet1/1/1
+ip ssh version 2
+ip scp server enable
+!
+ip access-list standard NEW_MGMT_ACL
+ 10 permit 10.8.10.8
+ 20 permit 192.168.100.6
+ 30 permit 192.168.100.26
+ 40 permit 192.100.4.186
+ 50 permit 192.168.120.14
+ 60 permit 192.168.34.122
+ 70 permit 192.100.6.150
+ 80 permit 192.100.8.153
+ 90 permit 10.98.114.34
+ 100 permit 192.168.34.118
+ 110 permit 10.98.113.122
+ 120 permit 10.96.115.150
+ 130 permit 172.30.2.46
+ 140 permit 172.30.2.26
+ 150 permit 172.30.2.30
+ 160 permit 10.96.115.201
+ 170 permit 192.168.100.254
+ 180 permit 10.110.65.192 0.0.0.31
+ 190 permit 10.99.28.0 0.0.0.255
+ 200 permit 10.242.126.0 0.0.0.255
+ 210 permit 10.98.151.0 0.0.0.255
+ 220 permit 10.98.153.0 0.0.0.255
+ 230 permit 10.98.154.0 0.0.0.255
+ 240 permit 10.2.0.0 0.0.255.255
+ 250 permit 10.237.47.0 0.0.0.255
+ 260 permit 10.3.0.0 0.0.255.255
+ 270 permit 10.56.233.0 0.0.0.255
+ 280 permit 10.9.0.0 0.0.255.255
+ 290 permit 10.252.126.0 0.0.0.255
+ 300 permit 10.10.71.0 0.0.0.255
+ 310 permit 10.240.246.0 0.0.0.255
+ 320 permit 10.252.120.0 0.0.0.255
+ 330 permit 10.110.192.0 0.0.0.31
+ 1000 deny   any
+ip access-list standard sshcontrol
+ 10 permit 10.0.22.26
+ 20 permit 10.0.22.23
+ 30 permit 10.0.10.15
+ 40 permit 10.0.25.50
+ 50 permit 10.252.126.170
+ 60 permit 10.10.2.42
+ 70 permit 10.0.5.91
+ 80 permit 10.0.25.125
+ 90 permit 10.10.71.194
+ 100 permit 10.0.22.137
+ 110 permit 10.0.25.133
+ 120 permit 10.0.25.178
+ 130 permit 10.0.122.213
+ 140 permit 10.0.122.199
+ 150 permit 10.0.22.205
+ 160 permit 10.0.25.244
+ 170 permit 10.0.22.251
+ 180 permit 10.10.2.254
+ 190 permit 10.98.151.0 0.0.0.255
+!
+ip access-list extended ACL-EMAIL
+ 10 permit ip host 10.0.31.4 any
+ 20 permit ip host 10.0.31.122 any
+ip access-list extended ACL-HOISILON
+ 10 permit ip 10.0.64.0 0.0.0.255 any
+ 20 permit ip host 10.0.64.101 any
+ 30 permit ip host 10.0.64.102 any
+ 40 permit ip host 10.0.64.103 any
+ 50 permit ip host 10.0.64.104 any
+ 60 permit ip host 10.0.64.105 any
+ 70 permit ip host 10.0.64.106 any
+ 80 permit ip host 10.0.64.107 any
+ 90 permit ip host 10.0.64.108 any
+ 100 permit ip host 10.0.64.109 any
+ 110 permit ip host 10.0.64.110 any
+ 120 permit ip host 10.0.64.111 any
+ 130 permit ip host 10.0.64.112 any
+ 140 permit ip host 10.0.64.113 any
+ 150 permit ip host 10.0.64.114 any
+ 160 permit ip host 10.0.64.115 any
+ 170 permit ip host 10.0.64.116 any
+ 180 permit ip host 10.0.64.117 any
+ 190 permit ip host 10.0.64.118 any
+ 200 permit ip host 10.0.64.119 any
+ 210 permit ip host 10.0.64.120 any
+ 220 permit ip host 10.0.64.121 any
+ 230 permit ip host 10.0.64.122 any
+ 240 permit ip host 10.0.64.123 any
+ 250 permit ip host 10.0.64.124 any
+ 260 permit ip host 10.0.64.125 any
+ 270 permit ip host 10.0.64.126 any
+ 280 permit ip host 10.0.64.127 any
+ 290 permit ip host 10.0.64.128 any
+ 300 permit ip host 10.0.64.129 any
+ 310 permit ip host 10.0.64.130 any
+ 320 permit ip host 10.0.64.147 any
+ 330 permit ip host 10.0.64.133 any
+ 340 permit ip host 10.0.64.143 any
+ 350 permit ip host 10.0.64.145 any
+ 360 permit ip host 10.0.64.139 any
+ 370 permit ip host 10.0.64.144 any
+ip access-list extended ACL-HOSEPPRDAP
+ 10 permit ip host 10.0.30.239 any
+ 20 permit ip host 10.0.30.240 any
+ip access-list extended ACL-MLFTPSERVER
+ 10 permit ip host 10.0.30.94 any time-range MLFTPSERVER
+ 20 permit ip host 10.252.64.102 any
+ 30 permit ip any host 10.252.64.102
+ 40 permit ip any host 10.252.64.104
+ 50 permit ip host 10.252.64.103 any
+ 60 permit ip host 10.252.64.104 any
+ip access-list extended ACL-PROXY
+ 10 permit ip host 10.0.3.106 any
+ 20 permit ip host 10.0.43.23 any
+ 30 permit ip host 10.0.43.24 any
+ 40 permit ip host 10.0.43.21 any
+ 50 permit ip host 10.0.43.22 any
+ip access-list extended ACL-SPLNK
+ 10 permit ip any host 10.252.126.139
+ 20 permit ip any host 10.252.126.138
+ 30 permit ip any host 10.252.126.111
+ 40 permit ip any host 10.252.126.113
+ 50 permit ip any host 10.252.126.109
+ 60 permit ip any host 10.252.126.112
+ 70 permit ip any host 10.252.126.110
+ 80 permit ip any host 10.252.126.233
+ 90 permit ip any host 10.252.126.236
+ 100 permit ip any host 10.252.126.231
+ 110 permit ip any host 10.252.126.232
+ip access-list extended ACL-SPLNK-OUT
+ 10 permit ip host 10.252.126.139 any
+ 20 permit ip host 10.252.126.138 any
+ 30 permit ip host 10.252.126.111 any
+ 40 permit ip host 10.252.126.113 any
+ 50 permit ip host 10.252.126.109 any
+ 60 permit ip host 10.252.126.112 any
+ 70 permit ip host 10.252.126.110 any
+ 80 permit ip host 10.252.126.233 any
+ 90 permit ip host 10.252.126.236 any
+ 100 permit ip host 10.252.126.231 any
+ 110 permit ip host 10.252.126.232 any
+ip access-list extended Best-Effort-B249
+ 10 permit ip any 10.154.37.0 0.0.0.255
+ip access-list extended Best-Effort-B314
+ 10 permit ip any 10.60.169.0 0.0.0.255
+ip access-list extended Best-Effort-B446
+ 10 permit ip any 10.28.81.0 0.0.0.255
+ip access-list extended Bulk-Traffic-B249
+ 10 permit tcp host 10.0.31.4 10.154.37.0 0.0.0.255 range 19916 63850
+ 20 permit tcp host 10.0.31.4 10.154.37.0 0.0.0.255 range 19916 63854
+ 30 permit tcp host 10.0.31.4 10.154.37.0 0.0.0.255 range 16939 51030
+ 40 permit tcp host 10.0.31.4 10.154.37.0 0.0.0.255 range 16939 49364
+ 50 permit tcp host 10.0.31.4 10.154.37.0 0.0.0.255 range 19916 52440
+ 60 permit tcp host 10.0.34.33 10.154.37.0 0.0.0.255 range 4728 63027
+ 70 permit tcp host 10.0.31.211 10.154.37.0 0.0.0.255 range 9000 62615
+ 80 permit udp host 10.0.34.33 10.154.37.0 0.0.0.255 eq 4104
+ 90 permit tcp host 10.0.6.18 10.154.37.0 0.0.0.255 range 1010 1233
+ 100 permit tcp host 10.0.34.111 10.154.37.0 0.0.0.255 range 8098 50804
+ 110 permit udp host 10.0.46.100 10.154.37.0 0.0.0.255 eq snmp
+ 120 permit udp host 10.0.46.100 10.154.37.0 0.0.0.255 eq snmptrap
+ 130 permit tcp host 10.0.46.54 10.154.37.0 0.0.0.255 eq 389
+ 140 permit udp host 10.0.46.54 10.154.37.0 0.0.0.255 eq 389
+ 150 permit tcp host 10.0.46.51 10.154.37.0 0.0.0.255 eq 389
+ 160 permit udp host 10.0.46.51 10.154.37.0 0.0.0.255 eq 389
+ 170 permit tcp host 10.0.46.52 10.154.37.0 0.0.0.255 eq 389
+ 180 permit udp host 10.0.46.52 10.154.37.0 0.0.0.255 eq 389
+ 190 permit tcp host 10.0.46.56 10.154.37.0 0.0.0.255 eq 389
+ 200 permit udp host 10.0.46.56 10.154.37.0 0.0.0.255 eq 389
+ 210 permit tcp host 10.0.46.53 10.154.37.0 0.0.0.255 eq 389
+ 220 permit udp host 10.0.46.53 10.154.37.0 0.0.0.255 eq 389
+ 230 permit tcp host 10.0.30.15 10.154.37.0 0.0.0.255 eq 389
+ 240 permit udp host 10.0.30.15 10.154.37.0 0.0.0.255 eq 389
+ip access-list extended Bulk-Traffic-B314
+ 10 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 50150
+ 20 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 60356
+ 30 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 50147
+ 40 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 49278
+ 50 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 57516
+ 60 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19916 60312
+ 70 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19770 51689
+ 80 permit tcp host 10.0.31.4 10.60.169.0 0.0.0.255 range 19770 58459
+ 90 permit tcp host 10.0.46.54 10.60.169.0 0.0.0.255 eq 389
+ 100 permit udp host 10.0.46.54 10.60.169.0 0.0.0.255 eq 389
+ 110 permit tcp host 10.0.46.53 10.60.169.0 0.0.0.255 eq 389
+ 120 permit udp host 10.0.46.53 10.60.169.0 0.0.0.255 eq 389
+ 130 permit tcp host 10.0.46.51 10.60.169.0 0.0.0.255 eq 389
+ 140 permit udp host 10.0.46.51 10.60.169.0 0.0.0.255 eq 389
+ 150 permit tcp host 10.0.30.15 10.60.169.0 0.0.0.255 eq 389
+ 160 permit udp host 10.0.30.15 10.60.169.0 0.0.0.255 eq 389
+ 170 permit tcp host 10.0.90.56 10.60.169.0 0.0.0.255 eq 389
+ 180 permit udp host 10.0.90.56 10.60.169.0 0.0.0.255 eq 389
+ 190 permit ip host 10.0.46.140 10.60.169.0 0.0.0.255
+ 200 permit ip host 10.0.30.15 10.60.169.0 0.0.0.255
+ 210 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 64786
+ 220 permit udp host 10.0.46.54 10.28.81.0 0.0.0.255 eq 389
+ 230 permit tcp host 10.0.34.43 10.154.37.0 0.0.0.255 eq 88
+ 240 permit tcp host 10.0.31.100 10.154.37.0 0.0.0.255 eq www
+ 250 permit tcp host 10.0.34.43 10.60.169.0 0.0.0.255 eq 88
+ 260 permit udp host 10.0.34.43 10.60.169.0 0.0.0.255 eq 88
+ip access-list extended Bulk-Traffic-B446
+ 10 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 64765
+ 20 permit udp host 10.0.46.54 10.28.81.0 0.0.0.255 eq 389
+ 30 permit ip host 10.0.30.15 10.28.81.0 0.0.0.255
+ 40 permit tcp host 10.0.30.15 10.28.81.0 0.0.0.255 eq 389
+ 50 permit udp host 10.0.30.15 10.28.81.0 0.0.0.255 eq 389
+ 60 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 62300
+ 70 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 59796
+ 80 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 62322
+ 90 permit tcp host 10.0.31.4 10.28.81.0 0.0.0.255 range 19916 64786
+ 100 permit tcp host 10.0.46.51 10.28.81.0 0.0.0.255 eq 389
+ 110 permit udp host 10.0.46.51 10.28.81.0 0.0.0.255 eq 389
+ 120 permit tcp host 10.0.46.52 10.28.81.0 0.0.0.255 eq 389
+ 130 permit udp host 10.0.46.52 10.28.81.0 0.0.0.255 eq 389
+ 140 permit tcp host 10.0.46.53 10.28.81.0 0.0.0.255 eq 389
+ 150 permit udp host 10.0.46.53 10.28.81.0 0.0.0.255 eq 389
+ 160 permit tcp host 10.0.46.54 10.28.81.0 0.0.0.255 eq 389
+ip access-list extended Business-High-B249
+ 10 permit ip host 10.0.31.28 10.154.37.0 0.0.0.255
+ 20 permit tcp host 10.0.46.52 10.154.37.0 0.0.0.255 eq 88
+ 30 permit tcp host 10.0.30.84 10.154.37.0 0.0.0.255 eq www
+ 40 permit tcp host 10.0.34.19 10.154.37.0 0.0.0.255 eq www
+ 50 permit udp host 10.0.34.43 10.60.169.0 0.0.0.255 eq 88
+ 60 permit tcp host 10.0.3.245 10.60.169.0 0.0.0.255 eq www
+ 70 permit tcp host 10.0.3.18 10.28.81.0 0.0.0.255 eq www
+ 80 permit tcp host 10.0.3.245 10.28.81.0 0.0.0.255 eq www
+ 90 permit tcp host 10.0.34.175 10.28.81.0 0.0.0.255 eq www
+ 100 permit ip host 10.0.46.51 host 10.165.0.4 time-range no-dc-traffic
+ 110 permit ip host 10.0.25.86 10.25.0.0 0.0.255.255
+ 120 permit ip host 10.0.30.94 10.25.0.0 0.0.255.255
+ip access-list extended Business-High-B314
+ 10 permit ip host 10.0.31.28 10.60.169.0 0.0.0.255
+ 20 permit udp host 10.0.100.54 10.60.169.0 0.0.0.255
+ip access-list extended Business-High-B446
+ 10 permit ip host 10.0.31.28 10.28.21.0 0.0.0.255
+ip access-list extended Business-Low-B249
+ 10 permit tcp host 10.0.34.175 10.154.37.0 0.0.0.255 eq www
+ 20 permit tcp host 10.0.34.43 10.154.37.0 0.0.0.255 eq 88
+ 30 permit tcp host 10.0.46.52 10.154.37.0 0.0.0.255 eq 88
+ 40 permit udp host 10.0.46.54 10.154.37.0 0.0.0.255 eq 88
+ 50 permit tcp host 10.0.31.145 10.154.37.0 0.0.0.255 eq www
+ 60 permit tcp host 10.0.31.211 10.154.37.0 0.0.0.255 eq www
+ 70 permit tcp host 10.0.31.3 10.154.37.0 0.0.0.255 eq www
+ 80 permit tcp host 10.0.3.245 10.154.37.0 0.0.0.255 eq www
+ 90 permit tcp host 10.0.30.199 10.154.37.0 0.0.0.255 eq www
+ 100 permit tcp host 10.0.30.239 10.154.37.0 0.0.0.255 eq www
+ 110 permit tcp host 10.0.31.100 10.154.37.0 0.0.0.255 eq www
+ 120 permit tcp host 10.0.30.84 10.154.37.0 0.0.0.255 eq www
+ 130 permit tcp host 10.0.34.19 10.154.37.0 0.0.0.255 eq www
+ip access-list extended Business-Low-B314
+ 10 permit udp host 10.0.88.28 10.60.169.0 0.0.0.255 range netbios-ns netbios-ss
+ 20 permit ip host 10.0.34.39 10.60.169.0 0.0.0.255
+ 30 permit ip host 10.0.34.108 10.60.169.0 0.0.0.255
+ 40 permit ip host 10.0.88.28 10.60.169.0 0.0.0.255
+ 50 permit ip host 10.0.16.111 10.60.169.0 0.0.0.255
+ 60 permit tcp host 10.0.34.43 10.60.169.0 0.0.0.255 eq 88
+ 70 permit udp host 10.0.34.43 10.60.169.0 0.0.0.255 eq 88
+ 80 permit tcp host 10.0.3.245 10.60.169.0 0.0.0.255 eq www
+ 90 permit tcp host 10.0.3.145 10.60.169.0 0.0.0.255 eq www
+ 100 permit tcp host 10.0.30.239 10.60.169.0 0.0.0.255 eq www
+ 110 permit tcp host 10.0.31.100 10.60.169.0 0.0.0.255 eq www
+ 120 permit tcp host 10.0.3.18 10.60.169.0 0.0.0.255 eq www
+ 130 permit tcp host 10.0.34.175 10.60.169.0 0.0.0.255 eq www
+ip access-list extended Business-Low-B446
+ 10 permit ip host 10.0.16.111 10.28.81.0 0.0.0.255
+ 20 permit tcp host 10.0.3.18 10.28.81.0 0.0.0.255 eq www
+ 30 permit tcp host 10.0.3.245 10.28.81.0 0.0.0.255 eq www
+ 40 permit tcp host 10.0.30.161 10.28.81.0 0.0.0.255 eq www
+ 50 permit tcp host 10.0.30.240 10.28.81.0 0.0.0.255 eq www
+ 60 permit tcp host 10.0.31.100 10.28.81.0 0.0.0.255 eq www
+ 70 permit tcp host 10.0.31.145 10.28.81.0 0.0.0.255 eq www
+ 80 permit tcp host 10.0.31.193 10.28.81.0 0.0.0.255 eq www
+ 90 permit tcp host 10.0.31.3 10.28.81.0 0.0.0.255 eq www
+ 100 permit tcp host 10.0.31.36 10.28.81.0 0.0.0.255 eq www
+ 110 permit tcp host 10.0.34.175 10.28.81.0 0.0.0.255 eq www
+ 120 permit tcp host 10.0.34.19 10.28.81.0 0.0.0.255 eq www
+ 130 permit tcp host 10.28.81.96 172.16.5.0 0.0.0.255 eq www
+ 140 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 64589
+ 150 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 51729
+ 160 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 61822
+ 170 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 49233
+ 180 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 64287
+ 190 permit tcp host 10.0.34.33 10.28.81.0 0.0.0.255 range 4728 53885
+ 200 permit icmp host 10.0.34.33 10.28.81.0 0.0.0.255
+ 210 permit tcp host 10.0.46.52 10.28.81.0 0.0.0.255 eq 88
+ 220 permit udp host 10.0.46.52 10.28.81.0 0.0.0.255 eq 88
+ip access-list extended CARDEALER-RESTRICT
+ 10 deny   ip 10.199.224.0 0.0.7.255 any time-range WEEKDAYS
+ 20 deny   ip 10.199.232.0 0.0.3.255 any time-range WEEKDAYS
+ 30 deny   ip 10.199.236.0 0.0.1.255 any time-range WEEKDAYS
+ 40 permit ip any any
+ip access-list extended CoPP-Management
+ 10 remark ****Match SNMP****
+ 10 permit udp any any eq snmp
+ 20 remark ****Match TACACS****
+ 20 permit tcp any eq tacacs any
+ 30 permit udp any eq tacacs any
+ 40 remark ****Match Telnet-SSH****
+ 40 permit tcp any any eq telnet
+ 50 permit tcp any eq telnet any
+ 60 permit tcp any eq 22 any
+ 70 permit tcp any any eq 22
+ 80 permit tcp any eq 22 any established
+ 90 permit tcp any any eq 22 established
+ 100 remark ****Match NTP-Domain****
+ 100 permit udp any any eq ntp
+ 110 permit udp any eq ntp any
+ 120 remark ****Match SYSLOG****
+ 120 permit udp any eq syslog any
+ 130 remark ****Match FTP/TFTP****
+ 130 permit udp any eq tftp any
+ 140 permit tcp any eq ftp any
+ 150 permit tcp any eq ftp-data any
+ip access-list extended CoPP-Monitoring
+ 10 permit icmp any any ttl-exceeded
+ 20 permit icmp any any port-unreachable
+ 30 permit icmp any any echo-reply
+ 40 permit icmp any any echo
+ 50 permit icmp any any time-exceeded
+ 60 remark ****UDP-Traceroute matching linux*****
+ 60 permit udp any any range 33434 33534
+ip access-list extended CoPP-Routing
+ 10 permit tcp any any eq bgp
+ 20 permit tcp any eq bgp any
+ip access-list extended CoPP-Undesirable
+ 10 permit udp any any range netbios-ns netbios-ss
+ 20 permit tcp any any fragments
+ 30 permit udp any any fragments
+ 40 permit icmp any any fragments
+ 50 permit ip any any fragments
+ip access-list extended HODC-JODC
+ 10 permit ip host 10.0.90.56 host 10.165.0.5 time-range no-dc-traffic
+ 20 permit ip host 10.0.30.15 host 10.165.0.5 time-range no-dc-traffic
+ 30 permit ip host 10.0.90.56 host 10.165.0.4 time-range no-dc-traffic
+ 40 permit ip host 10.0.30.15 host 10.165.0.4 time-range no-dc-traffic
+ 50 permit ip host 10.0.46.51 host 10.165.0.4 time-range no-dc-traffic
+ 60 permit ip host 10.0.46.51 host 10.165.0.5 time-range no-dc-traffic
+ 70 permit ip host 10.0.31.254 host 10.165.0.5 time-range no-dc-traffic
+ 80 permit ip host 10.0.31.254 host 10.165.0.4 time-range no-dc-traffic
+ip access-list extended TANFETH
+ 10 permit ip host 10.240.159.20 host 10.252.66.57
+ 20 permit ip host 10.252.66.57 host 10.240.159.20
+ip access-list extended TO_CIFS_CLIENT
+ 10 permit ip host 10.0.3.84 10.25.0.0 0.0.255.255
+ip access-list extended VIPBLDG_CIFS_CLIENT
+ 10 permit ip host 10.0.3.84 10.25.0.0 0.0.255.255
+ 20 permit ip host 10.0.25.86 10.25.0.0 0.0.255.255
+ 30 permit ip host 10.0.30.94 10.25.0.0 0.0.255.255
+ 40 permit ip host 10.0.3.245 10.25.0.0 0.0.255.255
+ip access-list extended VTY-ACL
+ 10 permit ip host 10.0.22.23 any
+ 20 permit ip host 10.0.10.15 any
+ 30 permit ip host 10.0.25.50 any
+ 40 permit ip host 10.252.126.170 any
+ 50 permit ip host 10.0.61.20 any
+ 60 permit ip host 10.10.2.42 any
+ 70 permit ip host 10.0.5.91 any
+ 80 permit ip host 10.0.25.125 any
+ 90 permit ip host 10.10.71.194 any
+ 100 permit ip host 10.0.22.137 any
+ 110 permit ip host 10.0.25.133 any
+ 120 permit ip host 10.0.25.178 any
+ 130 permit ip host 10.0.122.213 any
+ 140 permit ip host 10.11.31.173 any
+ 150 permit ip host 10.0.122.199 any
+ 160 permit ip host 10.0.9.195 any
+ 170 permit ip host 10.0.22.205 any
+ 180 permit ip host 10.0.25.244 any
+ 190 permit ip host 10.0.22.251 any
+ 200 permit ip host 10.10.2.254 any
+ 210 permit ip 10.98.151.0 0.0.0.255 any
+ 211 permit ip host 10.99.28.70 any
+ 220 permit ip host 10.99.28.72 any
+ 230 permit ip host 10.99.28.75 any
+ 240 permit ip host 10.99.28.76 any
+ 250 permit ip host 10.99.28.77 any
+ 260 permit ip host 10.99.28.78 any
+ 270 permit ip host 10.99.28.79 any
+ 280 permit ip host 10.99.28.80 any
+ 290 permit ip host 10.99.28.81 any
+ 300 permit ip host 10.99.28.82 any
+ 310 permit ip host 10.99.28.83 any
+ 320 permit ip host 10.99.28.84 any
+ 330 permit ip host 10.242.126.71 any
+ 340 permit ip host 10.242.126.72 any
+ 350 permit ip host 10.242.126.73 any
+ 360 permit ip host 10.242.126.74 any
+ 370 permit ip host 10.242.126.75 any
+ 380 permit ip host 10.242.126.76 any
+ 390 permit ip host 10.242.126.77 any
+ 400 permit ip host 10.242.126.78 any
+ 410 permit ip host 10.242.126.79 any
+ 420 permit ip host 10.242.126.80 any
+ 430 permit ip host 10.242.126.81 any
+ 440 permit ip 10.99.28.0 0.0.0.255 any
+ip access-list extended test
+ 10 permit udp host 10.0.10.10 host 10.165.0.240 eq 1194
+ 20 permit udp host 10.0.10.10 host 10.165.0.240 eq 2114
+ 30 permit tcp host 10.0.10.10 host 10.165.0.240
+ 40 permit udp host 10.0.10.10 host 10.165.0.240
+ 50 permit udp host 10.0.10.10 host 10.160.3.10 eq 2114
+ 60 permit tcp host 10.0.10.10 host 10.160.3.10
+ 70 permit udp host 10.0.10.10 host 10.160.3.10
+ 80 permit ip any any
+ 100 permit udp host 10.165.0.240 host 10.0.10.10 eq 1194
+ 110 permit udp host 10.165.0.240 host 10.0.10.10 eq 2114
+ 120 permit udp host 10.165.0.240 host 10.0.10.10
+!
+!
+ip prefix-list BUR_CALL_IN_PREFIX seq 15 permit 10.39.0.0/19
+ip prefix-list BUR_CALL_IN_PREFIX seq 20 permit 10.39.32.0/19
+!
+ip prefix-list Branch_Filteration seq 10 permit 0.0.0.0/0
+ip prefix-list Branch_Filteration seq 20 permit 10.0.0.0/13
+ip prefix-list Branch_Filteration seq 30 permit 10.0.50.23/32
+ip prefix-list Branch_Filteration seq 40 permit 69.191.192.0/24
+ip prefix-list Branch_Filteration seq 50 permit 75.124.69.66/32
+ip prefix-list Branch_Filteration seq 60 permit 75.124.69.78/32
+ip prefix-list Branch_Filteration seq 70 permit 87.101.222.0/30
+ip prefix-list Branch_Filteration seq 80 permit 129.0.0.0/8
+ip prefix-list Branch_Filteration seq 90 permit 155.195.0.0/16
+ip prefix-list Branch_Filteration seq 100 permit 160.43.250.0/24
+ip prefix-list Branch_Filteration seq 110 permit 172.16.1.166/32
+ip prefix-list Branch_Filteration seq 120 permit 172.16.2.43/32
+ip prefix-list Branch_Filteration seq 121 permit 172.16.1.20/32
+ip prefix-list Branch_Filteration seq 130 permit 172.16.3.17/32
+ip prefix-list Branch_Filteration seq 140 permit 172.16.3.23/32
+ip prefix-list Branch_Filteration seq 150 permit 72.16.3.48/32
+ip prefix-list Branch_Filteration seq 160 permit 172.17.0.80/29
+ip prefix-list Branch_Filteration seq 170 permit 172.17.0.104/29
+ip prefix-list Branch_Filteration seq 175 permit 172.21.0.16/32
+ip prefix-list Branch_Filteration seq 180 permit 172.29.30.0/24
+ip prefix-list Branch_Filteration seq 190 permit 172.31.20.224/30
+ip prefix-list Branch_Filteration seq 200 permit 192.9.100.0/24
+ip prefix-list Branch_Filteration seq 210 permit 205.216.112.0/24
+ip prefix-list Branch_Filteration seq 220 permit 206.156.53.0/24
+ip prefix-list Branch_Filteration seq 230 permit 208.22.56.0/24
+ip prefix-list Branch_Filteration seq 240 permit 208.22.57.0/24
+ip prefix-list Branch_Filteration seq 250 permit 212.100.213.195/32
+ip prefix-list Branch_Filteration seq 260 permit 212.100.213.198/32
+ip prefix-list Branch_Filteration seq 270 permit 212.116.199.26/32
+ip prefix-list Branch_Filteration seq 280 permit 212.116.199.27/32
+ip prefix-list Branch_Filteration seq 290 permit 212.116.199.28/32
+ip prefix-list Branch_Filteration seq 300 permit 206.156.53.131/32
+ip prefix-list Branch_Filteration seq 310 permit 206.156.53.138/32
+ip prefix-list Branch_Filteration seq 320 permit 206.190.96.0/24
+ip prefix-list Branch_Filteration seq 330 permit 192.168.108.75/32
+ip prefix-list Branch_Filteration seq 340 permit 192.168.124.19/32
+ip prefix-list Branch_Filteration seq 350 permit 10.0.0.0/8
+ip prefix-list Branch_Filteration seq 360 permit 192.168.108.115/32
+ip prefix-list Branch_Filteration seq 365 permit 192.168.124.182/32
+ip prefix-list Branch_Filteration seq 370 permit 192.168.124.193/32
+ip prefix-list Branch_Filteration seq 380 permit 192.168.124.194/32
+ip prefix-list Branch_Filteration seq 390 permit 192.168.124.114/32
+ip prefix-list Branch_Filteration seq 400 permit 10.66.102.50/32
+ip prefix-list Branch_Filteration seq 401 permit 10.66.102.52/32
+ip prefix-list Branch_Filteration seq 402 permit 172.16.3.100/32
+ip prefix-list Branch_Filteration seq 403 permit 10.0.27.10/32
+ip prefix-list Branch_Filteration seq 404 permit 10.0.27.20/32
+ip prefix-list Branch_Filteration seq 405 permit 10.0.27.21/32
+ip prefix-list Branch_Filteration seq 406 permit 1.1.1.1/32
+ip prefix-list Branch_Filteration seq 407 permit 10.0.3.84/32
+ip prefix-list Branch_Filteration seq 410 permit 10.0.30.94/32
+ip prefix-list Branch_Filteration seq 415 permit 10.0.3.245/32
+ip prefix-list Branch_Filteration seq 420 permit 172.31.1.31/32
+ip prefix-list Branch_Filteration seq 421 permit 172.16.5.17/32
+ip prefix-list Branch_Filteration seq 422 permit 172.16.5.101/32
+ip prefix-list Branch_Filteration seq 423 permit 172.16.10.103/32
+ip prefix-list Branch_Filteration seq 424 permit 172.16.10.48/32
+ip prefix-list Branch_Filteration seq 425 permit 172.16.10.23/32
+ip prefix-list Branch_Filteration seq 426 permit 172.16.10.102/32
+ip prefix-list Branch_Filteration seq 427 permit 172.20.2.51/32
+ip prefix-list Branch_Filteration seq 428 permit 172.16.10.111/32
+ip prefix-list Branch_Filteration seq 429 permit 172.16.10.112/32
+ip prefix-list Branch_Filteration seq 430 permit 172.16.10.113/32
+ip prefix-list Branch_Filteration seq 431 permit 172.16.10.107/32
+ip prefix-list Branch_Filteration seq 432 permit 10.199.204.10/32
+ip prefix-list Branch_Filteration seq 433 permit 10.174.174.16/32
+ip prefix-list Branch_Filteration seq 434 permit 10.114.114.100/32
+ip prefix-list Branch_Filteration seq 435 permit 10.199.204.14/32
+ip prefix-list Branch_Filteration seq 440 permit 10.99.66.135/32
+ip prefix-list Branch_Filteration seq 450 permit 172.16.6.9/32
+ip prefix-list Branch_Filteration seq 451 permit 10.62.7.0/24
+ip prefix-list Branch_Filteration seq 452 permit 172.16.5.136/32
+ip prefix-list Branch_Filteration seq 453 permit 10.98.0.212/30
+ip prefix-list Branch_Filteration seq 454 permit 10.27.9.0/24
+ip prefix-list Branch_Filteration seq 455 permit 10.0.50.24/32
+ip prefix-list Branch_Filteration seq 456 permit 87.101.223.252/30
+ip prefix-list Branch_Filteration seq 457 permit 172.27.107.232/30
+ip prefix-list Branch_Filteration seq 458 permit 172.31.215.164/30
+ip prefix-list Branch_Filteration seq 468 permit 172.21.1.23/32
+ip prefix-list Branch_Filteration seq 473 permit 10.99.1.70/32
+ip prefix-list Branch_Filteration seq 478 permit 10.99.1.71/32
+ip prefix-list Branch_Filteration seq 483 permit 10.99.1.72/32
+ip prefix-list Branch_Filteration seq 488 permit 10.99.1.73/32
+ip prefix-list Branch_Filteration seq 493 permit 10.99.1.74/32
+ip prefix-list Branch_Filteration seq 498 permit 10.99.1.75/32
+ip prefix-list Branch_Filteration seq 503 permit 10.99.1.78/32
+ip prefix-list Branch_Filteration seq 508 permit 10.99.1.79/32
+ip prefix-list Branch_Filteration seq 513 permit 10.99.1.80/32
+ip prefix-list Branch_Filteration seq 518 permit 10.99.1.81/32
+ip prefix-list Branch_Filteration seq 523 permit 10.99.1.82/32
+ip prefix-list Branch_Filteration seq 528 permit 10.99.1.83/32
+ip prefix-list Branch_Filteration seq 533 permit 10.99.74.0/24
+ip prefix-list Branch_Filteration seq 534 permit 172.18.1.0/24
+ip prefix-list Branch_Filteration seq 539 permit 0.0.0.0/1
+ip prefix-list Branch_Filteration seq 544 permit 128.0.0.0/1
+ip prefix-list Branch_Filteration seq 549 permit 10.0.0.0/9
+ip prefix-list Branch_Filteration seq 554 permit 10.128.0.0/9
+ip prefix-list Branch_Filteration seq 559 permit 129.0.0.0/9
+ip prefix-list Branch_Filteration seq 564 permit 129.128.0.0/9
+ip prefix-list Branch_Filteration seq 570 permit 10.99.7.0/28
+!
+ip prefix-list GO-SDWAN seq 5 permit 10.99.1.70/32
+ip prefix-list GO-SDWAN seq 10 permit 10.99.1.71/32
+ip prefix-list GO-SDWAN seq 15 permit 10.99.1.72/32
+ip prefix-list GO-SDWAN seq 20 permit 10.99.1.73/32
+ip prefix-list GO-SDWAN seq 25 permit 10.99.1.75/32
+ip prefix-list GO-SDWAN seq 30 permit 10.99.1.78/32
+ip prefix-list GO-SDWAN seq 35 permit 10.99.1.79/32
+ip prefix-list GO-SDWAN seq 40 permit 10.99.1.80/32
+ip prefix-list GO-SDWAN seq 45 permit 10.99.1.81/32
+ip prefix-list GO-SDWAN seq 50 permit 10.99.1.83/32
+!
+ip prefix-list GO_IN seq 5 deny 192.168.252.160/30
+ip prefix-list GO_IN seq 10 permit 192.168.252.0/24 ge 30 le 30
+ip prefix-list GO_IN seq 20 permit 192.168.254.0/24 ge 30 le 30
+ip prefix-list GO_IN seq 30 permit 10.0.0.0/8 ge 24 le 24
+ip prefix-list GO_IN seq 35 permit 10.0.0.0/8 ge 26 le 26
+ip prefix-list GO_IN seq 40 permit 10.0.0.0/8 ge 32
+ip prefix-list GO_IN seq 60 permit 192.168.244.0/23 le 32
+ip prefix-list GO_IN seq 70 permit 192.168.246.0/23 le 32
+ip prefix-list GO_IN seq 80 permit 192.168.248.0/23 le 32
+ip prefix-list GO_IN seq 90 permit 192.168.250.0/23 le 32
+ip prefix-list GO_IN seq 91 permit 10.21.29.0/27
+ip prefix-list GO_IN seq 92 permit 10.36.43.152/30
+ip prefix-list GO_IN seq 93 permit 10.1.0.4/30
+ip prefix-list GO_IN seq 94 permit 10.1.0.8/30
+ip prefix-list GO_IN seq 1000 deny 0.0.0.0/32
+!
+ip prefix-list GO_OUT seq 10 permit 10.0.0.0/8
+ip prefix-list GO_OUT seq 15 permit 10.0.0.0/13
+ip prefix-list GO_OUT seq 20 permit 129.0.0.0/8
+ip prefix-list GO_OUT seq 25 permit 172.16.5.101/32
+ip prefix-list GO_OUT seq 30 permit 172.16.40.47/32
+ip prefix-list GO_OUT seq 100 deny 0.0.0.0/0 le 32
+!
+ip prefix-list HO_Filtration seq 5 permit 172.18.0.36/30
+ip prefix-list HO_Filtration seq 100 deny 10.0.0.0/16 le 32
+ip prefix-list HO_Filtration seq 110 deny 10.236.16.14/32
+ip prefix-list HO_Filtration seq 120 deny 10.237.44.0/24
+ip prefix-list HO_Filtration seq 130 deny 10.237.45.0/24
+ip prefix-list HO_Filtration seq 140 deny 10.237.43.0/26
+ip prefix-list HO_Filtration seq 200 deny 172.16.0.0/21 le 32
+ip prefix-list HO_Filtration seq 205 deny 172.16.8.0/23 le 32
+ip prefix-list HO_Filtration seq 210 deny 172.16.10.0/24 le 32
+ip prefix-list HO_Filtration seq 215 deny 172.16.16.0/24 le 32
+ip prefix-list HO_Filtration seq 220 deny 172.17.0.0/16 le 32
+ip prefix-list HO_Filtration seq 225 deny 172.18.0.0/24 le 32
+ip prefix-list HO_Filtration seq 230 deny 172.18.1.0/24 le 32
+ip prefix-list HO_Filtration seq 235 deny 172.19.0.0/24 le 32
+ip prefix-list HO_Filtration seq 240 deny 172.20.0.0/16 le 32
+ip prefix-list HO_Filtration seq 245 deny 129.1.0.0/16 le 32
+ip prefix-list HO_Filtration seq 250 deny 10.42.0.48/29 le 32
+ip prefix-list HO_Filtration seq 255 deny 192.100.5.232/30
+ip prefix-list HO_Filtration seq 1000 permit 0.0.0.0/0 le 32
+!
+ip prefix-list ITC-SDWAN seq 5 permit 10.99.1.70/32
+ip prefix-list ITC-SDWAN seq 10 permit 10.99.1.71/32
+ip prefix-list ITC-SDWAN seq 15 permit 10.99.1.72/32
+ip prefix-list ITC-SDWAN seq 20 permit 10.99.1.74/32
+ip prefix-list ITC-SDWAN seq 25 permit 10.99.1.75/32
+ip prefix-list ITC-SDWAN seq 30 permit 10.99.1.78/32
+ip prefix-list ITC-SDWAN seq 35 permit 10.99.1.79/32
+ip prefix-list ITC-SDWAN seq 40 permit 10.99.1.80/32
+ip prefix-list ITC-SDWAN seq 45 permit 10.99.1.82/32
+ip prefix-list ITC-SDWAN seq 50 permit 10.99.1.83/32
+!
+ip prefix-list JORD_IN seq 10 permit 10.164.0.0/14
+ip prefix-list JORD_IN seq 20 permit 10.164.7.255/32
+ip prefix-list JORD_IN seq 30 permit 10.164.251.8/29
+ip prefix-list JORD_IN seq 40 permit 10.166.201.0/24
+ip prefix-list JORD_IN seq 50 permit 10.166.255.2/32
+ip prefix-list JORD_IN seq 60 permit 10.255.129.65/32
+ip prefix-list JORD_IN seq 70 permit 10.255.129.66/32
+ip prefix-list JORD_IN seq 80 permit 10.255.129.185/32
+ip prefix-list JORD_IN seq 90 permit 172.32.31.29/32
+ip prefix-list JORD_IN seq 100 permit 172.32.31.201/32
+ip prefix-list JORD_IN seq 110 permit 172.32.32.26/32
+ip prefix-list JORD_IN seq 120 permit 172.32.32.27/32
+ip prefix-list JORD_IN seq 130 permit 192.168.50.0/24
+ip prefix-list JORD_IN seq 140 permit 10.164.7.0/30
+ip prefix-list JORD_IN seq 150 permit 10.164.7.254/32
+ip prefix-list JORD_IN seq 160 permit 192.168.13.145/32
+ip prefix-list JORD_IN seq 170 permit 10.164.2.0/30
+ip prefix-list JORD_IN seq 180 permit 10.164.3.0/30
+ip prefix-list JORD_IN seq 190 permit 10.166.4.0/24
+ip prefix-list JORD_IN seq 200 permit 10.166.204.0/24
+ip prefix-list JORD_IN seq 210 permit 10.166.255.4/32
+ip prefix-list JORD_IN seq 220 permit 10.166.2.0/24
+ip prefix-list JORD_IN seq 230 permit 10.166.3.0/24
+ip prefix-list JORD_IN seq 240 permit 10.166.97.0/24
+ip prefix-list JORD_IN seq 250 permit 10.166.98.0/24
+ip prefix-list JORD_IN seq 260 permit 10.166.99.0/24
+ip prefix-list JORD_IN seq 270 permit 10.166.203.0/24
+ip prefix-list JORD_IN seq 280 permit 10.166.255.3/32
+ip prefix-list JORD_IN seq 290 permit 10.166.206.0/24
+ip prefix-list JORD_IN seq 300 permit 10.166.255.6/32
+ip prefix-list JORD_IN seq 400 permit 88.85.230.0/28
+ip prefix-list JORD_IN seq 410 permit 10.166.255.5/32
+ip prefix-list JORD_IN seq 415 permit 10.166.5.0/24
+ip prefix-list JORD_IN seq 420 permit 10.166.205.0/24
+ip prefix-list JORD_IN seq 425 permit 10.166.6.0/24
+ip prefix-list JORD_IN seq 426 permit 172.125.30.99/32
+ip prefix-list JORD_IN seq 427 permit 172.125.30.60/32
+ip prefix-list JORD_IN seq 428 permit 172.125.57.57/32
+ip prefix-list JORD_IN seq 429 permit 172.125.41.200/32
+ip prefix-list JORD_IN seq 430 permit 172.125.41.21/32
+ip prefix-list JORD_IN seq 431 permit 172.125.41.20/32
+ip prefix-list JORD_IN seq 432 permit 172.125.41.41/32
+ip prefix-list JORD_IN seq 433 permit 172.125.65.21/32
+ip prefix-list JORD_IN seq 434 permit 172.125.213.0/24
+ip prefix-list JORD_IN seq 435 permit 172.125.41.28/32
+ip prefix-list JORD_IN seq 436 permit 172.125.99.82/32
+ip prefix-list JORD_IN seq 437 permit 172.125.30.80/32
+ip prefix-list JORD_IN seq 438 permit 172.125.32.108/32
+ip prefix-list JORD_IN seq 449 permit 172.125.41.90/32
+ip prefix-list JORD_IN seq 450 permit 172.32.31.186/32
+!
+ip prefix-list Jordan_BGP_IP seq 4 permit 10.164.7.0/30
+!
+ip prefix-list KEY-SERVERS seq 5 permit 10.99.1.12/32
+ip prefix-list KEY-SERVERS seq 10 permit 10.99.1.13/32
+ip prefix-list KEY-SERVERS seq 15 permit 10.8.10.8/32
+!
+ip prefix-list KWT_IN seq 5 permit 10.160.0.0/16
+ip prefix-list KWT_IN seq 10 permit 10.160.0.0/24
+ip prefix-list KWT_IN seq 20 permit 10.160.1.0/24
+ip prefix-list KWT_IN seq 30 permit 10.1.1.0/24
+ip prefix-list KWT_IN seq 40 permit 10.1.2.0/24
+ip prefix-list KWT_IN seq 50 permit 10.160.3.0/24
+ip prefix-list KWT_IN seq 60 permit 10.10.9.0/24
+ip prefix-list KWT_IN seq 70 permit 10.5.3.0/24
+ip prefix-list KWT_IN seq 80 permit 10.5.4.121/32
+ip prefix-list KWT_IN seq 90 permit 10.160.8.128/25
+ip prefix-list KWT_IN seq 100 permit 10.160.14.254/32
+ip prefix-list KWT_IN seq 101 permit 10.160.14.253/32
+ip prefix-list KWT_IN seq 110 permit 10.250.2.254/32
+ip prefix-list KWT_IN seq 120 permit 10.160.2.0/24
+ip prefix-list KWT_IN seq 121 permit 10.5.4.0/24
+ip prefix-list KWT_IN seq 130 permit 10.5.3.121/32
+ip prefix-list KWT_IN seq 140 permit 192.168.1.0/24
+ip prefix-list KWT_IN seq 150 permit 172.25.1.1/32
+ip prefix-list KWT_IN seq 160 permit 192.168.37.0/30
+ip prefix-list KWT_IN seq 170 permit 192.168.41.168/30
+ip prefix-list KWT_IN seq 180 permit 10.163.1.0/24
+ip prefix-list KWT_IN seq 181 permit 10.163.5.0/24
+ip prefix-list KWT_IN seq 182 permit 10.163.31.0/24
+ip prefix-list KWT_IN seq 183 permit 10.163.32.0/24
+ip prefix-list KWT_IN seq 190 permit 10.163.14.254/32
+ip prefix-list KWT_IN seq 200 permit 10.160.0.15/32
+ip prefix-list KWT_IN seq 210 permit 192.168.20.2/32
+ip prefix-list KWT_IN seq 220 permit 88.85.230.0/28
+ip prefix-list KWT_IN seq 230 permit 192.168.41.172/30
+ip prefix-list KWT_IN seq 240 permit 10.160.20.0/24
+ip prefix-list KWT_IN seq 245 permit 10.8.99.87/32
+ip prefix-list KWT_IN seq 250 permit 10.162.1.0/24
+ip prefix-list KWT_IN seq 255 permit 10.162.101.0/24
+ip prefix-list KWT_IN seq 260 permit 10.162.255.1/32
+ip prefix-list KWT_IN seq 265 permit 10.162.201.0/30
+ip prefix-list KWT_IN seq 270 permit 10.162.203.0/30
+ip prefix-list KWT_IN seq 290 permit 10.162.2.0/24
+ip prefix-list KWT_IN seq 300 permit 10.5.14.121/32
+ip prefix-list KWT_IN seq 301 permit 10.5.14.111/32
+ip prefix-list KWT_IN seq 302 permit 10.5.13.111/32
+ip prefix-list KWT_IN seq 303 permit 10.5.13.121/32
+!
+ip prefix-list MAJOR seq 10 permit 10.0.0.0/8
+ip prefix-list MAJOR seq 20 permit 129.0.0.0/8
+!
+ip prefix-list MOBILY-SDWAN seq 5 permit 10.99.1.70/32
+ip prefix-list MOBILY-SDWAN seq 10 permit 10.99.1.72/32
+ip prefix-list MOBILY-SDWAN seq 15 permit 10.99.1.73/32
+ip prefix-list MOBILY-SDWAN seq 20 permit 10.99.1.74/32
+ip prefix-list MOBILY-SDWAN seq 25 permit 10.99.1.75/32
+ip prefix-list MOBILY-SDWAN seq 30 permit 10.99.1.78/32
+ip prefix-list MOBILY-SDWAN seq 35 permit 10.99.1.80/32
+ip prefix-list MOBILY-SDWAN seq 40 permit 10.99.1.81/32
+ip prefix-list MOBILY-SDWAN seq 45 permit 10.99.1.82/32
+ip prefix-list MOBILY-SDWAN seq 50 permit 10.99.1.83/32
+!
+ip prefix-list NN-SDWAN seq 5 permit 10.99.1.70/32
+ip prefix-list NN-SDWAN seq 10 permit 10.99.1.71/32
+ip prefix-list NN-SDWAN seq 15 permit 10.99.1.73/32
+ip prefix-list NN-SDWAN seq 20 permit 10.99.1.74/32
+ip prefix-list NN-SDWAN seq 25 permit 10.99.1.75/32
+ip prefix-list NN-SDWAN seq 30 permit 10.99.1.78/32
+ip prefix-list NN-SDWAN seq 35 permit 10.99.1.79/32
+ip prefix-list NN-SDWAN seq 40 permit 10.99.1.81/32
+ip prefix-list NN-SDWAN seq 45 permit 10.99.1.82/32
+ip prefix-list NN-SDWAN seq 50 permit 10.99.1.83/32
+!
+ip prefix-list NRR-OC_Filteration seq 10 permit 10.98.0.0/16
+!
+ip prefix-list NRR_Filtration seq 5 permit 172.18.0.36/30
+ip prefix-list NRR_Filtration seq 6 permit 10.201.15.20/32
+ip prefix-list NRR_Filtration seq 100 deny 10.0.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 110 deny 10.236.16.14/32
+ip prefix-list NRR_Filtration seq 120 deny 10.237.44.0/24
+ip prefix-list NRR_Filtration seq 130 deny 10.237.45.0/24
+ip prefix-list NRR_Filtration seq 140 deny 10.237.43.0/26
+ip prefix-list NRR_Filtration seq 200 deny 172.16.0.0/21 le 32
+ip prefix-list NRR_Filtration seq 205 deny 172.16.8.0/23 le 32
+ip prefix-list NRR_Filtration seq 210 deny 172.16.10.0/24 le 32
+ip prefix-list NRR_Filtration seq 215 deny 172.16.16.0/24 le 32
+ip prefix-list NRR_Filtration seq 220 deny 172.17.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 225 deny 172.18.0.0/24 le 32
+ip prefix-list NRR_Filtration seq 230 deny 172.18.1.0/24 le 32
+ip prefix-list NRR_Filtration seq 235 deny 172.19.0.0/24 le 32
+ip prefix-list NRR_Filtration seq 240 deny 172.20.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 245 deny 129.1.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 250 deny 10.42.0.48/29 le 32
+ip prefix-list NRR_Filtration seq 255 deny 192.100.5.232/30
+ip prefix-list NRR_Filtration seq 260 deny 192.168.35.104/30
+ip prefix-list NRR_Filtration seq 270 deny 10.102.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 280 deny 0.0.0.0/0
+ip prefix-list NRR_Filtration seq 290 deny 10.252.67.0/24
+ip prefix-list NRR_Filtration seq 300 deny 10.0.0.0/8 le 13
+ip prefix-list NRR_Filtration seq 310 deny 129.0.0.0/8
+ip prefix-list NRR_Filtration seq 320 deny 10.98.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 330 deny 10.96.0.0/16 le 32
+ip prefix-list NRR_Filtration seq 340 deny 10.20.70.0/23 le 32
+ip prefix-list NRR_Filtration seq 350 deny 10.20.72.0/21 le 32
+ip prefix-list NRR_Filtration seq 360 deny 10.20.80.0/22 le 32
+ip prefix-list NRR_Filtration seq 370 deny 10.20.84.0/23 le 32
+ip prefix-list NRR_Filtration seq 380 deny 10.20.86.0/24 le 32
+ip prefix-list NRR_Filtration seq 400 deny 10.20.0.144/31 le 32
+ip prefix-list NRR_Filtration seq 410 deny 10.39.0.0/18 le 32
+ip prefix-list NRR_Filtration seq 420 deny 10.99.7.16/29
+ip prefix-list NRR_Filtration seq 430 deny 10.102.7.0/28
+ip prefix-list NRR_Filtration seq 440 deny 10.99.7.0/28
+ip prefix-list NRR_Filtration seq 1000 permit 0.0.0.0/0 le 32
+!
+ip prefix-list OPC_Prefix seq 5 permit 10.98.0.11/32
+ip prefix-list OPC_Prefix seq 10 permit 10.98.0.0/16
+ip prefix-list OPC_Prefix seq 15 permit 10.98.0.233/32
+!
+ip prefix-list Olaya_View_Telesales_Prefix seq 10 permit 10.239.135.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 20 permit 10.239.136.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 30 permit 10.239.137.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 40 permit 10.239.138.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 50 permit 10.239.139.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 60 permit 10.239.140.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 61 permit 10.239.141.0/26
+ip prefix-list Olaya_View_Telesales_Prefix seq 62 permit 10.239.160.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 63 permit 10.239.161.0/24
+ip prefix-list Olaya_View_Telesales_Prefix seq 80 permit 10.236.16.218/32
+!
+ip prefix-list REMAL_IN_PREFIX seq 20 permit 10.20.0.144/32
+ip prefix-list REMAL_IN_PREFIX seq 30 permit 10.20.70.0/24
+ip prefix-list REMAL_IN_PREFIX seq 40 permit 10.20.71.0/24
+ip prefix-list REMAL_IN_PREFIX seq 50 permit 10.20.72.0/24
+ip prefix-list REMAL_IN_PREFIX seq 60 permit 10.20.73.0/24
+ip prefix-list REMAL_IN_PREFIX seq 70 permit 10.20.74.0/24
+ip prefix-list REMAL_IN_PREFIX seq 80 permit 10.20.75.0/24
+ip prefix-list REMAL_IN_PREFIX seq 90 permit 10.20.76.0/24
+ip prefix-list REMAL_IN_PREFIX seq 100 permit 10.20.77.0/24
+ip prefix-list REMAL_IN_PREFIX seq 110 permit 10.20.78.0/24
+ip prefix-list REMAL_IN_PREFIX seq 120 permit 10.20.79.0/24
+ip prefix-list REMAL_IN_PREFIX seq 130 permit 10.20.80.0/24
+ip prefix-list REMAL_IN_PREFIX seq 140 permit 10.20.81.0/24
+ip prefix-list REMAL_IN_PREFIX seq 150 permit 10.20.82.0/24
+ip prefix-list REMAL_IN_PREFIX seq 160 permit 10.20.83.0/24
+ip prefix-list REMAL_IN_PREFIX seq 170 permit 10.20.84.0/24
+ip prefix-list REMAL_IN_PREFIX seq 180 permit 10.20.85.0/24
+ip prefix-list REMAL_IN_PREFIX seq 190 permit 10.20.86.0/24
+ip prefix-list REMAL_IN_PREFIX seq 200 permit 10.20.70.0/25
+ip prefix-list REMAL_IN_PREFIX seq 210 permit 10.20.70.129/32
+ip prefix-list REMAL_IN_PREFIX seq 220 permit 10.20.70.132/30
+ip prefix-list REMAL_IN_PREFIX seq 230 permit 10.20.70.136/30
+ip prefix-list REMAL_IN_PREFIX seq 240 permit 10.20.70.244/30
+ip prefix-list REMAL_IN_PREFIX seq 250 permit 10.20.0.145/32
+ip prefix-list REMAL_IN_PREFIX seq 300 permit 10.20.78.0/23
+ip prefix-list REMAL_IN_PREFIX seq 310 permit 10.20.80.0/23
+ip prefix-list REMAL_IN_PREFIX seq 340 permit 10.20.76.0/23
+ip prefix-list REMAL_IN_PREFIX seq 350 permit 10.20.74.0/23
+!
+ip prefix-list SDWAN-Transport-Branches seq 10 permit 192.168.107.244/30
+ip prefix-list SDWAN-Transport-Branches seq 15 permit 172.30.10.228/30
+ip prefix-list SDWAN-Transport-Branches seq 20 permit 192.168.104.108/30
+ip prefix-list SDWAN-Transport-Branches seq 25 permit 192.100.2.164/30
+ip prefix-list SDWAN-Transport-Branches seq 30 permit 192.168.38.48/30
+ip prefix-list SDWAN-Transport-Branches seq 35 permit 192.168.100.32/30
+ip prefix-list SDWAN-Transport-Branches seq 1000 deny 0.0.0.0/0 le 32
+!
+ip prefix-list STC-SDWAN seq 5 permit 10.99.1.71/32
+ip prefix-list STC-SDWAN seq 10 permit 10.99.1.72/32
+ip prefix-list STC-SDWAN seq 15 permit 10.99.1.73/32
+ip prefix-list STC-SDWAN seq 20 permit 10.99.1.74/32
+ip prefix-list STC-SDWAN seq 25 permit 10.99.1.75/32
+ip prefix-list STC-SDWAN seq 30 permit 10.99.1.79/32
+ip prefix-list STC-SDWAN seq 35 permit 10.99.1.80/32
+ip prefix-list STC-SDWAN seq 40 permit 10.99.1.81/32
+ip prefix-list STC-SDWAN seq 45 permit 10.99.1.82/32
+ip prefix-list STC-SDWAN seq 50 permit 10.99.1.83/32
+!
+ip prefix-list TANFEETH_IN_PREFIX seq 20 permit 10.240.155.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 21 permit 10.240.156.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 22 permit 10.240.157.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 23 permit 10.240.158.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 24 permit 10.240.159.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 25 permit 10.240.160.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 26 permit 10.240.161.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 27 permit 10.240.162.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 28 permit 10.240.163.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 29 permit 10.240.164.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 30 permit 10.240.165.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 31 permit 10.240.166.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 32 permit 10.240.167.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 33 permit 10.240.168.0/29
+ip prefix-list TANFEETH_IN_PREFIX seq 34 permit 10.240.168.16/29
+ip prefix-list TANFEETH_IN_PREFIX seq 35 permit 10.240.168.32/29
+ip prefix-list TANFEETH_IN_PREFIX seq 36 permit 10.240.168.253/32
+ip prefix-list TANFEETH_IN_PREFIX seq 37 permit 10.240.168.254/32
+ip prefix-list TANFEETH_IN_PREFIX seq 38 permit 10.240.254.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 39 permit 10.240.169.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 40 permit 10.20.95.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 41 permit 10.20.96.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 42 permit 10.20.97.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 43 permit 10.20.98.0/24
+ip prefix-list TANFEETH_IN_PREFIX seq 44 permit 10.20.99.0/24
+!
+ip prefix-list TWR_Prefix seq 10 permit 10.96.0.0/16
+ip prefix-list TWR_Prefix seq 20 permit 10.0.50.120/30
+ip prefix-list TWR_Prefix seq 30 permit 10.0.50.128/30
+!
+ip prefix-list ZAIN-SDWAN seq 5 permit 10.99.1.70/32
+ip prefix-list ZAIN-SDWAN seq 10 permit 10.99.1.71/32
+ip prefix-list ZAIN-SDWAN seq 15 permit 10.99.1.72/32
+ip prefix-list ZAIN-SDWAN seq 20 permit 10.99.1.73/32
+ip prefix-list ZAIN-SDWAN seq 25 permit 10.99.1.74/32
+ip prefix-list ZAIN-SDWAN seq 30 permit 10.99.1.78/32
+ip prefix-list ZAIN-SDWAN seq 35 permit 10.99.1.79/32
+ip prefix-list ZAIN-SDWAN seq 40 permit 10.99.1.80/32
+ip prefix-list ZAIN-SDWAN seq 45 permit 10.99.1.81/32
+ip prefix-list ZAIN-SDWAN seq 50 permit 10.99.1.82/32
+!
+ip prefix-list check_for_connectivity seq 10 permit 10.99.1.2/32
+ip prefix-list check_for_connectivity seq 20 permit 10.99.1.5/32
+!
+ip prefix-list def seq 10 permit 0.0.0.0/0
+!
+ip prefix-list permit_STC_Newinfra_BR seq 1000 permit 0.0.0.0/0 le 32
+logging trap notifications
+logging origin-id hostname
+logging source-interface GigabitEthernet0 vrf Mgmt-intf
+logging host 10.0.46.236 vrf Mgmt-intf
+logging host 10.252.126.161 vrf Mgmt-intf
+logging host 10.0.61.20 vrf Mgmt-intf
+logging host 10.252.126.170 vrf Mgmt-intf
+logging host 10.252.126.129 vrf Mgmt-intf
+logging host 10.99.19.90 vrf Mgmt-intf
+logging host 10.99.28.72 vrf Mgmt-intf
+logging host 10.99.28.72
+logging host 10.252.105.67 vrf Mgmt-intf
+logging host 10.252.105.67 vrf Mgmt-intf transport udp port 1517
+ip access-list standard 10
+ 10 permit 10.0.10.15
+ 20 permit 10.99.28.100
+ 30 permit 10.99.19.90
+ 40 permit 10.99.28.72
+ 50 permit 10.0.46.100
+ 60 permit 10.0.46.72
+ 70 permit 10.242.212.185
+ 80 permit 10.0.46.236
+ 90 permit 10.252.64.90
+ 100 permit 10.252.64.89
+ 110 permit 193.19.91.0 0.0.0.255
+ 120 permit 10.252.126.0 0.0.0.255
+ 130 permit 10.110.64.36
+ip access-list standard 25
+ 10 permit 10.110.64.13
+ 20 permit 10.110.64.20
+ 30 permit 10.229.150.11
+ 40 permit 10.229.150.12
+ 50 permit 10.242.213.135
+ 60 permit 10.110.150.11
+ 70 permit 10.110.150.12
+ 80 permit 10.99.28.0 0.0.0.255
+ 90 permit 10.242.126.0 0.0.0.255
+ 100 permit 10.110.64.36
+!
+route-map OPC_IN permit 10 
+ match ip address prefix-list OPC_Prefix
+ set community 65048:669
+!
+route-map WAN_R1_select_stc permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048
+ set community 65048:110 65048:65048 additive
+!
+route-map WAN_R1_select_stc permit 10 
+ set as-path prepend 65048
+ set community 65048:111 65048:65048 additive
+!
+route-map TWR_IN permit 10 
+ match ip address prefix-list TWR_Prefix
+ set local-preference 500
+ set community 65048:670
+!
+route-map BUR_CALL_OUT permit 10 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map BUR_CALL_OUT permit 20 
+ match ip address prefix-list MAJOR
+!
+route-map BUR_CALL_OUT permit 30 
+ match ip address prefix-list def
+!
+route-map WAN_STC_ISP_IN permit 10 
+!
+route-map REMAL_IN permit 10 
+ match ip address prefix-list REMAL_IN_PREFIX
+ set community 65048:677
+!
+route-map TANFEETH_OUT permit 10 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map TANFEETH_OUT permit 20 
+ match ip address prefix-list MAJOR
+!
+route-map TANFEETH_OUT permit 30 
+ match ip address prefix-list def
+!
+route-map WAN_R1_select_itc permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048 65048
+ set community 65048:120 65048:65048 additive
+!
+route-map WAN_R1_select_itc permit 10 
+ set as-path prepend 65048 65048
+ set community 65048:121 65048:65048 additive
+!
+route-map INTL permit 20 
+ match ip address prefix-list JORD_IN
+ set local-preference 300
+!
+route-map WAN_R1_SELECT_ITCBR permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048
+ set community 65048:150 65048:65048 additive
+!
+route-map WAN_R1_SELECT_ITCBR permit 10 
+ set community 65048:151 65048:65048 additive
+!
+route-map STC-SDWAN deny 10 
+ match ip address prefix-list STC-SDWAN
+!
+route-map STC-SDWAN permit 20 
+!
+route-map WAN_R1_select_MOB permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048 65048 65048 65048
+ set community 65048:140 65048:65048 additive
+!
+route-map WAN_R1_select_MOB permit 10 
+ set as-path prepend 65048 65048 65048 65048
+ set community 65048:141 65048:65048 additive
+!
+route-map Olaya_View_OUT permit 10 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map Olaya_View_OUT permit 20 
+ match ip address prefix-list MAJOR
+!
+route-map Olaya_View_OUT permit 30 
+ match ip address prefix-list def
+!
+route-map ITC-SDWAN deny 10 
+ match ip address prefix-list ITC-SDWAN
+!
+route-map ITC-SDWAN permit 20 
+!
+route-map TWR_OUT permit 10 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map TWR_OUT permit 20 
+ match ip address prefix-list MAJOR
+!
+route-map TWR_OUT permit 30 
+ match ip address prefix-list def
+!
+route-map TWR_OUT permit 40 
+ match community CORE
+!
+route-map BUR_CALL_IN permit 10 
+ match ip address prefix-list BUR_CALL_IN_PREFIX
+ set community 65048:675
+!
+route-map KW_LINK permit 10 
+ match ip address prefix-list KWT_IN
+ set local-preference 300
+!
+route-map VIPBLDG_CIFS_CLIENT permit 10 
+ match ip address VIPBLDG_CIFS_CLIENT
+ set ip next-hop 192.168.120.5
+!
+route-map REMAL_OUT permit 10 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map REMAL_OUT permit 20 
+ match ip address prefix-list MAJOR
+!
+route-map REMAL_OUT permit 30 
+ match ip address prefix-list def
+!
+route-map AS_PATH_DENYALL permit 10 
+ match as-path 1
+!
+route-map OPC_OUT permit 10 
+ match as-path 10
+ set community 65048:610
+!
+route-map OPC_OUT permit 20 
+ match community DATASAT
+!
+route-map OPC_OUT permit 30 
+ match community SKYBAND
+!
+route-map OPC_OUT permit 40 
+ match community 3G
+!
+route-map OPC_OUT permit 50 
+ match ip address prefix-list KEY-SERVERS
+!
+route-map OPC_OUT permit 60 
+ match community INTERNET
+!
+route-map OPC_OUT permit 70 
+ match community SAMA
+!
+route-map OPC_OUT permit 80 
+ match community EXT_3rd
+!
+route-map OPC_OUT permit 90 
+ match community TADAWUL
+!
+route-map OPC_OUT permit 100 
+ match community Server_Farm
+!
+route-map OPC_OUT permit 110 
+ match community CORE
+!
+route-map OPC_OUT permit 120 
+ match community HUW_SDWAN_ATM
+!
+route-map ZAIN-CAR-DEALER permit 10 
+ match ip address prefix-list NRR_Filtration
+ set local-preference 500
+!
+route-map TANFEETH_IN permit 10 
+ match ip address prefix-list TANFEETH_IN_PREFIX
+ set community 65048:676
+!
+route-map IBGP-COMMUNITY permit 5 
+ match as-path 30
+ set community 65048:6666 65048:65048 additive
+!
+route-map IBGP-COMMUNITY permit 10 
+ set community 65048:65048 additive
+!
+route-map NN-SDWAN deny 10 
+ match ip address prefix-list NN-SDWAN
+!
+route-map NN-SDWAN permit 20 
+!
+route-map check permit 10 
+ match ip address prefix-list check_for_connectivity
+!
+route-map GO-SDWAN deny 10 
+ match ip address prefix-list GO-SDWAN
+!
+route-map GO-SDWAN permit 20 
+ set community 65048:65048 additive
+!
+route-map WAN_R1_select_NN permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048 65048
+ set community 65048:130 65048:65048 additive
+!
+route-map WAN_R1_select_NN permit 10 
+ set as-path prepend 65048 65048
+ set community 65048:131 65048:65048 additive
+!
+route-map Olaya_View_IN permit 10 
+ match ip address prefix-list Olaya_View_Telesales_Prefix
+!
+route-map SDWAN-VPN0-OUT permit 10 
+ match ip address prefix-list SDWAN-Transport-Branches
+ set community 65048:610
+!
+route-map WAN_R1_select_ZAIN_CRD permit 5 
+ match ip address prefix-list def
+ set as-path prepend 65048 65048
+ set community 65048:160 65048:65048 additive
+!
+route-map WAN_R1_select_ZAIN_CRD permit 10 
+ set as-path prepend 65048 65048
+ set community 65048:161 65048:65048 additive
+!
+route-map MOBILY-SDWAN deny 10 
+ match ip address prefix-list MOBILY-SDWAN
+!
+route-map MOBILY-SDWAN permit 20 
+!
+route-map ZAIN-SDWAN deny 10 
+ match ip address prefix-list ZAIN-SDWAN
+!
+route-map ZAIN-SDWAN permit 20 
+ set community 65048:65048 additive
+!
+snmp-server group admin v3 priv 
+snmp-server group Alrajhi v3 auth access 10
+snmp-server group Alrajhi v3 priv access 10
+snmp-server group default v3 priv 
+snmp-server group ncsuser v3 auth 
+snmp-server group SOLARWIND v3 auth access 25
+snmp-server group SOLARWIND v3 priv access 25
+snmp-server trap-source GigabitEthernet0
+snmp-server location Riyadh NRR-WAN-BR-R001
+snmp-server contact nw-cs@alrajhibank.com.sa
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps pfr
+snmp-server enable traps flowmon
+snmp-server enable traps ds1
+snmp-server enable traps entity-perf throughput-notif
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps casa
+snmp-server enable traps smart-license
+snmp-server enable traps license
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps bfd
+snmp-server enable traps bgp
+snmp-server enable traps bgp cbgp2
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dhcp
+snmp-server enable traps dial
+snmp-server enable traps diameter
+snmp-server enable traps dlsw
+snmp-server enable traps dsp card-status
+snmp-server enable traps dsp oper-state
+snmp-server enable traps dsp video-usage
+snmp-server enable traps dsp video-out-of-resource
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay multilink bundle-mismatch
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif
+snmp-server enable traps hsrp
+snmp-server enable traps pimstdmib neighbor-loss invalid-register invalid-join-prune rp-mapping-change interface-election
+snmp-server enable traps ipmulticast
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps ospfv3 state-change
+snmp-server enable traps ospfv3 errors
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps pw vc
+snmp-server enable traps rsvp
+snmp-server enable traps ipsla
+snmp-server enable traps syslog
+snmp-server enable traps l2tun session
+snmp-server enable traps l2tun pseudowire status
+snmp-server enable traps pki
+snmp-server enable traps adslline
+snmp-server enable traps vdsl2line
+snmp-server enable traps ethernet evc status create delete
+snmp-server enable traps ether-oam
+snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps entity-qfp mem-res-thresh throughput-notif
+snmp-server enable traps entity-state
+snmp-server enable traps lisp
+snmp-server enable traps entity-sensor
+snmp-server enable traps flash insertion removal lowspace
+snmp-server enable traps firewall serverstatus
+snmp-server enable traps netsync
+snmp-server enable traps sbc adj-status
+snmp-server enable traps sbc blacklist
+snmp-server enable traps sbc congestion-alarm
+snmp-server enable traps sbc h248-ctrlr-status
+snmp-server enable traps sbc media-source
+snmp-server enable traps sbc radius-conn-status
+snmp-server enable traps sbc sla-violation
+snmp-server enable traps sbc sla-violation-rev1
+snmp-server enable traps sbc svc-state
+snmp-server enable traps sbc qos-statistics
+snmp-server enable traps srp
+snmp-server enable traps isdn call-information
+snmp-server enable traps isdn layer2
+snmp-server enable traps isdn chan-not-avail
+snmp-server enable traps isdn ietf
+snmp-server enable traps cnpd
+snmp-server enable traps entity-diag boot-up-fail hm-test-recover hm-thresh-reached scheduled-test-fail
+snmp-server enable traps ike policy add
+snmp-server enable traps ike policy delete
+snmp-server enable traps ike tunnel start
+snmp-server enable traps ike tunnel stop
+snmp-server enable traps ipsec cryptomap add
+snmp-server enable traps ipsec cryptomap delete
+snmp-server enable traps ipsec cryptomap attach
+snmp-server enable traps ipsec cryptomap detach
+snmp-server enable traps ipsec tunnel start
+snmp-server enable traps ipsec tunnel stop
+snmp-server enable traps ipsec too-many-sas
+snmp-server enable traps gdoi gm-start-registration
+snmp-server enable traps gdoi gm-registration-complete
+snmp-server enable traps gdoi gm-re-register
+snmp-server enable traps gdoi gm-rekey-rcvd
+snmp-server enable traps gdoi gm-rekey-fail
+snmp-server enable traps gdoi ks-rekey-pushed
+snmp-server enable traps gdoi gm-incomplete-cfg
+snmp-server enable traps gdoi ks-no-rsa-keys
+snmp-server enable traps gdoi ks-new-registration
+snmp-server enable traps gdoi ks-reg-complete
+snmp-server enable traps gdoi ks-role-change
+snmp-server enable traps gdoi ks-gm-deleted
+snmp-server enable traps gdoi ks-peer-reachable
+snmp-server enable traps gdoi ks-peer-unreachable
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps sonet
+snmp-server enable traps resource-policy
+snmp-server enable traps otn
+snmp-server enable traps nhrp nhs
+snmp-server enable traps nhrp nhc
+snmp-server enable traps nhrp nhp
+snmp-server enable traps nhrp quota-exceeded
+snmp-server enable traps isis
+snmp-server enable traps ip local pool
+snmp-server enable traps mpls rfc ldp
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls rfc traffic-eng
+snmp-server enable traps mpls traffic-eng
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps alarms informational
+snmp-server enable traps voice
+snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+snmp-server enable traps ethernet cfm alarm
+snmp-server enable traps rf
+snmp-server enable traps transceiver all
+snmp-server enable traps mpls vpn
+snmp-server enable traps mpls rfc vpn
+snmp-server host 10.99.28.70 version 3 priv NSMmonitoring 
+snmp-server host 10.99.28.70 vrf Mgmt-intf version 3 priv NSMmonitoring 
+snmp-server host 10.99.28.72 version 3 priv NSMmonitoring 
+snmp-server host 10.99.28.72 vrf Mgmt-intf version 3 priv NSMmonitoring 
+snmp-server host 10.252.126.172 version 3 priv admin 
+snmp-server host 10.252.126.172 version 3 auth ncsuser 
+!
+tacacs server TACACS-SERVER-1
+ address ipv4 10.252.70.54
+ key 7 105D0C1A171618030501797F73
+ timeout 5
+tacacs server TACACS-SERVER-2
+ address ipv4 10.252.70.53
+ key 7 04480E051D204646001C564345
+ timeout 5
+tacacs server TACACS-SERVER-DR
+ address ipv4 10.242.70.54
+ key 7 0832494D1B180F1F1B0E5F507D
+ timeout 5
+!
+!
+!
+!
+control-plane
+ service-policy input Policy-CoPP
+!
+!
+!
+!
+!
+banner exec ^CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner login ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner motd ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+!
+line con 0
+ login authentication no_tacacs
+ stopbits 1
+line aux 0
+ login authentication no_tacacs
+ no exec
+ transport output none
+line vty 0 4
+ access-class NEW_MGMT_ACL in vrf-also
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ access-class NEW_MGMT_ACL in vrf-also
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output none
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+ntp authentication-key 1 md5 03165A010E062F585E 7
+ntp authenticate
+ntp trusted-key 1
+ntp source GigabitEthernet0
+ntp server vrf Mgmt-intf 10.11.3.240
+ntp server vrf Mgmt-intf 10.0.250.2 key 1
+ntp server vrf Mgmt-intf 10.0.3.52
+ntp server vrf Mgmt-intf 10.0.3.53
+ntp server vrf Mgmt-intf 10.11.3.239
+!
+time-range WEEKDAYS
+ periodic Monday Tuesday Wednesday Thursday Sunday 0:00 to 8:30
+ periodic Friday 0:00 to 16:00
+ periodic Saturday 0:00 to 8:00
+ periodic Saturday 12:00 to 16:00
+ periodic Monday Tuesday Wednesday Thursday Sunday 22:00 to 23:59
+ periodic Friday 22:00 to 23:59
+ periodic Saturday 22:00 to 23:59
+!
+!
+!
+!
+!
+!
+end
+

@@ -1,0 +1,92 @@
+device_id,username,privilege,hash_type,last_pw_change,password_lifetime_days,source_file
+nrr_cor_c_sw002,admin,15,5,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,ALRAJHISNMP,1,5,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,arbnsd,15,5,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+nrr_cor_c_sw002,NSMmonitoring,1,5,,,configs\NRR-COR-C-SW002.alrajhi.bank-10.99.18.254-2025-05-15_11-06-05.log
+NRR-EXT-EXT-FW001_d41d8cd9,*,,,,,configs\NRR-EXT-EXT-FW001_7-0_9221_202505151424.conf
+NRR-EXT-EXTBR-R002_d41d8cd9,arbnsd,15,9,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-EXTBR-R002_d41d8cd9,enable,15,9,,,configs\NRR-EXT-EXTBR-R002.alrajhi.bank-10.99.18.32-2025-05-15_11-06-44.log
+NRR-EXT-SAMA-FW001_d41d8cd9,*,,,,,configs\NRR-EXT-SAMA-FW001_7-0_9221_202505151426.conf
+NRR-EXT-TAD-FW001_d41d8cd9,*,,,,,configs\NRR-EXT-TAD-FW001_7-0_9221_202505151426.conf
+SSL VPN interface_d41d8cd9,*,,,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430-ASA-VDOM.conf
+"""translate\\.google\\..*""",set,1,local,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""",tacacs+,1,local,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""",setting,1,local,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+"""translate\\.google\\..*""",group,1,local,,,configs\NRR-INT-AGG-FW001_7-0_9221_202505151430PA-VDOM.conf
+NRR-INT-INTBR-R001_d41d8cd9,admin,15,9,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,arbnsd,15,7,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-INT-INTBR-R001_d41d8cd9,enable,15,9,,,configs\NRR-INT-INTBR-R001.alrajhi.bank-10.99.18.44-2025-05-15_11-06-50.log
+NRR-OOB-AGG-FW001_d41d8cd9,*,,,,,configs\NRR-OOB-AGG-FW001_7-0_9221_202505151433.conf
+NRR-WAN-AGG-FW001_d41d8cd9,*,,,,,configs\NRR-WAN-AGG-FW001_7-0_0282_202505151434.conf
+NRR-WAN-BR-R001_d41d8cd9,arbnsd,15,9,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R001_d41d8cd9,enable,15,9,,,configs\NRR-WAN-BR-R001.alrajhibank.com.sa-10.99.18.9-2025-05-15_11-06-08.log
+NRR-WAN-BR-R002_d41d8cd9,admin,15,9,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,arbnsd,15,9,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+NRR-WAN-BR-R002_d41d8cd9,enable,15,9,,,configs\NRR-WAN-BR-R002.alrajhibank.com.sa-10.99.18.10-2025-05-15_11-06-16.log
+palo_alto_device,to,1,local,,,configs\UAT-PA-Backup
+uat_ig_fw001,admin,15,5,"superuser,Local Administrator with hashed password,local,$5$pjtppbxx$98zQLAiXN7p7V/OroChaLPyMI73RLBaR2uP1KCPeYI6,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,arbfwL,15,5,"superuser,Local Administrator with hashed password,local,$1$uysabvjl$tWLBZpXGlyZR/6EFAjyID0,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038829,10,tacacs,"superreader,TACACS+ Superreader,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,con9860,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0018300,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,con2865,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,algosec-isd,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ars10296,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ars10233,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038959,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038948,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038068,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,bnauser,1,tacacs,",TACACS+ User,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,svc_vhnnwsec,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c001886,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c002856,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c003020,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C003240,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c003071,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c003862,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c003382,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c004139,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c004137,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c004505,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c004506,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,SVC_NW_AUTOMATION,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,arbfwl,15,5,"superuser,Local Administrator with hashed password,local,$1$gphxdlpe$2EMSRNwWldPKMfWlTlDIo.,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0039932,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0040314,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0040315,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C005809,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c005335,10,tacacs,"superreader,TACACS+ Superreader,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0041557,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0039241,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0040440,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C007531,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,XSOAR,15,5,"superuser,Local Administrator with hashed password,local,$5$sxkhxrlg$2WFeUVJnuZaqv7j7lEyjgqP72w3IIkhfpuJP2SZV5ZB,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c008010,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,con9905,15,tacacs,"superuser,TACACS+ Superuser,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c009162,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038913,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0038909,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c009332,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c009741,15,tacacs,"superuser,TACACS+ Superuser,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c009942,10,tacacs,"superreader,TACACS+ Superreader,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,0042847,1,tacacs,",TACACS+ User,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c003402,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C007178,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c008889,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c008888,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c009117,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C001657,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,SNDISCV,10,tacacs,"superreader,TACACS+ Superreader,tacacs-profile,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c013459,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c013340,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,c013695,15,tacacs,"superuser,TACACS+ Superuser,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,ars34919,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013714,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C007011,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C005917,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013303,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013471,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013461,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013470,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013650,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup
+uat_ig_fw001,C013658,10,tacacs,"superreader,TACACS+ Superreader,auth-aaa-local-sequence,external,active",,configs\UAT-PA-Internet-Backup

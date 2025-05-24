@@ -1,0 +1,1517 @@
+﻿CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+CC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+
+NRR-INT-INTBR-R002#ter
+NRR-INT-INTBR-R002#terminal mo
+NRR-INT-INTBR-R002#terminal monitor 0
+                                    ^
+% Invalid input detected at '^' marker.
+
+NRR-INT-INTBR-R002#ter
+NRR-INT-INTBR-R002#terminal le
+NRR-INT-INTBR-R002#terminal length 0
+NRR-INT-INTBR-R002#sh run conf
+                           ^
+% Invalid input detected at '^' marker.
+
+NRR-INT-INTBR-R002#sh run
+NRR-INT-INTBR-R002#sh running-config                  
+Building configuration...
+
+Current configuration : 48628 bytes
+!
+! Last configuration change at 00:11:37 KSA Fri May 9 2025 by c003396
+! NVRAM config last updated at 04:36:10 KSA Fri Apr 18 2025 by con6209
+!
+version 17.6
+service nagle
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service sequence-numbers
+no service dhcp
+! Call-home is enabled by Smart-Licensing.
+service call-home
+no service password-recovery 
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname NRR-INT-INTBR-R002
+!
+boot-start-marker
+boot system bootflash:packages.conf
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+logging buffered 256000
+no logging console
+enable secret 9 $14$b7hq$sqLzIh9WybiuYk$Te/QxOG8wl5agzvNG0B8hA9TNSKeIQd31bY5XenkjOI
+!
+aaa new-model
+!
+!
+aaa group server tacacs+ AAA-TACACS
+ server-private 10.252.70.54 key 7 105D0C1A171618030501797F73
+ server-private 10.252.70.53 key 7 095F4B0A0B041D1A0209577E7C
+ server-private 10.242.70.54 key 7 0215015819070529454B5A4D52
+ ip vrf forwarding Mgmt-intf
+ ip tacacs source-interface GigabitEthernet0
+!
+aaa group server tacacs+ TACACS-SERVERS
+ server name TACACS-SERVER-1
+ server name TACACS-SERVER-2
+ server name TACACS-SERVER-DR
+ ip vrf forwarding Mgmt-intf
+ ip tacacs source-interface GigabitEthernet0
+!
+aaa authentication login VTYSec group TACACS-SERVERS local
+aaa authentication login no_tacacs enable
+aaa authorization config-commands
+aaa authorization exec default group TACACS-SERVERS local 
+aaa authorization commands 1 default group TACACS-SERVERS local 
+aaa authorization commands 15 default group TACACS-SERVERS local 
+aaa accounting update newinfo
+aaa accounting exec default start-stop group TACACS-SERVERS
+aaa accounting commands 1 default stop-only group TACACS-SERVERS
+aaa accounting commands 15 default stop-only group TACACS-SERVERS
+aaa accounting network default stop-only group TACACS-SERVERS
+aaa accounting connection default stop-only group TACACS-SERVERS
+aaa accounting system default start-stop group TACACS-SERVERS
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone KSA 3 0
+ip icmp rate-limit unreachable 100
+ip icmp rate-limit unreachable DF 10
+ip spd queue max-threshold 1499
+ip spd queue min-threshold 1498
+!
+!
+!
+!
+!
+!
+!
+ip name-server 10.0.10.10 10.0.10.20 10.11.11.10 10.11.11.11
+ip domain name alrajhi.bank
+ip dhcp bootp ignore
+!
+!
+!
+login on-failure log
+login on-success log
+ipv6 unicast-routing
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+flow record netflow-VHN-NMS-01
+ match ipv4 tos
+ match ipv4 protocol
+ match ipv4 source address
+ match ipv4 destination address
+ match transport source-port
+ match transport destination-port
+ match interface input
+ match flow sampler
+ match transport tcp flags
+ match transport icmp ipv4 type
+ match interface input snmp
+ match interface output snmp
+ match ipv4 header-length
+ collect routing source as
+ collect routing destination as
+ collect routing next-hop address ipv4
+ collect ipv4 source mask
+ collect ipv4 destination mask
+ collect interface output
+ collect counter bytes
+ collect counter packets
+ collect timestamp sys-uptime first
+ collect timestamp sys-uptime last
+ collect flow end-reason
+!
+!
+flow exporter EXP-5000
+ description PROLEXIC-NETFLOW
+ destination 209.200.154.191
+ source Loopback300
+ transport udp 5000
+!
+!
+flow exporter EXP-9996
+ description ENTUITY-NETFLOW
+ destination 193.19.91.25
+ source Loopback300
+ transport udp 9996
+!
+!
+flow exporter EXP-8878
+ description STATSEEKER-NETFLOW
+ destination 193.19.91.25
+ source Loopback300
+ transport udp 8878
+!
+!
+flow exporter ENTUITY
+ description ENTUITY-NETFLOW
+ destination 10.252.126.172
+ source Loopback0
+ transport udp 9996
+!
+!
+flow exporter VHN-NMS-01
+ description Solarwinds
+ destination 10.99.28.77
+ source Loopback0
+ transport udp 2055
+!
+!
+flow exporter SmartConnecter_01
+ description Arcsight_SmartConnecter_01
+ destination 10.99.19.143
+ source Loopback0
+ transport udp 9995
+!
+!
+flow exporter SmartConnecter_02
+ description Arcsight_SmartConnecter_02
+ destination 10.252.105.62
+ source Loopback0
+ transport udp 9995
+!
+!
+flow exporter SmartConnecter_03
+ description Arcsight_SmartConnecter_03
+ destination 10.252.105.63
+ source Loopback0
+ transport udp 9995
+!
+!
+flow monitor PLX_FBM
+ exporter EXP-5000
+ exporter EXP-9996
+ exporter EXP-8878
+ cache timeout active 60
+ cache entries 100000
+ record netflow-original
+!
+!
+flow monitor ENTUITYM
+ exporter ENTUITY
+ record netflow ipv4 original-input
+!
+!
+flow monitor VHN-NMS-01
+ exporter VHN-NMS-01
+ exporter SmartConnecter_01
+ exporter SmartConnecter_02
+ exporter SmartConnecter_03
+ cache timeout inactive 10
+ cache timeout active 30
+ statistics packet protocol
+ statistics packet size
+ record netflow-VHN-NMS-01
+!
+!
+flow monitor VHN-NMS-IPV6-01
+ exporter VHN-NMS-01
+ cache timeout inactive 10
+ cache timeout active 30
+ statistics packet protocol
+ statistics packet size
+ record netflow ipv6 original-input
+!
+sampler PLX_FBM_SAMPLER
+ mode random 1 out-of 1024
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-4286992796
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4286992796
+ revocation-check none
+ rsakeypair TP-self-signed-4286992796
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-4286992796
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 34323836 39393237 3936301E 170D3138 30353232 30313132 
+  35385A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 32383639 
+  39323739 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100DD60 30EC569E D4EC9CE1 CDA9E91B 5D8D58CD F07BD180 985CC3E0 
+  8B48FA4A ECB8FF7D C1776E25 6758EA7F 3762D272 35AF627E 45627B75 50C29045 
+  1391BE66 1FF6D7D1 EEBD52EE D3627727 A706FE52 817B7762 DDD98BCE D325C55E 
+  118B05AE 4A1E41EF B44F03EC 3C8C5937 E3F992A9 8667AC43 328300F4 AA7230FF 
+  BB58AFF4 05F3E201 40A38763 8810435F 8481C9FA 0E75A694 08BDB94C 78637A50 
+  6A0FCEE4 3BE8D81A 3440E09C 4531D6C7 68C0F063 2E2744B7 831BA620 AD7F6E11 
+  8AB82FDD F427B02B 02DAF5AD 5A2B3B1F 132AE58C E9A83F4F 9A63ACED FCA95EB1 
+  FFA805B7 CC0FF0A1 9346EC3A D1248023 078FE337 CA8E90B7 A1AD250D 77198835 
+  AF06F4E8 A0F50203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 142EF3A9 E26A6B90 2A581B92 311051BD 276CCA75 
+  68301D06 03551D0E 04160414 2EF3A9E2 6A6B902A 581B9231 1051BD27 6CCA7568 
+  300D0609 2A864886 F70D0101 05050003 82010100 DAF63FB5 3446BD54 7E9520D2 
+  1445AAD8 EB4A6939 7457314A 1537DD18 62D80362 4B0F86CE A1EB1501 4403D593 
+  A9200395 649854D8 A1410FA6 BF278CA7 EB919707 BA5EDF28 AA27C4E4 75363F5B 
+  039883D8 2B161979 5687F9B3 C715DD55 EEA89907 292A7768 744EFA56 A358BC22 
+  5C10DDBC 3C3FC1E6 F005E39D 5E164676 56457258 795C2DBE DC5DB9C2 59A41518 
+  54E9D7A6 3A7DBAD8 E6ED0E5A 9CA304FA 5F4D1309 2E4F614B 03E6659E 420EBA71 
+  2DC3A8F7 BE7F7922 84BCEE1B 2F8B805E CFFD9D30 9B79253C 29292754 987CB521 
+  6405C5E4 48D17AF8 1A49A084 0EA36F9F E1D64FD9 CA872F0A AB8DD78E 84C6590E 
+  C5BF9E1E 539257F1 D957A510 B32593D1 B73F4261
+        quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+        quit
+!
+!
+license udi pid ASR1001-HX sn JAE22180CTR
+archive
+ path bootflash:CFG_BKP
+ time-period 1440
+memory free low-watermark processor 374485
+!
+!
+spanning-tree extend system-id
+diagnostic bootup level minimal
+!
+username admin privilege 15 secret 9 $14$qD/U$2frUZaRJVk.txE$DV4mlpkhjHJ2Zo5gqxlTYPxiuVH9CDEnU6NCWWb.ao.
+username arbnsd privilege 15 password 7 123217370009580A21
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+cdp run
+!
+track 1 ip sla 1 reachability
+!
+!
+class-map match-any Class-CoPP-Undesirable
+ match access-group name CoPP-Undesirable
+class-map match-any Class-CoPP-Routing
+ match access-group name CoPP-Routing
+ match protocol arp
+class-map match-any Class-CoPP-Monitoring
+ match access-group name CoPP-Monitoring
+class-map match-any Class-CoPP-Management
+ match access-group name CoPP-Management
+class-map match-all SWIFTNET-CLASS
+ match access-group name SWIFTNET
+!
+policy-map SWIFTNET-POLICY
+ class SWIFTNET-CLASS
+  bandwidth 20000
+  random-detect
+ class class-default
+  fair-queue
+  random-detect
+policy-map Policy-CoPP
+ class Class-CoPP-Routing
+  police 100000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Management
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Monitoring
+  police 1000000 conform-action transmit  exceed-action drop 
+ class Class-CoPP-Undesirable
+  police 1000000 conform-action drop  exceed-action drop 
+ class class-default
+  police 1000000 conform-action transmit  exceed-action drop 
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Null0
+ no ip unreachables
+!
+interface Loopback0
+ description ***IGP Loopback***
+ ip address 10.99.1.41 255.255.255.255
+ no ip redirects
+ no ip proxy-arp
+!
+interface Loopback300
+ description ***ARBORCLOUD-(INTBR2(Nour_Net))***
+ ip address 178.20.149.73 255.255.255.255
+ no ip redirects
+ no ip proxy-arp
+ shutdown
+!
+interface Loopback400
+ description ***SRC-VPN-PLXFRA2002105***
+ ip address 178.20.149.74 255.255.255.255
+ no ip redirects
+ no ip proxy-arp
+!
+interface Port-channel12
+ description ***L3 Connection to NRR-INT-INTBR-R001 Bundle 12***
+ mtu 9216
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.99.5.10 255.255.255.252
+ no ip redirects
+ no ip proxy-arp
+ ipv6 flow monitor VHN-NMS-IPV6-01 input
+ ipv6 flow monitor VHN-NMS-IPV6-01 output
+!
+interface Tunnel300
+ description ***VPN-PLXLON2002105-(INTBR2(Nour_Net))***
+ bandwidth 300000
+ ip flow monitor PLX_FBM sampler PLX_FBM_SAMPLER input
+ ip address 209.200.179.174 255.255.255.254
+ ip access-group Outside_In in
+ load-interval 30
+ tunnel source Loopback300
+ tunnel destination 209.200.159.8
+!
+interface Tunnel400
+ description ***VPN-PLXFRA2002105-(INTBR2(Nour_Net))***
+ bandwidth 300000
+ ip flow monitor PLX_FBM sampler PLX_FBM_SAMPLER input
+ ip address 72.52.53.220 255.255.255.254
+ ip access-group Outside_In in
+ tunnel source Loopback400
+ tunnel destination 72.52.53.54
+!
+interface Tunnel600
+ description ***ARBORCLOUD-(INTBR2(Nour_Net))***
+ bandwidth 3145728
+ ip unnumbered Loopback300
+ ip access-group Outside_In in
+ load-interval 30
+ shutdown
+ tunnel source Loopback300
+ tunnel destination 156.154.212.224
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/4
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/6
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/7
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface TenGigabitEthernet0/1/0
+ description ***Connection to NRR-INT-INTOUT-SW001 Eth1/1***
+ mtu 9216
+ no ip address
+ no negotiation auto
+ cdp enable
+!
+interface TenGigabitEthernet0/1/0.3360
+ description ***L3 Connection to -ARBOR-IXIA-IPS-NRR-INT-AGG-FW Port-Channel42.3360 ***
+ encapsulation dot1Q 3360
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 10.99.5.2 255.255.255.248
+ no ip redirects
+ no ip proxy-arp
+ ip policy route-map TO_AWAL_NET
+ ipv6 flow monitor VHN-NMS-IPV6-01 input
+ ipv6 flow monitor VHN-NMS-IPV6-01 output
+ ipv6 address 202A:2800:1:4601::2/64
+ ipv6 address 2A00:1560:10::C113:5B05/64
+!
+interface TenGigabitEthernet0/1/0.3362
+ description ***L3 Connection to NRR-INT-VPN-FW2 TBD***
+ encapsulation dot1Q 3362
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 193.19.91.5 255.255.255.0
+ no ip redirects
+ no ip proxy-arp
+ standby version 2
+ standby 3362 ip 193.19.91.11
+ standby 3362 priority 200
+ standby 3362 preempt
+ ip policy route-map TO_AWAL_NET
+ ipv6 flow monitor VHN-NMS-IPV6-01 input
+ ipv6 flow monitor VHN-NMS-IPV6-01 output
+!
+interface TenGigabitEthernet0/1/0.3399
+ description ***SWIFT-VPN-LINK-INTERNET***
+ encapsulation dot1Q 3399
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 185.148.148.253 255.255.255.248
+ no ip redirects
+ no ip proxy-arp
+ standby version 2
+ standby 3399 ip 185.148.148.254
+ standby 3399 priority 200
+ standby 3399 preempt
+ ipv6 flow monitor VHN-NMS-IPV6-01 input
+ ipv6 flow monitor VHN-NMS-IPV6-01 output
+!
+interface TenGigabitEthernet0/1/1
+ description ***Connection to NRR-INT-INTBR-R001 Te0/1/1***
+ mtu 9216
+ no ip address
+ no negotiation auto
+ cdp enable
+ channel-group 12 mode active
+!
+interface TenGigabitEthernet0/1/2
+ description ***Connection to NRR-INT-INTBR-R001 Te0/1/1***
+ mtu 9216
+ no ip address
+ no negotiation auto
+ cdp enable
+ channel-group 12 mode active
+!
+interface TenGigabitEthernet0/1/3
+ no ip address
+ shutdown
+ no negotiation auto
+!
+interface TenGigabitEthernet0/1/4
+ no ip address
+ shutdown
+ no negotiation auto
+!
+interface TenGigabitEthernet0/1/5
+ no ip address
+ shutdown
+ no negotiation auto
+!
+interface TenGigabitEthernet0/1/6
+ no ip address
+ shutdown
+ no negotiation auto
+!
+interface TenGigabitEthernet0/1/7
+ description INTERNET-NOORNET_ORD-01820-C6V9N5
+ bandwidth 2097152
+ ip flow monitor VHN-NMS-01 input
+ ip flow monitor VHN-NMS-01 output
+ ip address 172.22.43.222 255.255.255.252
+ ip tcp adjust-mss 1360
+ load-interval 30
+ no negotiation auto
+ ipv6 flow monitor VHN-NMS-IPV6-01 input
+ ipv6 flow monitor VHN-NMS-IPV6-01 output
+ ipv6 address 2A00:1560:3000:6::2/64
+!
+interface GigabitEthernet0
+ description ***Connection to OOB-FEX119 Eth119/0/8***
+ vrf forwarding Mgmt-intf
+ ip address 10.99.18.43 255.255.255.0
+ negotiation auto
+!
+router bgp 202982
+ bgp log-neighbor-changes
+ neighbor PROLEXIC peer-group
+ neighbor PROLEXIC remote-as 32787
+ neighbor PROLEXIC description PROLEXIC-AKAMI-32787
+ neighbor PROLEXIC password 7 0455312D1A2F751D5800160F3D0E3D3729263E0561
+ neighbor PROLEXIC version 4
+ neighbor 10.99.5.3 remote-as 64800
+ neighbor 10.99.5.3 description ***EBGP-to-NRR-INT-AGG-FW***
+ neighbor 10.99.5.9 remote-as 202982
+ neighbor 10.99.5.9 description ***IBGP-to-NRR-INT-INTBR-R001***
+ neighbor 202A:2800:1:4601::3 remote-as 64800
+ neighbor 2A00:1560:3000:6::1 remote-as 29684
+ neighbor 2A00:1560:3000:6::1 password 7 12181715325A5E57
+ neighbor 172.22.43.221 remote-as 29684
+ neighbor 172.22.43.221 password 7 06071D236C1F5B4A
+ !
+ address-family ipv4
+  bgp additional-paths select backup
+  bgp additional-paths install
+  network 10.99.1.41 mask 255.255.255.255
+  network 178.20.149.73 mask 255.255.255.255
+  network 178.20.149.74 mask 255.255.255.255
+  neighbor PROLEXIC send-community
+  neighbor PROLEXIC remove-private-as
+  neighbor PROLEXIC soft-reconfiguration inbound
+  neighbor PROLEXIC prefix-list deny-all in
+  neighbor PROLEXIC prefix-list OUT_TO_PROLEXIC out
+  neighbor 10.99.5.3 activate
+  neighbor 10.99.5.3 route-map DEFAULT-ONLY out
+  neighbor 10.99.5.9 activate
+  neighbor 10.99.5.9 next-hop-self
+  no neighbor 202A:2800:1:4601::3 activate
+  no neighbor 2A00:1560:3000:6::1 activate
+  neighbor 172.22.43.221 activate
+  neighbor 172.22.43.221 remove-private-as
+  neighbor 172.22.43.221 soft-reconfiguration inbound
+  neighbor 172.22.43.221 route-map NN_IN in
+  neighbor 172.22.43.221 route-map DENYALL out
+ exit-address-family
+ !
+ address-family ipv6
+  aggregate-address 2A0A:2800:1::/48
+  neighbor 202A:2800:1:4601::3 activate
+  neighbor 202A:2800:1:4601::3 soft-reconfiguration inbound
+  neighbor 202A:2800:1:4601::3 route-map DEFAULT out
+  neighbor 2A00:1560:3000:6::1 activate
+  neighbor 2A00:1560:3000:6::1 soft-reconfiguration inbound
+  neighbor 2A00:1560:3000:6::1 route-map NN_OUT_IPV6 out
+ exit-address-family
+!
+ip tcp window-size 65535
+ip tcp synwait-time 10
+ip tcp path-mtu-discovery
+ip telnet source-interface GigabitEthernet0
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip ftp source-interface GigabitEthernet0
+ip tftp source-interface GigabitEthernet0
+ip route 185.148.148.0 255.255.255.128 10.99.5.3 name INT_FW1
+ip route 185.148.148.128 255.255.255.128 10.99.5.3 name INT_FW2
+ip route 193.19.90.0 255.255.254.0 Null0 name MAJOR-PUBLIC-PREFIX
+ip route 193.19.90.0 255.255.255.128 10.99.5.3 name INT_FW4
+ip route 193.19.90.128 255.255.255.128 10.99.5.3 name INT_FW3
+ip route 193.19.91.0 255.255.255.128 10.99.5.3 name INT_FW5
+ip route 193.19.91.31 255.255.255.255 TenGigabitEthernet0/1/0.3362 193.19.91.31
+ip route 193.19.91.32 255.255.255.255 TenGigabitEthernet0/1/0.3362 193.19.91.32
+ip route 193.19.91.99 255.255.255.255 TenGigabitEthernet0/1/0.3362 193.19.91.99
+ip route 193.19.91.128 255.255.255.128 10.99.5.3 name INT_FW6
+ip route vrf Mgmt-intf 0.0.0.0 0.0.0.0 GigabitEthernet0 10.99.18.1
+ip ssh time-out 60
+ip ssh version 2
+ip scp server enable
+!
+ip access-list standard NEW_MGMT_ACL
+ 10 permit 10.8.10.8
+ 20 permit 192.168.100.6
+ 30 permit 192.168.100.26
+ 40 permit 192.100.4.186
+ 50 permit 192.168.120.14
+ 60 permit 192.168.34.122
+ 70 permit 192.100.6.150
+ 80 permit 192.100.8.153
+ 90 permit 10.98.114.34
+ 100 permit 192.168.34.118
+ 110 permit 10.98.113.122
+ 120 permit 10.96.115.150
+ 130 permit 172.30.2.46
+ 140 permit 172.30.2.26
+ 150 permit 172.30.2.30
+ 160 permit 10.96.115.201
+ 170 permit 192.168.100.254
+ 180 permit 10.110.65.192 0.0.0.31
+ 190 permit 10.99.28.0 0.0.0.255
+ 200 permit 10.242.126.0 0.0.0.255
+ 210 permit 10.98.151.0 0.0.0.255
+ 220 permit 10.98.153.0 0.0.0.255
+ 230 permit 10.98.154.0 0.0.0.255
+ 240 permit 10.2.0.0 0.0.255.255
+ 250 permit 10.237.47.0 0.0.0.255
+ 260 permit 10.3.0.0 0.0.255.255
+ 270 permit 10.56.233.0 0.0.0.255
+ 280 permit 10.9.0.0 0.0.255.255
+ 290 permit 10.252.126.0 0.0.0.255
+ 300 permit 10.10.71.0 0.0.0.255
+ 310 permit 10.240.246.0 0.0.0.255
+ 320 permit 10.252.120.0 0.0.0.255
+ 330 permit 10.110.192.0 0.0.0.31
+ 1000 deny   any
+!
+ip access-list extended CoPP-Management
+ 10 remark ****Match SNMP****
+ 10 permit udp any any eq snmp
+ 20 remark ****Match TACACS****
+ 20 permit tcp any eq tacacs any
+ 30 permit udp any eq tacacs any
+ 40 remark ****Match Telnet-SSH****
+ 40 permit tcp any any eq telnet
+ 50 permit tcp any eq telnet any
+ 60 permit tcp any eq 22 any
+ 70 permit tcp any any eq 22
+ 80 permit tcp any eq 22 any established
+ 90 permit tcp any any eq 22 established
+ 100 remark ****Match NTP-Domain****
+ 100 permit udp any any eq ntp
+ 110 permit udp any eq ntp any
+ 120 remark ****Match SYSLOG****
+ 120 permit udp any eq syslog any
+ 130 remark ****Match FTP/TFTP****
+ 130 permit udp any eq tftp any
+ 140 permit tcp any eq ftp any
+ 150 permit tcp any eq ftp-data any
+ip access-list extended CoPP-Monitoring
+ 10 permit icmp any any ttl-exceeded
+ 20 permit icmp any any port-unreachable
+ 30 permit icmp any any echo-reply
+ 40 permit icmp any any echo
+ 50 permit icmp any any time-exceeded
+ 60 remark ****UDP-Traceroute matching linux*****
+ 60 permit udp any any range 33434 33534
+ip access-list extended CoPP-Routing
+ 10 permit tcp any any eq bgp
+ 20 permit tcp any eq bgp any
+ip access-list extended CoPP-Undesirable
+ 10 permit udp any any range netbios-ns netbios-ss
+ 20 permit tcp any any fragments
+ 30 permit udp any any fragments
+ 40 permit icmp any any fragments
+ 50 permit ip any any fragments
+ip access-list extended FOR_TADAWUL
+ 10 permit ip host 193.19.90.28 any
+ 20 permit ip host 193.19.90.51 any
+ 30 permit ip 193.19.90.0 0.0.0.255 any
+ip access-list extended MARIO
+ 10 permit ip any host 193.19.91.126 log-input
+ 20 permit ip host 51.36.15.41 any log-input
+ 30 permit ip host 51.39.226.30 any log-input
+ 40 permit ip any host 51.39.226.30 log-input
+ 50 permit ip any any
+ip access-list extended Outside_In
+ 10 permit icmp host 156.154.212.224 host 178.20.149.73
+ 20 permit icmp host 88.85.230.4 host 172.22.43.222
+ 30 permit ip host 91.189.91.124 any
+ 40 permit ip host 91.189.91.123 any
+ 50 permit gre 156.154.0.0 0.0.255.255 host 178.20.149.73
+ 60 permit icmp 156.154.0.0 0.0.255.255 host 178.20.149.73
+ 70 permit ip host 37.42.66.225 host 193.19.91.31
+ 80 permit icmp host 156.154.213.224 host 178.20.149.73
+ 90 permit icmp host 156.154.214.224 host 178.20.149.73
+ 100 permit icmp host 156.154.215.224 host 178.20.149.73
+ 110 permit icmp host 156.154.216.224 host 178.20.149.73
+ 120 permit icmp host 156.154.217.224 host 178.20.149.73
+ 130 permit icmp host 156.154.218.224 host 178.20.149.73
+ 140 permit icmp host 156.154.219.224 host 178.20.149.73
+ 150 permit icmp host 156.154.220.224 host 178.20.149.73
+ 160 permit icmp host 156.154.221.224 host 178.20.149.73
+ 170 permit ip host 37.42.66.225 any
+ 180 permit icmp host 156.154.222.224 host 178.20.149.73
+ 190 permit icmp host 156.154.223.224 host 178.20.149.73
+ 200 permit icmp host 156.154.224.224 host 178.20.149.73
+ 210 permit icmp host 156.154.225.224 host 178.20.149.73
+ 220 permit icmp host 156.154.234.224 host 178.20.149.73
+ 230 permit icmp host 212.12.175.107 host 193.19.90.20
+ 240 permit gre host 156.154.213.224 host 178.20.149.73
+ 250 permit gre host 156.154.214.224 host 178.20.149.73
+ 260 permit gre host 156.154.215.224 host 178.20.149.73
+ 270 permit gre host 156.154.216.224 host 178.20.149.73
+ 280 permit gre host 156.154.217.224 host 178.20.149.73
+ 290 permit gre host 156.154.218.224 host 178.20.149.73
+ 300 permit gre host 156.154.219.224 host 178.20.149.73
+ 310 permit gre host 156.154.220.224 host 178.20.149.73
+ 320 permit gre host 156.154.221.224 host 178.20.149.73
+ 330 permit icmp host 212.12.175.110 host 193.19.90.20
+ 340 permit gre host 156.154.222.224 host 178.20.149.73
+ 350 permit gre host 156.154.223.224 host 178.20.149.73
+ 360 permit gre host 156.154.224.224 host 178.20.149.73
+ 370 permit gre host 156.154.225.224 host 178.20.149.73
+ 380 permit gre host 156.154.234.224 host 178.20.149.73
+ 390 permit icmp host 212.12.175.100 host 193.19.91.20
+ 400 permit icmp host 212.12.175.100 host 193.19.91.57
+ 410 permit tcp host 212.12.175.107 host 193.19.90.20 eq www
+ 420 permit tcp host 212.12.175.110 host 193.19.90.20 eq www
+ 430 permit tcp host 212.12.175.100 host 193.19.91.20 eq smtp
+ 440 permit ip host 172.22.43.221 any
+ 450 permit icmp any 185.148.148.0 0.0.0.255
+ 460 permit tcp host 212.12.175.100 host 193.19.91.57 eq smtp
+ 470 deny   udp any host 185.148.148.254 eq ntp
+ 480 permit ip any host 168.187.95.78
+ 490 permit icmp host 156.154.224.224 host 193.19.91.21
+ 500 permit ip host 193.47.102.10 any
+ 510 deny   ip host 176.10.107.180 any
+ 520 deny   ip host 78.46.220.130 any
+ 530 deny   ip host 77.247.181.163 any
+ 540 deny   ip host 209.145.56.15 any
+ 550 deny   ip host 77.247.181.165 any
+ 560 deny   ip host 37.220.35.202 any
+ 570 permit tcp host 212.12.175.110 host 193.19.90.21 eq 443
+ 580 permit icmp any host 78.93.0.69
+ 590 permit icmp any host 78.93.0.70
+ 600 deny   ip host 54.219.188.155 any
+ 610 deny   ip host 54.219.188.147 any
+ 620 permit tcp any host 193.19.91.221 eq 5060
+ 630 permit udp any host 193.19.91.221 eq 5060
+ 640 permit tcp any host 193.19.91.221 eq 5061
+ 650 permit udp any host 193.19.91.221 eq 5061
+ 660 permit tcp any host 193.19.91.221 eq 1720
+ 670 permit udp any host 193.19.91.221 eq 1720
+ 680 deny   ip host 219.136.206.12 host 193.19.90.51
+ 690 deny   ip host 199.59.243.109 any
+ 700 deny   ip host 210.40.132.140 any
+ 710 deny   tcp any any eq 4066
+ 720 deny   ip host 37.105.109.33 any
+ 730 deny   ip host 5.12.8.37 any
+ 740 deny   ip host 64.30.224.26 any
+ 750 deny   ip host 91.121.20.30 any
+ 760 deny   ip host 2.133.142.164 any
+ 770 deny   ip host 64.30.224.103 any
+ 780 deny   tcp any any eq 5060
+ 790 deny   ip 61.93.192.0 0.0.63.255 any
+ 800 deny   ip 61.93.192.0 0.0.31.255 any
+ 810 deny   ip 123.64.0.0 0.1.255.255 any
+ 820 deny   ip 59.90.0.0 0.0.255.255 any
+ 830 deny   udp any any eq 5060
+ 840 deny   ip host 212.143.177.241 any
+ 850 deny   ip host 178.210.90.90 any
+ 860 deny   ip host 193.138.222.36 any
+ 870 deny   ip host 79.140.94.211 any
+ 880 deny   ip host 79.140.94.218 any
+ 890 deny   ip host 79.140.94.203 any
+ 900 deny   ip host 93.169.236.203 any
+ 910 deny   tcp any any eq 1720
+ 920 deny   ip host 61.240.144.65 any
+ 930 deny   tcp any any eq 9066
+ 940 deny   tcp any any eq 2066
+ 950 deny   ip 61.240.144.0 0.0.0.255 any
+ 960 deny   ip host 222.186.21.202 any
+ 970 deny   ip host 185.40.4.185 any
+ 980 deny   tcp any any eq 6066
+ 990 deny   tcp any any eq 6130
+ 1000 deny   tcp any any eq 2130
+ 1010 deny   tcp any any eq 4130
+ 1020 deny   tcp any any eq 9130
+ 1030 permit icmp host 193.19.90.11 host 175.143.74.161
+ 1040 permit icmp host 193.19.90.11 host 175.143.74.165
+ 1050 permit icmp host 175.143.74.165 host 193.19.90.11
+ 1060 permit icmp host 175.143.74.161 host 193.19.90.11
+ 1070 permit icmp 193.19.90.0 0.0.0.3 any
+ 1080 deny   ip host 95.184.13.139 any
+ 1090 deny   icmp any any
+ 1100 deny   ip host 109.70.189.2 any
+ 1110 deny   ip host 94.141.221.156 any
+ 1120 deny   ip host 209.126.230.71 any
+ 1130 deny   ip host 211.81.31.54 any
+ 1140 deny   ip host 211.81.31.53 any
+ 1150 deny   ip host 69.43.161.171 any
+ 1160 deny   ip host 69.172.201.208 any log
+ 1170 deny   ip host 37.107.125.67 any
+ 1180 deny   ip host 212.116.202.242 any
+ 1190 deny   ip host 2.91.127.3 any
+ 1200 deny   ip host 93.169.127.34 any
+ 1210 deny   ip host 188.55.80.30 any
+ 1220 deny   ip host 37.231.22.225 any
+ 1230 deny   ip host 93.168.26.221 any
+ 1240 deny   ip host 188.54.56.144 any
+ 1250 deny   ip host 1.57.10.236 any
+ 1260 deny   ip host 1.62.165.203 any
+ 1270 deny   ip host 1.31.244.109 any
+ 1280 deny   ip host 1.69.131.182 any
+ 1290 deny   ip host 222.89.58.142 any
+ 1300 deny   ip host 1.52.163.171 any
+ 1310 deny   ip host 120.14.187.68 any
+ 1320 deny   ip host 120.9.41.215 any
+ 1330 deny   ip host 120.0.234.103 any
+ 1340 deny   ip host 1.59.179.202 any
+ 1350 deny   ip host 193.28.94.0 any
+ 1360 deny   ip host 198.51.75.1 any
+ 1370 deny   ip host 193.0.0.56 any
+ 1380 deny   ip host 195.208.112.161 any
+ 1390 deny   ip host 66.110.0.86 any
+ 1400 deny   ip host 217.75.96.60 any
+ 1410 deny   ip host 192.241.164.4 any
+ 1420 deny   ip host 69.31.111.244 any
+ 1430 deny   ip host 154.11.98.225 any
+ 1440 deny   ip host 144.228.241.130 any
+ 1450 deny   ip host 66.185.128.48 any
+ 1460 deny   ip host 162.243.188.2 any
+ 1470 deny   ip host 95.85.0.2 any
+ 1480 deny   ip host 5.101.110.2 any
+ 1490 deny   ip host 208.74.64.40 any
+ 1500 deny   ip host 164.128.32.11 any
+ 1510 deny   ip host 134.222.87.1 any
+ 1520 deny   ip host 202.232.0.2 any
+ 1530 deny   ip host 4.69.184.193 any
+ 1540 deny   ip host 162.250.137.254 any
+ 1550 deny   ip host 209.124.176.223 any
+ 1560 deny   ip host 216.218.252.164 any
+ 1570 deny   ip host 89.149.178.10 any
+ 1580 deny   ip host 207.172.6.20 any
+ 1590 deny   ip host 128.223.253.10 any
+ 1600 deny   ip host 195.66.232.239 any
+ 1610 deny   ip host 207.172.6.1 any
+ 1620 deny   ip host 203.62.252.186 any
+ 1630 deny   ip host 66.59.190.221 any
+ 1640 deny   ip host 194.85.40.15 any
+ 1650 deny   ip host 208.51.134.254 any
+ 1660 deny   ip host 129.250.0.11 any
+ 1670 deny   ip host 206.24.210.80 any
+ 1680 deny   ip host 81.248.175.26 any
+ 1690 deny   ip host 61.160.224.128 any
+ 1700 deny   tcp any host 193.19.90.5
+ 1710 deny   tcp any host 193.19.90.6
+ 1720 deny   tcp any host 193.19.90.7
+ 1730 deny   tcp any host 193.19.90.11
+ 1740 deny   tcp any host 193.19.91.5
+ 1750 deny   tcp any host 193.19.91.11
+ 1760 deny   udp any host 193.19.90.8 eq snmp
+ 1770 permit ip any any
+ 1780 permit icmp host 13.107.136.9 host 193.19.91.91
+ 1790 permit icmp host 52.98.61.34 host 193.19.91.91
+ 1800 permit icmp host 52.98.61.50 host 193.19.91.91
+ 1810 permit icmp host 52.98.95.210 host 193.19.91.91
+ 1820 permit icmp host 52.98.32.2 host 193.19.91.91
+ 1830 permit icmp host 52.97.146.146 host 193.19.91.91
+ 1840 permit icmp host 52.97.146.226 host 193.19.91.91
+ 1850 permit icmp host 52.97.133.162 host 193.19.91.91
+ 1860 permit icmp host 40.100.174.194 host 193.19.91.91
+ 1870 permit icmp host 13.107.136.9 host 193.19.90.3
+ 1880 permit icmp host 52.98.61.34 host 193.19.90.3
+ 1890 permit icmp host 52.98.61.50 host 193.19.90.3
+ 1900 permit icmp host 52.98.95.210 host 193.19.90.3
+ 1910 permit icmp host 52.98.32.2 host 193.19.90.3
+ 1920 permit icmp host 52.97.146.146 host 193.19.90.3
+ 1930 permit icmp host 52.97.146.226 host 193.19.90.3
+ 1940 permit icmp host 52.97.133.162 host 193.19.90.3
+ 1950 permit icmp host 40.100.174.194 host 193.19.90.3
+ip access-list extended SWIFTNET
+ 10 permit ip any host 149.134.170.7
+ 20 permit ip any host 91.229.32.1
+ip access-list extended TEST_PUBLIC_ASYMETRIC
+ 10 permit ip any 185.12.164.0 0.0.0.255
+ 20 permit ip any 193.8.250.0 0.0.0.255
+ 30 permit ip any 185.12.166.0 0.0.0.255
+ 40 permit ip any host 216.119.209.77
+ 50 permit ip any host 216.119.209.78
+ 60 permit ip any host 12.22.155.208
+ 70 permit ip any host 1.9.12.70
+ 80 permit ip any host 193.111.46.36
+ 90 permit ip any host 149.134.170.7
+ip access-list extended TRANSFAST
+ 10 permit ip any host 108.166.9.172
+ 20 permit ip any host 124.217.233.113
+ 30 permit ip any host 12.22.155.142
+ 40 permit ip any host 216.119.208.41
+ 50 permit ip any host 12.22.155.207
+ 60 permit ip any 206.156.53.0 0.0.0.255
+ 70 permit ip any 205.216.112.0 0.0.0.255
+ 80 permit ip any host 94.185.237.69
+ 90 permit ip any 93.191.176.0 0.0.7.255
+ip access-list extended VTY-ACL
+ 10 permit ip host 10.0.22.23 any
+ 20 permit ip host 10.0.10.15 any
+ 30 permit ip host 10.0.25.50 any
+ 40 permit ip host 10.252.126.170 any
+ 50 permit ip host 10.0.61.20 any
+ 60 permit ip host 10.10.2.42 any
+ 70 permit ip host 10.0.5.91 any
+ 80 permit ip host 10.0.25.125 any
+ 90 permit ip host 10.10.71.194 any
+ 100 permit ip host 10.0.22.137 any
+ 110 permit ip host 10.0.25.133 any
+ 120 permit ip host 10.0.25.178 any
+ 130 permit ip host 10.0.122.213 any
+ 140 permit ip host 10.11.31.173 any
+ 150 permit ip host 10.0.122.199 any
+ 160 permit ip host 10.0.9.195 any
+ 170 permit ip host 10.0.22.205 any
+ 180 permit ip host 10.0.25.244 any
+ 190 permit ip host 10.0.22.251 any
+ 200 permit ip host 10.10.2.254 any
+ 210 permit ip 10.98.151.0 0.0.0.255 any
+ 220 permit ip 10.70.0.0 0.0.255.255 any
+ 230 permit tcp host 10.0.30.71 any eq 22
+ 240 permit tcp host 10.99.23.121 any eq 22
+ 250 permit tcp host 10.0.61.57 any eq 22
+ 260 permit tcp host 10.98.156.152 any eq 22
+ 270 permit tcp 10.99.28.0 0.0.0.255 any eq 22
+ 280 permit tcp 10.242.126.0 0.0.0.255 any eq 22
+ 290 permit ip 10.110.65.192 0.0.0.31 any
+ 300 permit ip host 10.110.65.206 any
+ 310 permit ip host 10.110.65.207 any
+ 320 permit ip host 10.110.65.208 any
+ip access-list extended tac
+ 10 permit ip host 193.19.91.99 any
+ 20 permit ip any host 193.19.91.99
+ip access-list extended ubuntu
+ 10 permit ip host 193.19.91.99 host 91.189.91.123
+ 20 permit ip host 193.19.91.99 host 91.189.91.124
+ 30 permit ip host 91.189.91.123 host 193.19.91.99
+ 40 permit ip host 91.189.91.124 host 193.19.91.99
+!
+!
+ip prefix-list DEFAULT-ONLY seq 10 permit 0.0.0.0/0
+!
+ip prefix-list DENY-ALL seq 10 deny 0.0.0.0/0 le 32
+!
+ip prefix-list ITC_OUT seq 5 permit 178.20.149.73/32
+ip prefix-list ITC_OUT seq 10 permit 178.20.149.74/32
+ip prefix-list ITC_OUT seq 15 permit 193.19.91.0/24
+ip prefix-list ITC_OUT seq 20 permit 193.19.90.0/23
+ip prefix-list ITC_OUT seq 25 permit 185.148.148.0/24
+!
+ip prefix-list NN_OUT seq 5 permit 178.20.149.73/32
+ip prefix-list NN_OUT seq 10 permit 178.20.149.74/32
+ip prefix-list NN_OUT seq 15 permit 193.19.91.0/24
+ip prefix-list NN_OUT seq 20 permit 193.19.90.0/23
+ip prefix-list NN_OUT seq 25 permit 185.148.148.0/24
+!
+ip prefix-list NOUR_TEST seq 6 permit 185.148.148.0/24
+!
+ip prefix-list OUT_TO_ARBOR seq 10 permit 193.19.91.0/24
+ip prefix-list OUT_TO_ARBOR seq 20 permit 193.19.90.0/23
+ip prefix-list OUT_TO_ARBOR seq 25 permit 185.148.148.0/24
+!
+ip prefix-list OUT_TO_AWAL seq 5 permit 78.93.0.69/32
+ip prefix-list OUT_TO_AWAL seq 10 permit 78.93.0.70/32
+ip prefix-list OUT_TO_AWAL seq 15 permit 193.19.90.0/24
+ip prefix-list OUT_TO_AWAL seq 20 permit 193.19.90.0/23
+!
+ip prefix-list OUT_TO_PROLEXIC seq 10 permit 193.19.91.0/24
+ip prefix-list OUT_TO_PROLEXIC seq 20 permit 193.19.90.0/23
+ip prefix-list OUT_TO_PROLEXIC seq 25 permit 185.148.148.0/24
+!
+ip prefix-list PREFIX-LIST_BGP_IN seq 5 permit 0.0.0.0/0
+ip prefix-list PREFIX-LIST_BGP_IN seq 1000 permit 0.0.0.0/0 le 32
+!
+ip prefix-list RFC1918-AWAL seq 5 permit 0.0.0.0/0
+ip prefix-list RFC1918-AWAL seq 10 deny 0.0.0.0/0 le 32
+ip prefix-list RFC1918-AWAL seq 15 deny 10.0.0.0/8 le 32
+!
+ip prefix-list deny-all seq 5 deny 0.0.0.0/0 le 32
+ip sla 1
+ icmp-echo 10.99.5.3 source-interface TenGigabitEthernet0/1/0.3360
+  threshold 2
+  frequency 5
+ip sla schedule 1 life forever start-time now
+logging trap debugging
+logging origin-id hostname
+logging source-interface GigabitEthernet0 vrf Mgmt-intf
+logging host 10.0.46.236 vrf Mgmt-intf
+logging host 10.252.126.161 vrf Mgmt-intf
+logging host 10.0.61.20 vrf Mgmt-intf
+logging host 10.252.126.170 vrf Mgmt-intf
+logging host 10.252.126.129 vrf Mgmt-intf
+logging host 10.99.19.90 vrf Mgmt-intf
+logging host 10.99.28.72 vrf Mgmt-intf
+logging host 10.99.28.72
+logging host 10.252.105.67 vrf Mgmt-intf
+logging host 10.252.105.67 vrf Mgmt-intf transport udp port 1517
+logging host 10.110.64.36 vrf Mgmt-intf
+ip access-list standard 10
+ 10 permit 10.0.10.15
+ 20 permit 10.99.28.100
+ 30 permit 10.99.19.90
+ 40 permit 10.99.28.72
+ 50 permit 10.0.46.100
+ 60 permit 10.0.46.72
+ 70 permit 10.242.212.185
+ 80 permit 193.19.91.0 0.0.0.255
+ 90 permit 10.252.126.0 0.0.0.252
+ 100 permit 10.110.64.36
+ip access-list standard 25
+ 10 permit 10.110.64.13
+ 20 permit 10.110.64.20
+ 30 permit 10.229.150.11
+ 40 permit 10.229.150.12
+ 50 permit 10.242.213.135
+ 60 permit 10.110.150.11
+ 70 permit 10.110.150.12
+ 80 permit 10.99.28.0 0.0.0.255
+ 90 permit 10.242.126.0 0.0.0.255
+ 100 permit 10.110.64.36
+ip access-list standard 99
+ 10 deny   any
+ip access-list extended 100
+ 10 deny   ip host 193.19.91.31 any
+ 20 permit ip host 10.0.10.15 any
+ 30 permit ip host 10.0.46.72 any
+ 40 permit ip host 10.0.46.236 any
+ 50 permit ip 193.19.91.0 0.0.0.255 any
+ 60 permit ip any host 213.42.22.71
+ 70 permit ip any host 195.229.197.67
+ 80 permit ip any host 213.42.22.92
+ 90 permit ip any host 86.96.239.95
+ 100 permit ip host 178.20.149.75 any
+ipv6 route 2A00:1560:10::AC10:1A6/128 2A00:1560:10::C113:5A01 254
+ipv6 route 2A00:1560:10::C113:5A15/128 2A00:1560:10::C113:5A01 254
+ipv6 route ::/0 2A00:1560:3000:6::1 254 name default-route-to-nournet
+!
+!
+ipv6 prefix-list DEFAULT seq 5 permit ::/0
+!
+ipv6 prefix-list NN_OUT_IPV6 seq 5 permit 2A0A:2800:1::/48
+route-map ITC_IN permit 10 
+ match ip address prefix-list DEFAULT-ONLY
+!
+route-map NN_OUT permit 5 
+ match ip address prefix-list NN_OUT
+!
+route-map NN_OUT_IPV6 permit 10 
+ match ipv6 address prefix-list NN_OUT_IPV6
+ set metric 100
+!
+route-map NOTRANSIT permit 5 
+ match ip address prefix-list OUT_TO_AWAL
+!
+route-map DEFAULT permit 10 
+ match ipv6 address prefix-list DEFAULT
+ set metric 100
+!
+route-map ITC_OUT permit 5 
+ match ip address prefix-list ITC_OUT
+!
+route-map DENYALL permit 10 
+ match ip address prefix-list deny-all
+!
+route-map NN_IN permit 10 
+ match ip address prefix-list DEFAULT-ONLY
+!
+route-map TO_AWAL_NET permit 4 
+ match ip address TRANSFAST
+ set ip next-hop 10.99.5.9
+!
+route-map TO_AWAL_NET permit 5 
+ match ip address TEST_PUBLIC_ASYMETRIC
+ set ip next-hop 10.99.5.9
+ set ip next-hop verify-availability
+!
+route-map TO_AWAL_NET permit 10 
+ match ip address FOR_TADAWUL
+ set ip next-hop verify-availability
+ set ip default next-hop 10.99.5.9
+!
+route-map TO-NOURNET permit 10 
+ match ip address 100
+ set ip next-hop 10.99.5.6
+ set ip next-hop verify-availability
+!
+route-map DEFAULT-ONLY permit 10 
+ match ip address prefix-list DEFAULT-ONLY
+!
+snmp-server group admin v3 priv 
+snmp-server group Alrajhi v3 auth access 10
+snmp-server group Alrajhi v3 priv access 10
+snmp-server group default v3 priv 
+snmp-server group SOLARWIND v3 auth access 25
+snmp-server group SOLARWIND v3 priv access 25
+snmp-server trap-source GigabitEthernet0
+snmp-server location NRR-INT-INTBR-R002
+snmp-server contact nw-cs@alrajhibank.com.sa
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps pfr
+snmp-server enable traps flowmon
+snmp-server enable traps ds1
+snmp-server enable traps entity-perf throughput-notif
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps casa
+snmp-server enable traps smart-license
+snmp-server enable traps license
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps bfd
+snmp-server enable traps bgp
+snmp-server enable traps bgp cbgp2
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dhcp
+snmp-server enable traps dial
+snmp-server enable traps diameter
+snmp-server enable traps dlsw
+snmp-server enable traps dsp card-status
+snmp-server enable traps dsp oper-state
+snmp-server enable traps dsp video-usage
+snmp-server enable traps dsp video-out-of-resource
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay multilink bundle-mismatch
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif
+snmp-server enable traps hsrp
+snmp-server enable traps pimstdmib neighbor-loss invalid-register invalid-join-prune rp-mapping-change interface-election
+snmp-server enable traps ipmulticast
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps ospfv3 state-change
+snmp-server enable traps ospfv3 errors
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps pw vc
+snmp-server enable traps rsvp
+snmp-server enable traps ipsla
+snmp-server enable traps syslog
+snmp-server enable traps l2tun session
+snmp-server enable traps l2tun pseudowire status
+snmp-server enable traps pki
+snmp-server enable traps adslline
+snmp-server enable traps vdsl2line
+snmp-server enable traps ethernet evc status create delete
+snmp-server enable traps ether-oam
+snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps entity-qfp mem-res-thresh throughput-notif
+snmp-server enable traps entity-state
+snmp-server enable traps lisp
+snmp-server enable traps entity-sensor
+snmp-server enable traps flash insertion removal lowspace
+snmp-server enable traps firewall serverstatus
+snmp-server enable traps netsync
+snmp-server enable traps sbc adj-status
+snmp-server enable traps sbc blacklist
+snmp-server enable traps sbc congestion-alarm
+snmp-server enable traps sbc h248-ctrlr-status
+snmp-server enable traps sbc media-source
+snmp-server enable traps sbc radius-conn-status
+snmp-server enable traps sbc sla-violation
+snmp-server enable traps sbc sla-violation-rev1
+snmp-server enable traps sbc svc-state
+snmp-server enable traps sbc qos-statistics
+snmp-server enable traps srp
+snmp-server enable traps isdn call-information
+snmp-server enable traps isdn layer2
+snmp-server enable traps isdn chan-not-avail
+snmp-server enable traps isdn ietf
+snmp-server enable traps cnpd
+snmp-server enable traps entity-diag boot-up-fail hm-test-recover hm-thresh-reached scheduled-test-fail
+snmp-server enable traps ike policy add
+snmp-server enable traps ike policy delete
+snmp-server enable traps ike tunnel start
+snmp-server enable traps ike tunnel stop
+snmp-server enable traps ipsec cryptomap add
+snmp-server enable traps ipsec cryptomap delete
+snmp-server enable traps ipsec cryptomap attach
+snmp-server enable traps ipsec cryptomap detach
+snmp-server enable traps ipsec tunnel start
+snmp-server enable traps ipsec tunnel stop
+snmp-server enable traps ipsec too-many-sas
+snmp-server enable traps gdoi gm-start-registration
+snmp-server enable traps gdoi gm-registration-complete
+snmp-server enable traps gdoi gm-re-register
+snmp-server enable traps gdoi gm-rekey-rcvd
+snmp-server enable traps gdoi gm-rekey-fail
+snmp-server enable traps gdoi ks-rekey-pushed
+snmp-server enable traps gdoi gm-incomplete-cfg
+snmp-server enable traps gdoi ks-no-rsa-keys
+snmp-server enable traps gdoi ks-new-registration
+snmp-server enable traps gdoi ks-reg-complete
+snmp-server enable traps gdoi ks-role-change
+snmp-server enable traps gdoi ks-gm-deleted
+snmp-server enable traps gdoi ks-peer-reachable
+snmp-server enable traps gdoi ks-peer-unreachable
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps sonet
+snmp-server enable traps resource-policy
+snmp-server enable traps otn
+snmp-server enable traps nhrp nhs
+snmp-server enable traps nhrp nhc
+snmp-server enable traps nhrp nhp
+snmp-server enable traps nhrp quota-exceeded
+snmp-server enable traps isis
+snmp-server enable traps ip local pool
+snmp-server enable traps mpls rfc ldp
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls rfc traffic-eng
+snmp-server enable traps mpls traffic-eng
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps alarms informational
+snmp-server enable traps voice
+snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+snmp-server enable traps ethernet cfm alarm
+snmp-server enable traps rf
+snmp-server enable traps transceiver all
+snmp-server enable traps mpls vpn
+snmp-server enable traps mpls rfc vpn
+snmp-server host 10.99.28.72 version 3 priv NSMmonitoring 
+snmp-server host 10.99.28.72 vrf Mgmt-intf version 3 priv NSMmonitoring 
+snmp-server host 10.252.126.172 version 3 priv admin 
+!
+tacacs server TACACS-SERVER-1
+ address ipv4 10.252.70.54
+ key 7 071C244F5C08130D1E17585853
+ timeout 5
+tacacs server TACACS-SERVER-2
+ address ipv4 10.252.70.53
+ key 7 03175E08140E2B44470C4A5140
+ timeout 5
+tacacs server TACACS-SERVER-DR
+ address ipv4 10.242.70.54
+ key 7 071C244F5C08130D1E17585853
+ timeout 5
+!
+!
+!
+!
+control-plane
+ service-policy input Policy-CoPP
+!
+!
+!
+!
+!
+banner exec ^CCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner login ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+banner motd ^CCCC
+ *********************WELCOME TO**********************
+
+     0     00000       0      00000   00000   00000
+    0 0    0    0     0 0     0    0    0    0
+   0   0   00000     0   0    00000     0    0
+  0 0 0 0  0    0   0 0 0 0   0    0    0    0
+ 0       0 0     0 0       0  00000   00000   00000 NET
+          
+ *******UNAUTHORISED ACCESS STRICTLY PROHIBITED*******
+
+ You have logged on to a Al Rajhi proprietary device. 
+UNAUTHORIZED ACCESS TO THIS NETWORK DEVICE IS PROHIBITED.
+You must have explicit permission to access or configure this 
+device. All activities performed on this device may be logged.
+Violations of this policy may result in disciplinary action.
+This may be reported to law enforcement.
+^C
+!
+line con 0
+ exec-timeout 5 0
+ login authentication no_tacacs
+ stopbits 1
+line aux 0
+ login authentication no_tacacs
+ no exec
+ transport output none
+line vty 0 4
+ access-class NEW_MGMT_ACL in vrf-also
+ exec-timeout 5 0
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output telnet
+line vty 5
+ access-class NEW_MGMT_ACL in vrf-also
+ exec-timeout 5 0
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output telnet
+line vty 6 15
+ access-class NEW_MGMT_ACL in vrf-also
+ exec-timeout 5 0
+ login authentication VTYSec
+ transport preferred none
+ transport input ssh
+ transport output none
+!
+!
+monitor session 1 type erspan-source
+ shutdown
+ source interface Tu600
+ destination
+  mtu 1464
+!
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+ntp authentication-key 1 md5 03165A010E062F585E 7
+ntp authenticate
+ntp trusted-key 1
+ntp source GigabitEthernet0
+ntp server vrf Mgmt-intf 10.11.3.240
+ntp server vrf Mgmt-intf 10.0.250.2 prefer
+ntp server vrf Mgmt-intf 10.0.3.52
+ntp server vrf Mgmt-intf 10.0.3.53
+ntp server vrf Mgmt-intf 10.11.3.239
+!
+!
+!
+!
+!
+!
+end
+
